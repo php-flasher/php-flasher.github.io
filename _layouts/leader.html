@@ -13,46 +13,46 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway|Varela+Round" rel="stylesheet" />
     {% endif %}
     {% unless site.data.dev.dev_mode %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4D78SM7TC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'XXXXXXXX');
+        gtag('config', 'G-T4D78SM7TC');
     </script>
-    <base href="https://php-notify.github.io/" />
+    <base href="https://php-flasher.github.io/" />
     {% endunless %}
-    <link rel="stylesheet" href="{{ site.data.manifest['docs.css'] }}"/>
+    <link rel="stylesheet" href="/dist/index.css"/>
 </head>
 <body class="bg-grey-lighter min-h-screen bg-squared leading-tight leader">
 {% include size-helper.html %}
 <header id="leader" class="text-center md:py-10">
     <div id="teaser" class="pt-10 max-w-sm mx-auto text-center">
         <a href="/">
-            <img class="mb-4 inline" id="logo" src="/static/php-notify.png" height="150px" width="150px" alt="PHP Notify">
+            <img class="mb-4 inline" id="logo" src="/static/php-flasher.png" height="150px" width="150px" alt="PHP Flasher">
         </a>
         <h1 class="text-4xl">
-            PHP<span class="text-red">Notify</span>.
+            PHP<span class="text-red">Flasher</span>.
         </h1>
         <p class="text-xl max-w-sm mx-auto mt-4 px-8 leading-tight">
             Easy flash notifications for PHP
         </p>
         {% include leader-links.html %}
         <p class="pt-4">
-            <a href="https://github.com/php-notify/notify">
-                <img src="https://img.shields.io/badge/source-php--notify/notify-blue.svg?style=flat-square">
+            <a href="https://github.com/php-flasher/flasher">
+                <img src="https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square">
             </a>
-            <a href="https://github.com/php-notify/notify/releases">
-                <img src="https://img.shields.io/github/tag/php-notify/notify.svg">
+            <a href="https://github.com/php-flasher/flasher/releases">
+                <img src="https://img.shields.io/github/tag/php-flasher/flasher.svg">
             </a>
-            <a href="https://github.com/php-notify/notify/blob/master/LICENSE">
+            <a href="https://github.com/php-flasher/flasher/blob/master/LICENSE">
                 <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg">
             </a>
-            <a href="https://packagist.org/packages/php-notify/notify">
-                <img src="https://img.shields.io/packagist/dt/php-notify/notify.svg">
+            <a href="https://packagist.org/packages/php-flasher/flasher">
+                <img src="https://img.shields.io/packagist/dt/php-flasher/flasher.svg">
             </a>
-            <a href="https://packagist.org/packages/php-notify/notify">
-                <img src="https://img.shields.io/packagist/php-v/php-notify/notify.svg?style=flat-square">
+            <a href="https://packagist.org/packages/php-flasher/flasher">
+                <img src="https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square">
             </a>
         </p>
     </div>
@@ -65,7 +65,7 @@
             </span>
             <div class="mb-2 leading-normal">
                 <h2 class="text-3xl text-white leading-tight mb-2">
-                    Why use PHP Notify ?
+                    Why use PHP Flasher ?
                 </h2>
                 <p class="text-grey-dark text-lg mx-auto max-w-sm">
                     This library is designed, so you can take full control when creating you notifications :
@@ -133,7 +133,7 @@
                 <h2 class="text-3xl text-black mb-2">
                    Easy To use
                 </h2>
-                <p class="text-grey-darker text-lg mx-auto max-w-sm">
+                <p class="text-gray-900 text-lg mx-auto max-w-sm">
                     This library was developed with the idea that you should
                     be able to add flash notification to your application with ease and with few lines of code.
                 </p>
@@ -148,21 +148,21 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Http\Requests\PostRequest;
 use Illuminate\Database\Eloquent\Model;
-use Notify\Toastr\Producer\ToastrProducer;
+use Flasher\Toastr\Producer\ToastrProducer;
 
 class PostController extends Controller
 {
-    public function store(PostRequest $request, ToastrProducer $notify)
+    public function store(PostRequest $request, ToastrProducer $flasher)
     {
         $post = Post::create($request->only(['title', 'body']));
 
         if ($post instanceof Model) {
-            $notify->success('Data has been saved successfully!');
+            $flasher->success('Data has been saved successfully!');
 
             return redirect()->route('posts.index');
         }
 
-        $notify->error('An error has occurred please try again later.');
+        $flasher->error('An error has occurred please try again later.');
 
         return back();
     }

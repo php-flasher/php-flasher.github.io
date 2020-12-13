@@ -1,11 +1,11 @@
 PHP Notify:
     Introduction: '/docs/'
     Installation: '/docs/installation/'
-    <span class="github-link-icon"><img class="w-5 h-5 mr-1" src="/static/github.svg" /></span> Github: 'https://github.com/php-notify/notify'
+    <span class="github-link-icon"><img class="w-5 h-5 mr-1" src="/static/github.svg" /></span> Github: 'https://github.com/php-flasher/flasher'
 
 Frameworks:
     Symfony: '/docs/framework/symfony/'
-    Laravel: '/docs/framework/Laravel/'
+    Laravel: '/docs/framework/laravel/'
 
 Adapters:
     Toastr: '/docs/adapter/toastr/'

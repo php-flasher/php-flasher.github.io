@@ -7,19 +7,19 @@ updated_at: 2020-11-28
 ---
 
 <div class="text-center mb-8 max-w-md">
-    <img id="logo" src="/static/php-notify.png" height="150px" width="150px" alt="PHP Notify">
+    <img id="logo" src="/static/php-flasher.png" height="150px" width="150px" alt="PHP Notify">
     <h1 class="text-grey-darkest mt-1">
         PHP<span class="text-red">Notify</span>
     </h1>
 </div>
 
 [![Author](https://img.shields.io/badge/author-@yoeunes-blue.svg)](https://www.linkedin.com/in/younes-khoubza/)
-[![Source Code](https://img.shields.io/badge/source-php--notify/notify-blue.svg?style=flat-square)](https://github.com/php-notify/notify)
-[![Latest Version](https://img.shields.io/github/tag/php-notify/notify.svg)](https://github.com/php-notify/notify/releases)
-[![Packagist](https://img.shields.io/badge/packagist-php--notify/notify-orange.svg?style=flat-square)](https://packagist.org/packages/php-notify/notify)
-[![Software License](https:////img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/php-notify/notify/blob/master/LICENSE)
-[![Total Downloads](https://img.shields.io/packagist/dt/php-notify/notify.svg)](https://packagist.org/packages/php-notify/notify)
-![php >=5.3](https://img.shields.io/packagist/php-v/php-notify/notify.svg?style=flat-square)
+[![Source Code](https://img.shields.io/badge/source-php--notify/notify-blue.svg?style=flat-square)](https://github.com/php-flasher/flasher)
+[![Latest Version](https://img.shields.io/github/tag/php-flasher/flasher.svg)](https://github.com/php-flasher/flasher/releases)
+[![Packagist](https://img.shields.io/badge/packagist-php--notify/notify-orange.svg?style=flat-square)](https://packagist.org/packages/php-flasher/flasher)
+[![Software License](https:////img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/php-flasher/flasher/blob/master/LICENSE)
+[![Total Downloads](https://img.shields.io/packagist/dt/php-flasher/flasher.svg)](https://packagist.org/packages/php-flasher/flasher)
+![php >=5.3](https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square)
 
 
 # What is PHP Notify ?

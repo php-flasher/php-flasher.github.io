@@ -2,7 +2,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-postcss
 defaults:
   - scope:
       path: ""
@@ -14,6 +13,7 @@ defaults:
 exclude:
   - "*.config.js"
   - "package*.json"
-  - assets
-  - node_modules
+  - "assets"
+  - "node_modules"
   - "Gemfile*"
+  - ".idea"

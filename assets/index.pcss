@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 img {
-    @apply .inline;
+    @apply inline;
     vertical-align: initial;
 }
 
@@ -72,7 +72,7 @@ img {
 }
 
 body {
-    @apply text-grey-darkest font-body;
+    @apply text-gray-900;
     font-size: 15px;
     font-weight: 400;
     font-stretch: 100%;
@@ -85,12 +85,12 @@ body {
 }
 
 a {
-    @apply text-red;
+    @apply text-red-600;
 }
 
 h1, h2, h3 {
     font-weight: normal;
-    @apply font-heading;
+    @apply font-normal;
 }
 
 a {
@@ -98,21 +98,19 @@ a {
 }
 
 article h1 {
-    @apply text-red text-4xl leading-tight;
+    @apply text-red-600 text-4xl leading-tight;
 }
 
 article h2 {
-    @apply text-red
-    text-2xl;
+    @apply text-red-600 text-2xl;
 }
 
 article h3 {
-    @apply text-red
-    text-xl mt-6;
+    @apply text-red-600 text-xl mt-6;
 }
 
 article table {
-    @apply text-left p-4 bg-white border-l-4 border-grey-darker mb-4 shadow-md;
+    @apply text-left p-4 bg-white border-l-4 border-gray-900 mb-4 shadow-md;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
@@ -124,7 +122,7 @@ article p, article table {
 }
 
 article table td {
-    @apply border-t border-grey;
+    @apply border-t border-gray-900;
 }
 
 article table th, article table td {
@@ -132,7 +130,7 @@ article table th, article table td {
 }
 
 article blockquote {
-    @apply p-4 bg-white border-l-4 border-grey-darker mb-4 shadow;
+    @apply p-4 bg-white border-l-4 border-gray-900 mb-4 shadow;
 }
 
 article ul, article ol {
@@ -177,7 +175,7 @@ article blockquote :last-child {
         left: calc(50% + 20px);
         right: 0;
         z-index: -1;
-        @apply bg-white border border-grey-light border-r-0;
+        @apply bg-white border border-gray-200 border-r-0;
     }
     .md\:left-half-bg-black:before {
         position: absolute;
@@ -188,7 +186,7 @@ article blockquote :last-child {
         right: calc(50% + 20px);
         left: 0;
         z-index: -1;
-        @apply bg-white border border-grey-light border-l-0;
+        @apply bg-white border border-gray-200 border-l-0;
     }
 }
 
@@ -196,7 +194,7 @@ article blockquote :last-child {
     @apply text-left;
 }
 
-@screen -lg {
+@screen lg {
     #main-article div.highlight {
         margin-left: -1rem;
         margin-right: -1rem;

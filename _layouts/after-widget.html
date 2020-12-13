@@ -10,19 +10,20 @@
     <title>{{ page.title }} - {{ site.data.project.title }}</title>
     {% if site.data.project.description %}
     <meta name="description" content="{{ site.data.project.description }}" />
+    <meta name="google-site-verification" content="t3LQA1pQ-pzDXBua25DxF7oJ9ku5RcIX-mtQoG2r3pQ" />
     <link href="https://fonts.googleapis.com/css?family=Raleway|Varela+Round" rel="stylesheet" />
     {% endif %}
     {% unless site.data.dev.dev_mode %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4D78SM7TC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'XXXXXXXX');
+        gtag('config', 'G-T4D78SM7TC');
     </script>
-    <base href="https://php-notify.github.io/" />
+    <base href="https://php-flasher.github.io/" />
     {% endunless %}
-    <link rel="stylesheet" href="{{ site.data.manifest['docs.css'] }}"/>
+    <link rel="stylesheet" href="/dist/index.css"/>
 </head>
 <body class="bg-grey-lighter min-h-screen bg-squared leading-tight leader">
 {% include size-helper.html %}
