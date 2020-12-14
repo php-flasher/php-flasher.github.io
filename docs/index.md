@@ -21,7 +21,6 @@ updated_at: 2020-11-28
 [![Total Downloads](https://img.shields.io/packagist/dt/php-flasher/flasher.svg)](https://packagist.org/packages/php-flasher/flasher)
 ![php >=5.3](https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square)
 
-
 # What is PHP Flasher ?
 
 PHP Flasher library helps you to add flash notifications to your projects. 
