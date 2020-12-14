@@ -31281,14 +31281,14 @@ article h1 {
   line-height: 2.5rem;
   line-height: 1.25;
   --tw-text-opacity: 1;
-  color: rgba(220, 38, 38, var(--tw-text-opacity));
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
 }
 
 article h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   --tw-text-opacity: 1;
-  color: rgba(220, 38, 38, var(--tw-text-opacity));
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
 }
 
 article h3 {
@@ -31296,7 +31296,7 @@ article h3 {
   line-height: 1.75rem;
   margin-top: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgba(220, 38, 38, var(--tw-text-opacity));
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
 }
 
 article table {

@@ -24,98 +24,97 @@
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
 </head>
-<body class="bg-grey-lighter min-h-screen bg-squared leading-tight leader">
+<body class="bg-gray-100 min-h-screen bg-squared leading-tight leader">
 {% include size-helper.html %}
 <header id="leader" class="text-center md:py-10">
     <div id="teaser" class="pt-10 max-w-sm mx-auto text-center">
         <a href="/">
-            <img class="mb-4 inline" id="logo" src="/static/php-flasher.png" height="150px" width="150px" alt="PHP Flasher">
+            <img class="mb-4 inline" id="logo" src="/static/logo.png" height="150px" width="150px" alt="PHP Flasher" />
         </a>
         <h1 class="text-4xl">
-            PHP<span class="text-red">Flasher</span>.
+            PHP<span class="text-indigo-600">Flasher</span>.
         </h1>
         <p class="text-xl max-w-sm mx-auto mt-4 px-8 leading-tight">
-            Easy flash notifications for PHP
+            A powerful and flexible flash notifications system for PHP
         </p>
         {% include leader-links.html %}
         <p class="pt-4">
             <a href="https://github.com/php-flasher/flasher">
-                <img src="https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square">
+                <img src="https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square" />
             </a>
             <a href="https://github.com/php-flasher/flasher/releases">
-                <img src="https://img.shields.io/github/tag/php-flasher/flasher.svg">
+                <img src="https://img.shields.io/github/tag/php-flasher/flasher.svg" />
             </a>
             <a href="https://github.com/php-flasher/flasher/blob/master/LICENSE">
-                <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg">
+                <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" />
             </a>
             <a href="https://packagist.org/packages/php-flasher/flasher">
-                <img src="https://img.shields.io/packagist/dt/php-flasher/flasher.svg">
+                <img src="https://img.shields.io/packagist/dt/php-flasher/flasher.svg" />
             </a>
             <a href="https://packagist.org/packages/php-flasher/flasher">
-                <img src="https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square">
+                <img src="https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square" />
             </a>
         </p>
     </div>
 </header>
-<section class="my-10 bg-black pt-10 md:pt-16 md:pb-14 pb-10 w-full text-center md:text-left" style="background-color: #1C242B;">
-    <div class="max-w-xl mx-auto md:flex md:items-center relative overflow-hidden md:overflow-visible">
+<section class="my-10 bg-indigo-900 pt-10 md:pt-16 md:pb-14 pb-10 w-full text-center md:text-left">
+    <div class="container mx-auto md:flex md:items-center relative overflow-hidden md:overflow-visible">
         <section class="md:w-1/2 px-4 max-w-md flex flex-col md:flex-row items-center md:items-start">
-            <span class="h-10 w-10 mr-3 rounded-full bg-red inline-block mb-6 flex-1-0 flex-shrink-0 flex align-middle justify-center">
+            <span class="h-10 w-10 mr-3 rounded-full bg-indigo-500 inline-block mb-6 flex-1-0 flex-shrink-0 flex align-middle justify-center">
                 <img src="/static/icons/thumbs-up.svg" class="inline-block w-5" />
             </span>
             <div class="mb-2 leading-normal">
                 <h2 class="text-3xl text-white leading-tight mb-2">
                     Why use PHP Flasher ?
                 </h2>
-                <p class="text-grey-dark text-lg mx-auto max-w-sm">
+                <div class="text-indigo-300 text-lg mx-auto max-w-sm">
                     This library is designed, so you can take full control when creating you notifications :
 
                     <ul class="text-white list-none pl-0 space-y-3 my-5">
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
                             <span class="prose">Display multiple notifications</span>
                         </li>
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
                             <span class="prose">Sort and filter notifications</span>
                         </li>
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
                             <span class="prose">Render notification from JSON response with Ajax or Websockets</span>
                         </li>
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
                             <span class="prose">Limit the number of displayed notifications</span>
                         </li>
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
                             <span class="prose">Show notifications from different adapters at the same time</span>
                         </li>
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
-                            <span class="prose">implementations for popular frameworks : Symfony and Laravel</span>
+                            <span class="prose">Framework angostic with integration for : Symfony and Laravel</span>
                         </li>
                         <li class="flex items-start space-x-2 text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                                <path stroke-width="2" fill="#307378" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
+                                <path stroke-width="2" fill="#818CF8" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
                             </svg>
                             <span class="prose">...and more</span>
                         </li>
                     </ul>
-
-                </p>
+                </div>
             </div>
         </section>
         <section class="md:w-1/2 md:pl-4 text-center -md:bg-black -mx-8 md:-mx-0 mt-6 md:mt-0 md:text-right md:leading-squash">
@@ -124,13 +123,13 @@
     </div>
 </section>
 <section class="md:right-half-bg-black relative text-center md:text-left md:my-12">
-    <div class="max-w-xl mx-auto mb-10 md:flex relative">
+    <div class="container mx-auto mb-10 md:flex relative">
         <section class="md:w-1/2 lg:w-2/5 px-4 max-w-md flex flex-col md:flex-row items-center md:items-start">
-            <span class="h-10 w-10 mr-3 rounded-full bg-red inline-block mb-6 flex-1-0 flex-shrink-0 flex align-middle justify-center">
+            <span class="h-10 w-10 mr-3 rounded-full bg-indigo-500 inline-block mb-6 flex-1-0 flex-shrink-0 flex align-middle justify-center">
                 <img src="/static/icons/heart.svg" class="inline-block w-5" />
             </span>
             <div class="mb-8">
-                <h2 class="text-3xl text-black mb-2">
+                <h2 class="text-3xl text-indigo-500 mb-2">
                    Easy To use
                 </h2>
                 <p class="text-gray-900 text-lg mx-auto max-w-sm">
@@ -139,7 +138,7 @@
                 </p>
             </div>
         </section>
-        <section class="md:w-1/2 lg:w-3/5 border-b border-t md:border-l border-grey-light md:rounded-l-lg bg-white">
+        <section class="md:w-1/2 lg:w-3/5 border-b border-t md:border-l border-gray-100 md:rounded-l-lg bg-white">
 {% highlight php %}
 <?php
 
@@ -148,21 +147,23 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Http\Requests\PostRequest;
 use Illuminate\Database\Eloquent\Model;
-use Flasher\Toastr\Producer\ToastrProducer;
+use Flasher\Toastr\Prime\ToastrFactory;
 
 class PostController extends Controller
 {
-    public function store(PostRequest $request, ToastrProducer $flasher)
-    {
+    public function store(
+        PostRequest $request,
+        ToastrFactory $flasher
+    ) {
         $post = Post::create($request->only(['title', 'body']));
 
         if ($post instanceof Model) {
-            $flasher->success('Data has been saved successfully!');
+            $flasher->addSuccess('Data saved successfully!');
 
             return redirect()->route('posts.index');
         }
 
-        $flasher->error('An error has occurred please try again later.');
+        $flasher->addError('Error occurred, try again later.');
 
         return back();
     }

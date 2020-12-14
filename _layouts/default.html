@@ -13,16 +13,16 @@
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
     <link rel="stylesheet" href="/static/prism.css"/>
-    <base href="https://php-flasher.github.io/">
+<!--    <base href="https://php-flasher.github.io/">-->
 </head>
 <body class="min-h-screen min-w-full pt-12 leading-normal bg-grey-lightest">
 <div class="h-16 fixed z-10 top-0 w-screen bg-white border-grey-light border-b">
     <div class="max-w-lg lg:max-w-2xl mx-auto px-4 py-2">
         <div class="flex items-center flex-no-shrink pt-1">
             <a href="/" class="flex items-center">
-                 <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/php-flasher.png"/>
-                <span class="pr-2 font-normal font-normal leading-none text-3xl text-grey-darkest hidden sm:block">
-                    PHP<span class="text-red">Notify</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
+                <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png" />
+                <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
+                    PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
                 </span>
             </a>
             <div class="flex-grow"></div>
@@ -46,7 +46,7 @@
             <ul class="list-reset mb-8">
                 {% for link in section[1] %}
                 <li>
-                    <a class="leading-loose text-md {% if page.url == link[1] %}text-red{% else %}text-gray-900{% endif %}"
+                    <a class="leading-loose text-md {% if page.url == link[1] %}text-indigo-500{% else %}text-gray-900{% endif %}"
                        href="{{ link[1] }}">{{ link[0] }}</a>
                 </li>
                 {% endfor %}
