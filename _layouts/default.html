@@ -13,11 +13,12 @@
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
     <link rel="stylesheet" href="/static/prism.css"/>
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
 <!--    <base href="https://php-flasher.github.io/">-->
 </head>
-<body class="min-h-screen min-w-full pt-12 leading-normal bg-grey-lightest">
-<div class="h-16 fixed z-10 top-0 w-screen bg-white border-grey-light border-b">
-    <div class="max-w-lg lg:max-w-2xl mx-auto px-4 py-2">
+<body class="min-h-screen min-w-full leading-normal bg-gray-100">
+<div class="h-16 w-screen bg-white border-gray-100 border-b">
+    <div class="container mx-auto lg:px-48 py-2">
         <div class="flex items-center flex-no-shrink pt-1">
             <a href="/" class="flex items-center">
                 <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png" />
@@ -38,24 +39,22 @@
     </div>
 </div>
 
-<main class="lg:flex max-w-2xl mx-auto">
-    <nav id="main-navigation" class="lg:w-auto p-4 w-fullfixed lg:relative flex-no-shrink min-h-screen hidden lg:block">
-        <menu class="p-0 mt-0">
-            {% for section in site.data.menu %}
-            <h2 class="cli-prefixed text-sm leading-loose tracking-wide text-grey uppercase">{{ section[0] }}</h2>
-            <ul class="list-reset mb-8">
-                {% for link in section[1] %}
-                <li>
-                    <a class="leading-loose text-md {% if page.url == link[1] %}text-indigo-500{% else %}text-gray-900{% endif %}"
-                       href="{{ link[1] }}">{{ link[0] }}</a>
-                </li>
-                {% endfor %}
-            </ul>
+<main class="container mx-auto lg:px-48 grid grid-cols-4 sm:grid-cols-3">
+    <menu class="col-span-1 ml-4 sm:hidden">
+        {% for section in site.data.menu %}
+        <h2 class="cli-prefixed text-sm leading-loose tracking-wide text-indigo-600 uppercase">{{ section[0] }}</h2>
+        <ul class="list-reset mb-8">
+            {% for link in section[1] %}
+            <li>
+                <a class="leading-loose text-md {% if page.url == link[1] %}text-indigo-500{% else %}text-gray-900{% endif %}"
+                   href="{{ link[1] }}">{{ link[0] }}</a>
+            </li>
             {% endfor %}
-        </menu>
-    </nav>
-    <div id="main-article" class="flex-grow lg:block">
-        <article class="max-w-lg mx-auto px-4 py-4">
+        </ul>
+        {% endfor %}
+    </menu>
+    <div class="col-span-3">
+        <article class="mx-auto py-4">
             {% unless page.hide_title %}
             <h1 class="mb-1">{% if page.alternate_title %}{{ page.alternate_title }}{% else %}{{ page.title }}{% endif %}</h1>
             <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">

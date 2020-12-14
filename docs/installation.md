@@ -5,7 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP Notify consists of multiple parts. Besides the main package you'll need __producer__ and a __renderer__.
+PHP flasher consists of multiple parts. Besides the main package you'll need __producer__ and a __renderer__.
 
 First you'll need to install the main package. This package provides the base functionality, some interfaces and a base implementation.
 
