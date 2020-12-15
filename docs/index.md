@@ -1,6 +1,6 @@
 ---
 permalink: /docs/
-title: Flash notifications for PHP
+title: A powerful and flexible flash notifications system for PHP
 hide_title: true
 published_at: 2020-11-28
 updated_at: 2020-11-28
@@ -30,14 +30,14 @@ rewrites and no big investments upfront and no vendor-lock in.
 
 # Why use PHP Flasher ?
 
-The PHP Flasher project supports many notification libraries : __toastr.js__, __sweet alert 2__, __pflasher__, __noty__ and __notyf__
+Flasher supports many notification libraries : __toastr.js__, __sweet alert 2__, __pnotify__, __noty__ and __notyf__
 and its highly extendable so you can add custom adapters.
 
 This library is designed, so you can take full control when creating you notifications :
 
-> * Display multiple notifications
-> * Sort and filter notifications
-> * Render notification from JSON response with Ajax or Websockets
+> * Display multiple notifications at the same time
+> * Sort and filter notifications like a database
+> * Render notification from JSON response
 > * Limit the amount displayed notifications
 > * Show notifications from different adapters at the same time
 > * Framework agnostic with integration for: Laravel and Symfony
@@ -45,9 +45,9 @@ This library is designed, so you can take full control when creating you notific
 
 # Getting Started
 
-* **[Intallation]()**
-* **[Toastr]()**
-* **[Sweet Alert]()**
-* **[Pnotify]()**
-* **[Notyf]()**
-* **[Noty](/docs/noty)**
+* **[Intallation](/docs/installation/)**
+* **[Toastr](/docs/adapter/toastr/)**
+* **[Sweet Alert](/docs/adapter/sweet-alert/)**
+* **[Pnotify](/docs/adapter/pnotify/)**
+* **[Notyf](/docs/adapter/notyf/)**
+* **[Noty](/docs/adapter/noty/)**

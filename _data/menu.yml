@@ -12,13 +12,9 @@ Adapters:
     Sweet Alert: '/docs/adapter/sweet-alert/'
     Pnotify: '/docs/adapter/pnotify/'
     Notyf: '/docs/adapter/notyf/'
+    Noty: '/docs/adapter/noty/'
 
 Advanced:
-    Producers: '/docs/advanced/producers/'
-    Presenters: '/docs/advanced/presenters/'
-    Renderers: '/docs/advanced/renderers/'
-    Middlewares: '/docs/advanced/middlewares/'
+    Factories: '/docs/advanced/factories/'
+    Events: '/docs/advanced/events/'
     Stamps: '/docs/advanced/stamps/'
-    Filters: '/docs/advanced/filters/'
-    Criteria: '/docs/advanced/criteria/'
-    Specifications: '/docs/advanced/specifications/'
