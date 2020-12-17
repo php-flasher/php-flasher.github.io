@@ -72,7 +72,7 @@ class PostController extends Controller
     {
         $post = Post::create($request->only(['title', 'body']));
 
-        if ($post instanceof Model) {
+        if ($post instanceof Post) {
             $flasher->addSuccess('Data has been saved successfully!');
 
             return redirect()->route('posts.index');
