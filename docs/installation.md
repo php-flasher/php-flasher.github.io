@@ -5,7 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP flasher consists of multiple parts. Besides the main package you'll need __producer__ and a __renderer__.
+PHP flasher consists of multiple parts. Besides the main package every **library** has its own github repository.
 
 First you'll need to install the main package. This package provides the base functionality, some interfaces and a base implementation.
 
@@ -13,14 +13,18 @@ First you'll need to install the main package. This package provides the base fu
 composer require php-flasher/flasher
 ```
 
-Here is an example of the __producer__ and the __presenter__ for the **toastr** library
+PHP Flasher also offers a solid integration with Laravel and Symfony :
 
+### For Laravel:
 ```bash
-composer require php-flasher/flasher-toastr
+composer require php-flasher/flasher-laravel
 ```
 
-There's also a symfony specific package which offers a solid integration with the framework.
+### For Symfony:
 
 ```bash
-composer require php-flasher/flasher-symfony-toastr
+composer require php-flasher/flasher-symfony
 ```
+
+By default PHP Flasher came with a __Template__ based adapter wich provide a __tailwindcss__ and __bootstrap__ notification templates,
+and you can also download others implementations : __toastr__, __noty__, __notyf__, __pnotify__ and __sweet alert__.

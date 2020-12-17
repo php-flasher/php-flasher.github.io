@@ -51,3 +51,5 @@ This library is designed, so you can take full control when creating you notific
 * **[Pnotify](/docs/adapter/pnotify/)**
 * **[Notyf](/docs/adapter/notyf/)**
 * **[Noty](/docs/adapter/noty/)**
+* **[Tailwind CSS](/docs/adapter/template/tailwindcss/)**
+* **[Bootstrap](/docs/adapter/template/bootstrap/)**
