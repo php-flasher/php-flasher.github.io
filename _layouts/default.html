@@ -12,70 +12,117 @@
     {% unless site.data.dev.dev_mode %}
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
-    <link rel="stylesheet" href="/static/prism.css"/>
     <link rel="icon" type="image/png" href="/static/favicon.png"/>
-    <!--    <base href="https://php-flasher.github.io/">-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" />-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/xcode.min.css"/>
 </head>
-<body class="min-h-screen min-w-full leading-normal bg-gray-100 overflow-x-hidden">
-<div class="h-16 w-screen bg-white border-b">
-    <div class="container mx-auto lg:px-48 py-2">
-        <div class="flex items-center flex-no-shrink pt-1">
-            <a href="/" class="flex items-center">
-                <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png" />
-                <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
-                    PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
-                </span>
-            </a>
-            <div class="flex-grow"></div>
-            <a href="#" id="menu-toggle"
-               class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
-                <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                </svg>
-                <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
-                </svg>
-            </a>
+<body class="flex flex-col min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
+
+    <div class="h-16 w-screen bg-white border-b border-indigo-200">
+        <div class="container mx-auto py-2">
+            <div class="flex items-center flex-no-shrink pt-1">
+                <a href="/" class="flex items-center">
+                    <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png"/>
+                    <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
+                        PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark"
+                                                                            style="top: -20px;">{{ site.data.project.version }}</sup>
+                    </span>
+                </a>
+                <div class="flex-grow"></div>
+                <a href="#" id="menu-toggle"
+                   class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
+                    <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 20 20">
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                    <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 20 20">
+                        <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<main class="container mx-auto lg:px-48 grid sm:grid-cols-3 md:grid-cols-4">
-    <menu class="col-span-1 ml-4 sm:hidden md:block">
-        {% for section in site.data.menu %}
+    <main class="container mx-auto grid sm:grid-cols-3 md:grid-cols-4 flex-grow">
+        <menu class="col-span-1 ml-4 sm:hidden md:block">
+            {% for section in site.data.menu %}
             <h2 class="cli-prefixed text-sm leading-loose tracking-wide text-indigo-600 uppercase">{{ section[0] }}</h2>
             <ul class="list-reset mb-8">
                 {% for link in section[1] %}
-                    <li>
-                        <a class="leading-loose text-md {% if page.url == link[1] %}text-indigo-500{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
-                    </li>
+                <li>
+                    <a class="leading-loose text-md {% if page.url == link[1] %}text-indigo-500{% else %}text-gray-900{% endif %}"
+                       href="{{ link[1] }}">{{ link[0] }}</a>
+                </li>
                 {% endfor %}
             </ul>
-        {% endfor %}
-    </menu>
-    <div class="col-span-3">
-        <article class="mx-auto py-4">
-            {% unless page.hide_title %}
+            {% endfor %}
+        </menu>
+        <div class="col-span-3">
+            <article class="mx-auto py-4">
+                {% unless page.hide_title %}
                 <h1 class="mb-1">
                     {% if page.alternate_title %}
-                        {{ page.alternate_title }}
+                    {{ page.alternate_title }}
                     {% else %}
-                        {{ page.title }}
+                    {{ page.title }}
                     {% endif %}
                 </h1>
                 <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">
                     {% if page.published_at != page.updated_at %}
-                        Last updated at {{ page.updated_at | date_to_long_string }} |
+                    Last updated at {{ page.updated_at | date_to_long_string }} |
                     {% endif %}
                     Published at {{ page.published_at | date_to_long_string }}
                 </p>
-            {% endunless %}
-            {{ content }}
-        </article>
-    </div>
-</main>
-{% include compact-footer.html %}
-<script src="/static/prism.js" type="application/javascript"></script>
+                {% endunless %}
+                {{ content }}
+            </article>
+        </div>
+    </main>
+
+    {% include compact-footer.html %}
 <script src="/static/menu.js" type="application/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/twig.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script>
+    var snippets = document.querySelectorAll('.snippet');
+    snippets.forEach(function (snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button data-clipboard-snippet title="copy to clipboard" class="btn-clipboard text-indigo-500 focus:outline-none focus:text-indigo-900 transform focus:scale-75"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20"><path fill="#6366F1" d="M6 6V2c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h4zm2 0h4a2 2 0 0 1 2 2v4h4V2H8v4zM2 8v10h10V8H2z"/></svg></button>');
+    });
+
+    var btns = document.querySelectorAll('.btn-clipboard');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('mouseleave', clearTooltip);
+        btns[i].addEventListener('blur', clearTooltip);
+    }
+
+    function clearTooltip(e) {
+        e.currentTarget.classList.remove('tooltipped');
+        e.currentTarget.classList.remove('tooltipped-s');
+        e.currentTarget.removeAttribute('aria-label');
+    }
+
+    function showTooltip(elem, msg) {
+        elem.classList.add('tooltipped');
+        elem.classList.add('tooltipped-s');
+        elem.setAttribute('aria-label', msg);
+    }
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function (trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+
+    clipboardSnippets.on('success', function (e) {
+        e.clearSelection();
+        showTooltip(e.trigger, 'Copied!');
+    });
+
+    hljs.initHighlightingOnLoad();
+</script>
 </body>
 </html>

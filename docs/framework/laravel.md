@@ -12,9 +12,7 @@ From laravel 4.0 to laravel 8.
 
 you can install the package using composer
 
-```bash
-$ composer require php-flasher/flasher-laravel
-```
+<pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
 
 Then add the service provider to `config/app.php`. in Laravel version 5.5 and beyond  this step can be skipped if package auto-discovery is enabled.
 
@@ -28,21 +26,17 @@ Then add the service provider to `config/app.php`. in Laravel version 5.5 and be
 
 As optional if you want to change the default configuration, you can publish the configuration file:
 
-```bash 
-$ php artisan vendor:publish --tag='flasher-config'
-```
+<pre class="snippet"><code>php artisan vendor:publish --tag='flasher-config'</code></pre>
 
 You need also to publish **javascript** files needed to hander notifications rendering:
 
-```bash 
-$ php artisan vendor:publish --tag='flasher-public'
-```
+<pre class="snippet"><code>php artisan vendor:publish --tag='flasher-public'</code></pre>
 
 ## Usage:
  
 1. add  `@flasher_render` at the bottom of your blade view
 
-```html
+```twig
 <!doctype html>
 <html>
     <head>

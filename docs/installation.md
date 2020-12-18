@@ -13,6 +13,7 @@ First you'll need to install the main package. This package provides the base fu
 composer require php-flasher/flasher
 ```
 
+
 PHP Flasher also offers a solid integration with Laravel and Symfony :
 
 ### For Laravel:

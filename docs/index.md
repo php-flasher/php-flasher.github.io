@@ -11,15 +11,18 @@ updated_at: 2020-11-28
     <h1 class="text-indigo-900 mt-1">
         PHP<span class="text-indigo-500">Flasher</span>
     </h1>
+    <p class="mt-5">
+        <a href="https://www.linkedin.com/in/younes-khoubza/"><img src="https://img.shields.io/badge/author-@yoeunes-blue.svg" alt="Author"></a>
+        <a href="https://github.com/php-flasher/flasher"><img src="https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square" alt="Source Code"></a>
+        <a href="https://github.com/php-flasher/flasher/releases"><img src="https://img.shields.io/github/tag/php-flasher/flasher.svg" alt="Latest Version"></a>
+        <a href="https://packagist.org/packages/php-flasher/flasher"><img src="https://img.shields.io/badge/packagist-php--flasher/flasher-orange.svg?style=flat-square" alt="Packagist"></a>
+        <a href="https://github.com/php-flasher/flasher/blob/master/LICENSE"><img src="https:////img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License"></a>
+        <a href="https://packagist.org/packages/php-flasher/flasher"><img src="https://img.shields.io/packagist/dt/php-flasher/flasher.svg" alt="Total Downloads"></a>
+        <img src="https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square" alt="php >=5.3">
+        <a href="https://opencollective.com/php-flasher"><img src="https://opencollective.com/php-flasher/tiers/sponsor/badge.svg?label=sponsor&amp;color=brightgreen" alt="Sponsors"></a>
+        <a href="https://opencollective.com/php-flasher"><img src="https://opencollective.com/php-flasher/tiers/backer/badge.svg?label=backer&amp;color=brightgreen" alt="Backers"></a>
+    </p>
 </div>
-
-[![Author](https://img.shields.io/badge/author-@yoeunes-blue.svg)](https://www.linkedin.com/in/younes-khoubza/)
-[![Source Code](https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square)](https://github.com/php-flasher/flasher)
-[![Latest Version](https://img.shields.io/github/tag/php-flasher/flasher.svg)](https://github.com/php-flasher/flasher/releases)
-[![Packagist](https://img.shields.io/badge/packagist-php--flasher/flasher-orange.svg?style=flat-square)](https://packagist.org/packages/php-flasher/flasher)
-[![Software License](https:////img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/php-flasher/flasher/blob/master/LICENSE)
-[![Total Downloads](https://img.shields.io/packagist/dt/php-flasher/flasher.svg)](https://packagist.org/packages/php-flasher/flasher)
-![php >=5.3](https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square)
 
 # What is PHP Flasher ?
 
