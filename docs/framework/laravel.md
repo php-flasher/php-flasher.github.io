@@ -36,45 +36,45 @@ You need also to publish **javascript** files needed to hander notifications ren
  
 1. add  `@flasher_render` at the bottom of your blade view
 
-```twig
-<!doctype html>
-<html>
-    <head>
-        <title>Toastr.js</title>
-    </head>
-    <body>
-        
-    </body>
-    @flasher_render
-</html>
+    ```twig
+    <!doctype html>
+    <html>
+        <head>
+            <title>Toastr.js</title>
+        </head>
+        <body>
+            
+        </body>
+        @flasher_render
+    </html>
 ```
 
 2. dispatch `notifications` from anywhere in your application
 
-```php 
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Post;
-use App\Http\Requests\PostRequest;
-use Flasher\Prime\FlasherInterface;
-
-class PostController extends Controller
-{
-    public function store(PostRequest $request, FlasherInterface $flasher)
+    ```php 
+    <?php
+    
+    namespace App\Http\Controllers;
+    
+    use App\Post;
+    use App\Http\Requests\PostRequest;
+    use Flasher\Prime\FlasherInterface;
+    
+    class PostController extends Controller
     {
-        $post = Post::create($request->only(['title', 'body']));
-
-        if ($post instanceof Post) {
-            $flasher->addSuccess('Data has been saved successfully!');
-
-            return redirect()->route('posts.index');
+        public function store(PostRequest $request, FlasherInterface $flasher)
+        {
+            $post = Post::create($request->only(['title', 'body']));
+    
+            if ($post instanceof Post) {
+                $flasher->addSuccess('Data has been saved successfully!');
+    
+                return redirect()->route('posts.index');
+            }
+    
+            $flasher->addError('An error has occurred please try again later.');
+    
+            return back();
         }
-
-        $flasher->addError('An error has occurred please try again later.');
-
-        return back();
     }
-}
-```
+    ```

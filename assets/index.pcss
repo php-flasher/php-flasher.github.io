@@ -2,37 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.snippet {
-    @apply relative;
+body {
+    @apply text-gray-900;
+    font-size: 15px;
+    font-weight: 400;
+    font-stretch: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a {
+    @apply text-indigo-600;
+}
+
+pre {
+    @apply relative my-4 p-2 rounded shadow border border-gray-50 bg-white;
 }
 
 .snippet .btn-clipboard {
     @apply absolute;
-    top: 8px;
+    top: 14px;
     right: 12px;
 }
 
 img {
     @apply inline;
     vertical-align: initial;
-}
-
-.cli-prefixed::before {
-    content: '#';
-}
-
-.text-shadow {
-    /*text-shadow: 0 1px 1px rgba(34, 41, 47, 0.4);*/
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-}
-
-.bg-white-faded {
-    background: linear-gradient(-180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.bg-decorated > * {
-    position: relative;
-    z-index: 1;
 }
 
 .menu-closed\:shown {
@@ -47,64 +42,9 @@ img {
     @apply hidden;
 }
 
-.focus\:outline-0 {
-    outline: 0;
-    -webkit-appearance: none;
-}
-
-.focus\:placeholder-white:focus::placeholder {
-    color: transparent;
-}
-
-.algolia-autocomplete {
-    width: 100% !important
-}
-
-@media (max-width: 768px) {
-    .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
-        max-width: calc(100vw - 3rem) !important;
-        width: calc(100vw - 3rem) !important;
-        min-width: 0 !important;
-        width: calc(100vw - 3rem) !important;
-        margin-left: 16px !important;
-        right: -2rem !important;
-    }
-    .algolia-autocomplete .algolia-docsearch-suggestion--content {
-        width: 100% !important;
-        padding-left: 0 !important;
-    }
-    .algolia-autocomplete .algolia-docsearch-suggestion--content:before {
-        display: none !important;
-    }
-    .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-        display: none !important;
-    }
-}
-
-body {
-    @apply text-gray-900;
-    font-size: 15px;
-    font-weight: 400;
-    font-stretch: 100%;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-a {
-    @apply text-indigo-600;
-}
-
 h1, h2, h3 {
     font-weight: normal;
-    @apply font-normal;
-}
-
-a {
-    text-decoration: none;
+    @apply font-semibold my-6;
 }
 
 article h1 {
@@ -173,47 +113,4 @@ article blockquote :last-child {
     height: 60vh;
     width: 100%;
     background: linear-gradient(-180deg, rgba(241, 245, 248, 0) 0%, rgba(241, 245, 248, 1) 100%), url('/static/squares.svg') repeat center center;
-}
-
-@screen md {
-    .md\:right-half-bg-black:before {
-        position: absolute;
-        display: block;
-        content: " ";
-        top: 0;
-        bottom: 0;
-        left: calc(50% + 20px);
-        right: 0;
-        z-index: -1;
-        @apply bg-white border border-gray-200 border-r-0;
-    }
-    .md\:left-half-bg-black:before {
-        position: absolute;
-        display: block;
-        content: " ";
-        top: 0;
-        bottom: 0;
-        right: calc(50% + 20px);
-        left: 0;
-        z-index: -1;
-        @apply bg-white border border-gray-200 border-l-0;
-    }
-}
-
-.highlight {
-    @apply text-left;
-}
-
-@screen lg {
-    #main-article div.highlight {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        border-radius: 0px;
-    }
-}
-
-@screen md {
-    .highlight {
-        @apply rounded-lg;
-    }
 }

@@ -31168,37 +31168,45 @@ video {
           animation: bounce 1s infinite;
 }
 
-.snippet {
+body {
+  --tw-text-opacity: 1;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  font-size: 15px;
+  font-weight: 400;
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+a {
+  --tw-text-opacity: 1;
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
+}
+
+pre {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(249, 250, 251, var(--tw-border-opacity));
+  border-radius: 0.25rem;
+  border-width: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
   position: relative;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .snippet .btn-clipboard {
   position: absolute;
-  top: 8px;
+  top: 14px;
   right: 12px;
 }
 
 img {
   display: inline;
   vertical-align: initial;
-}
-
-.cli-prefixed::before {
-  content: '#';
-}
-
-.text-shadow {
-  /*text-shadow: 0 1px 1px rgba(34, 41, 47, 0.4);*/
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-}
-
-.bg-white-faded {
-  background: linear-gradient(-180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.bg-decorated > * {
-  position: relative;
-  z-index: 1;
 }
 
 .menu-closed\:shown {
@@ -31213,77 +31221,11 @@ img {
   display: none;
 }
 
-.focus\:outline-0 {
-  outline: 0;
-  -webkit-appearance: none;
-}
-
-.focus\:placeholder-white:focus::-moz-placeholder {
-  color: transparent;
-}
-
-.focus\:placeholder-white:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.focus\:placeholder-white:focus::placeholder {
-  color: transparent;
-}
-
-.algolia-autocomplete {
-  width: 100% !important
-}
-
-@media (max-width: 768px) {
-  .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
-    max-width: calc(100vw - 3rem) !important;
-    width: calc(100vw - 3rem) !important;
-    min-width: 0 !important;
-    width: calc(100vw - 3rem) !important;
-    margin-left: 16px !important;
-    right: -2rem !important;
-  }
-
-  .algolia-autocomplete .algolia-docsearch-suggestion--content {
-    width: 100% !important;
-    padding-left: 0 !important;
-  }
-
-  .algolia-autocomplete .algolia-docsearch-suggestion--content:before {
-    display: none !important;
-  }
-
-  .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-    display: none !important;
-  }
-}
-
-body {
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-  font-size: 15px;
-  font-weight: 400;
-  font-stretch: 100%;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  --tw-text-opacity: 1;
-  color: rgba(79, 70, 229, var(--tw-text-opacity));
-}
-
 h1, h2, h3 {
   font-weight: normal;
-  font-weight: 400;
-}
-
-a {
-  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 article h1 {
@@ -31386,60 +31328,6 @@ article blockquote :last-child {
   height: 60vh;
   width: 100%;
   background: linear-gradient(-180deg, rgba(241, 245, 248, 0) 0%, rgba(241, 245, 248, 1) 100%), url('/static/squares.svg') repeat center center;
-}
-
-@media (min-width: 768px) {
-  .md\:right-half-bg-black:before {
-    position: absolute;
-    display: block;
-    content: " ";
-    top: 0;
-    bottom: 0;
-    left: calc(50% + 20px);
-    right: 0;
-    z-index: -1;
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    --tw-border-opacity: 1;
-    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-    border-width: 1px;
-    border-right-width: 0px;
-  }
-
-  .md\:left-half-bg-black:before {
-    position: absolute;
-    display: block;
-    content: " ";
-    top: 0;
-    bottom: 0;
-    right: calc(50% + 20px);
-    left: 0;
-    z-index: -1;
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    --tw-border-opacity: 1;
-    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-    border-width: 1px;
-    border-left-width: 0px;
-  }
-}
-
-.highlight {
-  text-align: left;
-}
-
-@media (min-width: 1024px) {
-  #main-article div.highlight {
-    margin-left: -1rem;
-    margin-right: -1rem;
-    border-radius: 0px;
-  }
-}
-
-@media (min-width: 768px) {
-  .highlight {
-    border-radius: 0.5rem;
-  }
 }
 
 @media (min-width: 640px) {
