@@ -5,7 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP Flasher offers a solid integration with Laravel Framework, and it also support older version of the framework
+PHP Flasher offers a solid integration with theLaravel Framework, and it also support older version of the framework
 From laravel 4.0 to laravel 8.
 
 ## installation : 

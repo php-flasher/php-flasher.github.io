@@ -35,8 +35,7 @@ public function registerBundles()
 
 ## Default configuration :
 
-```yaml
-flasher:
+<pre class="snippet"><code>flasher:
     default: 'template'
     adapters:
         template:
@@ -64,4 +63,4 @@ flasher:
             options:
                 timeout: 5000
                 position: 'top-right'
-```
+</code></pre>
