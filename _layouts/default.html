@@ -44,8 +44,8 @@
         </div>
     </div>
 
-    <main class="lg:container mx-auto px-6 grid sm:grid-cols-3 md:grid-cols-4 flex-grow gap-4">
-        <div class="col-span-1 lg:ml-4 sm:hidden md:block lg:px-12">
+    <main class="lg:container md:mx-auto px-6 md:grid sm:grid-cols-3 md:grid-cols-4 flex-grow md:gap-4">
+        <nav id="main-navigation" class="col-span-1 lg:ml-4 hidden md:block px-2 lg:px-12">
             {% for section in site.data.menu %}
                 <h2 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase">{{ section[0] }}</h2>
                 <ul class="list-reset mb-8">
@@ -56,8 +56,8 @@
                     {% endfor %}
                 </ul>
             {% endfor %}
-        </div>
-        <div class="col-span-3">
+        </nav>
+        <div id="main-article" class="col-span-3">
             <article class="mx-auto py-4">
                 {% unless page.hide_title %}
                 <h1 class="mb-1">
