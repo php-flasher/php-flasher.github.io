@@ -5,27 +5,20 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP flasher consists of multiple parts. Besides the main package every **library** has its own github repository.
+PHP flasher consists of multiple parts and came with a default `template` driver which include `tailwindcss` and `bootstrap` notifications. 
 
-First you'll need to install the main package. This package provides the base functionality, some interfaces and a base implementation.
+PHP Flasher can be installed using composer.
 
-```bash
-composer require php-flasher/flasher
-```
+<pre class="snippet"><code>composer require php-flasher/flasher</code></pre>
 
+Additionally, you may want to install an extra adapter (library) to show a specific types of toast notifications, you can find the adapters in the menu.
 
 PHP Flasher also offers a solid integration with Laravel and Symfony :
 
 ### For Laravel:
-```bash
-composer require php-flasher/flasher-laravel
-```
+<pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
+
 
 ### For Symfony:
 
-```bash
-composer require php-flasher/flasher-symfony
-```
-
-By default PHP Flasher came with a __Template__ based adapter wich provide a __tailwindcss__ and __bootstrap__ notification templates,
-and you can also download others implementations : __toastr__, __noty__, __notyf__, __pnotify__ and __sweet alert__.
+<pre class="snippet"><code>composer require php-flasher/flasher-symfony</code></pre>
