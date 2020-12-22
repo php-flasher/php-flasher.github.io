@@ -64,3 +64,50 @@ public function registerBundles()
                 timeout: 5000
                 position: 'top-right'
 </code></pre>
+
+## Usage :
+
+1. add ``{{ "{{ flasher_render() " }}}}`` at the bottom of your base template
+    ```twig
+    <!doctype html>
+    <html>
+        <head>
+            <title>Toastr.js</title>
+        </head>
+        <body>
+            
+        </body>
+        {{ "{{ flasher_render() " }}}}
+    </html>
+    ```
+
+2. dispatch `notifiactions` from anywhere in you application
+    ```php
+    <?php
+
+    namespace App\Controller;
+
+    use Flasher\Prime\FlasherInterface;
+    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+    use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\Routing\Annotation\Route;
+
+    class NotifyController extends AbstractController
+    {
+       /**
+        * @param FlasherInterface $flasher
+        *
+        * @return Response
+        */
+        public function flasher(FlasherInterface $flasher): Response
+        {
+            // ... 
+
+            $flasher->addSuccess('Data has been saved successfully!');
+
+            // ...
+
+            return $this->render('notify/index.html.twig');
+        }
+    }    
+    ```

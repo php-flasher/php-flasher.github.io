@@ -13,79 +13,82 @@
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
     <link rel="icon" type="image/png" href="/static/favicon.png"/>
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" />-->
+    <!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/xcode.min.css"/>
 </head>
 <body class="flex flex-col min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
 
-    <div class="h-16 w-screen bg-white border-b border-indigo-200">
-        <div class="lg:container px-4 mx-auto py-2">
-            <div class="flex items-center flex-no-shrink pt-1">
-                <a href="/" class="flex items-center">
-                    <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png"/>
-                    <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
+<div class="h-16 w-screen bg-white border-b border-indigo-200">
+    <div class="lg:container px-4 mx-auto py-2">
+        <div class="flex items-center flex-no-shrink pt-1">
+            <a href="/" class="flex items-center">
+                <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png"/>
+                <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
                         PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark"
                                                                             style="top: -20px;">{{ site.data.project.version }}</sup>
                     </span>
-                </a>
-                <div class="flex-grow"></div>
-                <a href="#" id="menu-toggle"
-                   class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
-                    <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 20 20">
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                    </svg>
-                    <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 20 20">
-                        <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
-                    </svg>
-                </a>
-            </div>
+            </a>
+            <div class="flex-grow"></div>
+            <a href="#" id="menu-toggle"
+               class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
+                <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 20 20">
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+                <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 20 20">
+                    <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+                </svg>
+            </a>
         </div>
     </div>
+</div>
 
-    <main class="lg:container md:mx-auto px-6 md:grid sm:grid-cols-3 md:grid-cols-4 flex-grow md:gap-4">
-        <nav id="main-navigation" class="col-span-1 lg:ml-4 hidden md:block px-2 lg:px-12">
-            {% for section in site.data.menu %}
-                <h2 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase">{{ section[0] }}</h2>
-                <ul class="list-reset mb-8">
-                    {% for link in section[1] %}
-                        <li class="{% if page.url == link[1] %}bg-indigo-500{% endif %} px-6 rounded">
-                            <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+<main class="lg:container md:mx-auto px-6 md:grid sm:grid-cols-3 md:grid-cols-4 flex-grow md:gap-4">
+    <nav id="main-navigation" class="col-span-1 lg:ml-4 hidden md:block px-2 lg:px-12">
+        {% for section in site.data.menu %}
+        <h2 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase">{{ section[0] }}</h2>
+        <ul class="list-reset mb-8">
+            {% for link in section[1] %}
+            <li class="{% if page.url == link[1] %}bg-indigo-500{% endif %} px-6 rounded">
+                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}"
+                   href="{{ link[1] }}">{{ link[0] }}</a>
+            </li>
             {% endfor %}
-        </nav>
-        <div id="main-article" class="col-span-3">
-            <article class="mx-auto py-4">
-                {% unless page.hide_title %}
-                <h1 class="mb-1">
-                    {% if page.alternate_title %}
-                    {{ page.alternate_title }}
-                    {% else %}
-                    {{ page.title }}
-                    {% endif %}
-                </h1>
-                <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">
-                    {% if page.published_at != page.updated_at %}
-                    Last updated at {{ page.updated_at | date_to_long_string }} |
-                    {% endif %}
-                    Published at {{ page.published_at | date_to_long_string }}
-                </p>
-                {% endunless %}
-                {{ content }}
-            </article>
-        </div>
-    </main>
+        </ul>
+        {% endfor %}
+    </nav>
+    <div id="main-article" class="col-span-3">
+        <article class="mx-auto py-4">
+            {% unless page.hide_title %}
+            <h1 class="mb-1">
+                {% if page.alternate_title %}
+                {{ page.alternate_title }}
+                {% else %}
+                {{ page.title }}
+                {% endif %}
+            </h1>
+            <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">
+                {% if page.published_at != page.updated_at %}
+                Last updated at {{ page.updated_at | date_to_long_string }} |
+                {% endif %}
+                Published at {{ page.published_at | date_to_long_string }}
+            </p>
+            {% endunless %}
+            {{ content }}
+        </article>
+    </div>
+</main>
 
-    {% include compact-footer.html %}
+{% include compact-footer.html %}
 <script src="/static/menu.js" type="application/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/php.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/bash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/twig.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script src="/static/flasher/flasher.js"></script>
+<script src="/static/flasher/flasher-template.js"></script>
 <script>
     var snippets = document.querySelectorAll('.snippet');
     snippets.forEach(function (snippet) {
@@ -122,6 +125,37 @@
     });
 
     hljs.initHighlightingOnLoad();
+
+    PHPFlasher.render({
+        "scripts": [],
+        "styles": [],
+        "options": {"template": {"timeout": 50000, "position": "top-right"}},
+        "envelopes": [{
+            "notification": {"type": "success", "message": "template message success", "options": []},
+            "handler": "template",
+            "created_at": "2020-12-22 11:23:08",
+            "priority": 0,
+            "template": "                        \n<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-green-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-green-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"check w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 13l4 4L19 7\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-green-600\">\n                Success\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                template message success\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-green-100\">\n        <span class=\"flasher-progress bg-green-600\"><\/span>\n    <\/div>\n<\/div>\n",
+        }, {
+            "notification": {"type": "warning", "message": "template message warning", "options": []},
+            "handler": "template",
+            "created_at": "2020-12-22 11:23:08",
+            "priority": 0,
+            "template": "                        \n<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-yellow-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-yellow-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-yellow-600\">\n                Warning\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                template message warning\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-yellow-100\">\n        <span class=\"flasher-progress bg-yellow-600\"><\/span>\n    <\/div>\n<\/div>\n",
+        }, {
+            "notification": {"type": "error", "message": "template message error", "options": []},
+            "handler": "template",
+            "created_at": "2020-12-22 11:23:08",
+            "priority": 0,
+            "template": "                        \n<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-red-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-red-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"x w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-red-600\">\n                Error\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                template message error\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-red-100\">\n        <span class=\"flasher-progress bg-red-600\"><\/span>\n    <\/div>\n<\/div>\n",
+        }, {
+            "notification": {"type": "info", "message": "template message info", "options": []},
+            "handler": "template",
+            "created_at": "2020-12-22 11:23:08",
+            "priority": 0,
+            "template": "                        \n<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-blue-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-blue-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation-circle w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-blue-600\">\n                Info\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                template message info\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-blue-100\">\n        <span class=\"flasher-progress bg-blue-600\"><\/span>\n    <\/div>\n<\/div>\n",
+        }]
+    });
 </script>
 </body>
 </html>

@@ -50,7 +50,6 @@ You need also to publish **javascript** files needed to hander notifications ren
 ```
 
 2. dispatch `notifications` from anywhere in your application
-
     ```php 
     <?php
     
@@ -62,6 +61,10 @@ You need also to publish **javascript** files needed to hander notifications ren
     
     class PostController extends Controller
     {
+       /**
+        * @param PostRequest      $request
+        * @param FlasherInterface $flasher
+        */
         public function store(PostRequest $request, FlasherInterface $flasher)
         {
             $post = Post::create($request->only(['title', 'body']));
