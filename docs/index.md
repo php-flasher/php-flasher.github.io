@@ -26,10 +26,9 @@ updated_at: 2020-11-28
 
 # What is PHP Flasher ?
 
-PHP Flasher library helps you to add flash notifications to your projects. 
-This library was developed with the idea that you should
-be able to add flash notification to your application with ease and with few lines of code. No application-wide
-rewrites and no big investments upfront and no vendor-lock in.
+Flash messages are a great way to add some simple notifications to users of your website or application about important events that may have happened.
+
+**Flasher** provides a really simple way to give feedback to a user with the flashing system. The flashing system basically makes it possible to record a message at the end of a request and access it next request and only next request.
 
 # Why use PHP Flasher ?
 
