@@ -7,8 +7,8 @@ var PHPFlasher = (function () {
     exports.render = function (_options) {
         exports.addStyles(getStyles(_options), function () {
             exports.addScripts(getScripts(_options), function () {
-                exports.renderOptions(_options.options);
-                exports.renderEnvelopes(_options.envelopes);
+                exports.renderOptions(_options.options || []);
+                exports.renderEnvelopes(_options.envelopes || []);
             });
         });
     };

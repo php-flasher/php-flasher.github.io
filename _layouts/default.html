@@ -87,6 +87,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/bash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/twig.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script src="/static/flasher/flasher.js"></script>
 <script>
     var snippets = document.querySelectorAll('.snippet');
     snippets.forEach(function (snippet) {
@@ -123,6 +124,8 @@
     });
 
     hljs.initHighlightingOnLoad();
+
+    {{ site.data.flasher[page.url].render }}
 </script>
 </body>
 </html>
