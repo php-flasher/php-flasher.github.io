@@ -28,7 +28,8 @@ updated_at: 2020-11-28
 
 Flash messages are a great way to add some simple notifications to users of your website or application about important events that may have happened.
 
-**Flasher** provides a really simple way to give feedback to a user with the flashing system. The flashing system basically makes it possible to record a message at the end of a request and access it next request and only next request.
+**Flasher** provides a simple way to give feedback messages in the current or next page to a user with the flashing system. 
+The flashing system basically makes it possible to record a message and store it within the session so that it can be retrieved when needed.
 
 # Why use PHP Flasher ?
 
