@@ -111,3 +111,19 @@ public function registerBundles()
         }
     }    
     ```
+   
+## options
+
+By default the `template` adapter is used when creating your notification,
+if you want to render another type of notification use the `create()` method of use the specific factory
+instead for more options and autocompletion
+
+### exemple :
+
+```php 
+$adapter = $flasher->addSuccess('This notification will be rendered using the default adapter');
+
+
+$adapter = $flasher->create('toastr');
+$adapter->addSuccess('This notification will be rendered using the toastr adapter');
+```
