@@ -31168,14 +31168,32 @@ video {
           animation: bounce 1s infinite;
 }
 
+hr {
+  --tw-border-opacity: 1;
+  border-color: rgba(224, 231, 255, var(--tw-border-opacity));
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  opacity: 0.75;
+  width: 50%;
+  border-bottom-color: #FFF;
+}
+
 body {
   --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
   font-size: 15px;
   font-weight: 400;
   font-stretch: 100%;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+}
+
+:focus {
+  outline: none;
 }
 
 a {
@@ -31221,6 +31239,22 @@ img {
   display: none;
 }
 
+.focus\:placeholder-none:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.focus\:placeholder-none:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.focus\:placeholder-none:focus::placeholder {
+  opacity: 0;
+}
+
+p, ul {
+  margin-bottom: 1rem;
+}
+
 h1, h2, h3 {
   font-weight: normal;
   font-weight: 600;
@@ -31261,17 +31295,22 @@ article table {
   padding: 1rem;
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  table-layout: auto;
   text-align: left;
-  width: 100%;
+  width: calc(100% + 2rem);
   border-spacing: 0;
   border-collapse: collapse;
 }
 
+article table thead {
+  min-width: 100%;
+}
+
 article p, article table {
-  display: block;
   margin-bottom: 1.5rem;
   max-width: 100%;
   padding: 0px;
+  position: relative;
   overflow: auto;
 }
 
@@ -31281,8 +31320,45 @@ article table td {
   border-top-width: 1px;
 }
 
+div.highlighter-rouge + table {
+  --tw-border-opacity: 1;
+  border-color: rgba(49, 46, 129, var(--tw-border-opacity));
+  border-left-width: 0px;
+  border-top-width: 4px;
+  margin-top: -1rem;
+}
+
+h3 + div.highlighter-rouge {
+  margin-top: 1rem;
+}
+
+article table td {
+  vertical-align: top;
+  --tw-border-opacity: 1;
+  border-color: rgba(199, 210, 254, var(--tw-border-opacity));
+  border-top-width: 1px;
+}
+
 article table th, article table td {
-  padding: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+article table th {
+  --tw-bg-opacity: 1;
+  background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+div.highlighter-rouge + table th {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
 }
 
 article blockquote {

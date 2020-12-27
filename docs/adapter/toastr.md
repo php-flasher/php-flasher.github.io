@@ -23,6 +23,11 @@ This package can be installed through Composer.
 
 # Usage
 
-```php 
+Just instanciate the `ToastrFactory` and start calling build methods
 
+```php
+<?php
+
+// $factory is an instance of ToastrFactory
+$factory->addSuccess('this is a success message');
 ```

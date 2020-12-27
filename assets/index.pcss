@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+hr {
+    @apply border-b border-t border-indigo-100 mt-10 mb-8 opacity-75 w-1/2 mx-auto;
+    border-bottom-color: #FFF;
+}
+
 body {
-    @apply text-gray-900;
+    @apply text-gray-600;
     font-size: 15px;
     font-weight: 400;
     font-stretch: 100%;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
+}
+
+:focus {
+    outline: none;
 }
 
 a {
@@ -42,6 +51,14 @@ img {
     @apply hidden;
 }
 
+.focus\:placeholder-none:focus::placeholder {
+    opacity: 0;
+}
+
+p, ul {
+    @apply mb-4;
+}
+
 h1, h2, h3 {
     font-weight: normal;
     @apply font-semibold my-6;
@@ -60,14 +77,18 @@ article h3 {
 }
 
 article table {
-    @apply text-left p-4 bg-white border-l-4 border-gray-900 mb-4 shadow-md;
-    width: 100%;
+    @apply table-auto text-left p-4 bg-white border-l-4 border-gray-900 mb-4 shadow-md;
+    width: calc(100% + 2rem);
     border-spacing: 0;
     border-collapse: collapse;
 }
 
+article table thead {
+    @apply min-w-full;
+}
+
 article p, article table {
-    @apply mb-6 max-w-full block p-0;
+    @apply mb-6 max-w-full relative p-0;
     overflow: auto;
 }
 
@@ -75,8 +96,29 @@ article table td {
     @apply border-t border-gray-900;
 }
 
+div.highlighter-rouge + table {
+    @apply -mt-4 border-t-4 border-indigo-900 border-l-0;
+}
+
+h3 + div.highlighter-rouge {
+    @apply mt-4;
+}
+
+article table td {
+    vertical-align: top;
+    @apply border-t border-indigo-200;
+}
+
 article table th, article table td {
-    @apply p-2;
+    @apply px-4 py-2;
+}
+
+article table th {
+    @apply bg-indigo-600 text-white font-bold;
+}
+
+div.highlighter-rouge + table th {
+    @apply text-indigo-600 bg-white;
 }
 
 article blockquote {
