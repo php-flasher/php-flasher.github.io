@@ -9,6 +9,8 @@ The Flasher API is the most important interface Flasher describes when you want 
 
 > If you're using a framework like __Laravel__ or __Symfony__, just grabe an instance of __FlasherInterface__.
 
+<br />
+
 ## Simple Usage
 
 ```php
@@ -21,10 +23,10 @@ $notification = $flasher->addFlash(string $type, string $message, array $options
 
 param           | description                                      
 ----------------|------------------------------------------------- 
-`$type`         | success, error, warning, info ....etc            
-`$message`      | your message                                     
+`$type`         | Notification type : success, error, warning, info ....etc            
+`$message`      | The message to be displayed                                     
 `$options`      | Additional options to be available in javascript 
-`$notification` | the notification already stored in the session and ready to be rendered                      
+`$notification` | The notification already stored in the session and ready to be rendered                      
 
 There are also 4 shortcuts for the `addFlash()` method :
 
@@ -72,7 +74,157 @@ param           | description
 ----------------|------------------------------------------------- 
 `$type`         | success, error, warning, info ....etc            
 `$message`      | your message                                     
-`$options`      | Additional options to be available in javascript 
-`$notification` | The created notification                         
+`$options`      | Additional options to be available in javascript handlers
+`$builder`      | Intance of the builder to continue chaining methods                         
+
+---
+
+```php
+$builder = $flasher->success(string $message = null, array $options = array())
+$builder = $flasher->error(string $message = null, array $options = array())
+$builder = $flasher->warning(string $message = null, array $options = array())
+$builder = $flasher->info(string $message = null, array $options = array())
+```
+
+| description                                      
+|------------------------------------------------- 
+| Shortcuts for the $flasher->type() method                                
+                  
+
+---
+
+```php
+$builder = $flasher->message(string $message);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$message`      | your message                                     
+
+---
+
+```php
+$builder = $flasher->options(array $options, bool $merge = true);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$options`      | Array of extra options to be availabe in javascript handlers                                   
+`$merge`        | merge options if you call the options method multiple times                                   
+
+---
+
+```php
+$builder = $flasher->option(string $option, mixed $value);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$option`       | add or update an option key                                   
+`$value`        | the actual value                                   
+
+---
+
+```php
+$builder = $flasher->priority(int $priority);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$priority`     | use this value to filter notification at the rendering level                              
+
+---
+
+```php
+$builder = $flasher->hops(int $hops);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$hops`         | he number of requests in which the message will be present                                 
+
+---
+
+```php
+$builder = $flasher->keep();
+```
+
+| description                                      
+|------------------------------------------------- 
+| Adds one more hop to the current  notification                                
+
+---
+
+```php
+$builder = $flasher->delay(int $delay);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$hops`         | the number of requests in which the message will be waiting to to be ready for rendering                              
+
+---
+
+```php
+$builder = $flasher->now();
+```
+
+| description                                      
+|------------------------------------------------- 
+| Shortcut for $flasher->delay(0)                            
+
+---
+
+```php
+$builder = $flasher->withStamp(StampInterface $stamp);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$stamp`        | Attach a StampInterface to the current notification
+
+---
+
+```php
+$builder = $flasher->with(array $stamps);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$stamps`       | Attach multiple stamps at the same time to the current notification
+
+---
+
+```php
+$builder = $flasher->handler(string $handler);
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$handler`      | The handler name it will be used to choose to correct js library to render the notification
+
+---
+
+```php
+$envelope = $flasher->getEnvelope();
+```
+
+param           | description                                      
+----------------|------------------------------------------------- 
+`$envelope`     | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class
+
+---
+
+> Call the flash methods when the notification is ready to be rendered
+
+
+```php
+$envelope = $flasher->flash(array $stamps = []);
+```
+
+param           | description                                      
+----------------|-------------------------------------------------
+`$stamps`       | Attach multiple stamps at the same time to the current notification
+`$envelope`     | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class
 
 ---
