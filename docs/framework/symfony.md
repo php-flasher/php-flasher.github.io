@@ -8,7 +8,7 @@ updated_at: 2020-11-28
 PHP Flasher offers a solid integration with the Symfony Framework, and it also support older version of the framework
 From laravel 2.7 to 5.2.
 
-## Installtion :
+## Installation :
 
 you can install the bundle using composer
 
@@ -81,7 +81,7 @@ public function registerBundles()
     </html>
     ```
 
-2. dispatch `notifiactions` from anywhere in you application
+2. dispatch `notifications` from anywhere in you application
     ```php
     <?php
 
