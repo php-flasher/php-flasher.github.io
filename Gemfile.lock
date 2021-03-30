@@ -31,7 +31,6 @@ GEM
       terminal-table (~> 1.8)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-postcss (0.4.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (2.1.0)
@@ -42,7 +41,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -77,7 +76,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.1.1)
   jekyll-feed (~> 0.12)
-  jekyll-postcss
   jekyll-redirect-from
   jekyll-sitemap
   minima (~> 2.5)
