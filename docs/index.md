@@ -28,22 +28,22 @@ updated_at: 2020-11-28
 
 Flash messages are a great way to add some simple notifications to users of your website or application about important events that may have happened.
 
-**Flasher** provides a simple way to give feedback messages in the current or next page to a user with the flashing system. 
+**Flasher**  gives a straightforward way to give feedback messages in the current or next page to users with the flashing system. 
 The flashing system basically makes it possible to record a message and store it within the session so that it can be retrieved when needed.
 
 # Why use PHP Flasher ?
 
-Flasher supports many notification libraries : __toastr.js__, __sweet alert 2__, __pnotify__, __noty__ and __notyf__
+Flasher supports many notification libraries : __tailwindcss__, __bootstrap__, __toastr.js__, __sweet alert 2__, __pnotify__, __noty__ and __notyf__
 and its highly extendable so you can add custom adapters.
 
 This library is designed, so you can take full control when creating you notifications :
 
-> * Display multiple notifications at the same time
+> * Show various notifications simultaneously
 > * Sort and filter notifications like a database
 > * Render notification from JSON response
 > * Limit the amount displayed notifications
-> * Show notifications from different adapters at the same time
-> * Framework agnostic with integration for: Laravel and Symfony
+> * Show notifications from various adapters simultaneously
+> * Framework agnostic with implementations for: Laravel and Symfony
 > * ...and more
 
 # Getting Started
