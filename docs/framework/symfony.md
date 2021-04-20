@@ -27,7 +27,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Flasher\Symfony\FlasherBundle(),
+        new Flasher\Symfony\FlasherSymfonyBundle(),
         // ...
     );
 }
@@ -35,34 +35,42 @@ public function registerBundles()
 
 ## Default configuration :
 
-<pre class="snippet"><code>flasher:
-    default: 'template'
-    adapters:
-        template:
-            default: 'tailwindcss'
-            templates:
-                tailwindcss:
-                    view: '@Flasher/tailwindcss.html.twig'
-                    styles:
-                        - 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'
-
-                tailwindcss_bg:
-                    view: '@Flasher/tailwindcss_bg.html.twig'
-                    styles:
-                        - 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'
-
-                bootstrap:
-                    view: '@Flasher/bootstrap.html.twig'
-                    styles:
-                        - 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'
-            scripts:
-                - '/bundles/flasher/flasher-template.js'
-
-            styles: []
-
-            options:
-                timeout: 5000
-                position: 'top-right'
+<pre class="snippet"><code>
+flasher:
+    default: template
+    root_scripts:
+        - 'https://cdn.jsdelivr.net/npm/@flasher/flasher@0.1.3/dist/flasher.min.js'
+    template_factory:
+        default: tailwindcss
+        templates:
+            tailwindcss:
+                view: '@FlasherSymfony/tailwindcss.html.twig'
+                styles:
+                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/base.min.css'
+                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/utilities.css'
+            tailwindcss_bg:
+                view: '@FlasherSymfony/tailwindcss_bg.html.twig'
+                styles:
+                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/base.min.css'
+                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/utilities.css'
+            bootstrap:
+                view: '@FlasherSymfony/bootstrap.html.twig'
+                styles:
+                    - 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'
+    auto_create_from_session: true
+    types_mapping:
+        success:
+            - success
+        error:
+            - error
+            - danger
+        warning:
+            - warning
+            - alarm
+        info:
+            - info
+            - notice
+            - alert
 </code></pre>
 
 ## Usage :
