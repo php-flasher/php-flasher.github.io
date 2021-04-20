@@ -16,4 +16,4 @@ updated_at: 2020-11-28
 
 ### For Symfony
 
-<pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-laravel</code></pre>
+<pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-symfony</code></pre>

@@ -19,7 +19,7 @@ This package can be installed through Composer.
 
 ### For Symfony
 
-<pre class="snippet"><code>composer require php-flasher/flasher-toastr-laravel</code></pre>
+<pre class="snippet"><code>composer require php-flasher/flasher-toastr-symfony</code></pre>
 
 # Usage
 

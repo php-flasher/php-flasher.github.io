@@ -17,4 +17,4 @@ updated_at: 2020-11-28
 
 ### For Symfony
 
-<pre class="snippet"><code>composer require php-flasher/flasher-pnotify-laravel</code></pre>
+<pre class="snippet"><code>composer require php-flasher/flasher-pnotify-symfony</code></pre>
