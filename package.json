@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "cross-env": "^7.0",
-    "laravel-mix": "^6.0"
-  },
-  "dependencies": {
+    "laravel-mix": "^6.0",
     "autoprefixer": "^10.2.5",
+    "is-svg": "^4.3.1",
     "postcss": "^8.2.10",
+    "ssri": "^8.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0"
   }
 }
