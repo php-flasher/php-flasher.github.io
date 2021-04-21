@@ -7,16 +7,13 @@ updated_at: 2020-11-28
 
 # Installation
 
-### For Vanilla PHP 
-
+**For Vanilla PHP:**
 <pre class="snippet"><code>composer require php-flasher/flasher-notyf</code></pre>
 
-### For Laravel
-
+**For Laravel:**
 <pre class="snippet"><code>composer require php-flasher/flasher-notyf-laravel</code></pre>
 
-### For Symfony
-
+**For Symfony:**
 <pre class="snippet"><code>composer require php-flasher/flasher-notyf-symfony</code></pre>
 
 # Usage
@@ -24,8 +21,6 @@ updated_at: 2020-11-28
 Just instanciate the `NotyfFactory` and start calling build methods
 
 ```php
-<?php
-
 namespace App\Controller;
 
 use Flasher\Notyf\Prime\NotyfFactory;

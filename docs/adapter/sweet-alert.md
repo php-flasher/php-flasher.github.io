@@ -6,16 +6,13 @@ updated_at: 2020-11-28
 ---
 # Installation
 
-### For Vanilla PHP 
-
+**For Vanilla PHP:**
 <pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert</code></pre>
 
-### For Laravel
-
+**For Laravel:**
 <pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-laravel</code></pre>
 
-### For Symfony
-
+**For Symfony:**
 <pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-symfony</code></pre>
 
 # Usage
@@ -23,8 +20,6 @@ updated_at: 2020-11-28
 Just instanciate the `SweetAlertFactory` and start calling build methods
 
 ```php
-<?php
-
 namespace App\Controller;
 
 use Flasher\SweetAlert\Prime\SweetAlertFactory;

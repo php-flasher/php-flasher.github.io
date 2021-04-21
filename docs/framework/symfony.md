@@ -5,8 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP Flasher offers a solid integration with the Symfony Framework, and it also support older version of the framework
-From laravel 2.7 to 5.2.
+PHP Flasher offers a solid integration with the Symfony Framework, and it also supports older version of the framework From Symfony 2.7 to 5.2.
 
 ## Installation :
 
@@ -32,6 +31,43 @@ public function registerBundles()
     );
 }
 ```
+
+## Usage :
+
+1. add ``{{ "{{ flasher_render() " }}}}`` at the bottom of your base template
+    ```twig
+    <!doctype html>
+    <html>
+        <head>
+            <title>Toastr.js</title>
+        </head>
+        <body>
+            
+        </body>
+        {{ "{{ flasher_render() " }}}}
+    </html>
+    ```
+
+2. dispatch `notifications` from anywhere in you application
+    ```php
+    namespace App\Controller;
+   
+    use Flasher\Prime\FlasherInterface;
+    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+    use Symfony\Component\HttpFoundation\Response;
+   
+    class NotifyController extends AbstractController
+    {
+        public function flasher(FlasherInterface $flasher): Response
+        {
+            // ... 
+   
+            $flasher->addSuccess('Data has been saved successfully!');
+  
+            return $this->render('notify/index.html.twig');
+        }
+    }    
+    ```
 
 ## Default configuration :
 
@@ -73,64 +109,13 @@ flasher:
             - alert
 </code></pre>
 
-## Usage :
+### examples :
 
-1. add ``{{ "{{ flasher_render() " }}}}`` at the bottom of your base template
-    ```twig
-    <!doctype html>
-    <html>
-        <head>
-            <title>Toastr.js</title>
-        </head>
-        <body>
-            
-        </body>
-        {{ "{{ flasher_render() " }}}}
-    </html>
-    ```
-
-2. dispatch `notifications` from anywhere in you application
- ```php
- <?php
-
- namespace App\Controller;
-
- use Flasher\Prime\FlasherInterface;
- use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
- use Symfony\Component\HttpFoundation\Response;
- use Symfony\Component\Routing\Annotation\Route;
-
- class NotifyController extends AbstractController
- {
-    /**
-     * @param FlasherInterface $flasher
-     *
-     * @return Response
-     */
-     public function flasher(FlasherInterface $flasher): Response
-     {
-         // ... 
-
-         $flasher->addSuccess('Data has been saved successfully!');
-
-         // ...
-
-         return $this->render('notify/index.html.twig');
-     }
- }    
- ```
-   
-## options
-
-By default the `template` adapter is used when creating your notification,
-if you want to render another type of notification use the `create()` method of use the specific factory
-instead for more options and autocompletion
-
-### exemple :
+By default, the `template` adapter is used when creating your notification,
+to use another adapter you could use the `create()` method like the following:
 
 ```php 
 $adapter = $flasher->addSuccess('This notification will be rendered using the default adapter');
-
 
 $adapter = $flasher->create('toastr');
 $adapter->addSuccess('This notification will be rendered using the toastr adapter');

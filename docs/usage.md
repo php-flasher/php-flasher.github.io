@@ -41,7 +41,7 @@ $flasher->addInfo('info message');
 
 ## Notification Builder 
 
-The are only __two__ main steps to render a notification  : __build__ and __flash__ 
+There are only __two__ main steps to render a notification  : __build__ and __flash__ 
 
 ```php
 // Step 1: create your notification and add options
@@ -109,7 +109,7 @@ $builder = $flasher->options(array $options, bool $merge = true);
 
 param           | description                                      
 ----------------|------------------------------------------------- 
-`$options`      | Array of extra options to be availabe in javascript handlers                                   
+`$options`      | Array of extra options to be available in javascript handlers                                   
 `$merge`        | merge options if you call the options method multiple times                                   
 
 ---

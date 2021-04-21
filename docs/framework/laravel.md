@@ -5,8 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP Flasher offers a solid integration with theLaravel Framework, and it also support older version of the framework
-From laravel 4.0 to laravel 8.
+PHP Flasher offers a solid integration with the Laravel Framework, and it also supports older version of the framework From laravel 4.0 to laravel 8.
 
 ## installation : 
 
@@ -14,12 +13,12 @@ you can install the package using composer
 
 <pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
 
-Then add the service provider to `config/app.php`. in Laravel version 5.5 and beyond  this step can be skipped if package auto-discovery is enabled.
+Then add the service provider to `config/app.php`. in Laravel version 5.5 and beyond this step can be skipped if package auto-discovery is enabled.
 
 ```php
 'providers' => [
     ...
-    Flasher\Laravel\FlasherServiceProvider::class
+    Flasher\Laravel\FlasherServiceProvider::class,
     ...
 ];
 ```
@@ -27,10 +26,6 @@ Then add the service provider to `config/app.php`. in Laravel version 5.5 and be
 As optional if you want to change the default configuration, you can publish the configuration file:
 
 <pre class="snippet"><code>php artisan vendor:publish --tag='flasher-config'</code></pre>
-
-You need also to publish **javascript** files needed to hander notifications rendering:
-
-<pre class="snippet"><code>php artisan vendor:publish --tag='flasher-public'</code></pre>
 
 ## Usage:
  
@@ -51,8 +46,6 @@ You need also to publish **javascript** files needed to hander notifications ren
 
 2. dispatch `notifications` from anywhere in your application
     ```php 
-    <?php
-    
     namespace App\Http\Controllers;
     
     use App\Post;
@@ -61,10 +54,6 @@ You need also to publish **javascript** files needed to hander notifications ren
     
     class PostController extends Controller
     {
-       /**
-        * @param PostRequest      $request
-        * @param FlasherInterface $flasher
-        */
         public function store(PostRequest $request, FlasherInterface $flasher)
         {
             $post = Post::create($request->only(['title', 'body']));

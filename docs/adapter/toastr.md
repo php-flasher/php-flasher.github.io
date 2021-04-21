@@ -9,16 +9,13 @@ updated_at: 2020-11-28
 
 This package can be installed through Composer.
 
-### For Vanilla PHP 
-
+**For Vanilla PHP:**
 <pre class="snippet"><code>composer require php-flasher/flasher-toastr</code></pre>
 
-### For Laravel
-
+**For Laravel:**
 <pre class="snippet"><code>composer require php-flasher/flasher-toastr-laravel</code></pre>
 
-### For Symfony
-
+**For Symfony:**
 <pre class="snippet"><code>composer require php-flasher/flasher-toastr-symfony</code></pre>
 
 # Usage
@@ -26,8 +23,6 @@ This package can be installed through Composer.
 Just instanciate the `ToastrFactory` and start calling build methods
 
 ```php
-<?php
-
 namespace App\Controller;
 
 use Flasher\Toastr\Prime\ToastrFactory;
