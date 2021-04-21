@@ -90,35 +90,35 @@ flasher:
     ```
 
 2. dispatch `notifications` from anywhere in you application
-    ```php
-    <?php
+ ```php
+ <?php
 
-    namespace App\Controller;
+ namespace App\Controller;
 
-    use Flasher\Prime\FlasherInterface;
-    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-    use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\Routing\Annotation\Route;
+ use Flasher\Prime\FlasherInterface;
+ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+ use Symfony\Component\HttpFoundation\Response;
+ use Symfony\Component\Routing\Annotation\Route;
 
-    class NotifyController extends AbstractController
-    {
-       /**
-        * @param FlasherInterface $flasher
-        *
-        * @return Response
-        */
-        public function flasher(FlasherInterface $flasher): Response
-        {
-            // ... 
+ class NotifyController extends AbstractController
+ {
+    /**
+     * @param FlasherInterface $flasher
+     *
+     * @return Response
+     */
+     public function flasher(FlasherInterface $flasher): Response
+     {
+         // ... 
 
-            $flasher->addSuccess('Data has been saved successfully!');
+         $flasher->addSuccess('Data has been saved successfully!');
 
-            // ...
+         // ...
 
-            return $this->render('notify/index.html.twig');
-        }
-    }    
-    ```
+         return $this->render('notify/index.html.twig');
+     }
+ }    
+ ```
    
 ## options
 

@@ -18,3 +18,26 @@ updated_at: 2020-11-28
 ### For Symfony
 
 <pre class="snippet"><code>composer require php-flasher/flasher-notyf-symfony</code></pre>
+
+# Usage
+
+Just instanciate the `NotyfFactory` and start calling build methods
+
+```php
+<?php
+
+namespace App\Controller;
+
+use Flasher\Notyf\Prime\NotyfFactory;
+
+class NotifyController
+{
+    public function flasher(NotyfFactory $flasher)
+    {
+        // ... 
+        $flasher->addSuccess('Data has been saved successfully!');
+        
+        // ... redirect or render a view here
+    }
+}    
+```

@@ -17,3 +17,26 @@ updated_at: 2020-11-28
 ### For Symfony
 
 <pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-symfony</code></pre>
+
+# Usage
+
+Just instanciate the `SweetAlertFactory` and start calling build methods
+
+```php
+<?php
+
+namespace App\Controller;
+
+use Flasher\SweetAlert\Prime\SweetAlertFactory;
+
+class NotifyController
+{
+    public function flasher(SweetAlertFactory $flasher)
+    {
+        // ... 
+        $flasher->addSuccess('Data has been saved successfully!');
+        
+        // ... redirect or render a view here
+    }
+}    
+```

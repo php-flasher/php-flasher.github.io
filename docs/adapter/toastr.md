@@ -28,6 +28,18 @@ Just instanciate the `ToastrFactory` and start calling build methods
 ```php
 <?php
 
-// $factory is an instance of ToastrFactory
-$factory->addSuccess('this is a success message');
+namespace App\Controller;
+
+use Flasher\Toastr\Prime\ToastrFactory;
+
+class NotifyController
+{
+    public function flasher(ToastrFactory $flasher)
+    {
+        // ... 
+        $flasher->addSuccess('Data has been saved successfully!');
+        
+        // ... redirect or render a view here
+    }
+}    
 ```
