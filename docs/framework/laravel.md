@@ -5,7 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP Flasher offers a solid integration with the Laravel Framework, and it also supports older version of the framework From laravel 4.0 to laravel 8.
+PHP Flasher offers a solid integration with the Laravel Framework, and it also supports older versions of the framework From laravel 4.0 to laravel 8.
 
 ## installation : 
 
@@ -23,6 +23,12 @@ Then add the service provider to `config/app.php`. in Laravel version 5.5 and be
 ];
 ```
 
+Optionally include the Facade in `config/app.php` if you'd like.
+
+```php
+'Flasher' => Flasher\Laravel\Facade\Flasher::class,
+```
+
 As optional if you want to change the default configuration, you can publish the configuration file:
 
 <pre class="snippet"><code>php artisan vendor:publish --tag='flasher-config'</code></pre>
@@ -35,7 +41,7 @@ As optional if you want to change the default configuration, you can publish the
     <!doctype html>
     <html>
         <head>
-            <title>Toastr.js</title>
+            <title>PHP Flasher</title>
         </head>
         <body>
             
@@ -60,6 +66,7 @@ As optional if you want to change the default configuration, you can publish the
     
             if ($post instanceof Post) {
                 $flasher->addSuccess('Data has been saved successfully!');
+                // using Facade instead : Flasher::addSuccess('Data has been saved successfully!');
     
                 return redirect()->route('posts.index');
             }

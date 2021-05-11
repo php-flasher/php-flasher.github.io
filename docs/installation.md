@@ -39,7 +39,7 @@ The Flasher API is the most important interface Flasher describes when you want 
 > If you're using a framework like __Laravel__ or __Symfony__, just grab an instance of __FlasherInterface__.
 
 ```php
-$flasher->addFlash('success', 'Data has been saved successfully!');
+$flasher->addSuccess('Data has been saved successfully!');
 ```
 
 ```php

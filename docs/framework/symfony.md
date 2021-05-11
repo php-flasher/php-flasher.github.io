@@ -5,7 +5,7 @@ published_at: 2020-11-28
 updated_at: 2020-11-28
 ---
 
-PHP Flasher offers a solid integration with the Symfony Framework, and it also supports older version of the framework From Symfony 2.7 to 5.2.
+PHP Flasher offers a solid integration with the Symfony Framework, and it also supports older versions of the framework From Symfony 2.7 to 5.2.
 
 ## Installation :
 
@@ -111,7 +111,7 @@ flasher:
 
 ### examples :
 
-By default, the `template` adapter is used when creating your notification,
+By default, the **template** adapter is used when creating your notification,
 to use another adapter you could use the `create()` method like the following:
 
 ```php 

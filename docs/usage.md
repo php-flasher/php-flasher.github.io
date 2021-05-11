@@ -75,7 +75,7 @@ param           | description
 `$type`         | success, error, warning, info ....etc            
 `$message`      | your message                                     
 `$options`      | Additional options to be available in javascript handlers
-`$builder`      | Intance of the builder to continue chaining methods                         
+`$builder`      | Instance of the builder to continue chaining methods                         
 
 ---
 
