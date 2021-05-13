@@ -45,94 +45,204 @@ class NotifyController
 
 All methods in the **[Usage](/docs/usage/)** section are available also for `ToastrFactory`
 
+### title :
+The title of the notification
 ```php
-
-// The title of the notification
 $flasher->title(string $title)
+```
 
-// Enable a close button
+### closeButton :
+Enable a close button
+```php
 $flasher->closeButton(bool $closeButton = true)
+```
 
+### closeClass :
+
+```php
 $flasher->closeClass(string $closeClass)
+```
 
+### closeDuration :
+
+```php
 $flasher->closeDuration(int $closeDuration)
+```
 
+### closeEasing :
+
+```php
 $flasher->closeEasing(string $closeEasing)
+```
 
-// Override the close button's HTML.
+### closeHtml :
+Override the close button's HTML.
+```php
 $flasher->closeHtml(string $closeHtml)
+```
 
+### closeMethod :
+
+```php
 $flasher->closeMethod(string $closeMethod)
+```
 
+### closeOnHover :
+
+```php
 $flasher->closeOnHover(bool $closeOnHover = true)
+```
 
+### containerId :
+
+```php
 $flasher->containerId(string $containerId)
+```
 
+### debug :
+
+```php
 $flasher->debug(bool $debug = true)
+```
 
-// In case you want to escape HTML characters in title and message
+### escapeHtml :
+In case you want to escape HTML characters in title and message
+```php
 $flasher->escapeHtml(bool $escapeHtml = true)
+```
 
-// How long the toast will display after a user hovers over it
+### extendedTimeOut :
+How long the toast will display after a user hovers over it
+```php
 $flasher->extendedTimeOut(int $extendedTimeOut)
+```
 
-// Specifies the time during which the pop-up closes in ms
+### hideDuration :
+Specifies the time during which the pop-up closes in ms
+```php
 $flasher->hideDuration(int $hideDuration)
+```
 
-// Indicates the entry transition of the pop-up
+### hideEasing :
+Indicates the entry transition of the pop-up
+```php
 $flasher->hideEasing(string $hideEasing)
+```
 
-// Indicates the opening animation of the pop-up
+### hideMethod :
+Indicates the opening animation of the pop-up
+```php
 $flasher->hideMethod(string $hideMethod)
+```
 
+### iconClass :
+
+```php
 $flasher->iconClass(string $iconClass)
+```
 
+### messageClass :
+
+```php
 $flasher->messageClass(string $messageClass)
+```
 
-// Show newest toast at bottom (top is default)
+### newestOnTop :
+Show newest toast at bottom (top is default)
+```php
 $flasher->newestOnTop(bool $newestOnTop = true)
+```
 
-// Define a callback for when the toast is hidden
+### onHidden :
+Define a callback for when the toast is hidden
+```php
 $flasher->onHidden(string $onHidden)
+```
 
-// Define a callback for when the toast is shown
+### onShown :
+Define a callback for when the toast is shown
+```php
 $flasher->onShown(string $onShown)
+```
 
+### positionClass :
+
+```php
 $flasher->positionClass(string $positionClass)
+```
 
-// Rather than having identical toasts stack, set the preventDuplicates property to true.
-// Duplicates are matched to the previous toast based on their message content.
+### preventDuplicates :
+Rather than having identical toasts stack, set the preventDuplicates property to true.
+Duplicates are matched to the previous toast based on their message content.
+```php
 $flasher->preventDuplicates(bool $preventDuplicates = true)
+```
 
-// Visually indicate how long before a toast expires.
+### progressBar :
+Visually indicate how long before a toast expires.
+```php
 $flasher->progressBar(bool $progressBar = true)
+```
 
+### progressClass :
+
+```php
 $flasher->progressClass(string $progressClass)
+```
 
-// Flip the toastr to be displayed properly for right-to-left languages.
+### rtl :
+Flip the toastr to be displayed properly for right-to-left languages.
+```php
 $flasher->rtl(bool $rtl = true)
+```
 
-// Specifies the time during which the pop-up opens in ms
+### showDuration :
+Specifies the time during which the pop-up opens in ms
+```php
 $flasher->showDuration(int $showDuration)
+```
 
-// Indicates the entry transition of the pop-up
+### showEasing :
+Indicates the entry transition of the pop-up
+```php
 $flasher->showEasing(string $showEasing)
+```
 
-// Indicates the opening animation of the pop-up
+### showMethod :
+Indicates the opening animation of the pop-up
+```php
 $flasher->showMethod(string $showMethod)
+```
 
-// Forces the user to validate the pop-up before closing
+### tapToDismiss :
+Forces the user to validate the pop-up before closing
+```php
 $flasher->tapToDismiss(bool $tapToDismiss = true)
+```
 
+### target :
+```php
 $flasher->target(string $target)
+```
 
-// How long the toast will display without user interaction
+### timeOut :
+How long the toast will display without user interaction
+```php
 $flasher->timeOut(int $timeOut, bool $extendedTimeOut = null)
+```
 
+### titleClass :
+```php
 $flasher->titleClass(string $titleClass)
+```
 
+### toastClass :
+```php
 $flasher->toastClass(string $toastClass)
+```
 
-// Prevent from Auto Hiding
+### persistent :
+Prevent from Auto Hiding
+```php
 $flasher->persistent()
 ```
