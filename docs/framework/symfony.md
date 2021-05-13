@@ -111,8 +111,8 @@ flasher:
 
 ### examples :
 
-By default, the **template** adapter is used when creating your notification,
-to use another adapter you could use the `create()` method like the following:
+By default, the **template** tailwindcss adapter is used when creating your notification,
+to use another adapter you could use the `create()` method:
 
 ```php 
 class PostController
