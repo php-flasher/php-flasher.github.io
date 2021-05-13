@@ -115,8 +115,30 @@ By default, the **template** adapter is used when creating your notification,
 to use another adapter you could use the `create()` method like the following:
 
 ```php 
-$adapter = $flasher->addSuccess('This notification will be rendered using the default adapter');
-
-$adapter = $flasher->create('toastr');
-$adapter->addSuccess('This notification will be rendered using the toastr adapter');
+class PostController
+{
+   public function create(FlasherInterface $flasher): Response
+   {
+      $flasher
+         ->error('An error has occurred, please try again later.')
+         ->priority(3)
+         ->flash();
+   }
+   
+   public function edit(FlasherInterface $flasher): Response
+   {
+      $toastr = $flasher->create('toastr');
+      $toastr->addSuccess('This notification will be rendered using the toastr adapter');
+   }
+   
+   public function update(ToastrFactory $toastr): Response
+   {
+      $toastr
+         ->title('Oops...')
+         ->warning('Something went wrong!')
+         ->timeOut(3000)
+         ->progressBar()
+         ->flash();
+   }
+}
 ```
