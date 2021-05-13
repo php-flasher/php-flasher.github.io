@@ -52,7 +52,7 @@ $flasher->question(string $message = null, array $options = array())
 ### title :
 The title of the popup, as HTML.
 ```php
-$flashe->title(string $title)
+$flasher->title(string $title)
 ```
 
 ### titleText :
