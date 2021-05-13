@@ -7,6 +7,8 @@ updated_at: 2020-11-28
 
 # Installation
 
+For more information about notyf click <a href="https://carlosroso.com/notyf/">here</a>.
+
 **For Vanilla PHP:**
 <pre class="snippet"><code>composer require php-flasher/flasher-notyf</code></pre>
 
@@ -35,4 +37,33 @@ class NotifyController
         // ... redirect or render a view here
     }
 }    
+```
+
+## Notyf specific method builders
+
+All methods in the **[Usage](/docs/usage/)** section are available also for `NotyfFactory`
+
+
+### duration :
+Number of miliseconds before hiding the notification. Use 0 for infinite duration.
+```php
+$flasher->duration(int $duration)
+```
+
+### ripple :
+Whether to show the notification with a ripple effect
+```php
+$flasher->ripple(bool $ripple)
+```
+
+### position :
+Viewport location where notifications are rendered
+```php
+$flasher->position(string $position, string $value)
+```
+
+### dismissible :
+Whether to allow users to dismiss the notification with a button
+```php
+$flasher->dismissible(bool $dismissible)
 ```
