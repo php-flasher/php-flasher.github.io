@@ -14,3 +14,7 @@ Adapters:
     Pnotify: '/docs/adapter/pnotify/'
     Notyf: '/docs/adapter/notyf/'
     Noty: '/docs/adapter/noty/'
+
+Advanced:
+    Stamps: '/docs/advanced/stamps/'
+    Events: '/docs/advanced/events/'

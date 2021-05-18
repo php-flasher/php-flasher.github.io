@@ -34,7 +34,7 @@ public function registerBundles()
 
 ## Usage :
 
-1. add ``{{ "{{ flasher_render() " }}}}`` at the bottom of your base template
+1. add __`{% raw %}{{ flasher_render() }}{% endraw %}`__  at the bottom of your base template
     ```twig
     <!doctype html>
     <html>
@@ -44,7 +44,7 @@ public function registerBundles()
         <body>
             
         </body>
-        {{ "{{ flasher_render() " }}}}
+        {% raw %}{{ flasher_render() }}{% endraw %}
     </html>
     ```
 
