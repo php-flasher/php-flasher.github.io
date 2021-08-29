@@ -7,7 +7,7 @@ updated_at: 2020-11-28
 
 PHP Flasher offers a solid integration with the Laravel Framework, and it also supports older versions of the framework From laravel 4.0 to laravel 8.
 
-## installation : 
+## installation :
 
 you can install the package using composer
 
@@ -34,7 +34,7 @@ As optional if you want to change the default configuration, you can publish the
 <pre class="snippet"><code>php artisan vendor:publish --tag='flasher-config'</code></pre>
 
 ## Usage:
- 
+
 1. add  `@flasher_render` at the bottom of your blade view
 
     ```twig
@@ -44,35 +44,35 @@ As optional if you want to change the default configuration, you can publish the
             <title>PHP Flasher</title>
         </head>
         <body>
-            
+
+            @flasher_render
         </body>
-        @flasher_render
     </html>
 ```
 
 2. dispatch `notifications` from anywhere in your application
-    ```php 
+    ```php
     namespace App\Http\Controllers;
-    
+
     use App\Post;
     use App\Http\Requests\PostRequest;
     use Flasher\Prime\FlasherInterface;
-    
+
     class PostController extends Controller
     {
         public function store(PostRequest $request, FlasherInterface $flasher)
         {
             $post = Post::create($request->only(['title', 'body']));
-    
+
             if ($post instanceof Post) {
                 $flasher->addSuccess('Data has been saved successfully!');
                 // using Facade instead : Flasher::addSuccess('Data has been saved successfully!');
-    
+
                 return redirect()->route('posts.index');
             }
-    
+
             $flasher->addError('An error has occurred please try again later.');
-    
+
             return back();
         }
     }

@@ -42,31 +42,31 @@ public function registerBundles()
             <title>Toastr.js</title>
         </head>
         <body>
-            
+
+            {% raw %}{{ flasher_render() }}{% endraw %}
         </body>
-        {% raw %}{{ flasher_render() }}{% endraw %}
     </html>
     ```
 
 2. dispatch `notifications` from anywhere in you application
     ```php
     namespace App\Controller;
-   
+
     use Flasher\Prime\FlasherInterface;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Response;
-   
+
     class NotifyController extends AbstractController
     {
         public function flasher(FlasherInterface $flasher): Response
         {
-            // ... 
-   
+            // ...
+
             $flasher->addSuccess('Data has been saved successfully!');
-  
+
             return $this->render('notify/index.html.twig');
         }
-    }    
+    }
     ```
 
 ## Default configuration :
@@ -74,8 +74,7 @@ public function registerBundles()
 <pre class="snippet"><code>
 flasher:
     default: template
-    root_scripts:
-        - 'https://cdn.jsdelivr.net/npm/@flasher/flasher@0.1.3/dist/flasher.min.js'
+    root_script: 'https://cdn.jsdelivr.net/npm/@flasher/flasher@0.1.3/dist/flasher.min.js'
     template_factory:
         default: tailwindcss
         templates:
@@ -114,7 +113,7 @@ flasher:
 By default, the **template** tailwindcss adapter is used when creating your notification,
 to use another adapter you could use the `create()` method:
 
-```php 
+```php
 class PostController
 {
    public function create(FlasherInterface $flasher): Response
@@ -124,13 +123,13 @@ class PostController
          ->priority(3)
          ->flash();
    }
-   
+
    public function edit(FlasherInterface $flasher): Response
    {
       $toastr = $flasher->create('toastr');
       $toastr->addSuccess('This notification will be rendered using the toastr adapter');
    }
-   
+
    public function update(ToastrFactory $toastr): Response
    {
       $toastr
