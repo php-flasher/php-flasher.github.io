@@ -131,7 +131,7 @@ class MyComponent extends Component
 
 ### event handlers context :
 
-Every listener method accept an `array $data` parameter which contain the following data :
+Every listener method accept an **array $data** parameter which contain the following data :
 
 ```php
     public function sweetAlertConfirmed(array $data)

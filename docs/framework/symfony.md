@@ -69,45 +69,6 @@ public function registerBundles()
     }
     ```
 
-## Default configuration :
-
-<pre class="snippet"><code>
-flasher:
-    default: template
-    root_script: 'https://cdn.jsdelivr.net/npm/@flasher/flasher@0.1.3/dist/flasher.min.js'
-    template_factory:
-        default: tailwindcss
-        templates:
-            tailwindcss:
-                view: '@FlasherSymfony/tailwindcss.html.twig'
-                styles:
-                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/base.min.css'
-                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/utilities.css'
-            tailwindcss_bg:
-                view: '@FlasherSymfony/tailwindcss_bg.html.twig'
-                styles:
-                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/base.min.css'
-                    - 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/utilities.css'
-            bootstrap:
-                view: '@FlasherSymfony/bootstrap.html.twig'
-                styles:
-                    - 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'
-    auto_create_from_session: true
-    types_mapping:
-        success:
-            - success
-        error:
-            - error
-            - danger
-        warning:
-            - warning
-            - alarm
-        info:
-            - info
-            - notice
-            - alert
-</code></pre>
-
 ### examples :
 
 By default, the **template** tailwindcss adapter is used when creating your notification,
