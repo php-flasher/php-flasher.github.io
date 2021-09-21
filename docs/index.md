@@ -13,7 +13,7 @@ updated_at: 2020-11-28
     </h1>
     <p class="mt-5">
         <a href="https://www.linkedin.com/in/younes-khoubza/"><img src="https://img.shields.io/badge/author-@yoeunes-blue.svg" alt="Author"></a>
-        <a href="https://github.com/php-flasher/flasher"><img src="https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square" alt="Source Code"></a>
+        <a href="https://github.com/php-flasher/php-flasher"><img src="https://img.shields.io/badge/source-php--flasher/flasher-blue.svg?style=flat-square" alt="Source Code"></a>
         <a href="https://github.com/php-flasher/flasher/releases"><img src="https://img.shields.io/github/tag/php-flasher/flasher.svg" alt="Latest Version"></a>
         <a href="https://packagist.org/packages/php-flasher/flasher"><img src="https://img.shields.io/badge/packagist-php--flasher/flasher-orange.svg?style=flat-square" alt="Packagist"></a>
         <a href="https://github.com/php-flasher/flasher/blob/master/LICENSE"><img src="https:////img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License"></a>
@@ -28,7 +28,7 @@ updated_at: 2020-11-28
 
 Flash messages are a great way to add some simple notifications to users of your website or application about important events that may have happened.
 
-**Flasher** gives a straightforward way to give feedback messages in the current or next page to users with the flashing system. 
+**Flasher** gives a straightforward way to give feedback messages in the current or next page to users with the flashing system.
 The flashing system basically makes it possible to record a message and store it within the session so that it can be retrieved when needed.
 
 # Why use PHP Flasher ?
