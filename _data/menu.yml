@@ -2,7 +2,7 @@ PHP flasher:
     Introduction: '/docs/'
     Installation: '/docs/installation/'
     Usage: '/docs/usage/'
-    <span class="github-link-icon"><img class="w-5 h-5 mr-1" src="/static/github.svg" /></span> Github: 'https://github.com/php-flasher/flasher'
+    <span class="github-link-icon"><img class="w-5 h-5 mr-1" src="/static/github.svg" /></span> Github: 'https://github.com/php-flasher/php-flasher'
 
 Frameworks:
     Symfony: '/docs/framework/symfony/'
