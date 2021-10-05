@@ -13,8 +13,7 @@
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
     <link rel="icon" type="image/png" href="/static/favicon.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" />
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/xcode.min.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github-dark-dimmed.min.css"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4D78SM7TC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,7 +25,6 @@
         gtag('js', new Date());
         gtag('config', 'G-T4D78SM7TC');
     </script>
-    <script data-ad-client="ca-pub-9317139815225070" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="flex flex-col min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
 
@@ -34,21 +32,18 @@
     <div class="lg:container px-4 mx-auto py-2">
         <div class="flex items-center flex-no-shrink pt-1">
             <a href="/" class="flex items-center">
-                <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png"/>
+                <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png" />
                 <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
-                        PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark"
-                                                                            style="top: -20px;">{{ site.data.project.version }}</sup>
-                    </span>
+                    PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
+                </span>
             </a>
             <div class="flex-grow"></div>
             <a href="#" id="menu-toggle"
                class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
-                <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 20 20">
+                <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
                 </svg>
-                <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 20 20">
+                <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                     <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
                 </svg>
             </a>
@@ -63,8 +58,7 @@
         <ul class="list-reset mb-8">
             {% for link in section[1] %}
             <li class="{% if page.url == link[1] %}bg-indigo-500{% endif %} px-6 rounded">
-                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}"
-                   href="{{ link[1] }}">{{ link[0] }}</a>
+                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
             </li>
             {% endfor %}
         </ul>
@@ -94,10 +88,10 @@
 
 {% include compact-footer.html %}
 <script src="/static/menu.js" type="application/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/php.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/bash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/languages/twig.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/twig.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 <script src="/static/flasher/flasher.js"></script>
 <script>
