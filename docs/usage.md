@@ -2,16 +2,15 @@
 permalink: /docs/usage/
 title: Flasher Usage
 published_at: 2020-11-28
-updated_at: 2020-11-28
+updated_at: 2021-10-05
 ---
 
-The Flasher API is the most important interface Flasher describes when you want to use Flasher in your application.
+> If you like PHPFlasher please consider giving it a star on github.
 
-> If you're using a framework like __Laravel__ or __Symfony__, just grabe an instance of __FlasherInterface__.
+If you're using a framework like __Laravel__ or __Symfony__, just grab an instance of __FlasherInterface__ from the
+container, and you're ready to go
 
-<br />
-
-## Simple Usage
+## General Usage
 
 ```php
 $flasher->addFlash('success', 'Data has been saved successfully!');
@@ -25,7 +24,7 @@ param           | description
 ----------------|------------------------------------------------- 
 `$type`         | Notification type : success, error, warning, info ....etc            
 `$message`      | The message to be displayed                                     
-`$options`      | Additional options to be available in javascript 
+`$options`      | Options for the javascript libraries 
 `$notification` | The notification already stored in the session and ready to be rendered                      
 
 There are also 4 shortcuts for the `addFlash()` method :

@@ -2,20 +2,22 @@
 permalink: /docs/installation/
 title: Installation
 published_at: 2020-11-28
-updated_at: 2020-11-28
+updated_at: 2021-10-05
 ---
 
-PHP flasher consists of multiple parts and came with a default __template__ driver which include __tailwindcss__ and __bootstrap__ notifications. 
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** consists of multiple parts and
+came with a default __template__ driver which include __tailwindcss__ and __bootstrap__ notifications.
 
 ## Installation
 
-PHP Flasher can be installed using composer.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using
+composer.
 
 <pre class="snippet"><code>composer require php-flasher/flasher</code></pre>
 
-Additionally, you may want to install an extra adapter (library) to show a specific types of toast notifications, you can find the adapters in the menu.
+Additionally, you may want to install an extra adapter (library) to display a specific type of notifications, you can
+find the adapters in the menu.
 
-* **[Installation](/docs/installation/)**
 * **[Toastr](/docs/adapter/toastr/)**
 * **[Sweet Alert](/docs/adapter/sweet-alert/)**
 * **[Pnotify](/docs/adapter/pnotify/)**
@@ -23,8 +25,10 @@ Additionally, you may want to install an extra adapter (library) to show a speci
 * **[Noty](/docs/adapter/noty/)**
 * **[Tailwind CSS](/docs/adapter/template/tailwindcss/)**
 * **[Bootstrap](/docs/adapter/template/bootstrap/)**
+* **[Desktop](/docs/adapter/template/desktop/)**
 
-PHP Flasher also offers a solid integration with Laravel and Symfony :
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** also offers a solid integration
+with Laravel and Symfony :
 
 **For Laravel**:
 <pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
@@ -32,15 +36,10 @@ PHP Flasher also offers a solid integration with Laravel and Symfony :
 **For Symfony**:
 <pre class="snippet"><code>composer require php-flasher/flasher-symfony</code></pre>
 
-## Simple Usage
+## General Usage
 
-The Flasher API is the most important interface Flasher describes when you want to use Flasher in your application.
-
-> If you're using a framework like __Laravel__ or __Symfony__, just grab an instance of __FlasherInterface__.
-
-```php
-$flasher->addSuccess('Data has been saved successfully!');
-```
+If you're using a framework like __Laravel__ or __Symfony__, just grab an instance of __FlasherInterface__ from the
+container
 
 ```php
 <?php
@@ -53,11 +52,12 @@ class NotifyController
 {
     public function flasher(FlasherInterface $flasher)
     {
-        // ... 
-        
+        // ...
+
         $flasher->addSuccess('Data has been saved successfully!');
-        
+
+        flasher('Data has been saved successfully!') // only for the Laravel framework
         // ... redirect or render a view here
     }
-}    
+}
 ```
