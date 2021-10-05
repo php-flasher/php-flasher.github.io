@@ -40,7 +40,7 @@
         PHP<span class="text-indigo-600">Flasher</span>.
     </h1>
     <h3 class="text-2xl mx-auto text-gray-600 mt-4 px-8 leading-tight">
-        A powerful and flexible flash notifications system for PHP <br> With Symfony and Laravel implementations
+        A powerful and flexible flash notification system for PHP <br> With Symfony and Laravel implementations
     </h3>
 
     {% include leader-links.html %}
@@ -59,12 +59,6 @@
         </a>
         <a href="https://packagist.org/packages/php-flasher/flasher">
             <img src="https://img.shields.io/packagist/php-v/php-flasher/flasher.svg?style=flat-square"/>
-        </a>
-        <a href="https://opencollective.com/php-flasher">
-            <img src="https://opencollective.com/php-flasher/tiers/sponsor/badge.svg?label=sponsor&amp;color=brightgreen" alt="Sponsors">
-        </a>
-        <a href="https://opencollective.com/php-flasher">
-            <img src="https://opencollective.com/php-flasher/tiers/backer/badge.svg?label=backer&amp;color=brightgreen" alt="Backers">
         </a>
     </p>
 </header>
@@ -276,7 +270,37 @@
 {% include footer.html %}
 <script>
     flasherRender = function() {
-      Flasher.getInstance().render({"envelopes":[{"notification":{"type":"info","message":"Welcom back","options":[]},"handler":"template","created_at":"2021-10-05 01:45:22","uuid":"2B3E8E7A-36F3-470E-93D7-4710EE0E0DAC","priority":0,"template":"<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-blue-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-blue-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation-circle w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-blue-600\">\n                Info\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Welcom back\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-blue-100\">\n        <span class=\"flasher-progress bg-blue-600\"><\/span>\n    <\/div>\n<\/div>\n"},{"notification":{"type":"warning","message":"Are you sure you want to proceed ?","options":[]},"handler":"template","created_at":"2021-10-05 01:45:22","uuid":"205B983A-71B7-49E3-A693-F562356B5BEC","priority":0,"template":"<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-yellow-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-yellow-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-yellow-600\">\n                Warning\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Are you sure you want to proceed ?\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-yellow-100\">\n        <span class=\"flasher-progress bg-yellow-600\"><\/span>\n    <\/div>\n<\/div>\n"},{"notification":{"type":"error","message":"Oops! Something went wrong!","options":[]},"handler":"template","created_at":"2021-10-05 01:45:22","uuid":"00B76D03-6A5D-4534-8B15-681B55B9A341","priority":0,"template":"<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-red-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-red-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"x w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-red-600\">\n                Error\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Oops! Something went wrong!\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-red-100\">\n        <span class=\"flasher-progress bg-red-600\"><\/span>\n    <\/div>\n<\/div>\n"},{"notification":{"type":"success","message":"Data has been saved successfully!","options":[]},"handler":"template","created_at":"2021-10-05 01:45:22","uuid":"A46DF58E-CD6B-46F2-9984-2AB6A38C9EFF","priority":0,"template":"<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-green-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-green-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"check w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 13l4 4L19 7\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-green-600\">\n                Success\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Data has been saved successfully!\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-green-100\">\n        <span class=\"flasher-progress bg-green-600\"><\/span>\n    <\/div>\n<\/div>\n"}],"scripts":[],"styles":[],"options":[]});
+        Flasher.getInstance().render({
+            "envelopes": [{
+                "notification": {"type": "info", "message": "Welcome back", "options": []},
+                "handler": "template",
+                "created_at": "2021-10-05 01:45:22",
+                "uuid": "2B3E8E7A-36F3-470E-93D7-4710EE0E0DAC",
+                "priority": 0,
+                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-blue-600\">\n    <div class=\"flex items-center px-2 py-2 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-blue-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation-circle w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-blue-600\">\n                Info\n            <\/p>\n            <p class=\"text-sm leading-5 text-gray-500\">\n                Welcome back\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-blue-100\">\n        <span class=\"flasher-progress bg-blue-600\"><\/span>\n    <\/div>\n<\/div>\n"
+            }, {
+                "notification": {"type": "warning", "message": "Are you sure you want to proceed ?", "options": []},
+                "handler": "template",
+                "created_at": "2021-10-05 01:45:22",
+                "uuid": "205B983A-71B7-49E3-A693-F562356B5BEC",
+                "priority": 0,
+                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-yellow-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-yellow-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-yellow-600\">\n                Warning\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Are you sure you want to proceed ?\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-yellow-100\">\n        <span class=\"flasher-progress bg-yellow-600\"><\/span>\n    <\/div>\n<\/div>\n"
+            }, {
+                "notification": {"type": "error", "message": "Oops! Something went wrong!", "options": []},
+                "handler": "template",
+                "created_at": "2021-10-05 01:45:22",
+                "uuid": "00B76D03-6A5D-4534-8B15-681B55B9A341",
+                "priority": 0,
+                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-red-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-red-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"x w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-red-600\">\n                Error\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Oops! Something went wrong!\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-red-100\">\n        <span class=\"flasher-progress bg-red-600\"><\/span>\n    <\/div>\n<\/div>\n"
+            }, {
+                "notification": {"type": "success", "message": "Data has been saved successfully!", "options": []},
+                "handler": "template",
+                "created_at": "2021-10-05 01:45:22",
+                "uuid": "A46DF58E-CD6B-46F2-9984-2AB6A38C9EFF",
+                "priority": 0,
+                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-green-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-green-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"check w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 13l4 4L19 7\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-green-600\">\n                Success\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Data has been saved successfully!\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-green-100\">\n        <span class=\"flasher-progress bg-green-600\"><\/span>\n    <\/div>\n<\/div>\n"
+            }], "scripts": [], "styles": [], "options": []
+        });
     }
 
     if (!window.Flasher && !document.querySelector('script[src="https://cdn.jsdelivr.net/npm/@flasher/flasher@0.2.2/dist/flasher.min.js"]')) {
