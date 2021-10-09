@@ -22,7 +22,7 @@ updated_at: 2021-10-05
     </p>
 </div>
 
-> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a star on <a href="https://github.com/php-flasher/php-flasher">github</a>.
+> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a star on <a href="https://github.com/php-flasher/php-flasher">github</a>, by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation ❤️.
 
 # What is PHP Flasher ?
 
