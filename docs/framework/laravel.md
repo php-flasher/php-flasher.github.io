@@ -2,18 +2,21 @@
 permalink: /docs/framework/laravel/
 title: A solid integration with the Laravel framework
 published_at: 2020-11-28
-updated_at: 2020-11-28
+updated_at: 2021-10-10
 ---
 
-PHP Flasher offers a solid integration with the Laravel Framework, and it also supports older versions of the framework From laravel 4.0 to laravel 8.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with the Laravel Framework, and it also supports older versions of the framework From laravel 4.0 to laravel 8.
 
 ## installation :
 
-you can install the package using composer
+You can install the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** Laravel package using composer.<br />
+This is the base package for all Laravel adapters and which display `tailwindcss` notifications by default.
 
 <pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
 
-Then add the service provider to `config/app.php`. in Laravel version 5.5 and beyond this step can be skipped if package auto-discovery is enabled.
+Then add the service provider to `config/app.php`.
+
+> in Laravel version 5.5 and beyond this step can be skipped if package auto-discovery is enabled.
 
 ```php
 'providers' => [
@@ -23,7 +26,7 @@ Then add the service provider to `config/app.php`. in Laravel version 5.5 and be
 ];
 ```
 
-Optionally include the Facade in `config/app.php` if you'd like.
+Optionally include the Facade in `config/app.php`.
 
 ```php
 'Flasher' => Flasher\Laravel\Facade\Flasher::class,
