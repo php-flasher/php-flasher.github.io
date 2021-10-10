@@ -69,7 +69,8 @@ As optional if you want to change the default configuration, you can publish the
 
             if ($post instanceof Post) {
                 $flasher->addSuccess('Data has been saved successfully!');
-                // using Facade instead : Flasher::addSuccess('Data has been saved successfully!');
+                // if you like to use Facades : Flasher::addSuccess('Data has been saved successfully!');
+                // or functions flasher()->addSuccess('Data has been saved successfully!');
 
                 return redirect()->route('posts.index');
             }
