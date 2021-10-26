@@ -25,7 +25,6 @@
         gtag('js', new Date());
         gtag('config', 'G-T4D78SM7TC');
     </script>
-    <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"yoeunes",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
 </head>
 <body class="flex flex-col min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
 
@@ -134,5 +133,6 @@
 
     {{ site.data.flasher[page.url].render }}
 </script>
+<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"yoeunes",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
 </body>
 </html>
