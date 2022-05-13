@@ -17,3 +17,5 @@ exclude:
   - "node_modules"
   - "Gemfile*"
   - ".idea"
+
+url: https://php-flasher.io
