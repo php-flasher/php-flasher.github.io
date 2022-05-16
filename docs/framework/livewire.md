@@ -2,42 +2,29 @@
 permalink: /docs/framework/livewire/
 title: A solid integration with Laravel Livewire
 published_at: 2021-08-29
-updated_at: 2021-08-29
+updated_at: 2022-05-08
 ---
 
-PHP Flasher offers a solid integration with the Laravel Livewire v2.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Livewire.
 
-## installation :
+## Installation :
 
-you can install the package using composer
-
-<pre class="snippet"><code>composer require php-flasher/flasher-livewire</code></pre>
-
-Then add the service provider to `config/app.php`. this step can be skipped if package auto-discovery is enabled.
-
-```php
-'providers' => [
-    ...
-    Flasher\Livewire\FlasherLivewireServiceProvider::class,
-    ...
-];
-```
+Please follow the same installation steps as for the [Laravel Installation](/docs/framework/laravel) package.
 
 ## Usage:
 
-1. add  `@flasher_livewire_render` at the bottom of your blade view
+1. add  `@flasher_render` at the bottom of your blade view
 
     ```twig
     <!doctype html>
     <html>
         <head>
-            <title>PHP Flasher</title>
+            <title>PHPFlasher</title>
             @livewireStyles
+            @flasher_render // Should be placed before rendering any Livewire component
         </head>
         <body>
 
-            @flasher_render <!-- this render all flasher notifications. -->
-            @flasher_livewire_render <!-- this render livewire notifications only. -->
             @livewireScripts
         </body>
     </html>
@@ -53,8 +40,8 @@ Then add the service provider to `config/app.php`. this step can be skipped if p
     {
         public function someAction()
         {
-            toastr()->livewire()->addSuccess('notification using toastr library');
-            sweetAlert()->livewire()->addInfo('notification using sweetalert library');
+            toastr()->addSuccess('notification using toastr library'); // composer require php-flasher/flasher-toastr-laravel
+            sweetalert()->addInfo('notification using sweetalert library'); // composer require php-flasher/flasher-sweetalert-laravel
         }
 
         public function render()
@@ -65,7 +52,7 @@ Then add the service provider to `config/app.php`. this step can be skipped if p
 
 ## Events:
 
-For sweet alert you can listen to **Confirmed**, **Denied** and **Dismissed** from withing you component
+For sweetalert you can listen to **Confirmed**, **Denied** and **Dismissed** from withing you component
 
 ```php
 namespace App\Http\Livewire;
@@ -75,49 +62,35 @@ use Livewire\Component;
 class MyComponent extends Component
 {
     protected $listeners = [
-        'sweetAlertEvent', // for all events from sweet alert
-        'sweetAlertConfirmed', // only when confirm button is clicked
-        'sweetAlertDenied' => 'onDeny', // if you want a custom method name
-        'sweetAlertDismissed',
+        'sweetalertEvent', // for all events from sweetalert
+        'sweetalertConfirmed', // only when confirm button is clicked
+        'sweetalertDenied' => 'onDeny', // if you want a custom method name
+        'sweetalertDismissed',
     ];
 
     public function someAction()
     {
-        sweetAlert()
-            ->livewire([
-                'context data' => 'Younes KHOUZA', // this will be available inside handlers method
-            ])
-            ->showDenyButton()
-            ->addInfo('confirm or deny action');
+        sweetalert()->showDenyButton()->addInfo('confirm or deny action');
     }
 
-    public function sweetAlertEvent(array $data)
+    public function sweetAlertEvent(array $payload)
     {
-        toastr()
-            ->livewire()
-            ->closeButton()
-            ->addInfo('Event received from sweet alert');
+        toastr()->closeButton()->addInfo('Event received from sweetalert');
     }
 
-    public function sweetAlertConfirmed(array $data)
+    public function sweetAlertConfirmed(array $payload)
     {
-        toastr()
-            ->livewire()
-            ->addSuccess('The "Confirm" button was clicked');
+        toastr()->addSuccess('The "Confirm" button was clicked');
     }
 
-    public function onDeny(array $data)
+    public function onDeny(array $payload)
     {
-        toastr()
-            ->livewire()
-            ->addError('The "Deny" button was clicked');
+        toastr()->addError('The "Deny" button was clicked');
     }
 
-    public function sweetAlertDismissed(array $data)
+    public function sweetAlertDismissed(array $payload)
     {
-        toastr()
-            ->livewire()
-            ->addWarning('The "Cancel" button was clicked');
+        toastr()->addWarning('The "Cancel" button was clicked');
     }
 
     public function render()
@@ -127,23 +100,20 @@ class MyComponent extends Component
 }
 ```
 
-> If the name of the event and the method you're calling match, you can leave out the key. For example: `protected $listeners = ['sweetAlertConfirmed'];` will call the `sweetAlertConfirmed` method when the `sweetAlertConfirmed` event is emitted.
+> If the name of the event and the method you're calling match, you can leave out the key. For example: `protected $listeners = ['sweetalertConfirmed'];` will call the `sweetalertConfirmed` method when the `sweetalertConfirmed` event is emitted.
 
 ### event handlers context :
 
 Every listener method accept an **array $data** parameter which contain the following data :
 
 ```php
-    public function sweetAlertConfirmed(array $data)
+    public function sweetAlertConfirmed(array $payload)
     {
-        $context = $data['context'];
-        $promise = $data['promise'];
-        $response = $data['response'];
+        $promise = $payload['promise'];
+        $envelope = $payload['envelope'];
     }
 ```
 
-> **context** : the same context data passed to `->livewire(['context' => 'value'])` .
+> **promise** : the resolved promise from **sweetalert**.
 
-> **promise** : the resolved promise from **sweet alert**.
-
-> **response** : the notification where the event happened.
+> **envelope** : the notification where the event happened.

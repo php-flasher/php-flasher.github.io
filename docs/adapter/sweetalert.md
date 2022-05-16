@@ -1,8 +1,8 @@
 ---
-permalink: /docs/adapter/sweet-alert/
+permalink: /docs/adapter/sweetalert/
 title: Sweet Alert 2 adapter for PHP flasher
 published_at: 2020-11-28
-updated_at: 2020-11-28
+updated_at: 2022-05-08
 ---
 
 For more information about Sweet Alert 2 click <a href="https://sweetalert2.github.io/">here</a>.
@@ -10,13 +10,13 @@ For more information about Sweet Alert 2 click <a href="https://sweetalert2.gith
 # Installation
 
 **For Vanilla PHP:**
-<pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert</code></pre>
+<pre class="snippet"><code>composer require php-flasher/flasher-sweetalert</code></pre>
 
 **For Laravel:**
-<pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-laravel</code></pre>
+<pre class="snippet"><code>composer require php-flasher/flasher-sweetalert-laravel</code></pre>
 
 **For Symfony:**
-<pre class="snippet"><code>composer require php-flasher/flasher-sweet-alert-symfony</code></pre>
+<pre class="snippet"><code>composer require php-flasher/flasher-sweetalert-symfony</code></pre>
 
 # Usage
 

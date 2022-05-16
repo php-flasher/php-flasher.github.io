@@ -27,20 +27,21 @@
     <base href="https://php-flasher.io/"/>
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
+    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css"/>
     <link rel="icon" type="image/png" href="/static/favicon.png"/>
-    <script data-ad-client="ca-pub-9317139815225070" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-9317139815225070" async src="https://pagead2.googchlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="bg-gray-100 min-h-screen bg-squared leading-tight leader overflow-x-hidden">
 {% include size-helper.html %}
 <header class="container mx-auto flex flex-col items-center text-center">
     <a href="/">
-        <img class="max-w-sm" src="/static/php-flasher.png" alt="PHP Flasher"/>
+        <img class="max-w-sm" src="/static/php-flasher.png" alt="PHPFlasher"/>
     </a>
     <h1 class="text-6xl text-gray-600">
-        🔔 PHP<span class="text-indigo-600">Flasher</span>.
+        PHP<span class="text-indigo-600">Flasher</span>.
     </h1>
     <h3 class="text-2xl mx-auto text-gray-600 mt-4 px-8 leading-tight">
-        A powerful and flexible flash notification system for PHP <br> With Symfony and Laravel implementations
+        A powerful and flexible flash notification system for PHP <br> With <i class="fa-brands fa-symfony text-black"></i> Symfony and <i class="fa-brands fa-laravel text-red-900"></i> Laravel implementations
     </h3>
 
     {% include leader-links.html %}
@@ -63,80 +64,50 @@
     </p>
 </header>
 
-<section class="my-10 bg-indigo-900 py-10 px-4">
+<section class="my-10 bg-indigo-600 py-10 px-4">
     <div class="container mx-auto lg:grid lg:grid-cols-2">
         <section class="col-span-1">
             <h2 class="text-3xl text-white leading-tight mb-2 flex">
-                <span class="h-10 w-10 mr-3 rounded-full bg-indigo-500 flex items-center justify-center">
-                    <img src="/static/icons/thumbs-up.svg" class="w-5"/>
-                </span>
-                Why use PHPFlasher ?
+                <i class="fa-duotone fa-heart-circle-check text-white mr-1"></i> Why use <span class="ml-1 text-gray-300">PHP</span><span class="text-gray-400 mr-1">Flasher</span> ?
             </h2>
             <div class="text-indigo-300 text-xl mt-8 md:ml-16">
                 This library is designed, so you can take full control when creating you notifications :
 
                 <ul class="text-white mt-8">
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Show various notifications simultaneously</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Sort and filter notifications</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Render notifications from JSON response (ajax)</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Limit the amount of displayed notifications</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Show Desktop notifications for : Linux, MacOS and Windows</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Framework-agnostic with implementations for: Laravel and Symfony</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">Autocomplete for PHPSTORM</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">You can always create an adapter yourself</span>
                     </li>
                     <li class="flex text-xl mt-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                            <path stroke-width="2" fill="#818CF8"
-                                  d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                        </svg>
+                        <i class="fa-duotone fa-check-circle text-white mr-2"></i>
                         <span class="prose ml-4">...and more</span>
                     </li>
                 </ul>
@@ -150,23 +121,18 @@
 
 <section class="my-8 container mx-auto lg:grid lg:grid-cols-3 gap-8 px-4">
     <section class="col-span-2">
-        <img src="/static/flasher-usage.png" alt="Flasher usage"/>
+        <img src="/static/flasher-usage.png" alt="PHPFlasher usage"/>
     </section>
     <section class="col-span-1">
         <h2 class="text-3xl text-indigo-600 leading-tight mb-2 flex">
-                <span class="h-10 w-10 mr-3 rounded-full bg-indigo-500 flex items-center justify-center">
-                    <img src="/static/icons/heart.svg" class="inline-block w-5"/>
-                </span>
-            Easy To use to fit your taste
+            <i class="fa-duotone fa-flask mr-2"></i> Easy To use to fit your taste
         </h2>
         <p class="text-gray-600 text-xl mt-8 md:ml-16">
-            This library was developed with the idea that you should
-            be able to add flash notification to your application easily with few lines of code.
+            This library was developed with the idea that you should be able to add flash notification to your application easily with few lines of code.
         </p>
         <p class="text-gray-600 text-xl mt-8 md:ml-16">
             inject the <strong class="text-indigo-600">Flasher</strong> service and show a default notification library,
-            or choose a specific one by calling the <strong class="text-green-500">create(<span class="text-yellow-600">string</span>
-            <span>$library</span>)</strong> method.
+            or choose a specific one by calling the <strong class="text-indigo-600">create(string $library)</strong> method.
         </p>
         <p class="text-gray-600 text-xl mt-8 md:ml-16">
             Build you notification and add options to it using the default notification <strong class="text-indigo-600">builder</strong>, several notification builders exists to provide the assistance needed when creating your notifications.
@@ -177,54 +143,39 @@
             The library is accompanied by some <span class="text-indigo-600 font-semibold">stamps</span> out of the box :
         <ul class="mt-4 ml-4 md:ml-24 text-xl">
             <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1"
-                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 font-semibold text-indigo-600">CreatedAtStamp</span>
+                <i class="fa-duotone fa-check-circle text-indigo-600 mr-2"></i>
+                <span class="prose ml-4 font-semibold text-indigo-600">creation date</span>
             </li>
             <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1"
-                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 font-semibold text-indigo-600">PriorityStamp</span>
+                <i class="fa-duotone fa-check-circle text-indigo-600 mr-2"></i>
+                <span class="prose ml-4 font-semibold text-indigo-600">priority</span>
             </li>
             <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1"
-                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 font-semibold text-indigo-600">DelayStamp</span>
+                <i class="fa-duotone fa-check-circle text-indigo-600 mr-2"></i>
+                <span class="prose ml-4 font-semibold text-indigo-600">delay</span>
             </li>
             <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1"
-                          d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 font-semibold text-indigo-600">HopsStamp</span>
+                <i class="fa-duotone fa-check-circle text-indigo-600 mr-2"></i>
+                <span class="prose ml-4 font-semibold text-indigo-600">hops</span>
             </li>
         </ul>
         </p>
     </section>
 </section>
 
-<section class="mt-10 bg-indigo-900 py-10 px-4">
+<section class="mt-10 bg-indigo-600 py-10 px-4">
     <div class="container mx-auto lg:grid lg:grid-cols-2 gap-4">
         <section class="col-span-1 lg:px-24">
             <h2 class="text-3xl text-white leading-tight mb-2 flex">
-                <span class="h-10 w-10 mr-3 rounded-full bg-indigo-500 flex items-center justify-center">
-                    <img src="/static/icons/thumbs-up.svg" class="w-5"/>
-                </span>
-                Render you notifications
+                <i class="fa-duotone fa-message-captions mr-2"></i> Render you notifications
             </h2>
-            <p class="text-indigo-300 text-xl mt-8 md:ml-16">
+            <p class="text-white text-xl mt-8 md:ml-16">
                 PHPFlasher make it very easy to render you notifications just by adding a simple line of code.
             </p>
-            <p class="text-indigo-300 text-xl mt-8 md:ml-16">
-                You don't have to worry about importing your javascript or stylesheets, <strong class="text-white font-semibold">PHPFlasher</strong> handle this for you, and it only loads the needed files when notifications are ready to be rendered.
+            <p class="text-white text-xl mt-8 md:ml-16">
+                You don't have to worry about importing your javascript or stylesheets, <span class="text-gray-300">PHP</span><span class="text-gray-400">Flasher</span>. handle this for you, and it only loads the needed files when notifications are ready to be rendered.
             </p>
-            <p class="text-indigo-300 text-xl mt-8 md:ml-16">
+            <p class="text-white text-xl mt-8 md:ml-16">
                 You can customize how you want to display you notifications: Limit the number of displayed notifications, order them and also filter them how you want with <strong class="text-white">stamps</strong>, of course you can add your own logic here.
             </p>
         </section>
@@ -234,100 +185,34 @@
     </div>
 </section>
 
-<section class="my-8 container mx-auto px-4 lg:px-24">
-    <h2 class="text-3xl text-indigo-600 leading-tight mb-2 flex">
-            <span class="h-10 w-10 mr-3 rounded-full bg-indigo-500 flex items-center justify-center">
-                <img src="/static/icons/heart.svg" class="inline-block w-5"/>
-            </span>
-        Is it all 😞 ?
-    </h2>
-    <p class="text-gray-700 text-xl mt-8 md:ml-16">
-        <span class="text-indigo-600 font-semibold">Naaah!!!</span> of course there are a lot more of goodies, PHPFlasher is very powerful and flexible it allows you to do more advanced things :
-        <ul class="mt-4 ml-6 md:ml-24 text-xl">
-            <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 text-gray-600">You can add you own factories, stamps, eventSubscribers, filters .....etc.</span>
-            </li>
-            <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 text-gray-600">Easy migration from similar libraries.</span>
-            </li>
-            <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 text-gray-600">You can activate model observers to show notifications automatically when Eloquent events occurred.</span>
-            </li>
-            <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 text-gray-600">Show notifications from ajax or websockets requests from a json response.</span>
-            </li>
-            <li class="flex text-xl mt-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20">
-                    <path stroke-width="2" fill="#6366F1" d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z"/>
-                </svg>
-                <span class="prose ml-4 text-gray-600">And lot more, just checkout the <a href="/docs/">documentation</a></span>
-            </li>
-        </ul>
-    </p>
-</section>
-
 {% include footer.html %}
+
+{% if site.data.dev.dev_mode %}
+    <script src="{{  site.data.flasher.root_script.dev }}"></script>
+{% else %}
+    <script src="{{  site.data.flasher.root_script.build }}"></script>
+{% endif %}
+
 <script>
-    flasherRender = function() {
-        Flasher.getInstance().render({
-            "envelopes": [{
-                "notification": {"type": "info", "message": "Welcome back", "options": []},
-                "handler": "template",
-                "created_at": "2021-10-05 01:45:22",
-                "uuid": "2B3E8E7A-36F3-470E-93D7-4710EE0E0DAC",
-                "priority": 0,
-                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-blue-600\">\n    <div class=\"flex items-center px-2 py-2 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-blue-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation-circle w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-blue-600\">\n                Info\n            <\/p>\n            <p class=\"text-sm leading-5 text-gray-500\">\n                Welcome back\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-blue-100\">\n        <span class=\"flasher-progress bg-blue-600\"><\/span>\n    <\/div>\n<\/div>\n"
-            }, {
-                "notification": {"type": "warning", "message": "Are you sure you want to proceed ?", "options": []},
-                "handler": "template",
-                "created_at": "2021-10-05 01:45:22",
-                "uuid": "205B983A-71B7-49E3-A693-F562356B5BEC",
-                "priority": 0,
-                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-yellow-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-yellow-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"exclamation w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-yellow-600\">\n                Warning\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Are you sure you want to proceed ?\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-yellow-100\">\n        <span class=\"flasher-progress bg-yellow-600\"><\/span>\n    <\/div>\n<\/div>\n"
-            }, {
-                "notification": {"type": "error", "message": "Oops! Something went wrong!", "options": []},
-                "handler": "template",
-                "created_at": "2021-10-05 01:45:22",
-                "uuid": "00B76D03-6A5D-4534-8B15-681B55B9A341",
-                "priority": 0,
-                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-red-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-red-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"x w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-red-600\">\n                Error\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Oops! Something went wrong!\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-red-100\">\n        <span class=\"flasher-progress bg-red-600\"><\/span>\n    <\/div>\n<\/div>\n"
-            }, {
-                "notification": {"type": "success", "message": "Data has been saved successfully!", "options": []},
-                "handler": "template",
-                "created_at": "2021-10-05 01:45:22",
-                "uuid": "A46DF58E-CD6B-46F2-9984-2AB6A38C9EFF",
-                "priority": 0,
-                "template": "<div class=\"bg-white shadow-lg border-l-4 mt-2 cursor-pointer border-green-600\">\n    <div class=\"flex items-center px-2 py-3 rounded-lg shadow-lg overflow-hidden\">\n        <div class=\"inline-flex items-center bg-green-600 p-2 text-white text-sm rounded-full flex-shrink-0\">\n            <svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"check w-5 h-5\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 13l4 4L19 7\"\/><\/svg>\n        <\/div>\n        <div class=\"ml-4 w-0 flex-1\">\n            <p class=\"text-base leading-5 font-medium capitalize text-green-600\">\n                Success\n            <\/p>\n            <p class=\"mt-1 text-sm leading-5 text-gray-500\">\n                Data has been saved successfully!\n            <\/p>\n        <\/div>\n    <\/div>\n    <div class=\"h-0.5 flex bg-green-100\">\n        <span class=\"flasher-progress bg-green-600\"><\/span>\n    <\/div>\n<\/div>\n"
-            }], "scripts": [], "styles": [], "options": []
-        });
+    function showNotifications(notifications) {
+        if (notifications.length === 0) {
+            return;
+        }
+
+        setTimeout(() => {
+            notifications[0]();
+            showNotifications(notifications.slice(1));
+        }, 1500);
     }
 
-    if (!window.Flasher && !document.querySelector('script[src="https://cdn.jsdelivr.net/npm/@flasher/flasher@0.2.2/dist/flasher.min.js"]')) {
-        var tag = document.createElement('script');
-
-        tag.setAttribute('src', 'https://cdn.jsdelivr.net/npm/@flasher/flasher@0.2.2/dist/flasher.min.js');
-        tag.setAttribute('type', 'text/javascript');
-        tag.onload = flasherRender;
-
-        document.body.appendChild(tag);
-    } else {
-        document.addEventListener('DOMContentLoaded', function() {
-          flasherRender();
-        });
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        flasher.info('Welcome back');
+        showNotifications([
+            () => flasher.error('Oops! Something went wrong!'),
+            () => flasher.warning('Are you sure you want to proceed ?'),
+            () => flasher.success('Data has been saved successfully!'),
+        ]);
+    });
 </script>
-<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"yoeunes",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
 </body>
 </html>

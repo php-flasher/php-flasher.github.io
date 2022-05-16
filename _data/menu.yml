@@ -1,21 +1,17 @@
-PHP flasher:
+<i class="fa-duotone fa-bars-sort"></i> PHP flasher:
     Introduction: '/docs/'
     Installation: '/docs/installation/'
     Usage: '/docs/usage/'
-    <span class="github-link-icon"><img class="w-5 h-5 mr-1" src="/static/github.svg" /></span> Github: 'https://github.com/php-flasher/php-flasher'
+    <i class="fa-brands fa-github text-black mr-1"></i> Github: 'https://github.com/php-flasher/php-flasher'
 
-Frameworks:
-    Symfony: '/docs/framework/symfony/'
-    Laravel: '/docs/framework/laravel/'
-    Laravel Livewire: '/docs/framework/livewire/'
+<i class="fa-duotone fa-bars-sort"></i> Frameworks:
+    <i class="fa-brands fa-symfony text-black mr-1"></i> Symfony: '/docs/framework/symfony/'
+    <i class="fa-brands fa-laravel text-red-900 mr-1"></i> Laravel: '/docs/framework/laravel/'
+    <i class="fa-brands fa-laravel text-red-900 mr-1"></i> Livewire: '/docs/framework/livewire/'
 
-Adapters:
+<i class="fa-duotone fa-bars-sort"></i> Adapters:
     Toastr: '/docs/adapter/toastr/'
-    Sweet Alert: '/docs/adapter/sweet-alert/'
-    Pnotify: '/docs/adapter/pnotify/'
-    Notyf: '/docs/adapter/notyf/'
     Noty: '/docs/adapter/noty/'
-
-Advanced:
-    Stamps: '/docs/advanced/stamps/'
-    Events: '/docs/advanced/events/'
+    Notyf: '/docs/adapter/notyf/'
+    Sweetalert: '/docs/adapter/sweetalert/'
+    Pnotify: '/docs/adapter/pnotify/'

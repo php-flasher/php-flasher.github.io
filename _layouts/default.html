@@ -12,8 +12,9 @@
     {% unless site.data.dev.dev_mode %}
     {% endunless %}
     <link rel="stylesheet" href="/dist/index.css"/>
+    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css"/>
     <link rel="icon" type="image/png" href="/static/favicon.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github-dark-dimmed.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark-dimmed.min.css"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4D78SM7TC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,113 +27,184 @@
         gtag('config', 'G-T4D78SM7TC');
     </script>
 </head>
-<body class="flex flex-col min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
-
-<div class="h-16 w-screen bg-white border-b border-indigo-200">
-    <div class="lg:container px-4 mx-auto py-2">
-        <div class="flex items-center flex-no-shrink pt-1">
-            <a href="/" class="flex items-center">
-                <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png" />
-                <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
-                    PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
-                </span>
-            </a>
-            <div class="flex-grow"></div>
-            <a href="#" id="menu-toggle"
-               class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
-                <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                </svg>
-                <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
-                </svg>
-            </a>
+<body class="min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
+    <div class="h-16 z-10 top-0 w-screen bg-white border-b border-indigo-200 shadow">
+        <div class="px-4 py-2">
+            <div class="flex items-center flex-no-shrink pt-1">
+                <a href="/" class="flex items-center">
+                    <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/static/logo.png" />
+                    <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
+                        PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
+                    </span>
+                </a>
+                <div class="flex-grow"></div>
+                <a href="#" id="menu-toggle" class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
+                    <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                    <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<main class="lg:container md:mx-auto px-6 md:grid sm:grid-cols-3 md:grid-cols-4 flex-grow md:gap-4">
-    <nav id="main-navigation" class="col-span-1 lg:ml-4 hidden md:block px-2 lg:px-12">
-        {% for section in site.data.menu %}
-        <h2 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase">{{ section[0] }}</h2>
-        <ul class="list-reset mb-8">
-            {% for link in section[1] %}
-            <li class="{% if page.url == link[1] %}bg-indigo-500{% endif %} px-6 rounded">
-                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
-            </li>
+    <main class="container mx-auto px-6 flex-grow flex">
+        <nav id="main-navigation" class="lg:ml-4 hidden md:block px-2 lg:px-12 mt-10 mr-6">
+            {% for section in site.data.menu %}
+            <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
+            <ul class="list-reset mb-8">
+                {% for link in section[1] %}
+                <li class="{% if page.url == link[1] %}bg-indigo-500{% endif %} px-6 rounded">
+                    <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
+                </li>
+                {% endfor %}
+            </ul>
             {% endfor %}
-        </ul>
-        {% endfor %}
-    </nav>
-    <div id="main-article" class="col-span-3">
-        <article class="mx-auto py-4">
-            {% unless page.hide_title %}
-            <h1 class="mb-1">
-                {% if page.alternate_title %}
-                {{ page.alternate_title }}
-                {% else %}
-                {{ page.title }}
-                {% endif %}
-            </h1>
-            <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">
-                {% if page.published_at != page.updated_at %}
-                Last updated at {{ page.updated_at | date_to_long_string }} |
-                {% endif %}
-                Published at {{ page.published_at | date_to_long_string }}
-            </p>
-            {% endunless %}
-            {{ content }}
-        </article>
-    </div>
-</main>
+        </nav>
+        <article id="main-article" class="container grow mx-auto px-10 py-5">
+                <div class="border-b border-grey-lighter py-3 mb-3 hidden sm:block">
+                    {% include prev-next.html %}
+                </div>
 
-{% include compact-footer.html %}
-<script src="/static/menu.js" type="application/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/php.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/bash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/twig.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-<script src="/static/flasher/flasher.js"></script>
-<script>
-    var snippets = document.querySelectorAll('.snippet');
-    snippets.forEach(function (snippet) {
-        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button data-clipboard-snippet title="copy to clipboard" class="btn-clipboard text-white focus:outline-none focus:text-white transform focus:scale-75"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20"><path fill="#FFFFFF" d="M6 6V2c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h4zm2 0h4a2 2 0 0 1 2 2v4h4V2H8v4zM2 8v10h10V8H2z"/></svg></button>');
-    });
+                {% unless page.hide_title %}
+                <h1 class="mb-1">
+                    {% if page.alternate_title %}
+                        {{ page.alternate_title }}
+                    {% else %}
+                        {{ page.title }}
+                    {% endif %}
+                </h1>
+                <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">
+                    {% if page.published_at != page.updated_at %}
+                        Last updated at {{ page.updated_at | date_to_long_string }} |
+                    {% endif %}
+                    Published at {{ page.published_at | date_to_long_string }}
+                </p>
+                {% endunless %}
+                {{ content }}
+            </article>
+    </main>
 
-    var btns = document.querySelectorAll('.btn-clipboard');
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener('mouseleave', clearTooltip);
-        btns[i].addEventListener('blur', clearTooltip);
-    }
+    {% include footer.html %}
 
-    function clearTooltip(e) {
-        e.currentTarget.classList.remove('tooltipped');
-        e.currentTarget.classList.remove('tooltipped-s');
-        e.currentTarget.removeAttribute('aria-label');
-    }
+    <script src="/static/menu.js" type="application/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/twig.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    {% if site.data.dev.dev_mode %}
+        <script src="{{  site.data.flasher.root_script.dev }}"></script>
+    {% else %}
+        <script src="{{  site.data.flasher.root_script.build }}"></script>
+    {% endif %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            {% if site.data.dev.dev_mode %}
+                flasher.addScripts(["{{ site.data.flasher[page.url].dev }}"], function() {
+            {% else %}
+                flasher.addScripts(["{{ site.data.flasher[page.url].build }}"], function() {
+            {% endif %}
+                function showNotifications(notifications) {
+                    if (notifications.length === 0) {
+                        return;
+                    }
 
-    function showTooltip(elem, msg) {
-        elem.classList.add('tooltipped');
-        elem.classList.add('tooltipped-s');
-        elem.setAttribute('aria-label', msg);
-    }
+                    setTimeout(() => {
+                        notifications[0]();
+                        showNotifications(notifications.slice(1));
+                    }, 1500);
+                }
 
-    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
-        target: function (trigger) {
-            return trigger.nextElementSibling;
+                var factory = flasher.create("{{ site.data.flasher[page.url].handler }}");
+                factory.info('Welcome back');
+
+                if (!['/docs/adapter/sweetalert/', '/docs/adapter/pnotify/'].includes('{{ page.url }}')) {
+                    showNotifications([
+                        () => factory.error('Oops! Something went wrong!'),
+                        () => factory.warning('Are you sure you want to proceed ?'),
+                        () => factory.success('Data has been saved successfully!'),
+                    ]);
+                }
+            });
+        });
+    </script>
+    <script>
+        var prevNext = document.querySelectorAll('.prev-next');
+        var previous = undefined;
+        var next = undefined;
+        var active = undefined;
+        var navigationLinks = navigation.querySelectorAll('a');
+
+        navigationLinks.forEach(function(link) {
+            if (next !== undefined || link.href.includes('/docs/') === false) {
+                return;
+            }
+            if (link.classList.contains('text-white')) {
+                active = link;
+            } else if (active === undefined) {
+                previous = link;
+            } else if (next === undefined) {
+                next = link;
+            }
+        });
+
+        if (active !== undefined) {
+            prevNext.forEach(function(p) { p.classList.remove('hidden'); });
+            previous && renderPreviousNext('.link-previous', previous);
+            next && renderPreviousNext('.link-next', next);
         }
-    });
 
-    clipboardSnippets.on('success', function (e) {
-        e.clearSelection();
-        showTooltip(e.trigger, 'Copied!');
-    });
+        function renderPreviousNext(which, originalLink) {
+            var links = document.querySelectorAll(which);
 
-    hljs.initHighlightingOnLoad();
+            links.forEach(function (link) {
+                var label = link.querySelector('span');
+                label.innerHTML = originalLink.innerHTML.replace(/\d+\. /, '').replace(/<(\S*?)[^>]*>.*?<\/\1>|<.*?\/>/, '');
+                link.href = originalLink.href;
+                link.classList.remove('hidden');
+                link.classList.remove('sm:hidden');
+            });
+        }
+    </script>
+    <script>
+        var snippets = document.querySelectorAll('.snippet');
+        snippets.forEach(function (snippet) {
+            snippet.firstChild.insertAdjacentHTML('beforebegin', '<button data-clipboard-snippet title="copy to clipboard" class="btn-clipboard text-white focus:outline-none focus:text-white transform focus:scale-75"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-none mr-1" viewBox="0 0 20 20"><path fill="#FFFFFF" d="M6 6V2c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h4zm2 0h4a2 2 0 0 1 2 2v4h4V2H8v4zM2 8v10h10V8H2z"/></svg></button>');
+        });
 
-    {{ site.data.flasher[page.url].render }}
-</script>
-<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"yoeunes",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
+        var btns = document.querySelectorAll('.btn-clipboard');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('mouseleave', clearTooltip);
+            btns[i].addEventListener('blur', clearTooltip);
+        }
+
+        function clearTooltip(e) {
+            e.currentTarget.classList.remove('tooltipped');
+            e.currentTarget.classList.remove('tooltipped-s');
+            e.currentTarget.removeAttribute('aria-label');
+        }
+
+        function showTooltip(elem, msg) {
+            elem.classList.add('tooltipped');
+            elem.classList.add('tooltipped-s');
+            elem.setAttribute('aria-label', msg);
+        }
+
+        var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+            target: function (trigger) {
+                return trigger.nextElementSibling;
+            }
+        });
+
+        clipboardSnippets.on('success', function (e) {
+            e.clearSelection();
+            showTooltip(e.trigger, 'Copied!');
+        });
+
+        hljs.initHighlightingOnLoad();
+    </script>
 </body>
 </html>

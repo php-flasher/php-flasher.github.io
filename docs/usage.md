@@ -1,16 +1,14 @@
 ---
 permalink: /docs/usage/
-title: Flasher Usage
+title: PHPFlasher Usage
+hide_title: true
 published_at: 2020-11-28
-updated_at: 2021-10-05
+updated_at: 2022-05-08
 ---
 
-> If you like PHPFlasher please consider giving it a star on github.
+> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>
 
-If you're using a framework like __Laravel__ or __Symfony__, just grab an instance of __FlasherInterface__ from the
-container, and you're ready to go
-
-## General Usage
+## <i class="fa-duotone fa-list-radio"></i> General Usage
 
 ```php
 $flasher->addFlash('success', 'Data has been saved successfully!');
@@ -22,7 +20,7 @@ $notification = $flasher->addFlash(string $type, string $message, array $options
 
 param           | description                                      
 ----------------|------------------------------------------------- 
-`$type`         | Notification type : success, error, warning, info ....etc            
+`$type`         | Notification type : <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc            
 `$message`      | The message to be displayed                                     
 `$options`      | Options for the javascript libraries 
 `$notification` | The notification already stored in the session and ready to be rendered                      
@@ -38,16 +36,16 @@ $flasher->addInfo('info message');
 
 --- 
 
-## Notification Builder 
+## <i class="fa-duotone fa-list-radio"></i> Or with Notification Builder for more flexibility
 
 There are only __two__ main steps to render a notification  : __build__ and __flash__ 
 
 ```php
 // Step 1: create your notification and add options
-$builder = $flasher->type('success')
+$builder = $flasher->handler('toastr')
+    ->type('success')
     ->message('your custom message')
     ->priority(2)
-    ->handler('toastr')
     ->option('timer', 5000)
 ;
 
@@ -71,7 +69,7 @@ $builder = $flasher->type(string $type, string $message = null, array $options =
 
 param           | description                                      
 ----------------|------------------------------------------------- 
-`$type`         | success, error, warning, info ....etc            
+`$type`         | <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc            
 `$message`      | your message                                     
 `$options`      | Additional options to be available in javascript handlers
 `$builder`      | Instance of the builder to continue chaining methods                         

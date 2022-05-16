@@ -8,7 +8,7 @@ defaults:
     values:
       layout: "default"
       published_at: "2020-11-28"
-      updated_at: "2021-10-05"
+      updated_at: "2022-05-08"
 
 exclude:
   - "*.config.js"

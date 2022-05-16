@@ -1,45 +1,43 @@
 ---
 permalink: /docs/installation/
 title: Installation
+hide_title: true
 published_at: 2020-11-28
-updated_at: 2021-10-05
+updated_at: 2022-05-08
 ---
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** consists of multiple parts and
-came with a default __template__ driver which include __tailwindcss__ and __bootstrap__ notifications.
+> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>
 
-## Installation
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** consists of multiple parts, each of which is a separate library.
+so you can install only the parts you need.
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using
-composer.
+## <i class="fa-duotone fa-list-radio"></i> Installation
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer.
 
 <pre class="snippet"><code>composer require php-flasher/flasher</code></pre>
 
-Additionally, you may want to install an extra adapter (library) to display a specific type of notifications, you can
-find the adapters in the menu.
+By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** cames with default notification adapter, but you can install other adapters as well:
 
 * **[Toastr](/docs/adapter/toastr/)**
-* **[Sweet Alert](/docs/adapter/sweet-alert/)**
-* **[Pnotify](/docs/adapter/pnotify/)**
-* **[Notyf](/docs/adapter/notyf/)**
 * **[Noty](/docs/adapter/noty/)**
-* **[Tailwind CSS](/docs/adapter/template/tailwindcss/)**
-* **[Bootstrap](/docs/adapter/template/bootstrap/)**
-* **[Desktop](/docs/adapter/template/desktop/)**
+* **[Notyf](/docs/adapter/notyf/)**
+* **[Sweet Alert](/docs/adapter/sweetalert/)**
+* **[Pnotify](/docs/adapter/pnotify/)**
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** also offers a solid integration
-with Laravel and Symfony :
+with <i class="fa-brands fa-laravel text-red-900"></i> Laravel and <i class="fa-brands fa-symfony text-black"></i> Symfony :
 
-**For Laravel**:
+**<i class="fa-brands fa-laravel text-red-900"></i> Laravel**:
 <pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
 
-**For Symfony**:
+**<i class="fa-brands fa-symfony text-black"></i> Symfony**:
 <pre class="snippet"><code>composer require php-flasher/flasher-symfony</code></pre>
 
-## General Usage
+## <i class="fa-duotone fa-list-radio"></i> General Usage
 
-If you're using a framework like __Laravel__ or __Symfony__, just grab an instance of __FlasherInterface__ from the
-container
+If you're using a framework like <i class="fa-brands fa-laravel text-red-900"></i> __Laravel__ or <i class="fa-brands fa-symfony text-black"></i> __Symfony__, just grab an instance of __FlasherInterface__ from the
+container and use it to flash messages.
 
 ```php
 <?php
@@ -48,16 +46,17 @@ namespace App\Controller;
 
 use Flasher\Prime\FlasherInterface;
 
-class NotifyController
+class BookController
 {
-    public function flasher(FlasherInterface $flasher)
+    public function save(FlasherInterface $flasher)
     {
         // ...
 
         $flasher->addSuccess('Data has been saved successfully!');
 
-        flasher('Data has been saved successfully!') // only for the Laravel framework
-        // ... redirect or render a view here
+        flash('Data has been saved successfully!') // laravel helper function
+
+        // ... finally redirect or render the view
     }
 }
 ```

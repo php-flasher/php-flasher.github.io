@@ -2,7 +2,7 @@
 permalink: /docs/advanced/stamps/
 title: Attach extra information to your notification
 published_at: 2020-11-28
-updated_at: 2020-11-28
+updated_at: 2022-05-08
 ---
 
 If you need to add metadata to a notification, wrap it with the __Flasher\Prime\Envelope__ class and add stamps.

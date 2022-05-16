@@ -1,42 +1,31 @@
+root_script:
+    dev: '/static/packages/flasher/dist/flasher.js'
+    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.7/dist/flasher.min.js'
+
 /docs/adapter/toastr/:
     handler: 'toastr'
-    render: 'PHPFlasher.render({"scripts":["\/static\/flasher\/flasher-toastr.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/3.5.1\/jquery.min.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/toastr.js\/2.1.4\/toastr.min.js"],"styles":["https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/toastr.js\/2.1.4\/toastr.min.css"],"options":{"toastr":{"closeButton":true,"closeClass":"toast-close-button","closeDuration":300,"closeEasing":"swing","closeHtml":"<button><i class=\"icon-off\"><\/i><\/button>","closeMethod":"fadeOut","closeOnHover":true,"containerId":"toast-container","debug":false,"escapeHtml":false,"extendedTimeOut":10000,"hideDuration":1000,"hideEasing":"linear","hideMethod":"fadeOut","iconClass":"toast-info","iconClasses":{"error":"toast-error","info":"toast-info","success":"toast-success","warning":"toast-warning"},"messageClass":"toast-message","newestOnTop":false,"onHidden":null,"onShown":null,"positionClass":"toast-top-right","preventDuplicates":false,"progressBar":true,"progressClass":"toast-progress","rtl":false,"showDuration":300,"showEasing":"swing","showMethod":"fadeIn","tapToDismiss":true,"target":"body","timeOut":5000,"titleClass":"toast-title","toastClass":"toast"}},"envelopes":[{"notification":{"type":"success","message":"template message success","options":[],"title":null},"handler":"toastr","created_at":"2020-12-22 13:26:20","priority":0},{"notification":{"type":"warning","message":"template message warning","options":[],"title":null},"handler":"toastr","created_at":"2020-12-22 13:26:20","priority":0},{"notification":{"type":"error","message":"template message error","options":[],"title":null},"handler":"toastr","created_at":"2020-12-22 13:26:20","priority":0},{"notification":{"type":"info","message":"template message info","options":[],"title":null},"handler":"toastr","created_at":"2020-12-22 13:26:20","priority":0}]});'
-
-
-/docs/adapter/sweet-alert/:
-    handler: 'sweet_alert'
-    render: 'PHPFlasher.render({"scripts":["\/static\/flasher\/flasher-sweet-alert.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/3.5.1\/jquery.min.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/limonte-sweetalert2\/10.10.2\/sweetalert2.min.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/promise-polyfill\/8.2.0\/polyfill.min.js"],"styles":["https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/animate.css\/4.1.1\/animate.min.css","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/limonte-sweetalert2\/10.10.2\/sweetalert2.min.css"],"options":{"sweet_alert":{"timer":5000,"timerProgressBar":true}},"envelopes":[{"notification":{"type":"success","message":"template message success","options":[]},"handler":"sweet_alert","created_at":"2020-12-22 13:33:07","priority":0},{"notification":{"type":"warning","message":"template message warning","options":[]},"handler":"sweet_alert","created_at":"2020-12-22 13:33:07","priority":0},{"notification":{"type":"error","message":"template message error","options":[]},"handler":"sweet_alert","created_at":"2020-12-22 13:33:07","priority":0},{"notification":{"type":"info","message":"template message info","options":[]},"handler":"sweet_alert","created_at":"2020-12-22 13:33:07","priority":0}]});'
-
-/docs/adapter/pnotify/:
-    handler: 'pnotify'
-    render: 'PHPFlasher.render({"scripts":["\/static\/flasher\/flasher-pnotify.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/3.5.1\/jquery.min.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/pnotify\/3.2.1\/pnotify.js"],"styles":["https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/pnotify\/3.2.1\/pnotify.css","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/pnotify\/3.2.1\/pnotify.brighttheme.css"],"options":{"pnotify":{"type":"notice","title":false,"titleTrusted":false,"text":false,"textTrusted":false,"styling":"brighttheme","icons":"brighttheme","mode":"no-preference","addClass":"","addModalClass":"","addModelessClass":"","autoOpen":true,"width":"360px","minHeight":"16px","maxTextHeight":"200px","icon":true,"animation":"fade","animateSpeed":"normal","shadow":true,"hide":true,"delay":5000,"mouseReset":true,"closer":true,"closerHover":true,"sticker":true,"stickerHover":true,"labels":{"close":"Close","stick":"Pin","unstick":"Unpin"},"remove":true,"destroy":true}},"envelopes":[{"notification":{"type":"success","message":"template message success","options":[]},"handler":"pnotify","created_at":"2020-12-22 13:34:21","priority":0},{"notification":{"type":"warning","message":"template message warning","options":[]},"handler":"pnotify","created_at":"2020-12-22 13:34:21","priority":0},{"notification":{"type":"error","message":"template message error","options":[]},"handler":"pnotify","created_at":"2020-12-22 13:34:21","priority":0},{"notification":{"type":"info","message":"template message info","options":[]},"handler":"pnotify","created_at":"2020-12-22 13:34:21","priority":0}]});'
-
-/docs/adapter/notyf/:
-    handler: 'notyf'
-    render: 'PHPFlasher.render({"scripts":["\/static\/flasher\/flasher-notyf.js","https:\/\/cdn.jsdelivr.net\/npm\/notyf@3\/notyf.min.js"],"styles":["https:\/\/cdn.jsdelivr.net\/npm\/notyf@3\/notyf.min.css"],"options":{"notyf":{"duration":5000,"ripple":true,"position":{"x":"right","y":"top"},"dismissible":false,"types":[{"type":"success","className":"notyf__toast--success","backgroundColor":"#3dc763","icon":{"className":"notyf__icon--success","tagName":"i"}},{"type":"error","className":"notyf__toast--error","backgroundColor":"#ed3d3d","icon":{"className":"notyf__icon--error","tagName":"i"}},{"type":"info","className":"notyf__toast--info","backgroundColor":"#5784E5","icon":false},{"type":"warning","className":"notyf__toast--warning","backgroundColor":"#E3A008","icon":false}]}},"envelopes":[{"notification":{"type":"success","message":"template message success","options":[]},"handler":"notyf","created_at":"2020-12-22 13:35:49","priority":0},{"notification":{"type":"warning","message":"template message warning","options":[]},"handler":"notyf","created_at":"2020-12-22 13:35:49","priority":0},{"notification":{"type":"error","message":"template message error","options":[]},"handler":"notyf","created_at":"2020-12-22 13:35:49","priority":0},{"notification":{"type":"info","message":"template message info","options":[]},"handler":"notyf","created_at":"2020-12-22 13:35:49","priority":0}]});'
+    dev: '/static/packages/toastr/dist/flasher-toastr.js'
+    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-toastr@1.0.7/dist/flasher-toastr.min.js'
 
 /docs/adapter/noty/:
     handler: 'noty'
-    render: 'PHPFlasher.render({"scripts":["\/static\/flasher\/flasher-noty.js","https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/noty\/3.1.4\/noty.min.js"],"styles":["https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/noty\/3.1.4\/noty.min.css"],"options":{"noty":{"layout":"topRight","theme":"mint","timeout":false,"progressBar":true,"animation.open":"noty_effects_open","animation.close":"noty_effects_close","sounds.sources":[],"closeWith":["click"],"sounds.volume":1,"sounds.conditions":[],"docTitle.conditions":[],"modal":false,"id":false,"force":false,"queue":"global","killer":false,"container":false,"buttons":[],"visibilityControl":false}},"envelopes":[{"notification":{"type":"success","message":"template message success","options":[]},"handler":"noty","created_at":"2020-12-22 13:37:39","priority":0},{"notification":{"type":"warning","message":"template message warning","options":[]},"handler":"noty","created_at":"2020-12-22 13:37:39","priority":0},{"notification":{"type":"error","message":"template message error","options":[]},"handler":"noty","created_at":"2020-12-22 13:37:39","priority":0},{"notification":{"type":"info","message":"template message info","options":[]},"handler":"noty","created_at":"2020-12-22 13:37:39","priority":0}]});'
+    dev: '/static/packages/noty/dist/flasher-noty.js'
+    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-noty@1.0.7/dist/flasher-noty.min.js'
 
+/docs/adapter/notyf/:
+    handler: 'notyf'
+    dev: '/static/packages/notyf/dist/flasher-notyf.js'
+    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-notyf@1.0.7/dist/flasher-notyf.min.js'
 
+/docs/adapter/sweetalert/:
+    handler: 'sweetalert'
+    dev: '/static/packages/sweetalert/dist/flasher-sweetalert.js'
+    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-sweetalert@1.0.7/dist/flasher-sweetalert.min.js'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/docs/adapter/pnotify/:
+    handler: 'pnotify'
+    dev: '/static/packages/pnotify/dist/flasher-pnotify.js'
+    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-pnotify@1.0.7/dist/flasher-pnotify.min.js'
 
 
 

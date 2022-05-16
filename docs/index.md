@@ -1,13 +1,13 @@
 ---
 permalink: /docs/
-title: A powerful and flexible flash notifications' system for PHP
+title: A powerful and flexible flash notification system for PHP
 hide_title: true
 published_at: 2020-11-28
-updated_at: 2021-10-05
+updated_at: 2022-05-08
 ---
 
 <div class="text-center mb-8">
-    <img id="logo" src="/static/php-flasher.png" height="300px" width="300px" alt="PHP Flasher">
+    <img id="logo" src="/static/php-flasher.png" height="300px" width="300px" alt="PHPFlasher">
     <h1 class="text-indigo-900 mt-1">
         PHP<span class="text-indigo-500">Flasher</span>
     </h1>
@@ -22,39 +22,36 @@ updated_at: 2021-10-05
     </p>
 </div>
 
-> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a star on <a href="https://github.com/php-flasher/php-flasher">github</a>, by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation ❤️.
+> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>️.
 
-# What is PHP Flasher ?
+## <i class="fa-duotone fa-list-radio"></i> What is **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
 Flash messages are a great way to add some simple notifications to users of your website or application about important events that may have happened.
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** gives a straightforward way to give feedback messages in the current or next page to users with the flashing system.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** gives a straightforward way to give feedback messages in the current or the next page to users with a flashing system.
 The flashing system basically makes it possible to record a message and store it within the session so that it can be retrieved when needed.
 
-# Why use PHP Flasher ?
+## <i class="fa-duotone fa-list-radio"></i> Why use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : __tailwindcss__, __bootstrap__, __toastr.js__, __sweet alert 2__, __pnotify__, __noty__, __notyf__ and even show __desktop__ notifications.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : __toastr.js__, __sweetalert 2__, __pnotify__, __noty__, __notyf__ and even show __desktop__ notifications.
 
-This library is designed, so you can take full control when creating you notifications :
+This library is designed, so you can take full control when creating your notifications :
 
 * Show various notifications simultaneously
 * Sort and filter notifications
 * Render notifications from JSON response (ajax)
 * Limit the amount of displayed notifications
-* Show Desktop notifications for : Linux, MacOS and Windows
-* Framework-agnostic with implementations for: Laravel and Symfony
-* Autocomplete for PHPSTORM
+* Show Desktop notifications for : <i class="fa-brands fa-linux"></i> Linux, <i class="fa-brands fa-apple"></i> macOS, <i class="fa-brands fa-windows"></i> Windows
+* Framework-agnostic with implementations for: <i class="fa-brands fa-laravel text-red-900"></i> Laravel and <i class="fa-brands fa-symfony text-black"></i> Symfony
+* Autocomplete for <i class="fa-duotone fa-memo-pad"></i> PHPSTORM
 * You can always create an adapter yourself
 * ...and more
 
-# Getting Started
+## <i class="fa-duotone fa-list-radio"></i> Getting Started
 
 * **[Installation](/docs/installation/)**
 * **[Toastr](/docs/adapter/toastr/)**
-* **[Sweet Alert](/docs/adapter/sweet-alert/)**
-* **[Pnotify](/docs/adapter/pnotify/)**
-* **[Notyf](/docs/adapter/notyf/)**
 * **[Noty](/docs/adapter/noty/)**
-* **[Tailwind CSS](/docs/adapter/template/tailwindcss/)**
-* **[Bootstrap](/docs/adapter/template/bootstrap/)**
-* **[Desktop](/docs/adapter/template/desktop/)**
+* **[Notyf](/docs/adapter/notyf/)**
+* **[Sweet Alert](/docs/adapter/sweetalert/)**
+* **[Pnotify](/docs/adapter/pnotify/)**

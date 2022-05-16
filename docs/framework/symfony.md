@@ -2,10 +2,10 @@
 permalink: /docs/framework/symfony/
 title: A solid integration with the Symfony framework
 published_at: 2020-11-28
-updated_at: 2020-11-28
+updated_at: 2022-05-08
 ---
 
-PHP Flasher offers a solid integration with the Symfony Framework, and it also supports older versions of the framework From Symfony 2.7 to 5.2.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Symfony, with supports from Symfony **2.0** to **6**
 
 ## Installation :
 
@@ -15,7 +15,7 @@ you can install the bundle using composer
 
 ## Enable the bundle :
 
-If you are using Symfony 4+ the bundle will be registered automatically in `config/bundles.php`, otherwise enable the bundle in the kernel:
+If you are using Symfony 4+ the bundle will be registered automatically in **`config/bundles.php`**, otherwise enable the bundle in the kernel:
 
 ```php
 <?php
@@ -34,16 +34,16 @@ public function registerBundles()
 
 ## Usage :
 
-1. add __`{% raw %}{{ flasher_render() }}{% endraw %}`__  at the bottom of your base template
+1. add __`{% raw %}{{ flasher_render() }}{% endraw %}`__  at the **head** section of your base template
     ```twig
     <!doctype html>
     <html>
         <head>
-            <title>Toastr.js</title>
+            <title>PHPFlasher</title>
+            {% raw %}{{ flasher_render() }}{% endraw %}
         </head>
         <body>
 
-            {% raw %}{{ flasher_render() }}{% endraw %}
         </body>
     </html>
     ```
@@ -56,23 +56,23 @@ public function registerBundles()
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Response;
 
-    class NotifyController extends AbstractController
+    class BookController extends AbstractController
     {
-        public function flasher(FlasherInterface $flasher): Response
+        public function save(FlasherInterface $flasher): Response
         {
             // ...
 
             $flasher->addSuccess('Data has been saved successfully!');
 
-            return $this->render('notify/index.html.twig');
+            return $this->render('book/index.html.twig');
         }
     }
     ```
 
-### examples :
+### Examples :
 
-By default, the **template** tailwindcss adapter is used when creating your notification,
-to use another adapter you could use the `create()` method:
+By default, the **template** adapter is used when creating your notification,
+to use another adapter you could use the **`create()`** method:
 
 ```php
 class PostController
@@ -87,7 +87,7 @@ class PostController
 
    public function edit(FlasherInterface $flasher): Response
    {
-      $toastr = $flasher->create('toastr');
+      $toastr = $flasher->create('toastr'); // You need to require php-flasher/flasher-toastr-symfony
       $toastr->addSuccess('This notification will be rendered using the toastr adapter');
    }
 
