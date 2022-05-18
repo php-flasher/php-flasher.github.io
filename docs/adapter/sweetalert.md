@@ -10,13 +10,19 @@ For more information about Sweet Alert 2 click <a href="https://sweetalert2.gith
 # Installation
 
 **For Vanilla PHP:**
-<pre class="snippet"><code>composer require php-flasher/flasher-sweetalert</code></pre>
+```shell
+composer require php-flasher/flasher-sweetalert
+```
 
 **For Laravel:**
-<pre class="snippet"><code>composer require php-flasher/flasher-sweetalert-laravel</code></pre>
+```shell
+composer require php-flasher/flasher-sweetalert-laravel
+```
 
 **For Symfony:**
-<pre class="snippet"><code>composer require php-flasher/flasher-sweetalert-symfony</code></pre>
+```shell
+composer require php-flasher/flasher-sweetalert-symfony
+```
 
 # Usage
 
@@ -230,19 +236,34 @@ $flasher->keydownListenerCapture(bool $keydownListenerCapture = true)
 ### showConfirmButton :
 If set to false, a "Confirm"-button will not be shown.
 ```php
-$flasher->showConfirmButton(bool $showConfirmButton = true, string $confirmButtonText = null, string $confirmButtonColor = null, string $confirmButtonAriaLabel = null)
+$flasher->showConfirmButton(
+    bool $showConfirmButton = true, 
+    string $confirmButtonText = null, 
+    string $confirmButtonColor = null, 
+    string $confirmButtonAriaLabel = null
+)
 ```
 
 ### showDenyButton :
 If set to true, a "Deny"-button will be shown. It can be useful when you want a popup with 3 buttons.
 ```php
-$flasher->showDenyButton(bool $showDenyButton = true, string $denyButtonText = null, string $denyButtonColor = null, string $denyButtonAriaLabel = null)
+$flasher->showDenyButton(
+    bool $showDenyButton = true, 
+    string $denyButtonText = null, 
+    string $denyButtonColor = null, 
+    string $denyButtonAriaLabel = null
+)
 ```
 
 ### showCancelButton :
 If set to true, a "Cancel"-button will be shown, which the user can click on to dismiss the modal.
 ```php
-$flasher->showCancelButton(bool $showCancelButton = true, string $cancelButtonText = null, string $cancelButtonColor = null, string $cancelButtonAriaLabel = null)
+$flasher->showCancelButton(
+    bool $showCancelButton = true,
+    string $cancelButtonText = null,
+    string $cancelButtonColor = null,
+    string $cancelButtonAriaLabel = null
+)
 ```
 
 ### confirmButtonText : 

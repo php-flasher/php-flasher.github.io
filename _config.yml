@@ -1,20 +1,22 @@
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
-  - jekyll-redirect-from
+  - jekyll-seo-tag
+
 defaults:
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "main"
       published_at: "2020-11-28"
-      updated_at: "2022-05-08"
+      updated_at: "2022-05-18"
 
 exclude:
   - "*.config.js"
   - "package*.json"
-  - "assets"
-  - "node_modules"
+  - assets
+  - _data/manifest.yml
+  - node_modules
+  - CNAME
   - "Gemfile*"
   - ".idea"
 

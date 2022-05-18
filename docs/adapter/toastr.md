@@ -12,13 +12,19 @@ For more information about Toastr.js click <a href="https://github.com/CodeSeven
 This package can be installed through Composer.
 
 **For Vanilla PHP:**
-<pre class="snippet"><code>composer require php-flasher/flasher-toastr</code></pre>
+```shell
+composer require php-flasher/flasher-toastr
+```
 
 **For Laravel:**
-<pre class="snippet"><code>composer require php-flasher/flasher-toastr-laravel</code></pre>
+```shell
+composer require php-flasher/flasher-toastr-laravel
+```
 
 **For Symfony:**
-<pre class="snippet"><code>composer require php-flasher/flasher-toastr-symfony</code></pre>
+```shell
+composer require php-flasher/flasher-toastr-symfony
+```
 
 # Usage
 

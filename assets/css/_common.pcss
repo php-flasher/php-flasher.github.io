@@ -1,0 +1,49 @@
+@import './_fontawesome.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+hr {
+    @apply border-b border-t border-indigo-100 mt-10 mb-8 opacity-75 w-1/2 mx-auto;
+    border-bottom-color: #FFF;
+}
+
+body {
+    @apply text-gray-600;
+    font-size: 15px;
+    font-weight: 400;
+    font-stretch: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    @apply font-semibold my-6;
+}
+
+img {
+    @apply inline;
+    vertical-align: initial;
+}
+
+a {
+    @apply text-indigo-600;
+}
+
+p, ul {
+    @apply mb-4;
+}
+
+pre {
+    @apply relative py-2 px-4 rounded;
+}
+
+:focus {
+    outline: none;
+}
+
+.focus\:placeholder-none:focus::placeholder {
+    opacity: 0;
+}

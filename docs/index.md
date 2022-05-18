@@ -7,7 +7,7 @@ updated_at: 2022-05-08
 ---
 
 <div class="text-center mb-8">
-    <img id="logo" src="/static/php-flasher.png" height="300px" width="300px" alt="PHPFlasher">
+    <img id="logo" src="/dist/images/php-flasher.png" height="300px" width="300px" alt="PHPFlasher">
     <h1 class="text-indigo-900 mt-1">
         PHP<span class="text-indigo-500">Flasher</span>
     </h1>

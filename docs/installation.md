@@ -15,7 +15,22 @@ so you can install only the parts you need.
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer.
 
-<pre class="snippet"><code>composer require php-flasher/flasher</code></pre>
+```shell
+composer require php-flasher/flasher
+```
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** also offers a solid integration
+with <i class="fa-brands fa-laravel text-red-900"></i> Laravel and <i class="fa-brands fa-symfony text-black"></i> Symfony :
+
+**<i class="fa-brands fa-laravel text-red-900 fa-lg"></i> Laravel**:
+```shell
+composer require php-flasher/flasher-laravel
+```
+
+**<i class="fa-brands fa-symfony text-black fa-lg"></i> Symfony**:
+```shell
+composer require php-flasher/flasher-symfony
+```
 
 By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** cames with default notification adapter, but you can install other adapters as well:
 
@@ -24,15 +39,6 @@ By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flas
 * **[Notyf](/docs/adapter/notyf/)**
 * **[Sweet Alert](/docs/adapter/sweetalert/)**
 * **[Pnotify](/docs/adapter/pnotify/)**
-
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** also offers a solid integration
-with <i class="fa-brands fa-laravel text-red-900"></i> Laravel and <i class="fa-brands fa-symfony text-black"></i> Symfony :
-
-**<i class="fa-brands fa-laravel text-red-900"></i> Laravel**:
-<pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
-
-**<i class="fa-brands fa-symfony text-black"></i> Symfony**:
-<pre class="snippet"><code>composer require php-flasher/flasher-symfony</code></pre>
 
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 

@@ -1,0 +1,53 @@
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+{% if site.data.project.description %}
+    <meta name="description" content="{{ site.data.project.description }}"/>
+{% endif %}
+
+{% seo %}
+
+<title>{{ page.title }} - {{ site.data.project.title }}</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon-16x16.png"/>
+<link rel="icon" type="image/png" href="/dist/images/favicon.png"/>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway|Varela+Round" rel="stylesheet"/>
+
+{% for link in site.data.entrypoints['entrypoints'][page.layout]['css'] %}
+    <link href="{{ link }}" rel="stylesheet"/>
+{% endfor %}
+
+{% for link in site.data.entrypoints['entrypoints'][page.layout]['js'] %}
+    <script defer src="{{ link }}"></script>
+{% endfor %}
+
+{% if site.data.flasher contains page.url  %}
+    {% assign adapter = site.data.flasher[page.url] %}
+    {% for link in site.data.entrypoints['entrypoints'][adapter]['css'] %}
+        <link href="{{ link }}" rel="stylesheet"/>
+    {% endfor %}
+
+    {% for link in site.data.entrypoints['entrypoints'][adapter]['js'] %}
+        {% unless link contains '/dist/runtime.' %}
+            <script defer src="{{ link }}"></script>
+        {% endunless %}
+    {% endfor %}
+{% endif %}
+
+
+{% unless site.data.dev.dev_mode %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4D78SM7TC"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-T4D78SM7TC');
+    </script>
+{% endunless %}

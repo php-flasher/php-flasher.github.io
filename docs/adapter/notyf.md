@@ -10,13 +10,19 @@ updated_at: 2022-05-08
 For more information about notyf click <a href="https://carlosroso.com/notyf/">here</a>.
 
 **For Vanilla PHP:**
-<pre class="snippet"><code>composer require php-flasher/flasher-notyf</code></pre>
+```shell
+composer require php-flasher/flasher-notyf
+```
 
 **For Laravel:**
-<pre class="snippet"><code>composer require php-flasher/flasher-notyf-laravel</code></pre>
+```shell
+composer require php-flasher/flasher-notyf-laravel
+```
 
 **For Symfony:**
-<pre class="snippet"><code>composer require php-flasher/flasher-notyf-symfony</code></pre>
+```shell
+composer require php-flasher/flasher-notyf-symfony
+```
 
 # Usage
 

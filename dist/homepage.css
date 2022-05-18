@@ -1,0 +1,16 @@
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[1].use[2]!./assets/css/homepage.pcss ***!
+  \************************************************************************************************************************************************************************************************/
+.bg-squared::before{
+    z-index:-1;
+    content:' ';
+    position:absolute;
+    top:0;
+    left:0;
+    height:60vh;
+    width:100%;
+    background:linear-gradient(-180deg, rgba(241, 245, 248, 0) 0%, rgba(241, 245, 248, 1) 100%), url(/dist/images/squares.8ccb38a1.svg) repeat center center;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaG9tZXBhZ2UuY3NzIiwibWFwcGluZ3MiOiI7OztBQUFBO0lBQ0ksVUFBVztJQUNYLFdBQVk7SUFDWixpQkFBa0I7SUFDbEIsS0FBTTtJQUNOLE1BQU87SUFDUCxXQUFZO0lBQ1osVUFBVztJQUNYLHlKQUErSTtBQUNuSiIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9jc3MvaG9tZXBhZ2UucGNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIuYmctc3F1YXJlZDo6YmVmb3JlIHtcbiAgICB6LWluZGV4OiAtMTtcbiAgICBjb250ZW50OiAnICc7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIGhlaWdodDogNjB2aDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoLTE4MGRlZywgcmdiYSgyNDEsIDI0NSwgMjQ4LCAwKSAwJSwgcmdiYSgyNDEsIDI0NSwgMjQ4LCAxKSAxMDAlKSwgdXJsKCcuLi9pbWFnZXMvc3F1YXJlcy5zdmcnKSByZXBlYXQgY2VudGVyIGNlbnRlcjtcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/

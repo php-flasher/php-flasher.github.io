@@ -10,13 +10,19 @@ updated_at: 2022-05-08
 For more information about Pnotify click <a href="https://sciactive.com/pnotify/">here</a>.
 
 **For Vanilla PHP:**
-<pre class="snippet"><code>composer require php-flasher/flasher-pnotify</code></pre>
+```shell
+composer require php-flasher/flasher-pnotify
+```
 
 **For Laravel:**
-<pre class="snippet"><code>composer require php-flasher/flasher-pnotify-laravel</code></pre>
+```shell
+composer require php-flasher/flasher-pnotify-laravel
+```
 
 **For Symfony:**
-<pre class="snippet"><code>composer require php-flasher/flasher-pnotify-symfony</code></pre>
+```shell
+composer require php-flasher/flasher-pnotify-symfony
+```
 
 # Usage
 

@@ -15,39 +15,40 @@ Please follow the same installation steps as for the [Laravel Installation](/doc
 
 1. add  `@flasher_render` at the bottom of your blade view
 
-    ```twig
-    <!doctype html>
-    <html>
-        <head>
-            <title>PHPFlasher</title>
-            @livewireStyles
-            @flasher_render // Should be placed before rendering any Livewire component
-        </head>
-        <body>
+```twig
+<!doctype html>
+<html>
+    <head>
+        <title>PHPFlasher</title>
+        @livewireStyles
+        @flasher_render // Should be placed before rendering any Livewire component
+    </head>
+    <body>
 
-            @livewireScripts
-        </body>
-    </html>
+        @livewireScripts
+    </body>
+</html>
 ```
 
 2. dispatch `notifications` from your components
-    ```php
-    namespace App\Http\Livewire;
 
-    use Livewire\Component;
+```php
+namespace App\Http\Livewire;
 
-    class MyComponent extends Component
+use Livewire\Component;
+
+class MyComponent extends Component
+{
+    public function someAction()
     {
-        public function someAction()
-        {
-            toastr()->addSuccess('notification using toastr library'); // composer require php-flasher/flasher-toastr-laravel
-            sweetalert()->addInfo('notification using sweetalert library'); // composer require php-flasher/flasher-sweetalert-laravel
-        }
+        toastr()->addSuccess('notification using toastr library'); // composer require php-flasher/flasher-toastr-laravel
+        sweetalert()->addInfo('notification using sweetalert library'); // composer require php-flasher/flasher-sweetalert-laravel
+    }
 
-        public function render()
-        {
-            return view('livewire.my_component');
-        }
+    public function render()
+    {
+        return view('livewire.my_component');
+    }
 ```
 
 ## Events:
@@ -107,11 +108,11 @@ class MyComponent extends Component
 Every listener method accept an **array $data** parameter which contain the following data :
 
 ```php
-    public function sweetAlertConfirmed(array $payload)
-    {
-        $promise = $payload['promise'];
-        $envelope = $payload['envelope'];
-    }
+public function sweetAlertConfirmed(array $payload)
+{
+    $promise = $payload['promise'];
+    $envelope = $payload['envelope'];
+}
 ```
 
 > **promise** : the resolved promise from **sweetalert**.

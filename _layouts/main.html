@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
+        <div class="h-16 z-10 top-0 w-screen bg-white border-b border-indigo-200 shadow">
+            <div class="px-4 py-2">
+                <div class="flex items-center flex-no-shrink pt-1">
+                    <a href="/" class="flex items-center">
+                        <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/dist/images/logo.png" />
+                        <span class="pr-2 font-normal font-normal leading-none text-3xl text-indigo-900 hidden sm:block">
+                            PHP<span class="text-indigo-500">Flasher</span><sup class="text-xs relative text-grey-dark" style="top: -20px;">{{ site.data.project.version }}</sup>
+                        </span>
+                    </a>
+                    <div class="flex-grow"></div>
+                    <a href="#" id="menu-toggle" class="block lg:hidden h-8 w-8 border p-1 border-transparent text-gray-200 hover:text-grey menu-closed">
+                        <svg class="menu-closed:shown fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                        </svg>
+                        <svg class="menu-closed:hidden fill-current h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <main class="container mx-auto px-6 flex">
+            <nav id="main-navigation" class="hidden md:block">
+                {% for section in site.data.menu %}
+                    <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
+                    <ul class="list-reset mb-8">
+                        {% for link in section[1] %}
+                            <li class="{% if page.url == link[1] %}bg-indigo-500 {% endif %}px-6 rounded w-36">
+                                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </nav>
+            <article id="main-article" class="grow px-10 py-5">
+                <div class="border-b border-grey-lighter py-3 mb-3 hidden sm:block">
+                    {% include prev-next.html %}
+                </div>
+
+                {% unless page.hide_title %}
+                    <h1 class="mb-1">
+                        {% if page.alternate_title %}
+                            {{ page.alternate_title }}
+                        {% else %}
+                            {{ page.title }}
+                        {% endif %}
+                    </h1>
+                    <p class="text-xs text-grey-dark rounded rounded-t-none mb-4 text-shadow inline-block">
+                        {% if page.published_at != page.updated_at %}
+                            Last updated at {{ page.updated_at | date_to_long_string }} |
+                        {% endif %}
+                        Published at {{ page.published_at | date_to_long_string }}
+                    </p>
+                {% endunless %}
+
+                {{ content }}
+            </article>
+        </main>
+
+        {% include footer.html %}
+    </body>
+</html>

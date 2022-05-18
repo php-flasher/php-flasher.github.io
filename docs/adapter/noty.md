@@ -10,13 +10,19 @@ updated_at: 2022-05-08
 For more information about noty click <a href="https://ned.im/noty/">here</a>.
 
 **For Vanilla PHP:**
-<pre class="snippet"><code>composer require php-flasher/flasher-noty</code></pre>
+```shell
+composer require php-flasher/flasher-noty
+```
 
 **For Laravel:**
-<pre class="snippet"><code>composer require php-flasher/flasher-noty-laravel</code></pre>
+```shell
+composer require php-flasher/flasher-noty-laravel
+```
 
 **For Symfony:**
-<pre class="snippet"><code>composer require php-flasher/flasher-noty-symfony</code></pre>
+```shell
+composer require php-flasher/flasher-noty-symfony
+```
 
 # Usage
 

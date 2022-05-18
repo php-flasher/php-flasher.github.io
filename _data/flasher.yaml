@@ -1,31 +1,9 @@
-root_script:
-    dev: '/static/packages/flasher/dist/flasher.js'
-    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.7/dist/flasher.min.js'
-
-/docs/adapter/toastr/:
-    handler: 'toastr'
-    dev: '/static/packages/toastr/dist/flasher-toastr.js'
-    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-toastr@1.0.7/dist/flasher-toastr.min.js'
-
-/docs/adapter/noty/:
-    handler: 'noty'
-    dev: '/static/packages/noty/dist/flasher-noty.js'
-    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-noty@1.0.7/dist/flasher-noty.min.js'
-
-/docs/adapter/notyf/:
-    handler: 'notyf'
-    dev: '/static/packages/notyf/dist/flasher-notyf.js'
-    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-notyf@1.0.7/dist/flasher-notyf.min.js'
-
-/docs/adapter/sweetalert/:
-    handler: 'sweetalert'
-    dev: '/static/packages/sweetalert/dist/flasher-sweetalert.js'
-    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-sweetalert@1.0.7/dist/flasher-sweetalert.min.js'
-
-/docs/adapter/pnotify/:
-    handler: 'pnotify'
-    dev: '/static/packages/pnotify/dist/flasher-pnotify.js'
-    build: 'https://cdn.jsdelivr.net/npm/@flasher/flasher-pnotify@1.0.7/dist/flasher-pnotify.min.js'
+/: 'adapter/flasher'
+/docs/adapter/toastr/: 'adapter/toastr'
+/docs/adapter/noty/: 'adapter/noty'
+/docs/adapter/notyf/: 'adapter/notyf'
+/docs/adapter/sweetalert/: 'adapter/sweetalert'
+/docs/adapter/pnotify/: 'adapter/pnotify'
 
 
 

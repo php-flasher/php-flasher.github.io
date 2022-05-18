@@ -12,7 +12,9 @@ updated_at: 2022-05-08
 You can install the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** Laravel package using composer.<br />
 This is the base package for all Laravel adapters.
 
-<pre class="snippet"><code>composer require php-flasher/flasher-laravel</code></pre>
+```shell
+composer require php-flasher/flasher-laravel
+```
 
 Then add the service provider to **`config/app.php`**.
 
@@ -36,44 +38,44 @@ Optionally include the Facade in `config/app.php`.
 
 1. add  `@flasher_render` at the **header** section of your blade view
 
-    ```twig
-    <!doctype html>
-    <html>
-        <head>
-            <title>PHPFlasher</title>
-            @flasher_render
-        </head>
-        <body>
-
-        </body>
-    </html>
+```twig
+<!doctype html>
+<html>
+    <head>
+        <title>PHPFlasher</title>
+        @flasher_render
+    </head>
+    <body>
+    </body>
+</html>
 ```
 
 2. dispatch `notifications` from anywhere in your application
-    ```php
-    namespace App\Http\Controllers;
 
-    use App\Post;
-    use App\Http\Requests\PostRequest;
-    use Flasher\Prime\FlasherInterface;
+```php
+namespace App\Http\Controllers;
 
-    class PostController extends Controller
+use App\Post;
+use App\Http\Requests\PostRequest;
+use Flasher\Prime\FlasherInterface;
+
+class PostController extends Controller
+{
+    public function store(PostRequest $request, FlasherInterface $flasher)
     {
-        public function store(PostRequest $request, FlasherInterface $flasher)
-        {
-            $post = Post::create($request->only(['title', 'body']));
+        $post = Post::create($request->only(['title', 'body']));
 
-            if ($post instanceof Post) {
-                $flasher->addSuccess('Data has been saved successfully!');
-                // if you like to use Facades : Flasher::addSuccess('Data has been saved successfully!');
-                // or functions flash()->addSuccess('Data has been saved successfully!');
+        if ($post instanceof Post) {
+            $flasher->addSuccess('Data has been saved successfully!');
+            // if you like to use Facades : Flasher::addSuccess('Data has been saved successfully!');
+            // or functions flash()->addSuccess('Data has been saved successfully!');
 
-                return redirect()->route('posts.index');
-            }
-
-            $flasher->addError('An error has occurred please try again later.');
-
-            return back();
+            return redirect()->route('posts.index');
         }
+
+        $flasher->addError('An error has occurred please try again later.');
+
+        return back();
     }
-    ```
+}
+```

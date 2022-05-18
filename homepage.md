@@ -1,5 +1,5 @@
 ---
-layout: leader
+layout: homepage
 permalink: /
 title: Easy flash notification for PHP
 published_at: 2020-11-28

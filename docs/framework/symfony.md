@@ -11,7 +11,9 @@ updated_at: 2022-05-08
 
 you can install the bundle using composer
 
-<pre class="snippet"><code>composer require php-flasher/flasher-symfony</code></pre>
+```shell
+composer require php-flasher/flasher-symfony
+```
 
 ## Enable the bundle :
 
@@ -35,39 +37,41 @@ public function registerBundles()
 ## Usage :
 
 1. add __`{% raw %}{{ flasher_render() }}{% endraw %}`__  at the **head** section of your base template
-    ```twig
-    <!doctype html>
-    <html>
-        <head>
-            <title>PHPFlasher</title>
-            {% raw %}{{ flasher_render() }}{% endraw %}
-        </head>
-        <body>
 
-        </body>
-    </html>
-    ```
+```twig
+<!doctype html>
+<html>
+    <head>
+        <title>PHPFlasher</title>
+        {% raw %}{{ flasher_render() }}{% endraw %}
+    </head>
+    <body>
+
+    </body>
+</html>
+```
 
 2. dispatch `notifications` from anywhere in you application
-    ```php
-    namespace App\Controller;
 
-    use Flasher\Prime\FlasherInterface;
-    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-    use Symfony\Component\HttpFoundation\Response;
+```php
+namespace App\Controller;
 
-    class BookController extends AbstractController
+use Flasher\Prime\FlasherInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+
+class BookController extends AbstractController
+{
+    public function save(FlasherInterface $flasher): Response
     {
-        public function save(FlasherInterface $flasher): Response
-        {
-            // ...
+        // ...
 
-            $flasher->addSuccess('Data has been saved successfully!');
+        $flasher->addSuccess('Data has been saved successfully!');
 
-            return $this->render('book/index.html.twig');
-        }
+        return $this->render('book/index.html.twig');
     }
-    ```
+}
+```
 
 ### Examples :
 
