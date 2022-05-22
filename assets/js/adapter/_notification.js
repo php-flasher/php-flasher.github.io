@@ -16,18 +16,13 @@ function showNotifications(notifications) {
 export function showNotificationsForHandler(handler) {
     const factory = flasher.create(handler);
 
-    console.warn(handler)
-    // factory.info("Welcome back");
-    // factory.error("Oops! Something went wrong!");
-    // factory.warning("Are you sure you want to proceed ?");
-    // factory.success("Data has been saved successfully!");
+    factory.info("Welcome back");
 
     if (["sweetalert", "pnotify"].includes(handler)) {
         return;
     }
 
     showNotifications([
-        () => factory.info("Welcome back"),
         () => factory.error("Oops! Something went wrong!"),
         () => factory.warning("Are you sure you want to proceed ?"),
         () => factory.success("Data has been saved successfully!"),

@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@flasher/flasher': ^1.0.11
-  '@flasher/flasher-noty': ^1.0.11
-  '@flasher/flasher-notyf': ^1.0.11
-  '@flasher/flasher-pnotify': ^1.0.11
-  '@flasher/flasher-sweetalert': ^1.0.11
-  '@flasher/flasher-toastr': ^1.0.11
+  '@flasher/flasher': ^1.0.12
+  '@flasher/flasher-noty': ^1.0.12
+  '@flasher/flasher-notyf': ^1.0.12
+  '@flasher/flasher-pnotify': ^1.0.12
+  '@flasher/flasher-sweetalert': ^1.0.12
+  '@flasher/flasher-toastr': ^1.0.12
   '@symfony/webpack-encore': ^2.1.0
   autoprefixer: ^10.4.7
   cross-env: ^7.0
@@ -19,12 +19,12 @@ specifiers:
   webpack-notifier: ^1.15.0
 
 devDependencies:
-  '@flasher/flasher': 1.0.11
-  '@flasher/flasher-noty': 1.0.11
-  '@flasher/flasher-notyf': 1.0.11
-  '@flasher/flasher-pnotify': 1.0.11
-  '@flasher/flasher-sweetalert': 1.0.11
-  '@flasher/flasher-toastr': 1.0.11
+  '@flasher/flasher': 1.0.12
+  '@flasher/flasher-noty': 1.0.12
+  '@flasher/flasher-notyf': 1.0.12
+  '@flasher/flasher-pnotify': 1.0.12
+  '@flasher/flasher-sweetalert': 1.0.12
+  '@flasher/flasher-toastr': 1.0.12
   '@symfony/webpack-encore': 2.1.0
   autoprefixer: 10.4.7_postcss@8.4.14
   cross-env: 7.0.3
@@ -1183,43 +1183,43 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  /@flasher/flasher-noty/1.0.11:
-    resolution: {integrity: sha512-70Sg99HxVh03/I+GwkhjX2negiVV9tSngcogcMFHUD/NlEJcP3f9XVuVHu6ATSlAuqDbH63qkjfSW2cmRjzj3Q==}
+  /@flasher/flasher-noty/1.0.12:
+    resolution: {integrity: sha512-1OArMh3GUhzpyBC766gdgoeEVmQ6FX0deg4l6gX45MFr3qamAZJRf26aKhjYKduH3cK7ObUDDfp7seaT+smKpQ==}
     dependencies:
-      '@flasher/flasher': 1.0.11
+      '@flasher/flasher': 1.0.12
       noty: 3.2.0-beta-deprecated
     dev: true
 
-  /@flasher/flasher-notyf/1.0.11:
-    resolution: {integrity: sha512-88WC3MkzgDKc6eKudVl1DbSI9GlUy+OV89wyX0MoKXtnY868dSb7vowr/9cAuK+EMBoERbdhNX++zC2vJphLnw==}
+  /@flasher/flasher-notyf/1.0.12:
+    resolution: {integrity: sha512-pvpN7bADas07/X9I91WUsW/bnQ+Wi/2zfexwck4sx8bSRE4bR+/ET5T6sIXsRpTyC2RH78s+AIGHoPZ6JcFLRA==}
     dependencies:
-      '@flasher/flasher': 1.0.11
+      '@flasher/flasher': 1.0.12
       notyf: 3.10.0
     dev: true
 
-  /@flasher/flasher-pnotify/1.0.11:
-    resolution: {integrity: sha512-QPGNxubJr+7v7cfCmVPQVKfJcnahdyAreuwI8YUpnzC8iXlZ5tro1bLTR4mkw591mlFp99swJoGgrCQ6r4+JDQ==}
+  /@flasher/flasher-pnotify/1.0.12:
+    resolution: {integrity: sha512-CAuY0BhQN79BAY72qr3zRrNfz2i+6Mk19auOl8A7sl15GeUHdD1wNmWguQogyDNg8VV6WYCkh1rgkx0EV2zGxw==}
     dependencies:
-      '@flasher/flasher': 1.0.11
+      '@flasher/flasher': 1.0.12
       '@pnotify/core': 5.2.0
     dev: true
 
-  /@flasher/flasher-sweetalert/1.0.11:
-    resolution: {integrity: sha512-kxHXqsYI9Rj1R9SdOvzW9xmmBTJmE12CoyYq/UQ0YEx8PVJNNlt83h+NFwE+2Ie0fgGebFkHasQY95BxW10EWA==}
+  /@flasher/flasher-sweetalert/1.0.12:
+    resolution: {integrity: sha512-xsE1OzzvtXsPQH09rLPUYpI57DIy2ytzNRVEiRP+cn/q8FnMXFXP9N2VKkQjQjGY19EVdMVEh76efgwSCUucLQ==}
     dependencies:
-      '@flasher/flasher': 1.0.11
+      '@flasher/flasher': 1.0.12
       sweetalert2: 11.4.15
     dev: true
 
-  /@flasher/flasher-toastr/1.0.11:
-    resolution: {integrity: sha512-fAEEVCQE8X3F/MiRKOXJ4FJZo2fR+P5u8dEgwATqHnprP0QsqZKeav69jipMq+ePdWKoDlb8Q3cp1EHQNNc8Lw==}
+  /@flasher/flasher-toastr/1.0.12:
+    resolution: {integrity: sha512-WqISIlFvcMaSZM+az8tcOTasokoTEgk1MnB7uLtNu8no8qPnisLof+P1ctm6QQKMV5Lwho3Dn0Uxp41Qvu57Mg==}
     dependencies:
-      '@flasher/flasher': 1.0.11
+      '@flasher/flasher': 1.0.12
       toastr: 2.1.4
     dev: true
 
-  /@flasher/flasher/1.0.11:
-    resolution: {integrity: sha512-W7Fgw++xDnE9TTJABAKleWfcF5Zoksk+4mzqCeIOA1crjT1h58Kiys6T+HFBZ8XdWuroOo0Iz4Po6Mitm7es8g==}
+  /@flasher/flasher/1.0.12:
+    resolution: {integrity: sha512-WTNlrxhQ6rM5QylvhIefyBUur1m5BlP4zFz/QXY/xcgR17RhXSy925Y9kJlumB6NiZvlwVLiIcKmNjgs1Ge45w==}
     dependencies:
       csstype: 3.1.0
       deepmerge: 4.2.2
