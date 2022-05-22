@@ -1,8 +1,8 @@
-import '../css/_menu.pcss';
+import "../css/_menu.pcss";
 
-const menuBtn = document.getElementById('menu-toggle');
-const navigation = document.getElementById('main-navigation');
-const article = document.getElementById('main-article');
+const menuBtn = document.getElementById("menu-toggle");
+const navigation = document.getElementById("main-navigation");
+const article = document.getElementById("main-article");
 
 function toggleClassName(el, className) {
     if (el.classList.contains(className)) {
@@ -12,9 +12,9 @@ function toggleClassName(el, className) {
     }
 }
 
-menuBtn.addEventListener('click', function (e) {
+menuBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    toggleClassName(menuBtn, 'menu-closed');
-    toggleClassName(navigation, 'hidden');
-    toggleClassName(article, 'hidden');
+    toggleClassName(menuBtn, "menu-closed");
+    toggleClassName(navigation, "hidden");
+    toggleClassName(article, "hidden");
 });

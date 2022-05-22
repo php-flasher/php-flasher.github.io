@@ -20,51 +20,51 @@
         "/dist/main.css"
       ]
     },
-    "adapter/flasher": {
+    "adapter-flasher": {
       "js": [
         "/dist/runtime.js",
-        "/dist/vendors-node_modules_flasher_flasher_dist_index_js.js",
-        "/dist/adapter/flasher.js"
+        "/dist/vendors-node_modules_pnpm_flasher_flasher_1_0_11_node_modules_flasher_flasher_dist_index_js.js",
+        "/dist/adapter-flasher.js"
       ]
     },
-    "adapter/noty": {
+    "adapter-noty": {
       "js": [
         "/dist/runtime.js",
-        "/dist/vendors-node_modules_flasher_flasher_dist_index_js.js",
-        "/dist/vendors-node_modules_flasher_flasher-noty_dist_index_js.js",
-        "/dist/adapter/noty.js"
+        "/dist/vendors-node_modules_pnpm_flasher_flasher_1_0_11_node_modules_flasher_flasher_dist_index_js.js",
+        "/dist/vendors-node_modules_pnpm_flasher_flasher-noty_1_0_11_node_modules_flasher_flasher-noty_dist_-b97ce6.js",
+        "/dist/adapter-noty.js"
       ]
     },
-    "adapter/notyf": {
+    "adapter-notyf": {
       "js": [
         "/dist/runtime.js",
-        "/dist/vendors-node_modules_flasher_flasher_dist_index_js.js",
-        "/dist/vendors-node_modules_flasher_flasher-notyf_dist_index_js.js",
-        "/dist/adapter/notyf.js"
+        "/dist/vendors-node_modules_pnpm_flasher_flasher_1_0_11_node_modules_flasher_flasher_dist_index_js.js",
+        "/dist/vendors-node_modules_pnpm_flasher_flasher-notyf_1_0_11_node_modules_flasher_flasher-notyf_dis-138fd7.js",
+        "/dist/adapter-notyf.js"
       ]
     },
-    "adapter/pnotify": {
+    "adapter-pnotify": {
       "js": [
         "/dist/runtime.js",
-        "/dist/vendors-node_modules_flasher_flasher_dist_index_js.js",
-        "/dist/vendors-node_modules_flasher_flasher-pnotify_dist_index_js.js",
-        "/dist/adapter/pnotify.js"
+        "/dist/vendors-node_modules_pnpm_flasher_flasher_1_0_11_node_modules_flasher_flasher_dist_index_js.js",
+        "/dist/vendors-node_modules_pnpm_flasher_flasher-pnotify_1_0_11_node_modules_flasher_flasher-pnotify-969ce0.js",
+        "/dist/adapter-pnotify.js"
       ]
     },
-    "adapter/sweetalert": {
+    "adapter-sweetalert": {
       "js": [
         "/dist/runtime.js",
-        "/dist/vendors-node_modules_flasher_flasher_dist_index_js.js",
-        "/dist/vendors-node_modules_flasher_flasher-sweetalert_dist_index_js.js",
-        "/dist/adapter/sweetalert.js"
+        "/dist/vendors-node_modules_pnpm_flasher_flasher_1_0_11_node_modules_flasher_flasher_dist_index_js.js",
+        "/dist/vendors-node_modules_pnpm_flasher_flasher-sweetalert_1_0_11_node_modules_flasher_flasher-swee-932efd.js",
+        "/dist/adapter-sweetalert.js"
       ]
     },
-    "adapter/toastr": {
+    "adapter-toastr": {
       "js": [
         "/dist/runtime.js",
-        "/dist/vendors-node_modules_flasher_flasher_dist_index_js.js",
-        "/dist/vendors-node_modules_flasher_flasher-toastr_dist_index_js.js",
-        "/dist/adapter/toastr.js"
+        "/dist/vendors-node_modules_pnpm_flasher_flasher_1_0_11_node_modules_flasher_flasher_dist_index_js.js",
+        "/dist/vendors-node_modules_pnpm_flasher_flasher-toastr_1_0_11_node_modules_flasher_flasher-toastr_d-0533f1.js",
+        "/dist/adapter-toastr.js"
       ]
     }
   }

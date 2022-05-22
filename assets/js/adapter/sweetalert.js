@@ -1,4 +1,4 @@
-import '@flasher/flasher-sweetalert';
-import { showNotificationsForHandler } from './_notification.js';
+import "@flasher/flasher-sweetalert";
+import { showNotificationsForHandler } from "./_notification.js";
 
-showNotificationsForHandler('sweetalert');
+showNotificationsForHandler("sweetalert");

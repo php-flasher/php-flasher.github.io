@@ -1,4 +1,4 @@
-import '@flasher/flasher-notyf';
-import { showNotificationsForHandler } from './_notification.js';
+import "@flasher/flasher-notyf";
+import { showNotificationsForHandler } from "./_notification.js";
 
-showNotificationsForHandler('notyf');
+showNotificationsForHandler("notyf");

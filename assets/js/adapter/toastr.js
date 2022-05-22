@@ -1,4 +1,4 @@
-import '@flasher/flasher-toastr';
-import { showNotificationsForHandler } from './_notification.js';
+import "@flasher/flasher-toastr";
+import { showNotificationsForHandler } from "./_notification.js";
 
-showNotificationsForHandler('toastr');
+showNotificationsForHandler("toastr");

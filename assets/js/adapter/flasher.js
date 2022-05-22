@@ -1,3 +1,3 @@
-import { showNotificationsForHandler } from './_notification.js';
+import { showNotificationsForHandler } from "./_notification.js";
 
-showNotificationsForHandler('flasher')
+showNotificationsForHandler("flasher");

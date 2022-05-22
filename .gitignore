@@ -2,3 +2,5 @@ node_modules/
 .jekyll-cache/
 _site/
 .idea/
+
+.pnpm-debug.log

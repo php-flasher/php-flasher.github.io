@@ -28,12 +28,12 @@ Encore
     .addEntry('homepage', './assets/js/homepage.js')
     .addEntry('main', './assets/js/main.js')
 
-    .addEntry('adapter/flasher', './assets/js/adapter/flasher.js')
-    .addEntry('adapter/noty', './assets/js/adapter/noty.js')
-    .addEntry('adapter/notyf', './assets/js/adapter/notyf.js')
-    .addEntry('adapter/pnotify', './assets/js/adapter/pnotify.js')
-    .addEntry('adapter/sweetalert', './assets/js/adapter/sweetalert.js')
-    .addEntry('adapter/toastr', './assets/js/adapter/toastr.js')
+    .addEntry('adapter-flasher', './assets/js/adapter/flasher.js')
+    .addEntry('adapter-noty', './assets/js/adapter/noty.js')
+    .addEntry('adapter-notyf', './assets/js/adapter/notyf.js')
+    .addEntry('adapter-pnotify', './assets/js/adapter/pnotify.js')
+    .addEntry('adapter-sweetalert', './assets/js/adapter/sweetalert.js')
+    .addEntry('adapter-toastr', './assets/js/adapter/toastr.js')
 ;
 
 const config = Encore.getWebpackConfig();
