@@ -18,7 +18,7 @@ export function showNotificationsForHandler(handler) {
 
     factory.info("Welcome back");
 
-    if (["sweetalert", "pnotify"].includes(handler)) {
+    if (["sweetalert"].includes(handler)) {
         return;
     }
 
