@@ -7,7 +7,7 @@ updated_at: 2022-05-08
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Symfony, with supports from Symfony **2.0** to **6**
 
-## Installation :
+## <i class="fa-duotone fa-list-radio"></i> Installation :
 
 you can install the bundle using composer
 
@@ -15,7 +15,7 @@ you can install the bundle using composer
 composer require php-flasher/flasher-symfony
 ```
 
-## Enable the bundle :
+## <i class="fa-duotone fa-list-radio"></i> Enable the bundle :
 
 If you are using Symfony 4+ the bundle will be registered automatically in **`config/bundles.php`**, otherwise enable the bundle in the kernel:
 
@@ -34,7 +34,7 @@ public function registerBundles()
 }
 ```
 
-## Usage :
+## <i class="fa-duotone fa-list-radio"></i> Usage :
 
 1. add __`{% raw %}{{ flasher_render() }}{% endraw %}`__  at the **head** section of your base template
 

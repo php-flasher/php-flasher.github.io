@@ -7,11 +7,11 @@ updated_at: 2022-05-08
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Livewire.
 
-## Installation :
+## <i class="fa-duotone fa-list-radio"></i> Installation :
 
 Please follow the same installation steps as for the [Laravel Installation](/docs/framework/laravel) package.
 
-## Usage:
+## <i class="fa-duotone fa-list-radio"></i> Usage:
 
 1. add  `@flasher_render` at the bottom of your blade view
 
@@ -51,7 +51,7 @@ class MyComponent extends Component
     }
 ```
 
-## Events:
+## <i class="fa-duotone fa-list-radio"></i> Events:
 
 For sweetalert you can listen to **Confirmed**, **Denied** and **Dismissed** from withing you component
 

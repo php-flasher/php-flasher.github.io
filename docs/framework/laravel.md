@@ -7,7 +7,7 @@ updated_at: 2022-05-08
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration Laravel, with supports from Laravel  **4.0** to **9**.
 
-## Installation :
+## <i class="fa-duotone fa-list-radio"></i> Installation :
 
 You can install the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** Laravel package using composer.<br />
 This is the base package for all Laravel adapters.
@@ -34,7 +34,7 @@ Optionally include the Facade in `config/app.php`.
 'Flasher' => Flasher\Laravel\Facade\Flasher::class,
 ```
 
-## Usage:
+## <i class="fa-duotone fa-list-radio"></i> Usage:
 
 1. add  `@flasher_render` at the **header** section of your blade view
 
