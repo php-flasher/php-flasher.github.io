@@ -12,8 +12,16 @@ links.forEach((anchor) => {
 });
 
 function createAnchorNavigation() {
-    const container = document.querySelector('#anchor-navigation ul');
+    const container = document.querySelector('#anchor-navigation');
+    const ul = document.querySelector('#anchor-navigation ul');
     const anchors = document.querySelectorAll('a.anchor');
+
+    if (anchors.length === 0) {
+        container.remove();
+        return;
+    }
+
+    container.classList.add('md:block');
 
     anchors.forEach((anchor) => {
         const parent = anchor.parentElement;
@@ -30,7 +38,7 @@ function createAnchorNavigation() {
         li.classList.add('px-6', 'rounded', 'w-36');
         li.appendChild(link);
 
-        container.appendChild(li);
+        ul.appendChild(li);
     });
 }
 
