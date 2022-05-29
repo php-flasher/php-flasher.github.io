@@ -6,3 +6,4 @@ import "../css/_monokai.css";
 import "./_menu.js";
 import "./_prev-next.js";
 import "./_clipboard.js";
+import "./_anchors.js";
