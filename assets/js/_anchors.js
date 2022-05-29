@@ -16,6 +16,11 @@ function createAnchorNavigation() {
     const anchors = document.querySelectorAll('a.anchor');
 
     anchors.forEach((anchor) => {
+        const parent = anchor.parentElement;
+        parent.classList.add('px-6', 'rounded');
+
+        anchor.classList.add('leading-loose');
+
         const link = document.createElement('a');
         link.href = anchor.hash;
         link.innerText = anchor.innerText;
