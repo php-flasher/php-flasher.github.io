@@ -305,21 +305,33 @@ $flasher->showCancelButton(
 
 Use this to change the text on the "Confirm"-button.
 ```php
-$flasher->confirmButtonText(string $confirmButtonText, string $confirmButtonColor = null, string $confirmButtonAriaLabel = null)
+$flasher->confirmButtonText(
+    string $confirmButtonText,
+    string $confirmButtonColor = null,
+    string $confirmButtonAriaLabel = null
+)
 ```
 
 <p id="method-denyButtonText"><a href="#method-denyButtonText" class="anchor"><i class="fa-duotone fa-link"></i> DenyButtonText</a></p>
 
 Use this to change the text on the "Deny"-button.
 ```php
-$flasher->denyButtonText(string $denyButtonText, string $denyButtonColor = null, string $denyButtonAriaLabel = null)
+$flasher->denyButtonText(
+    string $denyButtonText,
+    string $denyButtonColor = null,
+    string $denyButtonAriaLabel = null
+)
 ```
 
 <p id="method-cancelButtonText"><a href="#method-cancelButtonText" class="anchor"><i class="fa-duotone fa-link"></i> CancelButtonText</a></p>
 
 Use this to change the text on the "Cancel"-button.
 ```php
-$flasher->cancelButtonText(string $cancelButtonText, string $cancelButtonColor = null, string $cancelButtonAriaLabel = null)
+$flasher->cancelButtonText(
+    string $cancelButtonText,
+    string $cancelButtonColor = null,
+    string $cancelButtonAriaLabel = null
+)
 ```
 
 <p id="method-confirmButtonColor"><a href="#method-confirmButtonColor" class="anchor"><i class="fa-duotone fa-link"></i> ConfirmButtonColor</a></p>
@@ -475,7 +487,12 @@ $flasher->returnInputValueOnDeny(bool $returnInputValueOnDeny = true)
 
 Add a customized icon for the popup. Should contain a string with the path or URL to the image.
 ```php
-$flasher->imageUrl(string $imageUrl, int $imageWidth = null, int $imageHeight = null, string $imageAlt = null)
+$flasher->imageUrl(
+    string $imageUrl,
+    int $imageWidth = null,
+    int $imageHeight = null,
+    string $imageAlt = null
+)
 ```
 
 <p id="method-imageWidth"><a href="#method-imageWidth" class="anchor"><i class="fa-duotone fa-link"></i> ImageWidth</a></p>
@@ -502,14 +519,28 @@ $flasher->imageAlt(string $imageAlt)
 <p id="method-image"><a href="#method-image" class="anchor"><i class="fa-duotone fa-link"></i> Image</a></p>
 
 ```php
-$flasher->image(string $title, string $text, string $imageUrl, int $imageWidth = 400, int $imageHeight = 200, string $imageAlt = null)
+$flasher->image(
+    string $title,
+    string $text,
+    string $imageUrl,
+    int $imageWidth = 400,
+    int $imageHeight = 200,
+    string $imageAlt = null
+)
 ```
 
 <p id="method-addImage"><a href="#method-addImage" class="anchor"><i class="fa-duotone fa-link"></i> AddImage</a></p>
 
 Shortcut to add and flush an image
 ```php
-$flasher->addImage(string $title, string $text, string $imageUrl, int $imageWidth = 400, int $imageHeight = 200, string $imageAlt = null)
+$flasher->addImage(
+    string $title,
+    string $text,
+    string $imageUrl,
+    int $imageWidth = 400,
+    int $imageHeight = 200,
+    string $imageAlt = null
+)
 ```
 
 <p id="method-inputLabel"><a href="#method-inputLabel" class="anchor"><i class="fa-duotone fa-link"></i> InputLabel</a></p>
