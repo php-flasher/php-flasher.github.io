@@ -10,6 +10,8 @@ updated_at: 2022-05-18
 ## <i class="fa-duotone fa-list-radio"></i> Installation :
 Quick start guide for installing the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** from cdn or npm.
 
+---
+
 ### <i class="fa-duotone fa-list-radio"></i> cdn
 
 To pull in the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** via CDN, grab the latest version from [jsdelivr](https://www.jsdelivr.com/package/npm/@flasher/flasher)
@@ -26,6 +28,8 @@ To pull in the **<span class="text-indigo-900">PHP<span class="text-indigo-500">
 ```html
 <script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.16/dist/flasher.min.js"></script>
 ```
+
+---
 
 ### <i class="fa-duotone fa-list-radio"></i> npm
 
@@ -59,6 +63,8 @@ or if you are using a cdn like this:
     flasher.info("Welcome back");
 </script>
 ```
+
+---
 
 ### <i class="fa-duotone fa-list-radio"></i> How about other adapters like toastr, noty and notyf ?
 
