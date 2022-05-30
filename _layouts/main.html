@@ -5,7 +5,7 @@
     </head>
     <body class="min-h-screen min-w-full leading-normal bg-gray-50 overflow-x-hidden">
         <div class="h-16 z-10 top-0 w-screen bg-white border-b border-indigo-200 shadow">
-            <div class="px-4 py-2">
+            <div id="header-logo" class="px-4 py-2">
                 <div class="flex items-center flex-no-shrink pt-1">
                     <a href="/" class="flex items-center">
                         <img class="fill-current h-10 w-10 mr-2" width="30" height="30" src="/dist/images/logo.png" />
@@ -28,18 +28,20 @@
 
         <main class="container mx-auto px-6 flex">
             <nav id="main-navigation" class="sticky top-4 hidden md:block h-full">
-                {% for section in site.data.menu %}
-                    <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
-                    <ul class="list-reset mb-8">
-                        {% for link in section[1] %}
-                            <li class="{% if page.url == link[1] %}bg-indigo-500 {% endif %}px-6 rounded w-36">
-                                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endfor %}
+                <div class="h-screen overflow-y-auto">
+                    {% for section in site.data.menu %}
+                        <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
+                        <ul class="list-reset mb-8">
+                            {% for link in section[1] %}
+                                <li class="{% if page.url == link[1] %}bg-indigo-500 {% endif %}px-6 rounded w-36">
+                                    <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </div>
             </nav>
-            <article id="main-article" class="grow px-10 py-5">
+            <article id="main-article" class="px-10 py-5 overflow-x-scroll ">
                 <div class="border-b border-grey-lighter py-3 mb-3 hidden sm:block">
                     {% include prev-next.html %}
                 </div>
@@ -62,11 +64,13 @@
 
                 {{ content }}
             </article>
-            <nav id="anchor-navigation" class="hidden h-full">
-                <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">
+            <nav id="anchor-navigation" class="sticky top-4 hidden h-full">
+                <div class="h-screen overflow-y-auto">
+                    <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">
                     <i class="fa-duotone fa-bars-sort"></i> Jump to
                 </h4>
-                <ul class="list-reset mb-8"></ul>
+                    <ul class="list-reset mb-8"></ul>
+                </div>
             </nav>
         </main>
 

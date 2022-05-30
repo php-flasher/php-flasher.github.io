@@ -244,7 +244,7 @@ param           | description
 
 ---
 
-<p id="method-withStamp"><a href="#method-withStamp" class="anchor"><i class="fa-duotone fa-link"></i> With Stamp</a></p>
+<p id="method-withStamp"><a href="#method-withStamp" class="anchor"><i class="fa-duotone fa-link"></i> WithStamp</a></p>
 
 ```php
 $builder = $flasher->withStamp(StampInterface $stamp);
@@ -280,7 +280,7 @@ param           | description
 
 ---
 
-<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> Get Envelope</a></p>
+<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> Getnvelope</a></p>
 
 ```php
 $envelope = $flasher->getEnvelope();

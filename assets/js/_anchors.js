@@ -37,7 +37,6 @@ function createAnchorNavigation() {
 
         const li = document.createElement('li');
         li.classList.add('px-6', 'rounded', 'w-full');
-        li.style.transform = 'translateX(-1.5rem)';
         li.appendChild(link);
 
         ul.appendChild(li);
@@ -54,17 +53,13 @@ function highlightCurrentAnchor(hash) {
         const parent = link.parentElement;
         link.classList.remove('text-gray-900');
         link.classList.add('text-indigo-500');
-        parent.classList.remove('bg-indigo-500', 'js-current-anchor');
+        parent.classList.remove('bg-indigo-500');
 
         if (hash === link.hash) {
             link.classList.remove('text-indigo-500');
             link.classList.add('text-white');
 
             parent.classList.add('bg-indigo-500');
-
-            if ('' === parent.id) {
-                parent.classList.add('js-current-anchor');
-            }
         }
     });
 }
