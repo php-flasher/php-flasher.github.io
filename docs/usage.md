@@ -8,6 +8,8 @@ updated_at: 2022-05-08
 
 > If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>
 
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
 ```php
@@ -15,16 +17,21 @@ $flasher->addFlash('success', 'Data has been saved successfully!');
 ```
 
 ```php
-$notification = $flasher->addFlash(string $type, string $message, string $title = null, array $options = [])
+$notification = $flasher->addFlash(
+    string $type,
+    string $message,
+    string $title = null,
+    array $options = []
+)
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$type`         | Notification type : <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc            
-`$message`      | The message to be displayed                                     
-`$title`        | The notification title                                     
-`$options`      | Options for the javascript libraries 
-`$notification` | The notification already stored in the session and ready to be rendered                      
+| param           | description                                                                                                                                                                                                                                                                                                         |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `$type`         | Notification type : <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
+| `$message`      | The message to be displayed                                                                                                                                                                                                                                                                                         |
+| `$title`        | The notification title                                                                                                                                                                                                                                                                                              |
+| `$options`      | Options for the javascript libraries                                                                                                                                                                                                                                                                                |
+| `$notification` | The notification already stored in the session and ready to be rendered                                                                                                                                                                                                                                             |
 
 There are also 4 shortcuts for the `addFlash()` method :
 
@@ -73,13 +80,13 @@ $builder = $flasher->type(string $type, string $message = null, string $title = 
 
 
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$type`         | <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc            
-`$message`      | Your message                                     
-`$title`        | Notification title                                     
-`$options`      | Additional options to be available in javascript handlers
-`$builder`      | Instance of the builder to continue chaining methods                         
+| param      | description                                                                                                                                                                                                                                                                                     |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `$type`    | <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
+| `$message` | Your message                                                                                                                                                                                                                                                                                    |
+| `$title`   | Notification title                                                                                                                                                                                                                                                                              |
+| `$options` | Additional options to be available in javascript handlers                                                                                                                                                                                                                                       |
+| `$builder` | Instance of the builder to continue chaining methods                                                                                                                                                                                                                                            |
 
 ---
 
@@ -90,10 +97,9 @@ $builder = $flasher->warning(string $message = null, string $title = null, array
 $builder = $flasher->info(string $message = null, string $title = null, array $options = [])
 ```
 
-| description                                      
-|------------------------------------------------- 
-| Shortcuts for the $flasher->type() method                                
-                  
+| description                               |
+|-------------------------------------------|
+| Shortcuts for the $flasher->type() method |
 
 ---
 
@@ -103,9 +109,9 @@ $builder = $flasher->info(string $message = null, string $title = null, array $o
 $builder = $flasher->message(string $message);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$message`      | Your message                                     
+| param      | description  |
+|------------|--------------|
+| `$message` | Your message |
 
 ---
 
@@ -115,9 +121,9 @@ param           | description
 $builder = $flasher->title(string $title);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$title`        | Notification title                                  
+| param    | description        |
+|----------|--------------------|
+| `$title` | Notification title |
 
 ---
 
@@ -127,10 +133,10 @@ param           | description
 $builder = $flasher->options(array $options, bool $merge = true);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$options`      | Array of extra options to be available in javascript handlers                                   
-`$merge`        | merge options if you call the options method multiple times                                   
+| param      | description                                                   |
+|------------|---------------------------------------------------------------|
+| `$options` | Array of extra options to be available in javascript handlers |
+| `$merge`   | merge options if you call the options method multiple times   |
 
 ---
 
@@ -140,10 +146,10 @@ param           | description
 $builder = $flasher->option(string $option, mixed $value);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$option`       | add or update an option key                                   
-`$value`        | the actual value                                   
+| param     | description                 |
+|-----------|-----------------------------|
+| `$option` | add or update an option key |
+| `$value`  | the actual value            |
 
 ---
 
@@ -153,9 +159,9 @@ param           | description
 $builder = $flasher->priority(int $priority);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$priority`     | use this value to filter notification at the rendering level                              
+| param       | description                                                  |
+|-------------|--------------------------------------------------------------|
+| `$priority` | use this value to filter notification at the rendering level |
 
 ---
 
@@ -165,9 +171,9 @@ param           | description
 $builder = $flasher->hops(int $hops);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$hops`         | he number of requests in which the message will be present                                 
+| param   | description                                                |
+|---------|------------------------------------------------------------|
+| `$hops` | he number of requests in which the message will be present |
 
 ---
 
@@ -177,9 +183,9 @@ param           | description
 $builder = $flasher->keep();
 ```
 
-| description                                      
-|------------------------------------------------- 
-| Adds one more hop to the current  notification                                
+| description                                    |
+|------------------------------------------------|
+| Adds one more hop to the current  notification |
 
 ---
 
@@ -189,9 +195,9 @@ $builder = $flasher->keep();
 $builder = $flasher->delay(int $delay);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$hops`         | the number of requests in which the message will be waiting to to be ready for rendering                              
+| param   | description                                                                              |
+|---------|------------------------------------------------------------------------------------------|
+| `$hops` | the number of requests in which the message will be waiting to to be ready for rendering |
 
 ---
 
@@ -201,9 +207,9 @@ param           | description
 $builder = $flasher->now();
 ```
 
-| description                                      
-|------------------------------------------------- 
-| Shortcut for $flasher->delay(0)                            
+| description                     |
+|---------------------------------|
+| Shortcut for $flasher->delay(0) |
 
 ---
 
@@ -213,9 +219,9 @@ $builder = $flasher->now();
 $builder = $flasher->translate(string $locale = null);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$locale`       | The locale to be used for the translation or null to use the default locale     
+| param     | description                                                                 |
+|-----------|-----------------------------------------------------------------------------|
+| `$locale` | The locale to be used for the translation or null to use the default locale |
 
 ---
 
@@ -225,10 +231,10 @@ param           | description
 $builder = $flasher->preset(string $preset, bool $flash = true);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$preset`       | The preset to be used for the notification                              
-`$flash`        | If true, the notification will be flashed after the preset is applied     
+| param     | description                                                           |
+|-----------|-----------------------------------------------------------------------|
+| `$preset` | The preset to be used for the notification                            |
+| `$flash`  | If true, the notification will be flashed after the preset is applied |
 
 ---
 
@@ -238,9 +244,9 @@ param           | description
 $builder = $flasher->context(array $context = []);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$context`      | Custom data to be available in javascript side
+| param      | description                                    |
+|------------|------------------------------------------------|
+| `$context` | Custom data to be available in javascript side |
 
 ---
 
@@ -250,9 +256,9 @@ param           | description
 $builder = $flasher->withStamp(StampInterface $stamp);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$stamp`        | Attach a StampInterface to the current notification
+| param    | description                                         |
+|----------|-----------------------------------------------------|
+| `$stamp` | Attach a StampInterface to the current notification |
 
 ---
 
@@ -262,9 +268,9 @@ param           | description
 $builder = $flasher->with(array $stamps);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$stamps`       | Attach multiple stamps at the same time to the current notification
+| param     | description                                                         |
+|-----------|---------------------------------------------------------------------|
+| `$stamps` | Attach multiple stamps at the same time to the current notification |
 
 ---
 
@@ -274,9 +280,9 @@ param           | description
 $builder = $flasher->handler(string $handler);
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$handler`      | The handler name it will be used to choose to correct js library to render the notification
+| param      | description                                                                                 |
+|------------|---------------------------------------------------------------------------------------------|
+| `$handler` | The handler name it will be used to choose to correct js library to render the notification |
 
 ---
 
@@ -286,9 +292,9 @@ param           | description
 $envelope = $flasher->getEnvelope();
 ```
 
-param           | description                                      
-----------------|------------------------------------------------- 
-`$envelope`     | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class
+| param       | description                                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------------------|
+| `$envelope` | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class |
 
 ---
 
@@ -301,9 +307,9 @@ param           | description
 $envelope = $flasher->flash(array $stamps = []);
 ```
 
-param           | description                                      
-----------------|-------------------------------------------------
-`$stamps`       | Attach multiple stamps at the same time to the current notification
-`$envelope`     | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class
+| param       | description                                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------------------|
+| `$stamps`   | Attach multiple stamps at the same time to the current notification                                                        |
+| `$envelope` | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class |
 
 ---
