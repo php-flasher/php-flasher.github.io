@@ -5,7 +5,7 @@ published_at: 2020-11-28
 updated_at: 2022-05-08
 ---
 
-# Installation
+## <i class="fa-duotone fa-list-radio"></i> Installation
 
 For more information about notyf click <a href="https://carlosroso.com/notyf/">here</a>.
 
@@ -24,9 +24,11 @@ composer require php-flasher/flasher-notyf-laravel
 composer require php-flasher/flasher-notyf-symfony
 ```
 
-# Usage
+---
 
-Just instanciate the `NotyfFactory` and start calling build methods
+## <i class="fa-duotone fa-list-radio"></i> Usage
+
+Just instantiate the `NotyfFactory` and start calling build methods
 
 ```php
 namespace App\Controller;
@@ -45,30 +47,43 @@ class NotifyController
 }    
 ```
 
-## Notyf specific method builders
+---
+
+## <i class="fa-duotone fa-list-radio"></i> Notyf specific method builders
 
 All methods in the **[Usage](/docs/usage/)** section are available also for `NotyfFactory`
 
+---
 
-### duration :
+<p id="method-duration"><a href="#method-duration" class="anchor"><i class="fa-duotone fa-link"></i> duration</a></p>
+
 Number of miliseconds before hiding the notification. Use 0 for infinite duration.
 ```php
 $flasher->duration(int $duration)
 ```
 
-### ripple :
+---
+
+<p id="method-ripple"><a href="#method-ripple" class="anchor"><i class="fa-duotone fa-link"></i> ripple</a></p>
+
 Whether to show the notification with a ripple effect
 ```php
 $flasher->ripple(bool $ripple)
 ```
 
-### position :
+---
+
+<p id="method-position"><a href="#method-position" class="anchor"><i class="fa-duotone fa-link"></i> position</a></p>
+
 Viewport location where notifications are rendered
 ```php
 $flasher->position(string $position, string $value)
 ```
 
-### dismissible :
+---
+
+<p id="method-dismissible"><a href="#method-dismissible" class="anchor"><i class="fa-duotone fa-link"></i> dismissible</a></p>
+
 Whether to allow users to dismiss the notification with a button
 ```php
 $flasher->dismissible(bool $dismissible)
