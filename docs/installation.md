@@ -11,6 +11,8 @@ updated_at: 2022-05-08
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** consists of multiple parts, each of which is a separate library.
 so you can install only the parts you need.
 
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer.
@@ -39,6 +41,8 @@ By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flas
 * **[Notyf](/docs/adapter/notyf/)**
 * **[Sweet Alert](/docs/adapter/sweetalert/)**
 * **[Pnotify](/docs/adapter/pnotify/)**
+
+---
 
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
