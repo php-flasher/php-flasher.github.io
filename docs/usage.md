@@ -1,13 +1,9 @@
 ---
 permalink: /docs/usage/
-title: PHPFlasher Usage
+title: Usage
 hide_title: true
 published_at: 2020-11-28
 updated_at: 2022-05-08
----
-
-> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>
-
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
@@ -30,10 +26,9 @@ $notification = $flasher->addFlash(
 | `$type`         | Notification type : <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
 | `$message`      | The message to be displayed                                                                                                                                                                                                                                                                                         |
 | `$title`        | The notification title                                                                                                                                                                                                                                                                                              |
-| `$options`      | Options for the javascript libraries                                                                                                                                                                                                                                                                                |
-| `$notification` | The notification already stored in the session and ready to be rendered                                                                                                                                                                                                                                             |
+| `$options`      | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                       |
 
-There are also 4 shortcuts for the `addFlash()` method :
+There are also 4 **shortcuts** for the **`addFlash()`** method :
 
 ```php
 $flasher->addSuccess('success message');
@@ -44,18 +39,17 @@ $flasher->addInfo('info message');
 
 --- 
 
-## <i class="fa-duotone fa-list-radio"></i> Or with Notification Builder for more flexibility
+## <i class="fa-duotone fa-list-radio"></i> More flexibility with Builder methods
 
-There are only __two__ main steps to render a notification  : __build__ and __flash__ 
+There are only __two__ main steps to display a notification with **builder methods** : __build__ and __flash__.
 
 ```php
 // Step 1: create your notification and add options
-$builder = $flasher->handler('toastr')
+$builder = $flasher->handler('toastr') // the handle() method here is optional
     ->type('success')
     ->message('your custom message')
     ->priority(2)
-    ->option('timer', 5000)
-;
+    ->option('timer', 5000);
 
 // Step2 : Store the notification in the session
 $builder->flash();
@@ -68,9 +62,9 @@ $builder = $flasher->type('error', 'An error has occurred please try again later
 $builder->flash();
 ```
 
-> As you can see, you **should** manually flash the notification, flasher has to know if your notification is ready to be rendered,
-> or you still need to call methods and add more options ...etc
+> <span class="text-orange-900"><i class="fa-duotone fa-circle-exclamation text-red-900 fa-xl"></i> as you can see, you **should** manually flash the notification, flasher has to know when your notification is ready to be displayed.</span> <br>
 
+---
 
 <p id="method-type"><a href="#method-type" class="anchor"><i class="fa-duotone fa-link"></i> type</a></p>
 
@@ -83,12 +77,14 @@ $builder = $flasher->type(string $type, string $message = null, string $title = 
 | param      | description                                                                                                                                                                                                                                                                                     |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `$type`    | <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
-| `$message` | Your message                                                                                                                                                                                                                                                                                    |
-| `$title`   | Notification title                                                                                                                                                                                                                                                                              |
-| `$options` | Additional options to be available in javascript handlers                                                                                                                                                                                                                                       |
-| `$builder` | Instance of the builder to continue chaining methods                                                                                                                                                                                                                                            |
+| `$message` | The message to be displayed                                                                                                                                                                                                                                                                     |
+| `$title`   | The notification title                                                                                                                                                                                                                                                                          |
+| `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                            |
+| `$builder` | An instance of the notification builder, so you could chain other builder methods on it                                                                                                                                                                                                         |
 
 ---
+
+<p id="method-shortcuts"><a href="#method-shortcuts" class="anchor"><i class="fa-duotone fa-link"></i> type method shortcuts</a></p>
 
 ```php
 $builder = $flasher->success(string $message = null, string $title = null, array $options = [])
@@ -109,9 +105,9 @@ $builder = $flasher->info(string $message = null, string $title = null, array $o
 $builder = $flasher->message(string $message);
 ```
 
-| param      | description  |
-|------------|--------------|
-| `$message` | Your message |
+| param      | description                 |
+|------------|-----------------------------|
+| `$message` | The message to be displayed |
 
 ---
 
@@ -121,9 +117,9 @@ $builder = $flasher->message(string $message);
 $builder = $flasher->title(string $title);
 ```
 
-| param    | description        |
-|----------|--------------------|
-| `$title` | Notification title |
+| param    | description            |
+|----------|------------------------|
+| `$title` | The notification title |
 
 ---
 
@@ -133,10 +129,10 @@ $builder = $flasher->title(string $title);
 $builder = $flasher->options(array $options, bool $merge = true);
 ```
 
-| param      | description                                                   |
-|------------|---------------------------------------------------------------|
-| `$options` | Array of extra options to be available in javascript handlers |
-| `$merge`   | merge options if you call the options method multiple times   |
+| param      | description                                                          |
+|------------|----------------------------------------------------------------------|
+| `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc) |
+| `$merge`   | Merge options if you call the options method multiple times          |
 
 ---
 
@@ -146,10 +142,10 @@ $builder = $flasher->options(array $options, bool $merge = true);
 $builder = $flasher->option(string $option, mixed $value);
 ```
 
-| param     | description                 |
-|-----------|-----------------------------|
-| `$option` | add or update an option key |
-| `$value`  | the actual value            |
+| param     | description  |
+|-----------|--------------|
+| `$option` | Option key   |
+| `$value`  | Option value |
 
 ---
 
@@ -159,9 +155,9 @@ $builder = $flasher->option(string $option, mixed $value);
 $builder = $flasher->priority(int $priority);
 ```
 
-| param       | description                                                  |
-|-------------|--------------------------------------------------------------|
-| `$priority` | use this value to filter notification at the rendering level |
+| param       | description                                                                                |
+|-------------|--------------------------------------------------------------------------------------------|
+| `$priority` | The priority of the notification, the higher the priority, the sooner it will be displayed |
 
 ---
 
@@ -171,9 +167,9 @@ $builder = $flasher->priority(int $priority);
 $builder = $flasher->hops(int $hops);
 ```
 
-| param   | description                                                |
-|---------|------------------------------------------------------------|
-| `$hops` | he number of requests in which the message will be present |
+| param   | description                                                 |
+|---------|-------------------------------------------------------------|
+| `$hops` | The number of requests in which the message will be present |
 
 ---
 
@@ -183,9 +179,9 @@ $builder = $flasher->hops(int $hops);
 $builder = $flasher->keep();
 ```
 
-| description                                    |
-|------------------------------------------------|
-| Adds one more hop to the current  notification |
+| description                                        |
+|----------------------------------------------------|
+| Keep the notification in the next session requests |
 
 ---
 
@@ -195,9 +191,9 @@ $builder = $flasher->keep();
 $builder = $flasher->delay(int $delay);
 ```
 
-| param   | description                                                                              |
-|---------|------------------------------------------------------------------------------------------|
-| `$hops` | the number of requests in which the message will be waiting to to be ready for rendering |
+| param    | description                                                                        |
+|----------|------------------------------------------------------------------------------------|
+| `$delay` | The number of requests in which the message will be waiting before being displayed |
 
 ---
 
@@ -256,9 +252,9 @@ $builder = $flasher->context(array $context = []);
 $builder = $flasher->withStamp(StampInterface $stamp);
 ```
 
-| param    | description                                         |
-|----------|-----------------------------------------------------|
-| `$stamp` | Attach a StampInterface to the current notification |
+| param    | description                                |
+|----------|--------------------------------------------|
+| `$stamp` | Attach a stamp to the current notification |
 
 ---
 
@@ -280,36 +276,34 @@ $builder = $flasher->with(array $stamps);
 $builder = $flasher->handler(string $handler);
 ```
 
-| param      | description                                                                                 |
-|------------|---------------------------------------------------------------------------------------------|
-| `$handler` | The handler name it will be used to choose to correct js library to render the notification |
+| param      | description                                                                                             |
+|------------|---------------------------------------------------------------------------------------------------------|
+| `$handler` | The handler name it will be used to choose to correct js adapter to be used to display the notification |
 
 ---
 
-<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> getnvelope</a></p>
+<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> getEnvelope</a></p>
 
 ```php
 $envelope = $flasher->getEnvelope();
 ```
 
-| param       | description                                                                                                                |
-|-------------|----------------------------------------------------------------------------------------------------------------------------|
-| `$envelope` | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class |
+| param       | description                                                             |
+|-------------|-------------------------------------------------------------------------|
+| `$envelope` | Get the current notification with all stamps and options attached to it |
 
 ---
 
 <p id="method-flash"><a href="#method-flash" class="anchor"><i class="fa-duotone fa-link"></i> flash</a></p>
 
-> Call the flash methods when the notification is ready to be rendered
+> <span class="text-orange-900">Call the **flash** method at the end when your notification is ready to be displayed</span>
 
 
 ```php
 $envelope = $flasher->flash(array $stamps = []);
 ```
 
-| param       | description                                                                                                                |
-|-------------|----------------------------------------------------------------------------------------------------------------------------|
-| `$stamps`   | Attach multiple stamps at the same time to the current notification                                                        |
-| `$envelope` | get the current notification with all stamps and options attached to it, in a single object instance of the Envelope class |
-
----
+| param       | description                                                         |
+|-------------|---------------------------------------------------------------------|
+| `$stamps`   | Attach multiple stamps at the same time to the current notification |
+| `$envelope` | The current notification with all stamps and options attached to it |
