@@ -6,35 +6,30 @@ published_at: 2020-11-28
 updated_at: 2022-05-08
 ---
 
-> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>
-
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** consists of multiple parts, each of which is a separate library.
 so you can install only the parts you need.
 
----
-
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer <i class="fa-brands fa-php fa-xl text-indigo-900"></i> :
 
 ```shell
 composer require php-flasher/flasher
 ```
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** also offers a solid integration
-with <i class="fa-brands fa-laravel text-red-900"></i> Laravel and <i class="fa-brands fa-symfony text-black"></i> Symfony :
+**or** choose one of the following integration with :
 
-**<i class="fa-brands fa-laravel text-red-900 fa-lg"></i> Laravel**:
+**<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 ```shell
 composer require php-flasher/flasher-laravel
 ```
 
-**<i class="fa-brands fa-symfony text-black fa-lg"></i> Symfony**:
+**<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
 ```shell
 composer require php-flasher/flasher-symfony
 ```
 
-By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** cames with default notification adapter, but you can install other adapters as well:
+By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** show its default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but you can install additional adapters as well :
 
 * **[Toastr](/docs/adapter/toastr/)**
 * **[Noty](/docs/adapter/noty/)**
@@ -47,7 +42,7 @@ By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flas
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
 If you're using a framework like <i class="fa-brands fa-laravel text-red-900"></i> __Laravel__ or <i class="fa-brands fa-symfony text-black"></i> __Symfony__, just grab an instance of __FlasherInterface__ from the
-container and use it to flash messages.
+service container and use it to display your notifications.
 
 ```php
 <?php
@@ -62,7 +57,7 @@ class BookController
     {
         // ...
 
-        $flasher->addSuccess('Data has been saved successfully!');
+        $flasher->addSuccess('Book saved successfully');
 
         flash('Data has been saved successfully!') // laravel helper function
 
