@@ -2,6 +2,7 @@ const container = document.querySelector('#anchor-navigation');
 
 createAnchorNavigation();
 highlightCurrentAnchor();
+stickyHeight();
 
 const links = document.querySelectorAll('a.anchor, #anchor-navigation ul li a');
 links.forEach((anchor) => {
@@ -61,5 +62,20 @@ function highlightCurrentAnchor(hash) {
 
             parent.classList.add('bg-indigo-500');
         }
+    });
+}
+
+function stickyHeight() {
+    const elements = document.querySelectorAll('.sticky');
+    elements.forEach((element) => {
+        if (element.offsetHeight <= window.innerHeight) {
+            return;
+        }
+
+        const div = document.createElement('div');
+        div.classList.add('h-screen', 'overflow-y-auto');
+        div.innerHTML = element.innerHTML;
+
+        element.innerHTML = div.outerHTML;
     });
 }

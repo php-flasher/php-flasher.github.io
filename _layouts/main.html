@@ -28,18 +28,16 @@
 
         <main class="container mx-auto px-6 flex">
             <nav id="main-navigation" class="sticky top-4 hidden md:block h-full w-36">
-                <div class="h-screen overflow-y-auto">
-                    {% for section in site.data.menu %}
-                        <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
-                        <ul class="list-reset mb-8">
-                            {% for link in section[1] %}
-                                <li class="{% if page.url == link[1] %}bg-indigo-500 {% endif %}px-6 rounded w-36">
-                                    <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endfor %}
-                </div>
+                {% for section in site.data.menu %}
+                    <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
+                    <ul class="list-reset mb-8">
+                        {% for link in section[1] %}
+                            <li class="{% if page.url == link[1] %}bg-indigo-500 {% endif %}px-6 rounded w-36">
+                                <a class="leading-loose text-md w-full {% if page.url == link[1] %}text-white{% else %}text-gray-900{% endif %}" href="{{ link[1] }}">{{ link[0] }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
             </nav>
             <article id="main-article" class="flex-1 px-10 py-5 overflow-x-auto">
                 <div class="border-b border-grey-lighter py-3 mb-3 hidden sm:block">
@@ -65,12 +63,10 @@
                 {{ content }}
             </article>
             <nav id="anchor-navigation" class="sticky top-4 hidden h-full w-56">
-                <div class="h-screen overflow-y-auto">
-                    <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">
+                <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">
                     <i class="fa-duotone fa-bars-sort"></i> Jump to
                 </h4>
-                    <ul class="list-reset mb-8"></ul>
-                </div>
+                <ul class="list-reset mb-8"></ul>
             </nav>
         </main>
 
