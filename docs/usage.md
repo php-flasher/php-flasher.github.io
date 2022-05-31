@@ -72,7 +72,7 @@ $builder->flash();
 > or you still need to call methods and add more options ...etc
 
 
-<p id="method-type"><a href="#method-type" class="anchor"><i class="fa-duotone fa-link"></i> Type</a></p>
+<p id="method-type"><a href="#method-type" class="anchor"><i class="fa-duotone fa-link"></i> type</a></p>
 
 ```php
 $builder = $flasher->type(string $type, string $message = null, string $title = null, array $options = [])
@@ -103,7 +103,7 @@ $builder = $flasher->info(string $message = null, string $title = null, array $o
 
 ---
 
-<p id="method-message"><a href="#method-message" class="anchor"><i class="fa-duotone fa-link"></i> Message</a></p>
+<p id="method-message"><a href="#method-message" class="anchor"><i class="fa-duotone fa-link"></i> message</a></p>
 
 ```php
 $builder = $flasher->message(string $message);
@@ -115,7 +115,7 @@ $builder = $flasher->message(string $message);
 
 ---
 
-<p id="method-title"><a href="#method-title" class="anchor"><i class="fa-duotone fa-link"></i> Title</a></p>
+<p id="method-title"><a href="#method-title" class="anchor"><i class="fa-duotone fa-link"></i> title</a></p>
 
 ```php
 $builder = $flasher->title(string $title);
@@ -127,7 +127,7 @@ $builder = $flasher->title(string $title);
 
 ---
 
-<p id="method-options"><a href="#method-options" class="anchor"><i class="fa-duotone fa-link"></i> Options</a></p>
+<p id="method-options"><a href="#method-options" class="anchor"><i class="fa-duotone fa-link"></i> options</a></p>
 
 ```php
 $builder = $flasher->options(array $options, bool $merge = true);
@@ -140,7 +140,7 @@ $builder = $flasher->options(array $options, bool $merge = true);
 
 ---
 
-<p id="method-option"><a href="#method-option" class="anchor"><i class="fa-duotone fa-link"></i> Option</a></p>
+<p id="method-option"><a href="#method-option" class="anchor"><i class="fa-duotone fa-link"></i> option</a></p>
 
 ```php
 $builder = $flasher->option(string $option, mixed $value);
@@ -153,7 +153,7 @@ $builder = $flasher->option(string $option, mixed $value);
 
 ---
 
-<p id="method-priority"><a href="#method-priority" class="anchor"><i class="fa-duotone fa-link"></i> Priority</a></p>
+<p id="method-priority"><a href="#method-priority" class="anchor"><i class="fa-duotone fa-link"></i> priority</a></p>
 
 ```php
 $builder = $flasher->priority(int $priority);
@@ -165,7 +165,7 @@ $builder = $flasher->priority(int $priority);
 
 ---
 
-<p id="method-hops"><a href="#method-hops" class="anchor"><i class="fa-duotone fa-link"></i> Hops</a></p>
+<p id="method-hops"><a href="#method-hops" class="anchor"><i class="fa-duotone fa-link"></i> hops</a></p>
 
 ```php
 $builder = $flasher->hops(int $hops);
@@ -177,7 +177,7 @@ $builder = $flasher->hops(int $hops);
 
 ---
 
-<p id="method-keep"><a href="#method-keep" class="anchor"><i class="fa-duotone fa-link"></i> Keep</a></p>
+<p id="method-keep"><a href="#method-keep" class="anchor"><i class="fa-duotone fa-link"></i> keep</a></p>
 
 ```php
 $builder = $flasher->keep();
@@ -189,7 +189,7 @@ $builder = $flasher->keep();
 
 ---
 
-<p id="method-delay"><a href="#method-delay" class="anchor"><i class="fa-duotone fa-link"></i> Delay</a></p>
+<p id="method-delay"><a href="#method-delay" class="anchor"><i class="fa-duotone fa-link"></i> delay</a></p>
 
 ```php
 $builder = $flasher->delay(int $delay);
@@ -201,7 +201,7 @@ $builder = $flasher->delay(int $delay);
 
 ---
 
-<p id="method-now"><a href="#method-now" class="anchor"><i class="fa-duotone fa-link"></i> Now</a></p>
+<p id="method-now"><a href="#method-now" class="anchor"><i class="fa-duotone fa-link"></i> now</a></p>
 
 ```php
 $builder = $flasher->now();
@@ -213,7 +213,7 @@ $builder = $flasher->now();
 
 ---
 
-<p id="method-translate"><a href="#method-translate" class="anchor"><i class="fa-duotone fa-link"></i> Translate</a></p>
+<p id="method-translate"><a href="#method-translate" class="anchor"><i class="fa-duotone fa-link"></i> translate</a></p>
 
 ```php
 $builder = $flasher->translate(string $locale = null);
@@ -225,7 +225,7 @@ $builder = $flasher->translate(string $locale = null);
 
 ---
 
-<p id="method-preset"><a href="#method-preset" class="anchor"><i class="fa-duotone fa-link"></i> Preset</a></p>
+<p id="method-preset"><a href="#method-preset" class="anchor"><i class="fa-duotone fa-link"></i> preset</a></p>
 
 ```php
 $builder = $flasher->preset(string $preset, bool $flash = true);
@@ -238,7 +238,7 @@ $builder = $flasher->preset(string $preset, bool $flash = true);
 
 ---
 
-<p id="method-context"><a href="#method-context" class="anchor"><i class="fa-duotone fa-link"></i> Context</a></p>
+<p id="method-context"><a href="#method-context" class="anchor"><i class="fa-duotone fa-link"></i> context</a></p>
 
 ```php
 $builder = $flasher->context(array $context = []);
@@ -250,7 +250,7 @@ $builder = $flasher->context(array $context = []);
 
 ---
 
-<p id="method-withStamp"><a href="#method-withStamp" class="anchor"><i class="fa-duotone fa-link"></i> WithStamp</a></p>
+<p id="method-withStamp"><a href="#method-withStamp" class="anchor"><i class="fa-duotone fa-link"></i> withStamp</a></p>
 
 ```php
 $builder = $flasher->withStamp(StampInterface $stamp);
@@ -262,7 +262,7 @@ $builder = $flasher->withStamp(StampInterface $stamp);
 
 ---
 
-<p id="method-with"><a href="#method-with" class="anchor"><i class="fa-duotone fa-link"></i> With</a></p>
+<p id="method-with"><a href="#method-with" class="anchor"><i class="fa-duotone fa-link"></i> with</a></p>
 
 ```php
 $builder = $flasher->with(array $stamps);
@@ -274,7 +274,7 @@ $builder = $flasher->with(array $stamps);
 
 ---
 
-<p id="method-handler"><a href="#method-handler" class="anchor"><i class="fa-duotone fa-link"></i> Handler</a></p>
+<p id="method-handler"><a href="#method-handler" class="anchor"><i class="fa-duotone fa-link"></i> handler</a></p>
 
 ```php
 $builder = $flasher->handler(string $handler);
@@ -286,7 +286,7 @@ $builder = $flasher->handler(string $handler);
 
 ---
 
-<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> Getnvelope</a></p>
+<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> getnvelope</a></p>
 
 ```php
 $envelope = $flasher->getEnvelope();
@@ -298,7 +298,7 @@ $envelope = $flasher->getEnvelope();
 
 ---
 
-<p id="method-flash"><a href="#method-flash" class="anchor"><i class="fa-duotone fa-link"></i> Flash</a></p>
+<p id="method-flash"><a href="#method-flash" class="anchor"><i class="fa-duotone fa-link"></i> flash</a></p>
 
 > Call the flash methods when the notification is ready to be rendered
 
