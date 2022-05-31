@@ -60,7 +60,17 @@
                     </p>
                 {% endunless %}
 
+                <blockquote>
+                  <p>If you like <strong><span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span></strong> please consider giving it a <i class="fa-duotone fa-star text-yellow-600"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/phpflasher">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i></p>
+                </blockquote>
+
+                <hr>
+
                 {{ content }}
+
+                <div class="border-t border-grey-lighter py-3 mb-3 hidden sm:block">
+                    {% include prev-next.html %}
+                </div>
             </article>
             <nav id="anchor-navigation" class="sticky top-4 hidden h-full w-56">
                 <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">
