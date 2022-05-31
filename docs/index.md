@@ -36,8 +36,6 @@ updated_at: 2022-05-08
     </p>
 </div>
 
-> If you like **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** please consider giving it a <i class="fa-duotone fa-star text-yellow-700"></i> on <a href="https://github.com/php-flasher/php-flasher">github</a> or by <a href="https://twitter.com/yoeunes/status/1446792536090161153">tweeting</a> about this library or by contributing to the documentation <i class="fa-solid fa-heart text-red-600"></i>️.
-
 ## <i class="fa-duotone fa-list-radio"></i> What is **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
 Flash messages are a great way to add some simple notifications to users of your website or application about important events that may have happened.
@@ -45,21 +43,25 @@ Flash messages are a great way to add some simple notifications to users of your
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** gives a straightforward way to give feedback messages in the current or the next page to users with a flashing system. <br>
 The flashing system basically makes it possible to record a message and store it within the session so that it can be retrieved when needed.
 
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Why use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : __toastr.js__, __sweetalert 2__, __pnotify__, __noty__, __notyf__ and even show __desktop__ notifications.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : <span class="text-indigo-900">__toastr.js__</span>, <span class="text-indigo-900">__sweetalert 2__</span>, <span class="text-indigo-900">__pnotify__</span>, <span class="text-indigo-900">__noty__</span>, <span class="text-indigo-900">__notyf__</span> and even show <span class="text-indigo-900">__desktop__</span> notifications.
 
 This library is designed, so you can take full control when creating your notifications :
 
 * Show various notifications simultaneously
-* Render notification easily from javascript with small footprint
-* LTR and Dark-mode support
+* Render notification easily from <i class="fa-brands fa-js-square text-yellow-600 fa-xl"></i> javascript with small footprint
+* LTR <i class="fa-duotone fa-signs-post text-indigo-900 fa-xl"></i> and Dark-mode <i class="fa-duotone fa-circle-half-stroke text-indigo-900 fa-xl"></i> support
 * Limit the amount of displayed notifications
-* Show Desktop notifications for : <i class="fa-brands fa-linux"></i> Linux, <i class="fa-brands fa-apple"></i> macOS, <i class="fa-brands fa-windows"></i> Windows
-* Framework-agnostic with implementations for: <i class="fa-brands fa-laravel text-red-900"></i> Laravel and <i class="fa-brands fa-symfony text-black"></i> Symfony
-* Autocomplete for <i class="fa-duotone fa-memo-pad"></i> PHPSTORM
-* You can always create an adapter yourself
+* Show Desktop notifications for : <i class="fa-brands fa-linux fa-xl"></i> Linux, <i class="fa-brands fa-apple fa-xl"></i> macOS, <i class="fa-brands fa-windows fa-xl"></i> Windows
+* Framework-agnostic with implementations for: <a href="https://laravel.com/" class="text-indigo-900"><i class="fa-brands fa-laravel text-red-900 fa-xl"></i> <strong>Laravel</strong></a> and <a href="https://symfony.com/" class="text-indigo-900"><i class="fa-brands fa-symfony text-black fa-xl"></i> <strong>Symfony</strong></a></span>
+* Autocomplete for <i class="fa-duotone fa-sidebar text-indigo-900 fa-xl"></i> PHPSTORM
+* You can always create an adapter yourself <i class="fa-duotone fa-screwdriver-wrench fa-xl text-indigo-900"></i>
 * ...and more
+
+---
 
 ## <i class="fa-duotone fa-list-radio"></i> Getting Started
 
