@@ -66,9 +66,13 @@ function highlightCurrentAnchor(hash) {
 }
 
 function stickyHeight() {
+    const article = document.querySelector('#main-article');
     const elements = document.querySelectorAll('.sticky');
+
+    console.log('article.height', article.offsetHeight);
+
     elements.forEach((element) => {
-        if (element.offsetHeight <= window.innerHeight) {
+        if (element.offsetHeight <= window.innerHeight || article.clientHeight <= element.offsetHeight) {
             return;
         }
 
