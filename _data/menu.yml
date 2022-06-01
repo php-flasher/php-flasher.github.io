@@ -2,13 +2,22 @@
     Introduction: '/docs/'
     Installation: '/docs/installation/'
     Usage: '/docs/usage/'
-    <i class="fa-brands fa-github text-black mr-1"></i> Github: 'https://github.com/php-flasher/php-flasher'
+    <i class="fa-brands fa-github text-black mr-1 fa-lg"></i> Github: 'https://github.com/php-flasher/php-flasher'
 
-<i class="fa-duotone fa-bars-sort"></i> Frameworks:
+<i class="fa-duotone fa-bars-sort"></i> Getting Started:
     <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony: '/docs/framework/symfony/'
     <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel: '/docs/framework/laravel/'
     <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Livewire: '/docs/framework/livewire/'
     <i class="fa-brands fa-js-square fa-lg text-yellow-600 mr-1"></i> Javascript: '/docs/framework/javascript/'
+
+<i class="fa-duotone fa-bars-sort"></i> Core Concepts:
+    <i class="fa-duotone fa-palette text-indigo-900 mr-1 fa-lg"></i> Theme: '/docs/concepts/custom-theme/'
+    <i class="fa-duotone fa-cubes text-indigo-900 mr-1 fa-lg"></i> Presets: '/docs/concepts/presets/'
+    <i class="fa-duotone fa-circle-half-stroke text-indigo-900 mr-1 fa-lg"></i> Dark Mode: '/docs/concepts/dark-mode/'
+    <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> RTL support: '/docs/concepts/rtl/'
+    <i class="fa-duotone fa-stamp text-indigo-900 mr-1 fa-lg"></i> Stamps: '/docs/concepts/stamps/'
+    <i class="fa-duotone fa-calendar-days text-indigo-900 mr-1 fa-lg"></i> Events: '/docs/concepts/events/'
+
 
 <i class="fa-duotone fa-bars-sort"></i> Adapters:
     Noty: '/docs/adapter/noty/'
@@ -17,3 +26,16 @@
     Notyf: '/docs/adapter/notyf/'
     Pnotify: '/docs/adapter/pnotify/'
 
+<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
+    Configuration: '/docs/laravel/configuration/'
+    Middleware: '/docs/laravel/middleware/'
+    Translations: '/docs/laravel/translations/'
+    Livewire: '/docs/laravel/livewire/'
+    Blade: '/docs/laravel/blade/'
+    Mix: '/docs/laravel/mix/'
+
+<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony:
+    Configuration: '/docs/symfony/configuration/'
+    Translations: '/docs/symfony/translations/'
+    Twig: '/docs/symfony/twig/'
+    Encore: '/docs/symfony/encore/'
