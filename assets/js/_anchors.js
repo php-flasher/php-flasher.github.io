@@ -67,7 +67,7 @@ function highlightCurrentAnchor(hash) {
 
 function stickyHeight() {
     const article = document.querySelector('#main-article');
-    const elements = document.querySelectorAll('.sticky');
+    const elements = document.querySelectorAll('.js-sticky');
 
     console.log('article.height', article.offsetHeight);
 
