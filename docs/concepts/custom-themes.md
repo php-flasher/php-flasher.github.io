@@ -11,7 +11,6 @@ the default notification style, and apply you own html/css styles
 
 ```html
 <script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.17/dist/flasher.min.js"></script>
-<script src="{{ asset('packages/flasher/dist/flasher.js') }}"></script>
 <script>
     flasher.addTheme('bootstrap', {
         styles: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', // optional
