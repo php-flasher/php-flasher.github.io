@@ -5,7 +5,14 @@ published_at: 2021-08-29
 updated_at: 2022-05-08
 ---
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Livewire.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Livewire v2.
+
+## <i class="fa-duotone fa-list-radio"></i> Requirements :
+
+> <i class="fa-brands fa-php fa-2xl text-blue-900 mr-1 mb-1"></i> **PHP** >= 7.2
+> <i class="fa-brands fa-laravel fa-2xl text-red-900 mr-1 ml-4"></i> **Laravel** >= 7.0
+
+---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation :
 
