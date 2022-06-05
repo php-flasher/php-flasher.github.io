@@ -32,22 +32,7 @@ public function registerBundles()
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage :
 
-**1.** Add __`{% raw %}{{ flasher_render() }}{% endraw %}`__ at the **head** section of your base template
-
-```twig
-<!doctype html>
-<html>
-    <head>
-        <title>PHPFlasher</title>
-        {% raw %}{{ flasher_render() }}{% endraw %}
-    </head>
-    <body>
-
-    </body>
-</html>
-```
-
-**2.** Dispatch your **`notifications`** from anywhere in you application
+Dispatch your **`notifications`** from anywhere in you application
 
 ```php
 namespace App\Controller;
