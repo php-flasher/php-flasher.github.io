@@ -13,24 +13,7 @@ Please follow the same installation steps as for the [Laravel Installation](/doc
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage:
 
-1. add  `@flasher_render` at the bottom of your blade view
-
-```twig
-<!doctype html>
-<html>
-    <head>
-        <title>PHPFlasher</title>
-        @livewireStyles
-        @flasher_render // Should be placed before rendering any Livewire component
-    </head>
-    <body>
-
-        @livewireScripts
-    </body>
-</html>
-```
-
-2. dispatch `notifications` from your components
+Dispatch **`notifications`** from your components
 
 ```php
 namespace App\Http\Livewire;
