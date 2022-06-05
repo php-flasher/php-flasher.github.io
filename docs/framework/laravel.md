@@ -36,21 +36,7 @@ Optionally include the Facade in `config/app.php`.
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage:
 
-1. add  `@flasher_render` at the **header** section of your blade view
-
-```twig
-<!doctype html>
-<html>
-    <head>
-        <title>PHPFlasher</title>
-        @flasher_render
-    </head>
-    <body>
-    </body>
-</html>
-```
-
-2. dispatch `notifications` from anywhere in your application
+Dispatch **`notifications`** from anywhere in your application
 
 ```php
 namespace App\Http\Controllers;
