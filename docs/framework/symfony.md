@@ -7,6 +7,13 @@ updated_at: 2022-05-08
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offer a solid integration with <i class="fa-brands fa-symfony text-black fa-xl"></i> **Symfony**, with support from **Symfony** version **2.0** to **6**
 
+## <i class="fa-duotone fa-list-radio"></i> Requirements :
+
+> <i class="fa-brands fa-php fa-2xl text-blue-900 mr-1 mb-1"></i> **PHP** >= 5.3
+> <i class="fa-brands fa-symfony fa-2xl text-black mr-1 ml-4"></i> **Symfony** >= 2.0
+
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Installation :
 
 You can install **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** <i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony bundle using composer :
