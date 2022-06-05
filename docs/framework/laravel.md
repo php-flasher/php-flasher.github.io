@@ -5,7 +5,14 @@ published_at: 2020-11-28
 updated_at: 2022-05-08
 ---
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration Laravel, with supports from Laravel  **4.0** to **9**.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel**, with supports from **Laravel**  **4.0** to **9**.
+
+## <i class="fa-duotone fa-list-radio"></i> Requirements :
+
+> <i class="fa-brands fa-php fa-2xl text-blue-900 mr-1 mb-1"></i> **PHP** >= 5.3
+> <i class="fa-brands fa-laravel fa-2xl text-red-900 mr-1 ml-4"></i> **Laravel** >= 4.0
+
+---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation :
 
