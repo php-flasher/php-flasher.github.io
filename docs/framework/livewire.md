@@ -18,6 +18,8 @@ updated_at: 2022-05-08
 
 Please follow the same installation steps as for the [Laravel Installation](/docs/framework/laravel) package.
 
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Usage:
 
 Dispatch **`notifications`** from your components
@@ -40,6 +42,8 @@ class MyComponent extends Component
         return view('livewire.my_component');
     }
 ```
+
+---
 
 ## <i class="fa-duotone fa-list-radio"></i> Events:
 
