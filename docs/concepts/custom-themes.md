@@ -5,9 +5,9 @@ published_at: 2022-06-01
 updated_at: 2022-06-01
 ---
 
-<h1 class="text-center">Draft...</h1>
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you change
-the default notification style, and apply you own html/css styles
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to specify a custom theme for your notifications. 
+and apply you own html/css markup to it.
+
 
 ```html
 <script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.17/dist/flasher.min.js"></script>
