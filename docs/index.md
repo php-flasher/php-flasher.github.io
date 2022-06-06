@@ -45,6 +45,17 @@ The flashing system basically makes it possible to record a message and store it
 
 ---
 
+### <i class="fa-duotone fa-list-radio"></i> Types of Messages
+
+Flash notifications serves as a feedback & confirmation mechanism after the user takes an action.
+
+> <div class="mt-2"><span class="text-green-700"><i class="fa-solid fa-circle-check fa-xl"></i> success : </span> Whatever was attempted did, in fact, succeed.</div>
+> <div class="mt-2"><span class="text-blue-600"><i class="fa-solid fa-circle-info fa-xl"></i> info : </span> Some event occurred that the user should be aware of.</div>
+> <div class="mt-2"><span class="text-yellow-600"><i class="fa-solid fa-circle-exclamation fa-xl"></i> warning : </span> Something not good happened, but it isn't an error.</div>
+> <div class="mt-2"><span class="text-red-600"><i class="fa-solid fa-circle-xmark fa-xl"></i> error : </span> Some sort of program error occurred.</div>
+
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Why use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : <span class="text-indigo-900">__toastr.js__</span>, <span class="text-indigo-900">__sweetalert 2__</span>, <span class="text-indigo-900">__pnotify__</span>, <span class="text-indigo-900">__noty__</span>, <span class="text-indigo-900">__notyf__</span> and even show <span class="text-indigo-900">__desktop__</span> notifications.
