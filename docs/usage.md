@@ -8,6 +8,8 @@ updated_at: 2022-05-08
 
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
+Using this package is actually pretty easy. Adding notifications to your application actually require only one line of code.
+
 ```php
 $flasher->addFlash('success', 'Data has been saved successfully!');
 ```
@@ -28,12 +30,14 @@ $notification = $flasher->addFlash(
 | `$title`   | The notification title, Can also include HTML                                                                                                                                                                                                                                                                       |
 | `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                       |
 
-There are also 4 **shortcuts** for the **`addFlash()`** method :
+
+To make life even easier, there are four helper methods for different notification types of notification. 
+So instead of manually supplying the notification type, you can simply call the type as its method name. 
 
 ```php
 $flasher->addSuccess('success message');
 $flasher->addError('error message');
-$flasher->addWarning('warning essage');
+$flasher->addWarning('warning message');
 $flasher->addInfo('info message');
 ```
 
