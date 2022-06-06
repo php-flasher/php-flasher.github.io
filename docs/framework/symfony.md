@@ -22,6 +22,8 @@ You can install **<span class="text-indigo-900">PHP<span class="text-indigo-500"
 composer require php-flasher/flasher-symfony
 ```
 
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Enable the bundle :
 
 If you are using <i class="fa-brands fa-symfony text-black fa-xl"></i> **Symfony** version **4+** the bundle will be registered automatically in **`config/bundles.php`**, otherwise enable the bundle in the kernel:
@@ -36,6 +38,8 @@ public function registerBundles()
     ];
 }
 ```
+
+---
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage :
 
