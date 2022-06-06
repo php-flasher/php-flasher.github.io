@@ -41,6 +41,8 @@ Optionally include the Facade in `config/app.php`.
 'Flasher' => Flasher\Laravel\Facade\Flasher::class,
 ```
 
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> Usage:
 
 Dispatch **`notifications`** from anywhere in your application
