@@ -42,7 +42,7 @@ By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flas
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
 If you're using a framework like <i class="fa-brands fa-laravel text-red-900"></i> __Laravel__ or <i class="fa-brands fa-symfony text-black"></i> __Symfony__, just grab an instance of __FlasherInterface__ from the
-service container and use it to display your notifications.
+service container and just before returning a view or redirect, call the __addSuccess__ method for example with the message you want to display.
 
 ```php
 <?php
