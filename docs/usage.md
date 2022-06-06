@@ -21,12 +21,12 @@ $notification = $flasher->addFlash(
 )
 ```
 
-| param           | description                                                                                                                                                                                                                                                                                                         |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `$type`         | Notification type : <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
-| `$message`      | The message to be displayed                                                                                                                                                                                                                                                                                         |
-| `$title`        | The notification title                                                                                                                                                                                                                                                                                              |
-| `$options`      | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                       |
+| param      | description                                                                                                                                                                                                                                                                                                         |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `$type`    | Notification type : <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
+| `$message` | The body of the message you want to deliver to your user. This may contain HTML. If you add links, be sure to add the appropriate classes for the framework you are using.                                                                                                                                          |
+| `$title`   | The notification title, Can also include HTML                                                                                                                                                                                                                                                                       |
+| `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                       |
 
 There are also 4 **shortcuts** for the **`addFlash()`** method :
 
@@ -39,9 +39,9 @@ $flasher->addInfo('info message');
 
 --- 
 
-## <i class="fa-duotone fa-list-radio"></i> More flexibility with Builder methods
+## <i class="fa-duotone fa-list-radio"></i> More flexibility using fluent Builder methods
 
-There are only __two__ main steps to display a notification with **builder methods** : __build__ and __flash__.
+There are only __two__ main steps to display a notification using **a fluent chainable way** : __build__ and __flash__.
 
 ```php
 // Step 1: create your notification and add options
@@ -56,6 +56,8 @@ $builder->flash();
 ```
 
 ---
+
+Its getting even better right ? it's so easy to read and still very powerful. You can omit properties that you do not care about. and only set the ones that important to you.
 
 ```php
 $builder = $flasher->type('error', 'An error has occurred please try again later.');
@@ -77,7 +79,7 @@ $builder = $flasher->type(string $type, string $message = null, string $title = 
 | param      | description                                                                                                                                                                                                                                                                                     |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `$type`    | <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
-| `$message` | The message to be displayed                                                                                                                                                                                                                                                                     |
+| `$message` | The body of the message you want to deliver to your user. This may contain HTML. If you add links, be sure to add the appropriate classes for the framework you are using.                                                                                                                      |
 | `$title`   | The notification title                                                                                                                                                                                                                                                                          |
 | `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                            |
 | `$builder` | An instance of the notification builder, so you could chain other builder methods on it                                                                                                                                                                                                         |
@@ -163,13 +165,15 @@ $builder = $flasher->priority(int $priority);
 
 <p id="method-hops"><a href="#method-hops" class="anchor"><i class="fa-duotone fa-link"></i> hops</a></p>
 
+Sometimes you may want a flash message to persist for longer than a single request. As an example, with a multi-page form, you may want to store messages until all pages have been filled.
+
 ```php
 $builder = $flasher->hops(int $hops);
 ```
 
-| param   | description                                                 |
-|---------|-------------------------------------------------------------|
-| `$hops` | The number of requests in which the message will be present |
+| param   | description                                                   |
+|---------|---------------------------------------------------------------|
+| `$hops` | indicate how many requests the flash message will persist for |
 
 ---
 
