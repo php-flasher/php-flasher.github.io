@@ -1,13 +1,12 @@
 ---
 permalink: /docs/concepts/custom-themes/
-title: Custom Theme
+title: Adding a Custom Theme to <span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>
 published_at: 2022-06-01
 updated_at: 2022-06-01
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to specify a custom theme for your notifications. 
 and apply your own html/css markup to it.
-
 
 ```html
 <script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.17/dist/flasher.min.js"></script>
@@ -32,6 +31,10 @@ and apply your own html/css markup to it.
     })
 </script>
 ```
+
+> The reason why we are registering custom themes with JavaScript is because we want to be able to use the same theme for both the backend and the frontend. <br>
+
+---
 
 The next step is straightforward, send your notification with `theme.boostrap` like the following:
 
