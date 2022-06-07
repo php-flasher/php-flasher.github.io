@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <main class="container mx-auto px-6 flex">
+        <main class="container md:mx-auto md:px-6 flex">
             <nav id="main-navigation" class="sticky top-4 hidden md:block h-full w-40">
                 {% for section in site.data.menu %}
                     <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
@@ -39,7 +39,7 @@
                     </ul>
                 {% endfor %}
             </nav>
-            <article id="main-article" class="flex-1 px-10 py-5 overflow-x-auto">
+            <article id="main-article" class="flex-1 px-2 md:px-10 py-5 overflow-x-auto">
                 <div class="border-b border-grey-lighter py-3 mb-3 hidden sm:block">
                     {% include prev-next.html %}
                 </div>
