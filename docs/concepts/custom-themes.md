@@ -6,7 +6,7 @@ updated_at: 2022-06-01
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to specify a custom theme for your notifications. 
-and apply you own html/css markup to it.
+and apply your own html/css markup to it.
 
 
 ```html
@@ -31,4 +31,44 @@ and apply you own html/css markup to it.
         },
     })
 </script>
+```
+
+The next step is straightforward, send your notification with `theme.boostrap` like the following:
+
+```php
+<?php
+
+namespace App\Controller;
+
+use Flasher\Prime\FlasherInterface;
+
+class BookController
+{
+    public function save(FlasherInterface $flasher)
+    {
+        // ...
+
+        $flasher->using('theme.bootstrap')->addSuccess('Book saved successfully');
+        
+        // ... finally redirect or render the view
+    }
+}
+```
+
+Or maybe use it as the default adapter for your application:
+
+For **<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
+
+```php
+// config/flasher.php
+return [
+    'default' => 'theme.bootstrap',
+];
+```
+
+For **<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
+```yaml
+# config/packages/flasher.yaml
+flasher:
+    default: theme.bootstrap
 ```
