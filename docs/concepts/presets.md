@@ -44,10 +44,9 @@ flasher:
 And then use it in your controller:
 
 ```php
-public function save(FlasherInterface $flasher)
-{    
-    $flasher->addPreset('entity_saved')
-    
-    // ... finally redirect or render the view
-}
+class BookController
+{
+    public function save(FlasherInterface $flasher)
+    {
+        $flasher->addPreset('entity_saved')
 ```

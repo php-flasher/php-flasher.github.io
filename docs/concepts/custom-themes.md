@@ -39,12 +39,6 @@ and apply your own html/css markup to it.
 The next step is straightforward, send your notification with `theme.boostrap` like the following:
 
 ```php
-<?php
-
-namespace App\Controller;
-
-use Flasher\Prime\FlasherInterface;
-
 class BookController
 {
     public function save(FlasherInterface $flasher)
@@ -52,10 +46,6 @@ class BookController
         // ...
 
         $flasher->using('theme.bootstrap')->addSuccess('Book saved successfully');
-        
-        // ... finally redirect or render the view
-    }
-}
 ```
 
 Or maybe use it as the default adapter for your application:

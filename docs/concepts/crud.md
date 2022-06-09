@@ -10,8 +10,6 @@ updated_at: 2022-06-07
 ### <i class="fa-duotone fa-list-radio"></i> Basic usage
 
 ```php 
-<?php
-
 class BookController
 {
     public function save(FlasherInterface $flasher)
