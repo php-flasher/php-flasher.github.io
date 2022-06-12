@@ -51,7 +51,7 @@ class NotifyController
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Toastr specific method builders
+## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
 
 All methods in the **[Usage](/docs/usage/)** section are available also for `ToastrFactory`
 
