@@ -43,7 +43,7 @@ $flasher->addInfo('info message');
 
 --- 
 
-## <i class="fa-duotone fa-list-radio"></i> More flexibility using fluent Builder methods
+## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
 
 There are only __two__ main steps to display a notification using **a fluent chainable way** : __build__ and __flash__.
 
@@ -78,8 +78,6 @@ $builder->flash();
 $builder = $flasher->type(string $type, string $message = null, string $title = null, array $options = [])
 ```
 
-
-
 | param      | description                                                                                                                                                                                                                                                                                     |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `$type`    | <span class="text-white bg-green-600 px-2 py-1 rounded">success</span>, <span class="text-white bg-red-600 px-2 py-1 rounded">error</span>, <span class="text-white bg-yellow-600 px-2 py-1 rounded">warning</span>, <span class="text-white bg-blue-600 px-2 py-1 rounded">info</span> ....etc |
@@ -90,7 +88,7 @@ $builder = $flasher->type(string $type, string $message = null, string $title = 
 
 ---
 
-<p id="method-shortcuts"><a href="#method-shortcuts" class="anchor"><i class="fa-duotone fa-link"></i> type method shortcuts</a></p>
+<p id="method-shortcuts"><a href="#method-shortcuts" class="anchor"><i class="fa-duotone fa-link"></i> type shortcuts</a></p>
 
 ```php
 $builder = $flasher->success(string $message = null, string $title = null, array $options = [])
