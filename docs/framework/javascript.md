@@ -7,7 +7,7 @@ updated_at: 2022-05-18
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** assets can be installed from a cdn or using npm
 
-## <i class="fa-duotone fa-list-radio"></i> Installation :
+## <i class="fa-duotone fa-list-radio"></i> Installation
 Quick start guide for installing the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** from cdn or npm.
 
 ---
@@ -66,7 +66,7 @@ or if you are using a cdn like this:
 
 ---
 
-### <i class="fa-duotone fa-list-radio"></i> How about other adapters like toastr, noty and notyf ?
+### <i class="fa-duotone fa-list-radio"></i> Other adapters
 
 First grad the cdn for any js library adapter supported by **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** or install it with npm
 and then call the **`create()`** method on flasher object :
