@@ -86,10 +86,3 @@ function stickyHeight() {
         element.innerHTML = div.outerHTML;
     });
 }
-
-function isBefore(element, target) {
-    const elementRect = element.getBoundingClientRect();
-    const targetRect = target.getBoundingClientRect();
-
-    return elementRect.top < targetRect.top;
-}
