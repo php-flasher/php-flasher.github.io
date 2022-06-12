@@ -49,7 +49,7 @@ class NotifyController
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Noty specific method builders
+## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
 
 All methods in the **[Usage](/docs/usage/)** section are available also for `NotyFactory`
 
