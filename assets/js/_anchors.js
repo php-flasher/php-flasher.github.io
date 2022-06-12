@@ -5,7 +5,7 @@ highlightCurrentAnchor();
 stickyHeight();
 
 const links = document.querySelectorAll('a.anchor, #anchor-navigation ul li a');
-links.forEach((anchor) => {
+links.forEach(anchor => {
     anchor.addEventListener('click', (event) => {
         event.preventDefault();
 
@@ -16,7 +16,7 @@ links.forEach((anchor) => {
 
 function createAnchorNavigation() {
     const ul = document.querySelector('#anchor-navigation ul');
-    const anchors = document.querySelectorAll('a.anchor');
+    const anchors = document.querySelectorAll('#main-article h3, #main-article h2, #main-article a.anchor');
 
     if (anchors.length === 0) {
         container.remove();
@@ -25,19 +25,24 @@ function createAnchorNavigation() {
 
     container.classList.add('md:block');
 
-    anchors.forEach((anchor) => {
+    anchors.forEach(anchor => {
         const parent = anchor.parentElement;
         parent.classList.add('px-6', 'rounded');
 
         anchor.classList.add('leading-loose');
 
         const link = document.createElement('a');
-        link.href = anchor.hash;
-        link.innerText = anchor.innerText;
-        link.classList.add('leading-loose', 'text-md', 'w-full', 'text-indigo-500');
+        link.href = 'A' === anchor.tagName ? anchor.hash : '#'+anchor.getAttribute('id');
+        link.innerHTML = 'A' === anchor.tagName ? anchor.innerText : '<i class="fa-duotone fa-angle-right"></i>' + anchor.innerText;
+        link.classList.add('leading-loose', 'text-md', 'inline-block', 'w-full', 'text-indigo-500');
 
         const li = document.createElement('li');
         li.classList.add('px-6', 'rounded', 'w-full');
+        if ('A' === anchor.tagName) {
+            li.classList.remove('px-6');
+            li.classList.add('px-12');
+        }
+
         li.appendChild(link);
 
         ul.appendChild(li);
@@ -50,7 +55,7 @@ function highlightCurrentAnchor(hash) {
     }
 
     const links = document.querySelectorAll('a.anchor, #anchor-navigation ul li a');
-    links.forEach((link) => {
+    links.forEach(link => {
         const parent = link.parentElement;
         link.classList.remove('text-gray-900');
         link.classList.add('text-indigo-500');
@@ -69,9 +74,7 @@ function stickyHeight() {
     const article = document.querySelector('#main-article');
     const elements = document.querySelectorAll('.sticky');
 
-    console.log('article.height', article.offsetHeight);
-
-    elements.forEach((element) => {
+    elements.forEach(element => {
         if (element.offsetHeight <= window.innerHeight || article.clientHeight <= element.offsetHeight) {
             return;
         }
@@ -82,4 +85,11 @@ function stickyHeight() {
 
         element.innerHTML = div.outerHTML;
     });
+}
+
+function isBefore(element, target) {
+    const elementRect = element.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+
+    return elementRect.top < targetRect.top;
 }
