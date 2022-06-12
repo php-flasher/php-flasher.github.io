@@ -8,12 +8,12 @@
         "watch": "encore dev --watch"
     },
     "devDependencies": {
-        "@flasher/flasher": "^1.0.18",
-        "@flasher/flasher-noty": "^1.0.18",
-        "@flasher/flasher-notyf": "^1.0.18",
-        "@flasher/flasher-pnotify": "^1.0.18",
-        "@flasher/flasher-sweetalert": "^1.0.18",
-        "@flasher/flasher-toastr": "^1.0.18",
+        "@flasher/flasher": "^1.1.0",
+        "@flasher/flasher-noty": "^1.1.0",
+        "@flasher/flasher-notyf": "^1.1.0",
+        "@flasher/flasher-pnotify": "^1.1.0",
+        "@flasher/flasher-sweetalert": "^1.1.0",
+        "@flasher/flasher-toastr": "^1.1.0",
         "@symfony/webpack-encore": "^2.1.0",
         "autoprefixer": "^10.4.7",
         "cross-env": "^7.0",
