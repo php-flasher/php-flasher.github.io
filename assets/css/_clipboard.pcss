@@ -3,6 +3,11 @@ pre.copyable {
 }
 
 pre.copyable .copy {
+    display: none;
+}
+
+pre.copyable:hover .copy {
+    display: block;
     position: absolute;
     right: 1.5rem;
     top: 0.85rem;
@@ -14,4 +19,10 @@ pre.copyable .copy i {
 
 pre.copyable .copy:active {
     transform: translateY(3px);
+}
+
+@media (max-width: 768px) {
+    pre.copyable:hover .copy {
+        display: none;
+    }
 }
