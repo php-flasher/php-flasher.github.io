@@ -6,18 +6,18 @@
         "/dist/homepage.528bdb13.js"
       ],
       "css": [
-        "/dist/707.61819870.css",
+        "/dist/707.dc65dd60.css",
         "/dist/homepage.0987a79e.css"
       ]
     },
     "main": {
       "js": [
         "/dist/runtime.3b483ffe.js",
-        "/dist/main.7424e72e.js"
+        "/dist/main.e5552caf.js"
       ],
       "css": [
-        "/dist/707.61819870.css",
-        "/dist/main.1a78d557.css"
+        "/dist/707.dc65dd60.css",
+        "/dist/main.67cefab7.css"
       ]
     },
     "adapter-flasher": {
