@@ -15,12 +15,7 @@ $flasher->addFlash('success', 'Data has been saved successfully!');
 ```
 
 ```php
-$notification = $flasher->addFlash(
-    string $type,
-    string $message,
-    string $title = null,
-    array $options = []
-)
+$notification = $flasher->addFlash(string $type, string $message, string $title = null, array $options = [])
 ```
 
 | param      | description                                                                                                                                                                                                                                                                                                         |
