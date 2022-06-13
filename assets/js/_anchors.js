@@ -23,7 +23,7 @@ function createAnchorNavigation() {
         return;
     }
 
-    container.classList.add('md:block');
+    container.classList.add('lg:block');
 
     anchors.forEach(anchor => {
         const parent = anchor.parentElement;

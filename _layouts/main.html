@@ -28,8 +28,8 @@
             </div>
         </div>
 
-        <main class="container md:mx-auto md:px-6 flex">
-            <nav id="main-navigation" class="sticky top-4 hidden md:block h-full w-full mx-10 md:mx-0 md:w-40">
+        <main class="lg:container lg:mx-auto lg:px-6 flex">
+            <nav id="main-navigation" class="sticky top-4 hidden lg:block h-full w-full mx-10 lg:w-40">
                 {% for section in site.data.menu %}
                     <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">{{ section[0] }}</h4>
                     <ul class="list-reset mb-8">
@@ -41,7 +41,7 @@
                     </ul>
                 {% endfor %}
             </nav>
-            <article id="main-article" class="flex-1 px-2 md:px-10 py-5 overflow-x-auto">
+            <article id="main-article" class="flex-1 px-2 lg:px-10 py-5 w-full overflow-x-auto">
                 <div class="border-b border-grey-lighter py-3 mb-3 hidden sm:block">
                     {% include prev-next.html %}
                 </div>
@@ -78,7 +78,7 @@
                     {% include prev-next.html %}
                 </div>
             </article>
-            <nav id="anchor-navigation" class="js-sticky sticky top-4 hidden h-full w-56">
+            <nav id="anchor-navigation" class="js-sticky hidden sticky top-4 h-full w-56">
                 <h4 class="text-sm leading-loose tracking-wide text-indigo-400 uppercase mt-4">
                     <i class="fa-duotone fa-bars-sort"></i> Jump to
                 </h4>
