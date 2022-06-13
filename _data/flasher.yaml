@@ -1,4 +1,5 @@
 /: 'adapter-flasher'
+/docs/: 'adapter-flasher'
 /docs/adapter/toastr/: 'adapter-toastr'
 /docs/adapter/noty/: 'adapter-noty'
 /docs/adapter/notyf/: 'adapter-notyf'
