@@ -69,7 +69,7 @@ or if you are using a cdn like this:
 ### <i class="fa-duotone fa-list-radio"></i> Other adapters
 
 First grad the cdn for any js library adapter supported by **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** or install it with npm
-and then call the **`create()`** method on flasher object :
+and then call the `create()` method on flasher object :
 
 ```html
 <script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.0.17/dist/flasher.min.js"></script>

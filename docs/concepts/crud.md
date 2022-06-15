@@ -91,9 +91,9 @@ $flash->addDeleted(ResourceInterface|string|null $resource);
 
 <p id="method-addOperation"><a href="#method-addOperation" class="anchor"><i class="fa-duotone fa-link"></i> addOperation</a></p>
 
-All the above CRUD operations are in fact shortcuts for the **`addOperation`** method.
+All the above CRUD operations are in fact shortcuts for the `addOperation` method.
 
-The **`addOperation`** method is used to display a predefined message for a CRUD operation. It accepts a **`$resource`** parameter that can be a string or a **`ResourceInterface`** instance.
+The `addOperation`** method is used to display a predefined message for a CRUD operation. It accepts a `$resource` parameter that can be a string or a **`ResourceInterface` instance.
 
 ```php
 $flash->addOperation(string $operation, ResourceInterface|string|null $resource);
@@ -108,7 +108,7 @@ $flash->addOperation(string $operation, ResourceInterface|string|null $resource)
 
 ### <i class="fa-duotone fa-list-radio"></i> Resource interface
 
-Behind the scenes the **`addOperation`** method will use the **`getResourceType`** and **`getResourceName`** methods to get the type and name of the resource that was affected.
+Behind the scenes the `addOperation` method will use the `getResourceType` and `getResourceName` methods to get the type and name of the resource that was affected.
 
 ```php
 <?php

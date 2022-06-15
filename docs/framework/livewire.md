@@ -22,7 +22,7 @@ Please follow the same installation steps as for the [Laravel Installation](/doc
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Dispatch **`notifications`** from your components
+Dispatch `notifications` from your components
 
 ```php
 namespace App\Http\Livewire;

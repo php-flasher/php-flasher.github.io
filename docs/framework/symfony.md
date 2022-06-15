@@ -26,7 +26,7 @@ composer require php-flasher/flasher-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Enable the bundle
 
-If you are using <i class="fa-brands fa-symfony text-black fa-xl"></i> **Symfony** version **4+** the bundle will be registered automatically in **`config/bundles.php`**, otherwise enable the bundle in the kernel:
+If you are using <i class="fa-brands fa-symfony text-black fa-xl"></i> **Symfony** version **4+** the bundle will be registered automatically in `config/bundles.php`, otherwise enable the bundle in the kernel:
 
 ```php
 public function registerBundles()
@@ -43,7 +43,7 @@ public function registerBundles()
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Dispatch your **`notifications`** from anywhere in you application
+Dispatch your `notifications` from anywhere in you application
 
 ```php
 namespace App\Controller;
@@ -68,7 +68,7 @@ class BookController extends AbstractController
 ### <i class="fa-duotone fa-list-radio"></i> Examples
 
 By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** show its default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>. <br>
-To use another adapter, use the **`create()`** method or its **Factory** service :
+To use another adapter, use the `create()` method or its **Factory** service :
 
 ```php
 class PostController

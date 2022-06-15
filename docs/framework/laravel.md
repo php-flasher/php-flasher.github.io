@@ -23,7 +23,7 @@ This is the base package for all Laravel adapters.
 composer require php-flasher/flasher-laravel
 ```
 
-Then add the service provider to **`config/app.php`**.
+Then add the service provider to `config/app.php`.
 
 > in Laravel version 5.5 and beyond this step can be skipped if package auto-discovery is enabled.
 
@@ -45,7 +45,7 @@ Optionally include the Facade in `config/app.php`.
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Dispatch **`notifications`** from anywhere in your application
+Dispatch `notifications` from anywhere in your application
 
 ```php
 namespace App\Http\Controllers;
