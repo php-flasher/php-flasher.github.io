@@ -16,8 +16,8 @@
     <i class="fa-duotone fa-circle-c text-indigo-900 mr-1 fa-lg"></i> Crud: '/docs/concepts/crud/'
     <i class="fa-duotone fa-circle-half-stroke text-indigo-900 mr-1 fa-lg"></i> Dark Mode: '/docs/concepts/dark-mode/'
     <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> RTL support: '/docs/concepts/rtl/'
-    <i class="fa-duotone fa-stamp text-indigo-900 mr-1 fa-lg"></i> Stamps: '/docs/concepts/stamps/'
-    <i class="fa-duotone fa-calendar-days text-indigo-900 mr-1 fa-lg"></i> Events: '/docs/concepts/events/'
+    # <i class="fa-duotone fa-stamp text-indigo-900 mr-1 fa-lg"></i> Stamps: '/docs/concepts/stamps/'
+    # <i class="fa-duotone fa-calendar-days text-indigo-900 mr-1 fa-lg"></i> Events: '/docs/concepts/events/'
 
 
 <i class="fa-duotone fa-bars-sort"></i> Adapters:
