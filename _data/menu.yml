@@ -11,7 +11,7 @@
     <i class="fa-brands fa-js-square fa-lg text-yellow-600 mr-1"></i> Javascript: '/docs/framework/javascript/'
 
 <i class="fa-duotone fa-bars-sort"></i> Core Concepts:
-    <i class="fa-duotone fa-palette text-indigo-900 mr-1 fa-lg"></i> Themes: '/docs/concepts/custom-themes/'
+    <i class="fa-duotone fa-palette text-indigo-900 mr-1 fa-lg"></i> Themes: '/docs/concepts/themes/'
     <i class="fa-duotone fa-cubes text-indigo-900 mr-1 fa-lg"></i> Presets: '/docs/concepts/presets/'
     <i class="fa-duotone fa-circle-c text-indigo-900 mr-1 fa-lg"></i> Crud: '/docs/concepts/crud/'
     <i class="fa-duotone fa-circle-half-stroke text-indigo-900 mr-1 fa-lg"></i> Dark Mode: '/docs/concepts/dark-mode/'
