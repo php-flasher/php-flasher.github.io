@@ -10,7 +10,7 @@ updated_at: 2022-05-08
 ## <i class="fa-duotone fa-list-radio"></i> Laravel
 
 By default <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel** has a built-in <span class="text-indifo-600 font-bold">flashing</span> system.
-you can check it in the <a href="https://laravel.com/docs/9.x/session#flash-data" class="text-blue-600 font-bold">session</a> section of the documentation.
+you can check it in the <a href="https://laravel.com/docs/session#flash-data" class="text-blue-600 font-bold">session</a> section of the documentation.
 
 Data stored in the session using this method will be available immediately and during the subsequent HTTP request. After the subsequent HTTP request, the flashed data will be deleted.
 
@@ -45,6 +45,8 @@ This approach is simple enough to add a flash message to your app. But :
 And solve all the above issues in a simple and easy way.
 
 ## <i class="fa-duotone fa-list-radio"></i> Requirements
+
+To use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** in a Laravel application, you need :
 
 > <i class="fa-brands fa-php fa-2xl text-blue-900 mr-1 mb-1"></i> **PHP** >= 5.3
 > <i class="fa-brands fa-laravel fa-2xl text-red-900 mr-1 ml-4"></i> **Laravel** >= 4.0
