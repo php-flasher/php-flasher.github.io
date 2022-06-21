@@ -1,5 +1,5 @@
 ---
-permalink: /docs/usage/
+permalink: /docs/concepts/usage/
 title: Usage
 hide_title: true
 published_at: 2020-11-28
