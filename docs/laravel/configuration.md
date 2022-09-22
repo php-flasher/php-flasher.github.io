@@ -40,7 +40,7 @@ return [
     | use a CDN with the latest version of the library. but you
     | could download it locally or install it with npm.
     */
-    'root_script' => 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.1.0/dist/flasher.min.js',
+    'root_script' => 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.1.1/dist/flasher.min.js',
     
      /*
      |--------------------------------------------------------------------------
@@ -56,8 +56,7 @@ return [
      | Inject PHPFlasher in Response
      |--------------------------------------------------------------------------
      | PHPFlasher scripts are added automatically before </body>, by listening
-     | to the Response after the App is done. If you disable this, you
-     | have to add them in your template yourself.
+     | to the Response after the App is done.
      */
     'auto_render' => true,
     
@@ -81,13 +80,25 @@ return [
         | notification types. on the right side are the PHPFlasher types
         | On the left side are the Laravel session keys that you
         | want to convert to PHPFlasher types.
-        */        
+        */
         'mapping' => [
             'success' => ['success'],
             'error' => ['error', 'danger'],
             'warning' => ['warning', 'alarm'],
             'info' => ['info', 'notice', 'alert'],
         ],
+    ],
+    
+    /*
+    |-----------------------------------------------------------------------
+    | Global Filter Criteria
+    |-----------------------------------------------------------------------
+    | This option allows you to filter the notifications that are displayed
+    | by default all notifications are displayed, but you can filter
+    | them, for example to only display errors.
+    */
+    'filter_criteria' => [
+        'limit' => 5, // Limit the number of notifications to display
     ],
 ];
 ```

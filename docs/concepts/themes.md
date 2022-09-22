@@ -20,7 +20,7 @@ First you need to require `flasher` main script, and then use the `addTheme()` m
 The usage is very simple : 
 
 ```html
-<script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.1.0/dist/flasher.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.1.1/dist/flasher.min.js"></script>
 <script>
     flasher.addTheme('bootstrap', {
         styles: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', // optional

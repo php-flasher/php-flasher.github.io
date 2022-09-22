@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@flasher/flasher': ^1.1.0
-  '@flasher/flasher-noty': ^1.1.0
-  '@flasher/flasher-notyf': ^1.1.0
-  '@flasher/flasher-pnotify': ^1.1.0
-  '@flasher/flasher-sweetalert': ^1.1.0
-  '@flasher/flasher-toastr': ^1.1.0
+  '@flasher/flasher': ^1.1.1
+  '@flasher/flasher-noty': ^1.1.1
+  '@flasher/flasher-notyf': ^1.1.1
+  '@flasher/flasher-pnotify': ^1.1.1
+  '@flasher/flasher-sweetalert': ^1.1.1
+  '@flasher/flasher-toastr': ^1.1.1
   '@symfony/webpack-encore': ^2.1.0
   autoprefixer: ^10.4.7
   cross-env: ^7.0
@@ -15,16 +15,16 @@ specifiers:
   postcss-discard-comments: ^5.1.2
   postcss-import: ^14.1.0
   postcss-loader: ^7.0
-  tailwindcss: ^3.1.2
+  tailwindcss: ^3.1.4
   webpack-notifier: ^1.15.0
 
 devDependencies:
-  '@flasher/flasher': 1.1.0
-  '@flasher/flasher-noty': 1.1.0
-  '@flasher/flasher-notyf': 1.1.0
-  '@flasher/flasher-pnotify': 1.1.0
-  '@flasher/flasher-sweetalert': 1.1.0
-  '@flasher/flasher-toastr': 1.1.0
+  '@flasher/flasher': 1.1.1
+  '@flasher/flasher-noty': 1.1.1
+  '@flasher/flasher-notyf': 1.1.1
+  '@flasher/flasher-pnotify': 1.1.1
+  '@flasher/flasher-sweetalert': 1.1.1
+  '@flasher/flasher-toastr': 1.1.1
   '@symfony/webpack-encore': 2.1.0
   autoprefixer: 10.4.7_postcss@8.4.14
   cross-env: 7.0.3
@@ -33,7 +33,7 @@ devDependencies:
   postcss-discard-comments: 5.1.2_postcss@8.4.14
   postcss-import: 14.1.0_postcss@8.4.14
   postcss-loader: 7.0.0_postcss@8.4.14
-  tailwindcss: 3.1.2
+  tailwindcss: 3.1.4
   webpack-notifier: 1.15.0
 
 packages:
@@ -1181,43 +1181,43 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  /@flasher/flasher-noty/1.1.0:
-    resolution: {integrity: sha512-OcIQ1BaVVuaisYNNnluWXH2DN5ix9cE4MmmyGfO9VNS37nIwbJ/aRno0sbrlTlNKHyryNGxldonuoaNfR/1/Pw==}
+  /@flasher/flasher-noty/1.1.1:
+    resolution: {integrity: sha512-9Q5nlCPvPiVUhlOfbgYimP7AlAMqaE4gOXj1VVdVmbI2AA5Xw660/hMp2ZsU/NuL3rt4K6Wkij+TjkgjqJjqsg==}
     dependencies:
-      '@flasher/flasher': 1.1.0
+      '@flasher/flasher': 1.1.1
       noty: 3.2.0-beta-deprecated
     dev: true
 
-  /@flasher/flasher-notyf/1.1.0:
-    resolution: {integrity: sha512-gRJexU+RxAcl7LWsSSNwI5LOxMhtU/wZ8ZNhF6GqPq1DBjTCxSv3KOonl5Di5NbP0uFRYQxrTgL4ighz6z2p7g==}
+  /@flasher/flasher-notyf/1.1.1:
+    resolution: {integrity: sha512-qK5WCejmDCtVDJN6eAHtUUmEvgn4jPpj3aMh+YJ8tj3eBFwjfXmM0sriHos5fmLC6xb9JCoYlBE+UsVGMRLk4A==}
     dependencies:
-      '@flasher/flasher': 1.1.0
+      '@flasher/flasher': 1.1.1
       notyf: 3.10.0
     dev: true
 
-  /@flasher/flasher-pnotify/1.1.0:
-    resolution: {integrity: sha512-z9r8MIYEUDQIUGm7Bm1pmOTMM5zQoDCBECXF7t9n0ebUc0XxPmR9r8SjeKmLKgMOp8JGD09OeodZvuKVQhBGuQ==}
+  /@flasher/flasher-pnotify/1.1.1:
+    resolution: {integrity: sha512-6kVqhHj7PreSPjPp3yP8ejzkX/WcD6Q/1yAQie7igZ3Mog8epJP4NoKvNhod0bjX0fzCVdHhUBpKVgBPu9O69w==}
     dependencies:
-      '@flasher/flasher': 1.1.0
+      '@flasher/flasher': 1.1.1
       '@pnotify/core': 5.2.0
     dev: true
 
-  /@flasher/flasher-sweetalert/1.1.0:
-    resolution: {integrity: sha512-j5X+3JOorpNlAyWjdd6LN9QpxflPeoiKhYJ82k04UPI4EHm58IOOSAtpvR41q3ffVmEcSvS+dUMxK5idcKd3Qw==}
+  /@flasher/flasher-sweetalert/1.1.1:
+    resolution: {integrity: sha512-146va5dXNQljBBO2HxLEmV77HQwAfDc4C/cAfu0Zenq56L2YsSCEiyew0R9X8YfxF78VcgZtWgxJ2bTRGSzBiQ==}
     dependencies:
-      '@flasher/flasher': 1.1.0
-      sweetalert2: 11.4.17
+      '@flasher/flasher': 1.1.1
+      sweetalert2: 11.4.19
     dev: true
 
-  /@flasher/flasher-toastr/1.1.0:
-    resolution: {integrity: sha512-cwU0u6PDTWO3D2EfWVi76o2dFDQqCE04h1WSqsoE+XzR+ZGRHq7fxFteUpLphjWQ/nD9+2tgOL/g1zywn2s+4w==}
+  /@flasher/flasher-toastr/1.1.1:
+    resolution: {integrity: sha512-u9NehG/afNuWyKlhGPvqY3AH/TxNQ17WRWUwgWwGikFU+Uw2ckgSq74jCa7GZav69Qdt3UnIM3g+QcvG6xeGSA==}
     dependencies:
-      '@flasher/flasher': 1.1.0
+      '@flasher/flasher': 1.1.1
       toastr: 2.1.4
     dev: true
 
-  /@flasher/flasher/1.1.0:
-    resolution: {integrity: sha512-iU0eqOIFCpjciDQE+cBX/5n+2kPnCzYm+gCGlhqXhSMqBePv45mfr82Oa/26ygxjrqq5sjNqWYKlEu0vhY9cYQ==}
+  /@flasher/flasher/1.1.1:
+    resolution: {integrity: sha512-ekwjSNq5dc+r2tGOgj5c9htjxUn/MsadnuG3qsueW3YG2zd1ND1t61G4egO9b+GyiuGM61fjSsawLo7iMVPmng==}
     dependencies:
       csstype: 3.1.0
     dev: true
@@ -1755,8 +1755,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /arg/5.0.1:
-    resolution: {integrity: sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA==}
+  /arg/5.0.2:
+    resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
     dev: true
 
   /array-flatten/1.1.1:
@@ -4651,8 +4651,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /sweetalert2/11.4.17:
-    resolution: {integrity: sha512-z0iQW5fDdvtoDNle3iHTKunsuNWgPaMifVu0GPtdguR0uVPrvg9gg9bnSQeJ4tx3C7FwJOEnRshxrs6fFItRvw==}
+  /sweetalert2/11.4.19:
+    resolution: {integrity: sha512-N3GA2M/K6PFzLprKWENioL0ckXPHLiWwvMMAJSfGgxB+aptzQrElv6D+j3D++K9yXSjpTs3XqJHYUQpEUzpv/g==}
     dev: true
 
   /sync-rpc/1.3.6:
@@ -4661,12 +4661,12 @@ packages:
       get-port: 3.2.0
     dev: true
 
-  /tailwindcss/3.1.2:
-    resolution: {integrity: sha512-yJ6L5s1U5AeS5g7HHy212zdQfjwD426FBfm59pet/JsyneuZuD4C2W7PpJEg4ppisiB21uLqtNagv8KXury3+Q==}
+  /tailwindcss/3.1.4:
+    resolution: {integrity: sha512-NrxbFV4tYsga/hpWbRyUfIaBrNMXDxx5BsHgBS4v5tlyjf+sDsgBg5m9OxjrXIqAS/uR9kicxLKP+bEHI7BSeQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
-      arg: 5.0.1
+      arg: 5.0.2
       chokidar: 3.5.3
       color-name: 1.1.4
       detective: 5.2.1

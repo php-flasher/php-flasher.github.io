@@ -6,14 +6,10 @@
     <body class="bg-gray-100 min-h-screen bg-squared leading-tight leader overflow-x-hidden">
         {% include size-helper.html %}
 
-        <header class="container mx-auto flex flex-col items-center text-center">
-            <a href="/">
-                <img class="max-w-sm" src="/dist/images/php-flasher.png" alt="PHPFlasher"/>
-            </a>
-            <h1 class="text-6xl text-gray-600">
-                PHP<span class="text-indigo-600">Flasher</span>.
-            </h1>
-            <h3 class="text-2xl mx-auto text-gray-600 mt-4 px-8 leading-tight">
+        <header class="container mx-auto flex flex-col items-center text-center justify-center">
+            <img class="max-w-2xl" src="/dist/images/php-flasher-logo.svg" alt="PHPFlasher"/>
+
+            <h3 class="text-2xl mx-auto text-gray-600 mt-8 px-8 leading-tight">
                 A powerful and flexible flash notification system for <span class="text-indigo-600">PHP</span>  <br> With <i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony and <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel implementations
             </h3>
 
@@ -117,28 +113,6 @@
                     </ul>
                 </p>
             </section>
-        </section>
-
-        <section class="mt-10 bg-indigo-600 py-10 px-4">
-            <div class="container mx-auto lg:grid lg:grid-cols-2 gap-4">
-                <section class="col-span-1 lg:px-24">
-                    <h2 class="text-3xl text-white leading-tight mb-2 flex">
-                        <i class="fa-duotone fa-message-captions mr-2"></i> Render you notifications
-                    </h2>
-                    <p class="text-white text-xl mt-8 md:ml-16">
-                        PHPFlasher make it very easy to render your notifications just by adding a simple line of code.
-                    </p>
-                    <p class="text-white text-xl mt-8 md:ml-16">
-                        You don't have to worry about importing your javascript or stylesheets, <span class="text-gray-300">PHP</span><span class="text-gray-400">Flasher</span> handle this for you, and it only loads the needed files when notifications are ready to be rendered.
-                    </p>
-                    <p class="text-white text-xl mt-8 md:ml-16">
-                        You can customize how you want to display your notifications: Limit the number of displayed notifications, order them and also filter them how you want with <strong class="text-white">stamps</strong>, of course you can add your own logic here.
-                    </p>
-                </section>
-                <section class="flex items-center justify-center col-span-1 mt-8">
-                    <img class="w-full" src="/dist/images/render-notifications.png" alt="Render Notifications"/>
-                </section>
-            </div>
         </section>
 
         {% include footer.html %}
