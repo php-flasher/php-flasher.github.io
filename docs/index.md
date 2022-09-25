@@ -55,7 +55,7 @@ Flash notifications serves as a feedback & confirmation mechanism after the user
 
 ## <i class="fa-duotone fa-list-radio"></i> Why use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : <span class="text-indigo-900">__toastr.js__</span>, <span class="text-indigo-900">__sweetalert 2__</span>, <span class="text-indigo-900">__pnotify__</span>, <span class="text-indigo-900">__noty__</span>, <span class="text-indigo-900">__notyf__</span> and even show <span class="text-indigo-900">__desktop__</span> notifications.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports many notification libraries : <span class="text-indigo-900">[__toastr.js__](/docs/adapter/toastr/)</span>, <span class="text-indigo-900">[__sweetalert 2__](/docs/adapter/sweetalert/)</span>, <span class="text-indigo-900">[__pnotify__](/docs/adapter/pnotify/)</span>, <span class="text-indigo-900">[__noty__](/docs/adapter/noty/)</span>, <span class="text-indigo-900">[__notyf__](/docs/adapter/notyf/)</span> and even show <span class="text-indigo-900">__desktop__</span> notifications.
 
 This library is designed, so you can take full control when creating your notifications :
 
@@ -64,7 +64,7 @@ This library is designed, so you can take full control when creating your notifi
 * LTR <i class="fa-duotone fa-signs-post text-indigo-900 fa-xl"></i> and Dark-mode <i class="fa-duotone fa-circle-half-stroke text-indigo-900 fa-xl"></i> support
 * Limit the amount of displayed notifications
 * Show Desktop notifications for : <i class="fa-brands fa-linux fa-xl"></i> Linux, <i class="fa-brands fa-apple fa-xl"></i> macOS, <i class="fa-brands fa-windows fa-xl"></i> Windows
-* Framework-agnostic with implementations for: <a href="https://laravel.com/" class="text-indigo-900"><i class="fa-brands fa-laravel text-red-900 fa-xl"></i> <strong>Laravel</strong></a> and <a href="https://symfony.com/" class="text-indigo-900"><i class="fa-brands fa-symfony text-black fa-xl"></i> <strong>Symfony</strong></a></span>
+* Framework-agnostic with implementations for: <a href="https://laravel.com/" class="text-indigo-900"><i class="fa-brands fa-laravel text-red-900 fa-xl"></i> <strong>Laravel</strong></a> and <a href="https://symfony.com/" class="text-indigo-900"><i class="fa-brands fa-symfony text-black fa-xl"></i> <strong>Symfony</strong></a>
 * Autocomplete for <i class="fa-duotone fa-sidebar text-indigo-900 fa-xl"></i> PHPSTORM
 * You can always create an adapter yourself <i class="fa-duotone fa-screwdriver-wrench fa-xl text-indigo-900"></i>
 * ...and more
