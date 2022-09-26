@@ -5,7 +5,8 @@
         "dev": "encore dev",
         "dev-server": "encore dev-server",
         "format": "prettier --write 'assets/**/*.{pcss,js}'",
-        "watch": "encore dev --watch"
+        "watch": "encore dev --watch",
+        "serve": "jekyll serve --livereload"
     },
     "devDependencies": {
         "@flasher/flasher": "^1.1.1",
