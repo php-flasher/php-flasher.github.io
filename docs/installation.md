@@ -59,8 +59,11 @@ class BookController
 
         $flasher->addSuccess('Book saved successfully');
 
-        flash('Data has been saved successfully!') // laravel helper function
-
+        // laravel helpers function
+        flash('Data has been saved successfully!');
+        flash()->addSuccess('Data has been saved successfully!'); // equivalent to the above
+        flash()->success('Data has been saved successfully!')->flash(); // equivalent to the above
+        
         // ... finally redirect or render the view
     }
 }

@@ -12,6 +12,8 @@ Using this package is actually pretty easy. Adding notifications to your applica
 
 ```php
 $flasher->addFlash('success', 'Data has been saved successfully!');
+
+flash()->addFlash('success', 'Data has been saved successfully!'); // equivalent for the above but only for Laravel users
 ```
 
 ```php
@@ -25,6 +27,7 @@ $notification = $flasher->addFlash(string $type, string $message, string $title 
 | `$title`   | The notification title, Can also include HTML                                                                                                                                                                                                                                                                       |
 | `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                       |
 
+> <span class="text-orange-900"><i class="fa-duotone fa-circle-exclamation text-red-900 fa-xl"></i> For <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel users whenever you see `$flasher` you could use `flash()` helper method instead.</span> <br>
 
 To make life even easier, there are four helper methods for different notification types of notification. 
 So instead of manually supplying the notification type, you can simply call the type as its method name. 
