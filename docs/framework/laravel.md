@@ -62,24 +62,6 @@ This is the base package for all Laravel adapters.
 composer require php-flasher/flasher-laravel
 ```
 
-Then add the service provider to `config/app.php`.
-
-> in Laravel version 5.5 and beyond this step can be skipped if package auto-discovery is enabled.
-
-```php
-'providers' => [
-    ...
-    Flasher\Laravel\FlasherServiceProvider::class,
-    ...
-];
-```
-
-Optionally include the Facade in `config/app.php`.
-
-```php
-'Flasher' => Flasher\Laravel\Facade\Flasher::class,
-```
-
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
@@ -95,21 +77,40 @@ use Flasher\Prime\FlasherInterface;
 
 class PostController extends Controller
 {
-    public function store(PostRequest $request, FlasherInterface $flasher)
+    public function store(PostRequest $request)
     {
         $post = Post::create($request->only(['title', 'body']));
 
         if ($post instanceof Post) {
-            $flasher->addSuccess('Data has been saved successfully!');
+            flash()->addSuccess('Data has been saved successfully!');
             // if you like to use Facades : Flasher::addSuccess('Data has been saved successfully!');
-            // or functions flash()->addSuccess('Data has been saved successfully!');
 
             return redirect()->route('posts.index');
         }
 
-        $flasher->addError('An error has occurred please try again later.');
+        flash()->addError('An error has occurred please try again later.');
 
         return back();
     }
 }
+```
+
+## <i class="fa-duotone fa-list-radio"></i> For Laravel version < 5.5
+
+> in Laravel version 5.5 and beyond this step can be skipped if package auto-discovery is enabled.
+
+Add the service provider to `config/app.php`.
+
+```php
+'providers' => [
+    ...
+    Flasher\Laravel\FlasherServiceProvider::class,
+    ...
+];
+```
+
+Optionally include the Facade in `config/app.php`.
+
+```php
+'Flasher' => Flasher\Laravel\Facade\Flasher::class,
 ```
