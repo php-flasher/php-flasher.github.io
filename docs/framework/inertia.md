@@ -1,0 +1,78 @@
+---
+permalink: /docs/framework/inertia/
+title: How to make PHPFlasher work with Inertia.js ?
+published_at: 2021-08-29
+updated_at: 2022-05-08
+---
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Inertia.js
+
+## <i class="fa-duotone fa-list-radio"></i> Installation
+
+Please follow the same installation steps as for the [Laravel Installation](/docs/framework/laravel) package.
+
+You have also to install `@flasher/flasher` from npm.
+```shell
+npm i @flasher/flasher
+```
+
+---
+
+## <i class="fa-duotone fa-list-radio"></i> Usage
+
+Dispatch `notifications` from your `HandleInertiaRequests` middleware shared data.
+
+```php
+<?php
+// app/Http/Middleware/HandleInertiaRequests.php
+
+class HandleInertiaRequests extends Middleware
+{
+    public function share(Request $request): array
+    {
+        return array_merge(parent::share($request), [
+            'messages' => flash()->render([], 'array'),
+        ]);
+    }
+}
+```
+
+---
+
+Then render your `notifications` from your `Layout.vue` file like the following:
+
+```html
+// resources/js/Shared/Layout.vue
+<script>
+import flasher from "@flasher/flasher";
+
+export default {
+  props: {
+    messages: Object,
+  },
+  watch: {
+    messages(value) {
+      flasher.render(value);
+    }
+  }
+}
+</script>
+```
+
+All you have to do now, is to trigger you notification from anywhere in your application.
+
+```php
+<?php
+// app/Http/Controllers/UsersController.php
+class UsersController
+{
+    public function store()
+    {
+        // your saving logic
+        
+        flash()->addSuccess('User created.');
+        
+        return Redirect::route('users');
+    }
+}
+```
