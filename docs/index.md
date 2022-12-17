@@ -1,5 +1,5 @@
 ---
-permalink: /docs/
+permalink: /
 title: A powerful and flexible flash notification system for PHP
 hide_title: true
 published_at: 2020-11-28
