@@ -1,5 +1,5 @@
 <i class="fa-duotone fa-bars-sort"></i> Getting Started:
-    <i class="fa-duotone fa-message-check text-indigo-900 mr-1 fa-lg"></i> Introduction: '/docs/'
+    <i class="fa-duotone fa-message-check text-indigo-900 mr-1 fa-lg"></i> Introduction: '/'
     <i class="fa-duotone fa-cloud-arrow-down text-indigo-900 mr-1 fa-lg"></i> Installation: '/docs/installation/'
     <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel: '/docs/framework/laravel/'
     <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony: '/docs/framework/symfony/'
