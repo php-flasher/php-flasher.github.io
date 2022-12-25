@@ -36,7 +36,7 @@ flasher:
     # use a CDN with the latest version of the library. but you
     # could download it locally or install it with npm.
     
-    root_script: 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.1.1/dist/flasher.min.js'
+    root_script: 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.2.4/dist/flasher.min.js'
     
 
     # --------------------------------------------------------------------------

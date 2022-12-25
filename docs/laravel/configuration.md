@@ -40,8 +40,23 @@ return [
     | use a CDN with the latest version of the library. but you
     | could download it locally or install it with npm.
     */
-    'root_script' => 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.1.1/dist/flasher.min.js',
-    
+    'root_script' => [
+        'cdn' => 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.2.4/dist/flasher.min.js',
+        'local' => '/vendor/flasher/flasher.min.js',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Whether to use CDN for PHPFlasher assets or not
+    |--------------------------------------------------------------------------
+    | By default PHPFlasher use CDN for all assets, to use local version of
+    | the assets set use_cdn to false.
+    |
+    | Don't forget to publish your assets with:
+    |     php artisan vendor:publish --force --tag=flasher-assets
+    */
+    'use_cdn' => true,
+
      /*
      |--------------------------------------------------------------------------
      | Translate PHPFlasher messages
