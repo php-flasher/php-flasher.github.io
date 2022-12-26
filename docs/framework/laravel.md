@@ -392,6 +392,8 @@ To use the **local** version of the assets, first publish the assets to the publ
 php artisan vendor:publish --force --tag=flasher-assets
 ```
 
+The published assets will be copied to the `/public/vendor/flasher` folder.
+
 Then update the configuration file at `config/flasher.php`, set **`use_cdn`** to false
 
 ```php
