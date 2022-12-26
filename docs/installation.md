@@ -42,7 +42,7 @@ By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flas
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
 If you're using a framework like <i class="fa-brands fa-laravel text-red-900"></i> __Laravel__ or <i class="fa-brands fa-symfony text-black"></i> __Symfony__, just grab an instance of __FlasherInterface__ from the
-service container and just before returning a view or redirect, call the __addSuccess__ method for example with the message you want to display.
+service container or use the `flash` helper method and just before returning a view or redirect, call the __addSuccess__ method for example with the message you want to display.
 
 ```php
 <?php
@@ -53,18 +53,28 @@ use Flasher\Prime\FlasherInterface;
 
 class BookController
 {
-    public function save(FlasherInterface $flasher)
+    public function save()
     {
         // ...
 
-        $flasher->addSuccess('Book saved successfully');
-
-        // laravel helpers function
         flash('Data has been saved successfully!');
-        flash()->addSuccess('Data has been saved successfully!'); // equivalent to the above
-        flash()->success('Data has been saved successfully!')->flash(); // equivalent to the above
         
-        // ... finally redirect or render the view
+        flash()->addSuccess('Data has been saved successfully!');
+        
+        flash()
+            ->success('Data has been saved successfully!')
+            ->flash();
+
+        // ... redirect or render the view
+    }
+    
+    public function update(FlasherInterface $flasher)
+    {
+        // ...
+        
+        $flasher->addSuccess('Book saved successfully');
+        
+        // ... redirect or render the view
     }
 }
 ```
