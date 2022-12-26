@@ -68,6 +68,9 @@ class BookController
         // ... redirect or render the view
     }
     
+    /**
+     * if you prefer to use dependency injection 
+     */
     public function update(FlasherInterface $flasher)
     {
         // ...
