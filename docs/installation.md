@@ -6,18 +6,12 @@ published_at: 2020-11-28
 updated_at: 2022-05-08
 ---
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** consists of multiple parts, each of which is a separate library.
-so you can install only the parts you need.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is modular and consists of multiple libraries, 
+allowing users to install and use only the specific components they need for their project.
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer <i class="fa-brands fa-php fa-xl text-indigo-900"></i> :
-
-```shell
-composer require php-flasher/flasher
-```
-
-**or** choose one of the following integration with :
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer :
 
 **<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 ```shell
@@ -29,7 +23,9 @@ composer require php-flasher/flasher-laravel
 composer require php-flasher/flasher-symfony
 ```
 
-By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** show its default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but you can install additional adapters as well :
+---
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** includes a default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but users can also install additional adapters to customize the appearance of notifications within their projects such as :
 
 * **[Toastr](/docs/adapter/toastr/)**
 * **[Noty](/docs/adapter/noty/)**
@@ -41,8 +37,8 @@ By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flas
 
 ## <i class="fa-duotone fa-list-radio"></i> General Usage
 
-If you're using a framework like <i class="fa-brands fa-laravel text-red-900"></i> __Laravel__ or <i class="fa-brands fa-symfony text-black"></i> __Symfony__, just grab an instance of __FlasherInterface__ from the
-service container or use the `flash` helper method and just before returning a view or redirect, call the __addSuccess__ method for example with the message you want to display.
+To display a notification message, you can either use the `flash()` helper method or obtain an instance of `flasher` from the service container. 
+Then, before returning a view or redirecting, call the `addSuccess()` method and pass in the desired message to be displayed.
 
 ```php
 <?php
@@ -71,11 +67,11 @@ class BookController
     /**
      * if you prefer to use dependency injection 
      */
-    public function update(FlasherInterface $flasher)
+    public function register(FlasherInterface $flasher)
     {
         // ...
         
-        $flasher->addSuccess('Book saved successfully');
+        $flasher->addSuccess('Your account has been successfully created!');
         
         // ... redirect or render the view
     }

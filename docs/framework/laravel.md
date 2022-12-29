@@ -1,50 +1,16 @@
 ---
 permalink: /docs/framework/laravel/
-title: A solid integration with the Laravel framework
+title: Effortless integration with Laravel
 published_at: 2020-11-28
 updated_at: 2022-05-08
 ---
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel**, with supports from **Laravel**  **4.0** to **9**.
-
-## <i class="fa-duotone fa-list-radio"></i> Introduction
-
-By default <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel** has a built-in <span class="text-indifo-600 font-bold">flashing</span> system.
-<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel** flash toast messages, can be found in the <a href="https://laravel.com/docs/session#flash-data" class="text-blue-600 font-bold">session</a> section of the documentation.
-
-Data stored in the session using this method will be available immediately and during the subsequent HTTP request. After the subsequent HTTP request, the flashed data will be deleted.
-
-```php 
-$request->session()->flash('success', 'Task was successful!');
-```
-
-And then somewhere in the view, you can use the `session()->get('success')` method to get the data.
-
-{% raw %}
-```twig
-@if (session()->has('success'))
-    <div class="fixed bg-green-600 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm">
-        <p>{{ session()->get('success') }}</p>
-    </div>
-@endif
-```
-{% endraw %}
-
-This example uses <a href="https://tailwindcss.com/">tailwindcss</a> for styling, but you can use any CSS framework you want.
-
-This approach is simple enough to add a flash message to your app. But :
-
-1. You can store only on flash type at a time. like `success`, `error`, `info`, `warning`
-2. You have to make changes to the view to use another CSS framework than `tailwindcss` like `bootstrap` or `material-ui`
-3. But what if you want to use multiple CSS frameworks for different types of flash messages ?
-4. How you can sort or limit the displayed flash messages ?
-5. How about translations and rtl languages ?
-6. Do you want to use some javascript library to display the flash messages ? (like [sweetalert](https://sweetalert2.github.io/) or [toastr](https://github.com/CodeSeven/toastr))
-
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** take this approach of storing the flash messages in the session and then retrieving it in the view to the next level.
-And solve all the above issues in a simple and easy way.
-
 ## <i class="fa-duotone fa-list-radio"></i> PHPFlasher Laravel
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is a trusted and well-supported package 
+that allows you to easily integrate flash notification messages into your <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel** projects.
+
+Its compatibility with Laravel versions **4.0** to **9** makes it a reliable choice for use in a wide range of Laravel projects, ensuring seamless integration and hassle-free functionality.
 
 To use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** in a Laravel application, you need :
 
@@ -75,7 +41,6 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Http\Requests\PostRequest;
-use Flasher\Prime\FlasherInterface;
 
 class PostController extends Controller
 {
@@ -89,8 +54,6 @@ class PostController extends Controller
             return redirect()->route('posts.index');
         }
 
-        flash()->addError('An error has occurred please try again later.');
-
         return back();
     }
 }
@@ -100,13 +63,13 @@ class PostController extends Controller
 
 ## <i class="fa-duotone fa-list-radio"></i> Configuration
 
-As optional if you want to modify the default configuration, you can publish the configuration file:
+As optional, if you want to modify the default configuration, you can publish the configuration file:
 
 ```shell
 php artisan vendor:publish --tag=flasher-config
 ```
 
-The Configuration file will be located at `config/flasher.php` and will have the following content :
+The configuration file will be located at `config/flasher.php` and will have the following content:
 
 ```php
 <?php // config/flasher.php
@@ -117,11 +80,18 @@ return [
     |--------------------------------------------------------------------------
     | Default PHPFlasher library
     |--------------------------------------------------------------------------
-    | This option controls the default library that will be used by PHPFlasher.
-    |
-    | Supported libraries: "flasher", "toastr", "noty", "notyf", "sweetalert", "pnotify"
+    | This option controls the default library that will be used by PHPFlasher
+    | to display notifications in your Laravel application. PHPFlasher supports
+    | several libraries, including "flasher", "toastr", "noty", "notyf", 
+    | "sweetalert" and "pnotify". 
     | 
-    | The "flasher" library is used by default, other libraries must be installed using composer.
+    | The "flasher" library is used by default. If you want to use a different
+    | library, you will need to install it using composer. For example, to use
+    | the "toastr" library, run the following command:
+    |     composer require php-flasher/flasher-toastr-laravel
+    |
+    | Here is a list of the supported libraries and the corresponding composer
+    | commands to install them:
     |
     | "toastr"     : composer require php-flasher/flasher-toastr-laravel
     | "noty"       : composer require php-flasher/flasher-noty-laravel
@@ -135,13 +105,19 @@ return [
     |--------------------------------------------------------------------------
     | Main PHPFlasher javascript file 
     |--------------------------------------------------------------------------
-    | This is the main javascript file that will be included in the page
-    | when a notification is ready to be displayed, by defaut PHPFlasher
-    | use a CDN with the latest version of the library. but you
-    | could download it locally or install it with npm.
+    | This option specifies the location of the main javascript file that is
+    | required by PHPFlasher to display notifications in your Laravel application.
+    |
+    | By default, PHPFlasher uses a CDN to serve the latest version of the library.
+    | However, you can also choose to download the library locally or install it
+    | using npm. 
     |
     | To use the local version of the library, run the following command:
     |     php artisan vendor:publish --force --tag=flasher-assets
+    |
+    | This will copy the necessary assets to your application's public folder. 
+    | You can then specify the local path to the javascript file in the 'local'
+    | field of this option.
     */
     'root_script' => [
         'cdn' => 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.2.4/dist/flasher.min.js',
@@ -152,41 +128,69 @@ return [
     |--------------------------------------------------------------------------
     | Whether to use CDN for PHPFlasher assets or not
     |--------------------------------------------------------------------------
-    | By default PHPFlasher use CDN links for its assets, to use local version of
-    | the assets set use_cdn to false.
+    | This option controls whether PHPFlasher should use CDN links or local assets
+    | for its javascript and CSS files. By default, PHPFlasher uses CDN links
+    | to serve the latest version of the library. However, you can also choose
+    | to use local assets by setting this option to 'false'.
     |
-    | Don't forget to publish your assets with:
+    | If you decide to use local assets, don't forget to publish the necessary
+    | files to your application's public folder by running the following command:
     |     php artisan vendor:publish --force --tag=flasher-assets
+    |
+    | This will copy the necessary assets to your application's public folder. 
     */
     'use_cdn' => true,
 
-     /*
-     |--------------------------------------------------------------------------
-     | Translate PHPFlasher messages
-     |--------------------------------------------------------------------------
-     | By default PHPFlasher messages are passed to Laravel translator service
-     | to disable this behavior, set this option to `false`.
-     */
+
+    /*
+    |--------------------------------------------------------------------------
+    | Translate PHPFlasher messages
+    |--------------------------------------------------------------------------
+    | This option controls whether PHPFlasher should pass its messages to the Laravel's
+    | translation service for localization. 
+    |
+    | By default, this option is set to 'true', which means that PHPFlasher will 
+    | attempt to translate its messages using the translation service.
+    |
+    | If you don't want PHPFlasher to use the Laravel's translation service, you can
+    | set this option to 'false'. In this case, PHPFlasher will use the messages
+    | as-is, without attempting to translate them.
+    */
     'auto_translate' => true,
+
     
-     /*
-     |--------------------------------------------------------------------------
-     | Inject PHPFlasher in Response
-     |--------------------------------------------------------------------------
-     | PHPFlasher scripts are added automatically before </body>, by listening
-     | to the Response after the App is done.
-     */
+    /*
+    |--------------------------------------------------------------------------
+    | Inject PHPFlasher in Response
+    |--------------------------------------------------------------------------
+    | This option controls whether PHPFlasher should automatically inject its
+    | javascript and CSS files into the HTML response of your Laravel application.
+    |
+    | By default, this option is set to 'true', which means that PHPFlasher will
+    | listen to the response of your application and automatically insert its
+    | scripts and stylesheets into the HTML before the closing `</body>` tag.
+    |
+    | If you don't want PHPFlasher to automatically inject its scripts and stylesheets
+    | into the response, you can set this option to 'false'. In this case, you will
+    | need to manually include the necessary files in your application's layout.
+    */
     'auto_render' => true,
+
     
     'flash_bag' => [
         /*
         |-----------------------------------------------------------------------
         | Enable flash bag
         |-----------------------------------------------------------------------
-        | This option allows you to automatically convert Laravel's flash
-        | messages to PHPFlasher notifications. This is useful when
-        | you want to migrate from a Legacy system or another
-        | library similar to PHPFlasher.
+        | This option controls whether PHPFlasher should automatically convert
+        | Laravel's flash messages to PHPFlasher notifications. This feature is
+        | useful when you want to migrate from a legacy system or another
+        | library that uses similar conventions for flash messages.
+        |
+        | When this option is set to 'true', PHPFlasher will check for flash
+        | messages in the session and convert them to notifications using the
+        | mapping specified in the 'mapping' option. When this option is set
+        | to 'false', PHPFlasher will ignore flash messages in the session.
         */
         'enabled' => true,
         
@@ -195,9 +199,14 @@ return [
         | Flash bag type mapping
         |-----------------------------------------------------------------------
         | This option allows you to map or convert session keys to PHPFlasher
-        | notification types. on the right side are the PHPFlasher types
-        | On the left side are the Laravel session keys that you
-        | want to convert to PHPFlasher types.
+        | notification types. On the left side are the PHPFlasher types.
+        | On the right side are the Laravel session keys that you want to
+        | convert to PHPFlasher types.
+        |
+        | For example, if you want to convert Laravel's 'danger' flash
+        | messages to PHPFlasher's 'error' notifications, you can add
+        | the following entry to the mapping:
+        |     'error' => ['danger'],
         */
         'mapping' => [
             'success' => ['success'],
@@ -212,12 +221,29 @@ return [
     | Global Filter Criteria
     |-----------------------------------------------------------------------
     | This option allows you to filter the notifications that are displayed
-    | by default all notifications are displayed, but you can filter
-    | them, for example to only display errors.
+    | in your Laravel application. By default, all notifications are displayed,
+    | but you can use this option to limit the number of notifications or
+    | filter them by type.
+    |
+    | For example, to limit the number of notifications to 5, you can set
+    | the 'limit' field to 5:
+    |     'limit' => 5,
+    |
+    | To filter the notifications by type, you can specify an array of
+    | types that you want to display. For example, to only display
+    | error notifications, you can set the 'types' field to ['error']:
+    |     'types' => ['error'],
+    |
+    | You can also combine multiple criteria by specifying multiple fields.
+    | For example, to display up to 5 error notifications, you can set
+    | the 'limit' and 'types' fields like this:
+    |     'limit' => 5,
+    |     'types' => ['error'],
     */
     'filter_criteria' => [
         'limit' => 5, // Limit the number of notifications to display
     ],
+
 ];
 ```
 
@@ -225,35 +251,16 @@ return [
 
 ## <i class="fa-duotone fa-list-radio"></i> Presets
 
-Let's say you have a custom notification that you want to use in multiple places. 
-You can create a preset for it and then use it in multiple places.
+You can create a preset for a custom notification that you want to reuse in multiple places by adding a presets entry in the configuration file.
 
-> You can think of a preset as a pre-defined message that you can use in multiple places. <br>
+> You can think of a preset as a pre-defined message that you can use in multiple locations. <br>
 
-Add a `presets` entry in the configuration file, for example `entity_saved` is the name of the preset
+For example, you can create a preset named `entity_saved` in the configuration file and then use
 
 ```php
 <?php // config/flasher.php
 
 return [
-    /*
-    |--------------------------------------------------------------------------
-    | Default PHPFlasher library
-    |--------------------------------------------------------------------------
-    | This option controls the default library that will be used by PHPFlasher.
-    |
-    | Supported libraries: "flasher", "toastr", "noty", "notyf", "sweetalert", "pnotify"
-    | 
-    | The "flasher" library is used by default, other libraries must be installed using composer.
-    |
-    | "toastr"     : composer require php-flasher/flasher-toastr-laravel
-    | "noty"       : composer require php-flasher/flasher-noty-laravel
-    | "notyf"      : composer require php-flasher/flasher-notyf-laravel
-    | "sweetalert" : composer require php-flasher/flasher-sweetalert-laravel
-    | "pnotify"    : composer require php-flasher/flasher-pnotify-laravel
-    */
-    'default' => 'flasher',
-    
     'presets' => [
         'entity_saved' => [
             'type' => 'success',
@@ -264,7 +271,7 @@ return [
 ];
 ```
 
-And then use it in your controller like the following:
+To use the preset, you can call the `addPreset()` method and pass the name of the preset as the first argument:
 
 ```php
 <?php
@@ -292,18 +299,16 @@ class BookController
 
 ## <i class="fa-duotone fa-list-radio"></i> Translation
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to translate your notification messages, presets and automatically detect RTL support.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to translate your notification messages, presets and automatically detect right-to-left (RTL) support.
 
-By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** came with Arabic, English and French translations, but you can add your own translations easily.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** comes with Arabic, English and French translations out of the box, but you can easily add your own translations.
 
-For example, if you need to override the English translation strings for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**,  you should place a language file at the following location:
+For example, if you need to override the English translation strings for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**,  you can create a language file at the following location:
 **`/resources/lang/vendor/flasher/en/messages.php`**. 
 
-Within this file, you should only define the translation strings you wish to override.
+In this file, you should only define the translation strings you want to override. Any translation strings that you don't override will still be loaded from **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**'s original language files.
 
-Any translation strings you don't override will still be loaded from the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**'s original language files.
-
-Here is the list of the default translation keys for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**:
+Here is a list of the default translation keys for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**:
 
 ```php
 <?php // /resources/lang/vendor/flasher/ar/messages.php
@@ -404,13 +409,18 @@ return [
     |--------------------------------------------------------------------------
     | Whether to use CDN for PHPFlasher assets or not
     |--------------------------------------------------------------------------
-    | By default PHPFlasher use CDN links for its assets, to use local version of
-    | the assets set use_cdn to false.
+    | This option controls whether PHPFlasher should use CDN links or local assets
+    | for its javascript and CSS files. By default, PHPFlasher uses CDN links
+    | to serve the latest version of the library. However, you can also choose
+    | to use local assets by setting this option to 'false'.
     |
-    | Don't forget to publish your assets with:
+    | If you decide to use local assets, don't forget to publish the necessary
+    | files to your application's public folder by running the following command:
     |     php artisan vendor:publish --force --tag=flasher-assets
+    |
+    | This will copy the necessary assets to your application's public folder. 
     */
-    'use_cdn' => false,
+    'use_cdn' => true,
 ];
 ```
 
@@ -441,13 +451,19 @@ return [
     |--------------------------------------------------------------------------
     | Main PHPFlasher javascript file 
     |--------------------------------------------------------------------------
-    | This is the main javascript file that will be included in the page
-    | when a notification is ready to be displayed, by defaut PHPFlasher
-    | use a CDN with the latest version of the library. but you
-    | could download it locally or install it with npm.
+    | This option specifies the location of the main javascript file that is
+    | required by PHPFlasher to display notifications in your Laravel application.
+    |
+    | By default, PHPFlasher uses a CDN to serve the latest version of the library.
+    | However, you can also choose to download the library locally or install it
+    | using npm. 
     |
     | To use the local version of the library, run the following command:
     |     php artisan vendor:publish --force --tag=flasher-assets
+    |
+    | This will copy the necessary assets to your application's public folder. 
+    | You can then specify the local path to the javascript file in the 'local'
+    | field of this option.
     */
     'root_script' => [], // set this to empty array
 ];
