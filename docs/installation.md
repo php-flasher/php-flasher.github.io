@@ -49,17 +49,19 @@ use Flasher\Prime\FlasherInterface;
 
 class BookController
 {
-    public function save()
+    public function saveBook()
     {
         // ...
 
-        flash('Data has been saved successfully!');
+        flash('Book has been created successfully!');
         
-        flash()->addSuccess('Data has been saved successfully!');
+        flash()->addSuccess('The book has been added to the library successfully!');
         
         flash()
-            ->success('Data has been saved successfully!')
+            ->success('Congratulations! Your book has been published.')
             ->flash();
+            
+        app('flasher')->addSuccess('The book creation process has been completed successfully.');
 
         // ... redirect or render the view
     }
@@ -77,3 +79,9 @@ class BookController
     }
 }
 ```
+
+<br />
+
+It's important to choose a message that is clear and concise, and that accurately reflects the outcome of the operation. <br />
+In this case, `"Book has been created successfully!"` is already a good message,
+but you may want to tailor it to fit the specific context and language of your application.
