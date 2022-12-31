@@ -1,3 +1,19 @@
+url: https://php-flasher.io
+
+title: PHPFlasher
+
+author:
+  name: Younes KHOUBZA
+  twitter: yoeunes
+  url: https://www.linkedin.com/in/younes-khoubza/
+  picture: https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
+
+image:
+  path: /dist/images/php-flasher-logo.svg
+  alt: PHPFlasher Logo
+
+highlighter: none
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -7,6 +23,7 @@ defaults:
       path: ""
     values:
       layout: "main"
+      image: /dist/images/php-flasher-logo.svg
 
 exclude:
   - "*.config.js"
@@ -17,7 +34,3 @@ exclude:
   - CNAME
   - "Gemfile*"
   - ".idea"
-
-url: https://php-flasher.io
-
-highlighter: none

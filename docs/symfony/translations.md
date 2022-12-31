@@ -1,8 +1,6 @@
 ---
 permalink: /docs/symfony/translations/
 title: Symfony Translations
-published_at: 2022-06-01
-updated_at: 2022-06-01
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to translate your notification messages, presets and automatically detect RTL support.

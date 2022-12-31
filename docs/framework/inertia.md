@@ -1,8 +1,6 @@
 ---
 permalink: /docs/framework/inertia/
 title: How to make PHPFlasher work with Inertia.js ?
-published_at: 2021-08-29
-updated_at: 2022-05-08
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Inertia.js

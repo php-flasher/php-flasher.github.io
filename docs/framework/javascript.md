@@ -1,8 +1,6 @@
 ---
 permalink: /docs/framework/javascript/
 title: Install PHPFlasher assets with cdn or npm
-published_at: 2020-05-18
-updated_at: 2022-05-18
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** assets can be installed from a cdn or using npm

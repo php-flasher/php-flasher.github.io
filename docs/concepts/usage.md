@@ -1,9 +1,6 @@
 ---
 permalink: /docs/concepts/usage/
 title: Usage
-hide_title: true
-published_at: 2020-11-28
-updated_at: 2022-05-08
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> General Usage

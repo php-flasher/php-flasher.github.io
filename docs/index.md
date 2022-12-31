@@ -1,9 +1,6 @@
 ---
 permalink: /
 title: Effortless Flash Notifications for PHP with PHPFlasher
-hide_title: true
-published_at: 2020-11-28
-updated_at: 2022-05-08
 ---
 
 <div class="text-center mb-8">

@@ -1,9 +1,6 @@
 ---
 permalink: /docs/installation/
 title: Installation
-hide_title: true
-published_at: 2020-11-28
-updated_at: 2022-05-08
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is modular and consists of multiple libraries, 

@@ -1,8 +1,6 @@
 ---
 permalink: /docs/symfony/configuration/
 title: Symfony Configuration
-published_at: 2022-06-01
-updated_at: 2022-06-01
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** symfony configuration file is located at `config/packages/flasher.yaml`

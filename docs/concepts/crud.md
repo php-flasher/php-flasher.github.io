@@ -1,8 +1,6 @@
 ---
 permalink: /docs/concepts/crud/
 title: CRUD flash messages made easy
-published_at: 2022-06-07
-updated_at: 2022-06-07
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows to display flash messages for common CRUD operations with ease.
