@@ -1,6 +1,7 @@
 import "../css/_tryit.pcss";
 
 import flasher from "@flasher/flasher";
+import toastr from "@flasher/flasher-toastr";
 
 const messages = {
     success: [
@@ -78,6 +79,29 @@ const examples = {
     "# info": function () {
         flasher.info(getRandomMessageByType("info"));
     },
+    "# notification builder with toastr": function () {
+        toastr.success('The action was completed successfully.', 'Great!', {
+            timeOut: 10000,
+        });
+    },
+    "# example with type": function () {
+        flasher.error('An error has occurred please try again later.');
+    },
+    "# success type with title": function () {
+        flasher.success(getRandomMessageByType("success"), 'Congratulations!');
+    },
+    "# error message": function () {
+        flasher.error("This may take some time. Do not refresh the page.");
+    },
+    "# error message with title": function () {
+        flasher.error("This may take some time. Do not refresh the page.", "Oops!");
+    },
+    "# error message with options": function () {
+        flasher.error("This may take some time. Do not refresh the page.", "Oops!", {
+            timeout: 10000,
+            position: "top-center",
+        });
+    }
 };
 
 const codeBlocks = document.querySelectorAll("pre > code");
@@ -109,6 +133,7 @@ codeBlocks.forEach(function (codeBlock) {
         try {
             examples[example]();
         } catch (error) {
+            console.error(error);
             console.log(`${example} example doest not exist`);
         }
 
