@@ -3,27 +3,33 @@ import "../css/_clipboard.pcss";
 const codeBlocks = document.querySelectorAll("pre > code");
 
 codeBlocks.forEach(function (codeBlock) {
-    const copyButton = document.createElement("button");
-    copyButton.classList.add("copy", "text-indigo-500");
-    copyButton.type = "button";
-    copyButton.ariaLabel = "Copy code to clipboard";
+    const button = document.createElement("button");
+    button.classList.add("copy", "text-indigo-500");
+    button.type = "button";
+    button.ariaLabel = "Copy code to clipboard";
 
-    const copyIcon = '<i class="fa-duotone fa-clipboard"></i>';
-    copyButton.innerHTML = copyIcon;
+    const icon = '<i class="fa-duotone fa-clipboard"></i>';
+    button.innerHTML = icon;
 
     const parent = codeBlock.parentElement;
     parent.classList.add("copyable");
 
-    parent.append(copyButton);
+    parent.append(button);
 
-    copyButton.addEventListener("click", function () {
-        const code = codeBlock.innerText.trim();
+    button.addEventListener("click", function () {
+        let code = codeBlock.innerText.trim();
+        if (code.startsWith("#")) {
+            const parts = code.split("\n");
+            parts.shift();
+            code = parts.join("\n");
+        }
+
         window.navigator.clipboard.writeText(code);
 
-        copyButton.innerHTML = '<i class="fa-duotone fa-clipboard-check"></i>';
+        button.innerHTML = '<i class="fa-duotone fa-clipboard-check"></i>';
 
         setTimeout(function () {
-            copyButton.innerHTML = copyIcon;
+            button.innerHTML = icon;
         }, 1000);
     });
 });

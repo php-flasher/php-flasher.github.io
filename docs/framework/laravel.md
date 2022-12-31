@@ -1,8 +1,6 @@
 ---
 permalink: /docs/framework/laravel/
 title: Effortless integration with Laravel
-published_at: 2020-11-28
-updated_at: 2022-05-08
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> PHPFlasher Laravel

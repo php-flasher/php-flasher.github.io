@@ -11,9 +11,8 @@ updated_at: 2022-05-08
 Using this package is actually pretty easy. Adding notifications to your application actually require only one line of code.
 
 ```php
-$flasher->addFlash('success', 'Data has been saved successfully!');
-
-flash()->addFlash('success', 'Data has been saved successfully!'); // equivalent for the above but only for Laravel users
+# success
+flash()->addFlash('success', 'Your request has been submitted successfully.');
 ```
 
 ```php
@@ -27,16 +26,27 @@ $notification = $flasher->addFlash(string $type, string $message, string $title 
 | `$title`   | The notification title, Can also include HTML                                                                                                                                                                                                                                                                       |
 | `$options` | Custom options for javascript libraries (toastr, noty, notyf ...etc)                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                       |
 
-> <span class="text-orange-900"><i class="fa-duotone fa-circle-exclamation text-red-900 fa-xl"></i> For <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel users whenever you see `$flasher` you could use `flash()` helper method instead.</span> <br>
-
 To make life even easier, there are four helper methods for different notification types of notification. 
 So instead of manually supplying the notification type, you can simply call the type as its method name. 
 
 ```php
-$flasher->addSuccess('success message');
-$flasher->addError('error message');
-$flasher->addWarning('warning message');
-$flasher->addInfo('info message');
+# success
+$flasher->addSuccess('Your request has been submitted successfully.');
+```
+
+```php
+# error
+$flasher->addError('Sorry, we encountered an error. Please try again later.');
+```
+
+```php
+# warning
+$flasher->addWarning('Are you sure you want to delete this item? This action cannot be undone.');
+```
+
+```php
+# info
+$flasher->addInfo('Your account has been successfully created. Please check your email for a confirmation message.');
 ```
 
 --- 
