@@ -11,7 +11,7 @@ Using this package is actually pretty easy. Adding notifications to your applica
 flash()->addFlash(string $type, string $message, string $title = null, array $options = [])
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # success
@@ -28,7 +28,7 @@ flash()->addFlash('success', 'Your request has been submitted successfully.');
 To make life even easier, there are four helper methods for different notification types of notification. 
 So instead of manually supplying the notification type, you can simply call the type as its method name. 
 
-Examples:
+<br /> Example:
 
 ```php
 # success
@@ -70,7 +70,7 @@ $builder = flash()
 $builder->flash();
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # notification builder with toastr
@@ -102,7 +102,7 @@ Its getting even better right ? it's so easy to read and still very powerful. Yo
 flash()->type(string $type, string $message = null, string $title = null, array $options = []);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # example with type
@@ -130,7 +130,7 @@ flash()->warning(string $message = null, string $title = null, array $options = 
 flash()->info(string $message = null, string $title = null, array $options = []);
 ```
 
-example :
+<br /> Example:
 
 ```php
 # success type with title
@@ -148,7 +148,7 @@ flash()
 flash()->message(string $message);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # error message
@@ -167,7 +167,7 @@ flash()
 flash()->title(string $title);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # error message with title
@@ -187,7 +187,7 @@ flash()
 flash()->options(array $options, bool $merge = true);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # error message with options
@@ -216,7 +216,7 @@ flash()
 flash()->option(string $option, mixed $value);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # success message with options
@@ -240,7 +240,7 @@ flash()
 flash()->priority(int $priority);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # Message with priority
@@ -276,7 +276,7 @@ Sometimes you may want a flash message to persist for longer than a single reque
 flash()->hops(int $hops);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 flash()
@@ -296,7 +296,7 @@ flash()
 flash()->keep();
 ```
 
-Example:
+<br /> Example:
 
 ```php
 flash()
@@ -317,7 +317,7 @@ flash()
 flash()->delay(int $delay);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 flash()
@@ -338,7 +338,7 @@ flash()
 flash()->now();
 ```
 
-Example:
+<br /> Example:
 
 ```php
 flash()
@@ -358,7 +358,7 @@ flash()
 flash()->translate(string $locale = null);
 ```
 
-Example:
+<br /> Example:
 
 ```php
 # Translated message

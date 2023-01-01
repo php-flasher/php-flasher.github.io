@@ -15,6 +15,8 @@ allowing users to install and use only the specific components they need for the
 composer require php-flasher/flasher-laravel
 ```
 
+<br />
+
 **<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
 ```shell
 composer require php-flasher/flasher-symfony

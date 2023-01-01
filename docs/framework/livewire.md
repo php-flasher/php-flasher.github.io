@@ -66,12 +66,12 @@ class MyComponent extends Component
         sweetalert()->showDenyButton()->addInfo('confirm or deny action');
     }
 
-    public function sweetAlertEvent(array $payload)
+    public function sweetalertEvent(array $payload)
     {
         toastr()->closeButton()->addInfo('Event received from sweetalert');
     }
 
-    public function sweetAlertConfirmed(array $payload)
+    public function sweetalertConfirmed(array $payload)
     {
         toastr()->addSuccess('The "Confirm" button was clicked');
     }
@@ -81,7 +81,7 @@ class MyComponent extends Component
         toastr()->addError('The "Deny" button was clicked');
     }
 
-    public function sweetAlertDismissed(array $payload)
+    public function sweetalertDismissed(array $payload)
     {
         toastr()->addWarning('The "Cancel" button was clicked');
     }

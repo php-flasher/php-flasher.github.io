@@ -2,6 +2,7 @@ import "../css/_tryit.pcss";
 
 import flasher from "@flasher/flasher";
 import toastr from "@flasher/flasher-toastr";
+import noty from "@flasher/flasher-noty";
 
 const messages = {
     success: [
@@ -143,7 +144,67 @@ const examples = {
         flasher.error('Une erreur s\'est produite lors de l\'envoi de votre demande.', 'Erreur');
         flasher.warning('Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire.', 'Avertissement');
         flasher.info('Cette page sera mise à jour dans 10 minutes.', 'Information');
-    }
+    },
+    "# noty": function () {
+        noty.success("The book has been added to the library successfully!");
+    },
+    "# noty text": function () {
+        noty.error("Oops, something went wrong.");
+    },
+    "# noty alert": function () {
+        noty.flash("alert", "This may take a while. Do not refresh the page.")
+    },
+    "# noty layout": function () {
+        noty.success("The action was completed successfully.", {
+            layout: "topCenter",
+        });
+    },
+    "# noty theme mint": function () {
+        noty.success('Your request was successfully sent.', {theme: "mint"});
+        noty.error('An error occurred while sending your request.', {theme: "mint"});
+        noty.warning('You must fill out all required fields before submitting the form.', {theme: "mint"});
+        noty.info('This page will be updated in 10 minutes.', {theme: "mint"});
+    },
+    "# noty theme relax": function () {
+        import("noty/lib/themes/relax.css").then(function () {
+            noty.success('Your request was successfully sent.', {theme: "relax"});
+            noty.error('An error occurred while sending your request.', {theme: "relax"});
+            noty.warning('You must fill out all required fields before submitting the form.', {theme: "relax"});
+            noty.info('This page will be updated in 10 minutes.', {theme: "relax"});
+        });
+    },
+    "# noty theme metroui": function () {
+        import("noty/lib/themes/metroui.css").then(function () {
+            noty.success('Your request was successfully sent.', {theme: "metroui"});
+            noty.error('An error occurred while sending your request.', {theme: "metroui"});
+            noty.warning('You must fill out all required fields before submitting the form.', {theme: "metroui"});
+            noty.info('This page will be updated in 10 minutes.', {theme: "metroui"});
+        });
+    },
+    "# noty theme light": function () {
+        import("noty/lib/themes/light.css").then(function () {
+            noty.success('Your request was successfully sent.', {theme: "light"});
+            noty.error('An error occurred while sending your request.', {theme: "light"});
+            noty.warning('You must fill out all required fields before submitting the form.', {theme: "light"});
+            noty.info('This page will be updated in 10 minutes.', {theme: "light"});
+        });
+    },
+    "# noty theme nest": function () {
+        import("noty/lib/themes/nest.css").then(function () {
+            noty.success('Your request was successfully sent.', {theme: "nest"});
+            noty.error('An error occurred while sending your request.', {theme: "nest"});
+            noty.warning('You must fill out all required fields before submitting the form.', {theme: "nest"});
+            noty.info('This page will be updated in 10 minutes.', {theme: "nest"});
+        });
+    },
+    "# noty theme sunset": function () {
+        import("noty/lib/themes/sunset.css").then(function () {
+            noty.success('Your request was successfully sent.', {theme: "sunset"});
+            noty.error('An error occurred while sending your request.', {theme: "sunset"});
+            noty.warning('You must fill out all required fields before submitting the form.', {theme: "sunset"});
+            noty.info('This page will be updated in 10 minutes.', {theme: "sunset"});
+        });
+    },
 };
 
 const codeBlocks = document.querySelectorAll("pre > code");
