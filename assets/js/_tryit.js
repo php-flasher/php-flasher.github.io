@@ -128,6 +128,21 @@ const examples = {
             rtl: true,
             position: "top-left",
         });
+    },
+    "# preset entity_saved": function () {
+        flasher.success("Entity saved successfully", "Entity saved");
+    },
+    "# arabic translation": function () {
+        flasher.success('تم إرسال طلبك بنجاح.', 'نجاح', {rtl: true});
+        flasher.error('حدث خطأ أثناء إرسال طلبك.', 'خطأ', {rtl: true});
+        flasher.warning('يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج', 'تحذير', {rtl: true});
+        flasher.info('سيتم تحديث هذه الصفحة في غضون 10 دقائق.', 'معلومة', {rtl: true});
+    },
+    "# french translation": function () {
+        flasher.success('Votre demande a été envoyée avec succès.', 'Succès');
+        flasher.error('Une erreur s\'est produite lors de l\'envoi de votre demande.', 'Erreur');
+        flasher.warning('Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire.', 'Avertissement');
+        flasher.info('Cette page sera mise à jour dans 10 minutes.', 'Information');
     }
 };
 

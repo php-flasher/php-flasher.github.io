@@ -280,6 +280,8 @@ return [
 To use the preset, you can call the `addPreset()` method and pass the name of the preset as the first argument:
 
 ```php
+# preset entity_saved
+
 <?php
 
 class BookController
@@ -292,6 +294,8 @@ class BookController
 This is equivalent to:
 
 ```php
+# preset entity_saved
+
 <?php
 
 class BookController
@@ -368,6 +372,26 @@ return [
 
         'resource' => '',
 ];
+```
+
+Examples:
+
+```php
+# arabic translation
+
+flash()->addSuccess('تم إرسال طلبك بنجاح.');
+flash()->addError('حدث خطأ أثناء إرسال طلبك.');
+flash()->addWarning('يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج');
+flash()->addInfo('سيتم تحديث هذه الصفحة في غضون 10 دقائق.');
+```
+
+```php
+# french translation
+
+flash()->addSuccess('Votre demande a été envoyée avec succès.');
+flash()->addError('Une erreur s\'est produite lors de l\'envoi de votre demande.');
+flash()->addWarning('Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire.');
+flash()->addInfo('Cette page sera mise à jour dans 10 minutes.');
 ```
 
 ---
