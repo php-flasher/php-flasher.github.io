@@ -13,8 +13,8 @@
     "main": {
       "js": [
         "/dist/runtime.4454596f.js",
-        "/dist/245.aacf1689.js",
-        "/dist/main.14fd2146.js"
+        "/dist/245.6246929d.js",
+        "/dist/main.7a8acc7b.js"
       ],
       "css": [
         "/dist/857.11f63fec.css",
@@ -57,7 +57,7 @@
     "adapter-toastr": {
       "js": [
         "/dist/runtime.4454596f.js",
-        "/dist/245.aacf1689.js",
+        "/dist/245.6246929d.js",
         "/dist/adapter-toastr.2bb263be.js"
       ]
     }

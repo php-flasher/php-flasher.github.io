@@ -216,6 +216,17 @@ flash()
 flash()->option(string $option, mixed $value);
 ```
 
+Example:
+
+```php
+# success message with options
+
+flash()
+    ->option('position', 'top-center')
+    ->option('timeout', 10000)
+    ->addSuccess('Your request was processed successfully.', 'Congratulations!');
+```
+
 | param     | description  |
 |-----------|--------------|
 | `$option` | Option key   |
@@ -226,7 +237,29 @@ flash()->option(string $option, mixed $value);
 <p id="method-priority"><a href="#method-priority" class="anchor"><i class="fa-duotone fa-link"></i> priority</a></p>
 
 ```php
-$builder = flash()->priority(int $priority);
+flash()->priority(int $priority);
+```
+
+Example:
+
+```php
+# Message with priority
+
+flash()
+    ->priority(3)
+    ->addSuccess('Message with priority 3');
+
+flash()
+    ->priority(1)
+    ->addError('Message with priority 1');
+
+flash()
+    ->priority(4)
+    ->addWarning('Message with priority 4');
+
+flash()
+    ->priority(2)
+    ->addInfo('Message with priority 2');
 ```
 
 | param       | description                                                                                |
@@ -240,7 +273,15 @@ $builder = flash()->priority(int $priority);
 Sometimes you may want a flash message to persist for longer than a single request. As an example, with a multi-page form, you may want to store messages until all pages have been filled.
 
 ```php
-$builder = flash()->hops(int $hops);
+flash()->hops(int $hops);
+```
+
+Example:
+
+```php
+flash()
+    ->hops(2)
+    ->addSuccess('This message will be displayed in the current and next page');
 ```
 
 | param   | description                                                   |
@@ -252,8 +293,17 @@ $builder = flash()->hops(int $hops);
 <p id="method-keep"><a href="#method-keep" class="anchor"><i class="fa-duotone fa-link"></i> keep</a></p>
 
 ```php
-$builder = flash()->keep();
+flash()->keep();
 ```
+
+Example:
+
+```php
+flash()
+    ->keep()
+    ->addSuccess('This message will be displayed in the current and next page');
+```
+
 
 | description                                        |
 |----------------------------------------------------|
@@ -264,8 +314,17 @@ $builder = flash()->keep();
 <p id="method-delay"><a href="#method-delay" class="anchor"><i class="fa-duotone fa-link"></i> delay</a></p>
 
 ```php
-$builder = flash()->delay(int $delay);
+flash()->delay(int $delay);
 ```
+
+Example:
+
+```php
+flash()
+    ->delay(2)
+    ->addSuccess('This message will not be displayed until the next request');
+```
+
 
 | param    | description                                                                        |
 |----------|------------------------------------------------------------------------------------|
@@ -276,7 +335,15 @@ $builder = flash()->delay(int $delay);
 <p id="method-now"><a href="#method-now" class="anchor"><i class="fa-duotone fa-link"></i> now</a></p>
 
 ```php
-$builder = flash()->now();
+flash()->now();
+```
+
+Example:
+
+```php
+flash()
+    ->now()
+    ->addSuccess('This message will be displayed in the current page');
 ```
 
 | description                     |
@@ -288,7 +355,26 @@ $builder = flash()->now();
 <p id="method-translate"><a href="#method-translate" class="anchor"><i class="fa-duotone fa-link"></i> translate</a></p>
 
 ```php
-$builder = flash()->translate(string $locale = null);
+flash()->translate(string $locale = null);
+```
+
+Example:
+
+```php
+# Translated message
+
+flash()
+    ->translate('ar')
+    ->addSuccess('The operation completed successfully.', 'Congratulations!');
+```
+
+```php
+# Translated message top-left
+
+flash()
+    ->translate('ar')
+    ->option('position', 'top-left')
+    ->addSuccess('The operation completed successfully.', 'Congratulations!');
 ```
 
 | param     | description                                                                 |

@@ -101,6 +101,30 @@ const examples = {
             timeout: 10000,
             position: "top-center",
         });
+    },
+    "# success message with options": function () {
+        flasher.success("The action was completed successfully.", "Congratulations!", {
+            timeout: 10000,
+            position: "top-center",
+        });
+    },
+    "# Message with priority": function () {
+        flasher.warning("Message with priority 4");
+        flasher.success("Message with priority 3");
+        flasher.info("Message with priority 2");
+        flasher.error("Message with priority 1");
+    },
+    "# Translated message": function () {
+        flasher.success("تمت العملية بنجاح.", "تهانينا!", {
+            rtl: true,
+            position: "top-right",
+        });
+    },
+    "# Translated message top-left": function () {
+        flasher.success("تمت العملية بنجاح.", "تهانينا!", {
+            rtl: true,
+            position: "top-left",
+        });
     }
 };
 
