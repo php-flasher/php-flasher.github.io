@@ -142,7 +142,7 @@ codeBlocks.forEach(function (codeBlock) {
     const button = document.createElement("button");
     button.classList.add("tryit", "text-indigo-500");
     button.type = "button";
-    button.ariaLabel = "Try it!";
+    button.ariaLabel = button.title = "Try it!";
 
     const icon = '<i class="fa-duotone fa-play"></i>';
     button.innerHTML = icon;

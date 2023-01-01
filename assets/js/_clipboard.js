@@ -6,7 +6,7 @@ codeBlocks.forEach(function (codeBlock) {
     const button = document.createElement("button");
     button.classList.add("copy", "text-indigo-500");
     button.type = "button";
-    button.ariaLabel = "Copy code to clipboard";
+    button.ariaLabel = button.title = "Copy code to clipboard";
 
     const icon = '<i class="fa-duotone fa-clipboard"></i>';
     button.innerHTML = icon;
