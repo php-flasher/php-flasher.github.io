@@ -38,6 +38,8 @@ To display a notification message, you can either use the `flash()` helper metho
 Then, before returning a view or redirecting, call the `addSuccess()` method and pass in the desired message to be displayed.
 
 ```php
+# General usage
+
 <?php
 
 namespace App\Controller;

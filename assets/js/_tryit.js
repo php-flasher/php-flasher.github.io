@@ -67,6 +67,9 @@ function getRandomMessage() {
 }
 
 const examples = {
+    "# General usage": function () {
+        flasher.success("Book has been created successfully!");
+    },
     "# success": function () {
         flasher.success(getRandomMessageByType("success"));
     },

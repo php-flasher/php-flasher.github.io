@@ -33,26 +33,34 @@ composer require php-flasher/flasher-laravel
 Dispatch `notifications` anywhere from your application
 
 ```php
+# General usage
+
 <?php
 
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\Http\Requests\PostRequest;
+use Illuminate\Http\Request;
 
-class PostController extends Controller
+class BookController extends Controller
 {
-    public function store(PostRequest $request)
+    public function saveBook(Request $request)
     {
-        $post = Post::create($request->only(['title', 'body']));
-
-        if ($post instanceof Post) {
-            flash()->addSuccess('Data has been saved successfully!');
-
-            return redirect()->route('posts.index');
-        }
-
-        return back();
+        $request->validate([
+            'title' => 'required|max:255',
+            'author' => 'required|max:255',
+            'price' => 'required|numeric',
+        ]);
+    
+        $book = Book::create([
+            'title' => $request->title,
+            'author' => $request->author,
+            'price' => $request->price,
+        ]);
+    
+        flash()->addSuccess('Book successfully created!');
+    
+        return redirect()->route('books.index');
     }
 }
 ```
