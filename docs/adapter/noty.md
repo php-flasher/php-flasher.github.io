@@ -40,7 +40,7 @@ class BookController
 {
     public function saveBook()
     {        
-        noty()addSuccess('The book has been added to the library successfully!');
+        noty()->addSuccess('The book has been added to the library successfully!');
     }
 }
 ```
@@ -61,7 +61,7 @@ This string can contain HTML too. But be careful and don't pass user inputs to t
 noty()->text(string $text);
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty text
@@ -82,7 +82,7 @@ Display alert type notification
 noty()->alert(string $message = null, array $options = array());
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty alert
@@ -98,13 +98,13 @@ noty()
 
 `top`, `topLeft`, `topCenter`, `topRight`, `center`, `centerLeft`, `centerRight`, `bottom`, `bottomLeft`, `bottomCenter`, `bottomRight` <br />
 
-> ClassName generator uses this value → noty_layout__${layout}
+ClassName generator uses this value → <span class="text-orange-600">noty_layout__${layout}</span>
 
 ```php
 noty()->layout(string $layout);
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty layout
@@ -120,7 +120,7 @@ noty()
 
 Possible values: `relax`, `mint`, `metroui`, `light`, `sunset`, `nest`.
 
-> ClassName generator uses this value → noty_theme__${theme}
+ClassName generator uses this value → <span class="text-orange-600">noty_theme__${theme}</span>
 
 ```php
 noty()->theme(string $theme);
@@ -248,7 +248,7 @@ notifications.
 noty()->timeout(int|bool $timeout)
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty timeout
@@ -268,7 +268,7 @@ noty()
 noty()->progressBar(bool $progressBar = false)
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty progressBar
@@ -284,13 +284,13 @@ noty()
 
 `click`, `button`
 
-> default `click`
+Default `click`
 
 ```php
 noty()->closeWith(string|array $closeWith)
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty closeWith
@@ -313,7 +313,7 @@ You can use `animate.css` class names or your custom css animations as well.
 noty()->animation(string $animation, string $effect)
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty animation
@@ -335,7 +335,7 @@ noty()
 noty()->sounds(string $option, mixed $value)
 ```
 
-<br /> Example:
+<br /> `Example`:
 
 ```php
 # noty sounds
@@ -351,8 +351,20 @@ noty()
 
 <p id="method-docTitle"><a href="#method-docTitle" class="anchor"><i class="fa-duotone fa-link"></i> docTitle</a></p>
 
+There are two conditions for now: `docVisible` & `docHidden`. You can use one of them or both.
+
 ```php
 noty()->docTitle(string $option, mixed $docTitle)
+```
+
+<br /> `Example`:
+
+```php
+# noty docTitle
+
+noty()
+    ->docTitle('conditions', ['docVisible', 'docHidden'])
+    ->addSuccess('The operation completed successfully.');
 ```
 
 ---
@@ -363,60 +375,127 @@ noty()->docTitle(string $option, mixed $docTitle)
 noty()->modal(bool $modal = true)
 ```
 
+<br /> `Example`:
+
+```php
+# noty modal
+
+noty()
+    ->modal(true)
+    ->addError('There was a problem processing your request.');
+```
+
 ---
 
 <p id="method-id"><a href="#method-id" class="anchor"><i class="fa-duotone fa-link"></i> id</a></p>
 
-You can use this id with querySelectors. Generated automatically if false.
+You can use this id with querySelectors. <br />
+Generated automatically if false.
 
 ```php
 noty()->id(bool|string $id)
+```
+
+<br /> `Example`:
+
+```php
+# noty id
+
+noty()
+    ->id(false)
+    ->addWarning('This may have unintended consequences. Proceed with caution.');
 ```
 
 ---
 
 <p id="method-force"><a href="#method-force" class="anchor"><i class="fa-duotone fa-link"></i> force</a></p>
 
-DOM insert method depends on this parameter. If false uses append, if true uses prepend.
+DOM insert method depends on this parameter. <br />
+If `false` uses append, if `true` uses prepend.
 
 ```php
 noty()->force(bool $force = true)
+```
+
+<br /> `Example`:
+
+```php
+# noty force
+
+noty()
+    ->force(false)
+    ->addWarning('This may have unintended consequences. Proceed with caution.');
 ```
 
 ---
 
 <p id="method-queue"><a href="#method-queue" class="anchor"><i class="fa-duotone fa-link"></i> queue</a></p>
 
+NEW Named queue system. Details are [here](https://ned.im/noty/#/api).
+
 ```php
 noty()->queue(string $queue)
+```
+
+Default: `global`
+
+<br /> `Example`:
+
+```php
+# noty force
+
+noty()
+    ->queue('global')
+    ->addWarning('This may have unintended consequences. Proceed with caution.');
 ```
 
 ---
 
 <p id="method-killer"><a href="#method-killer" class="anchor"><i class="fa-duotone fa-link"></i> killer</a></p>
 
-If true closes all visible notifications and shows itself. If string(queueName) closes all visible notification
-on this queue and shows itself.
+If `true` closes all `visible` notifications and shows itself. <br />
+If `string(queueName)` closes all `visible` notification on this queue and shows itself.
 
 ```php
 noty()->killer(bool|string $killer)
+```
+
+<br /> `Example`:
+
+```php
+# noty killer
+
+noty()
+    ->killer(true)
+    ->addError('There was a problem processing your request.');
 ```
 
 ---
 
 <p id="method-container"><a href="#method-container" class="anchor"><i class="fa-duotone fa-link"></i> container</a></p>
 
-Custom container selector string. Like '.my-custom-container'. Layout parameter will be ignored.
+Custom container selector string. Like `.my-custom-container`. <br />
+Layout parameter will be ignored.
 
 ```php
 noty()->container(bool|string $container)
+```
+
+<br /> `Example`:
+
+```php
+# noty container
+
+noty()
+    ->container(false)
+    ->addError('There was a problem processing your request.');
 ```
 
 ---
 
 <p id="method-buttons"><a href="#method-buttons" class="anchor"><i class="fa-duotone fa-link"></i> buttons</a></p>
 
-An array of Noty.button, for creating confirmation dialogs.
+An `array` of <span class="text-orange-600">Noty.button</span>, for creating confirmation dialogs. Details are [here](https://ned.im/noty/#/confirm).
 
 ```php
 noty()->buttons(array $buttons)
@@ -426,8 +505,19 @@ noty()->buttons(array $buttons)
 
 <p id="method-visibilityControl"><a href="#method-visibilityControl" class="anchor"><i class="fa-duotone fa-link"></i> visibilityControl</a></p>
 
-If true Noty uses PageVisibility API to handle timeout. To ensure that users do not miss their notifications.
+If `true` Noty uses PageVisibility API to handle timeout. <br />
+To ensure that users do not miss their notifications.
 
 ```php
 noty()->visibilityControl(bool $visibilityControl)
+```
+
+<br /> `Example`:
+
+```php
+# noty visibilityControl
+
+noty()
+    ->visibilityControl(true)
+    ->addError('There was a problem processing your request.');
 ```

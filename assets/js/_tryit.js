@@ -227,6 +227,30 @@ const examples = {
             conditions: ["docVisible", "docHidden"],
         });
     },
+    "# noty docTitle": function () {
+        noty.success("The operation completed successfully.", { docTitle: ["docVisible", "docHidden"] });
+    },
+    "# noty modal": function () {
+        noty.error("There was a problem processing your request.", { modal: true });
+    },
+    "# noty id": function () {
+        noty.warning("This may have unintended consequences. Proceed with caution.", { id: false });
+    },
+    "# noty force": function () {
+        noty.warning("This may have unintended consequences. Proceed with caution.", { force: false });
+    },
+    "# noty queue": function () {
+        noty.warning("This may have unintended consequences. Proceed with caution.", { queue: "global" });
+    },
+    "# noty killer": function () {
+        noty.error("There was a problem processing your request.", { killer: true });
+    },
+    "# noty container": function () {
+        noty.error("There was a problem processing your request.", { container: false });
+    },
+    "# noty visibilityControl": function () {
+        noty.error("There was a problem processing your request.", { visibilityControl: true });
+    },
 };
 
 const codeBlocks = document.querySelectorAll("pre > code");
