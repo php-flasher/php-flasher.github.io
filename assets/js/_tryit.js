@@ -84,15 +84,15 @@ const examples = {
         flasher.info(getRandomMessageByType("info"));
     },
     "# notification builder with toastr": function () {
-        toastr.success('The action was completed successfully.', 'Great!', {
+        toastr.success("The action was completed successfully.", "Great!", {
             timeOut: 10000,
         });
     },
     "# example with type": function () {
-        flasher.error('An error has occurred please try again later.');
+        flasher.error("An error has occurred please try again later.");
     },
     "# success type with title": function () {
-        flasher.success(getRandomMessageByType("success"), 'Congratulations!');
+        flasher.success(getRandomMessageByType("success"), "Congratulations!");
     },
     "# error message": function () {
         flasher.error("This may take some time. Do not refresh the page.");
@@ -134,16 +134,19 @@ const examples = {
         flasher.success("Entity saved successfully", "Entity saved");
     },
     "# arabic translation": function () {
-        flasher.success('تم إرسال طلبك بنجاح.', 'نجاح', {rtl: true});
-        flasher.error('حدث خطأ أثناء إرسال طلبك.', 'خطأ', {rtl: true});
-        flasher.warning('يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج', 'تحذير', {rtl: true});
-        flasher.info('سيتم تحديث هذه الصفحة في غضون 10 دقائق.', 'معلومة', {rtl: true});
+        flasher.success("تم إرسال طلبك بنجاح.", "نجاح", { rtl: true });
+        flasher.error("حدث خطأ أثناء إرسال طلبك.", "خطأ", { rtl: true });
+        flasher.warning("يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج", "تحذير", { rtl: true });
+        flasher.info("سيتم تحديث هذه الصفحة في غضون 10 دقائق.", "معلومة", { rtl: true });
     },
     "# french translation": function () {
-        flasher.success('Votre demande a été envoyée avec succès.', 'Succès');
-        flasher.error('Une erreur s\'est produite lors de l\'envoi de votre demande.', 'Erreur');
-        flasher.warning('Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire.', 'Avertissement');
-        flasher.info('Cette page sera mise à jour dans 10 minutes.', 'Information');
+        flasher.success("Votre demande a été envoyée avec succès.", "Succès");
+        flasher.error("Une erreur s'est produite lors de l'envoi de votre demande.", "Erreur");
+        flasher.warning(
+            "Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire.",
+            "Avertissement"
+        );
+        flasher.info("Cette page sera mise à jour dans 10 minutes.", "Information");
     },
     "# noty": function () {
         noty.success("The book has been added to the library successfully!");
@@ -152,7 +155,7 @@ const examples = {
         noty.error("Oops, something went wrong.");
     },
     "# noty alert": function () {
-        noty.flash("alert", "This may take a while. Do not refresh the page.")
+        noty.flash("alert", "This may take a while. Do not refresh the page.");
     },
     "# noty layout": function () {
         noty.success("The action was completed successfully.", {
@@ -160,49 +163,68 @@ const examples = {
         });
     },
     "# noty theme mint": function () {
-        noty.success('Your request was successfully sent.', {theme: "mint"});
-        noty.error('An error occurred while sending your request.', {theme: "mint"});
-        noty.warning('You must fill out all required fields before submitting the form.', {theme: "mint"});
-        noty.info('This page will be updated in 10 minutes.', {theme: "mint"});
+        noty.success("Your request was successfully sent.", { theme: "mint" });
+        noty.error("An error occurred while sending your request.", { theme: "mint" });
+        noty.warning("You must fill out all required fields before submitting the form.", { theme: "mint" });
+        noty.info("This page will be updated in 10 minutes.", { theme: "mint" });
     },
     "# noty theme relax": function () {
         import("noty/lib/themes/relax.css").then(function () {
-            noty.success('Your request was successfully sent.', {theme: "relax"});
-            noty.error('An error occurred while sending your request.', {theme: "relax"});
-            noty.warning('You must fill out all required fields before submitting the form.', {theme: "relax"});
-            noty.info('This page will be updated in 10 minutes.', {theme: "relax"});
+            noty.success("Your request was successfully sent.", { theme: "relax" });
+            noty.error("An error occurred while sending your request.", { theme: "relax" });
+            noty.warning("You must fill out all required fields before submitting the form.", { theme: "relax" });
+            noty.info("This page will be updated in 10 minutes.", { theme: "relax" });
         });
     },
     "# noty theme metroui": function () {
         import("noty/lib/themes/metroui.css").then(function () {
-            noty.success('Your request was successfully sent.', {theme: "metroui"});
-            noty.error('An error occurred while sending your request.', {theme: "metroui"});
-            noty.warning('You must fill out all required fields before submitting the form.', {theme: "metroui"});
-            noty.info('This page will be updated in 10 minutes.', {theme: "metroui"});
+            noty.success("Your request was successfully sent.", { theme: "metroui" });
+            noty.error("An error occurred while sending your request.", { theme: "metroui" });
+            noty.warning("You must fill out all required fields before submitting the form.", { theme: "metroui" });
+            noty.info("This page will be updated in 10 minutes.", { theme: "metroui" });
         });
     },
     "# noty theme light": function () {
         import("noty/lib/themes/light.css").then(function () {
-            noty.success('Your request was successfully sent.', {theme: "light"});
-            noty.error('An error occurred while sending your request.', {theme: "light"});
-            noty.warning('You must fill out all required fields before submitting the form.', {theme: "light"});
-            noty.info('This page will be updated in 10 minutes.', {theme: "light"});
+            noty.success("Your request was successfully sent.", { theme: "light" });
+            noty.error("An error occurred while sending your request.", { theme: "light" });
+            noty.warning("You must fill out all required fields before submitting the form.", { theme: "light" });
+            noty.info("This page will be updated in 10 minutes.", { theme: "light" });
         });
     },
     "# noty theme nest": function () {
         import("noty/lib/themes/nest.css").then(function () {
-            noty.success('Your request was successfully sent.', {theme: "nest"});
-            noty.error('An error occurred while sending your request.', {theme: "nest"});
-            noty.warning('You must fill out all required fields before submitting the form.', {theme: "nest"});
-            noty.info('This page will be updated in 10 minutes.', {theme: "nest"});
+            noty.success("Your request was successfully sent.", { theme: "nest" });
+            noty.error("An error occurred while sending your request.", { theme: "nest" });
+            noty.warning("You must fill out all required fields before submitting the form.", { theme: "nest" });
+            noty.info("This page will be updated in 10 minutes.", { theme: "nest" });
         });
     },
     "# noty theme sunset": function () {
         import("noty/lib/themes/sunset.css").then(function () {
-            noty.success('Your request was successfully sent.', {theme: "sunset"});
-            noty.error('An error occurred while sending your request.', {theme: "sunset"});
-            noty.warning('You must fill out all required fields before submitting the form.', {theme: "sunset"});
-            noty.info('This page will be updated in 10 minutes.', {theme: "sunset"});
+            noty.success("Your request was successfully sent.", { theme: "sunset" });
+            noty.error("An error occurred while sending your request.", { theme: "sunset" });
+            noty.warning("You must fill out all required fields before submitting the form.", { theme: "sunset" });
+            noty.info("This page will be updated in 10 minutes.", { theme: "sunset" });
+        });
+    },
+    "# noty timeout": function () {
+        noty.success("The action was completed successfully.", { timeout: 2000 });
+    },
+    "# noty progressBar": function () {
+        noty.success("The action was completed successfully.", { progressBar: false });
+    },
+    "# noty closeWith": function () {
+        noty.error("An error occurred while sending your request.", { closeWith: ["click", "button"] });
+    },
+    "# noty animation": function () {
+        noty.info("This may take some time. Do not refresh the page.", { animation: null });
+    },
+    "# noty sounds": function () {
+        noty.success("The operation completed successfully.", {
+            sources: ["/dist/sounds/notification.wav"],
+            volume: 0.3,
+            conditions: ["docVisible", "docHidden"],
         });
     },
 };

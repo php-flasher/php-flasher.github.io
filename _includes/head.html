@@ -25,21 +25,21 @@
     <script defer src="{{ link }}"></script>
 {% endfor %}
 
-{% if site.data.flasher contains page.url  %}
-    {% assign adapter = site.data.flasher[page.url] %}
-    {% for link in site.data.entrypoints['entrypoints'][adapter]['css'] %}
-        <link href="{{ link }}" rel="stylesheet"/>
-    {% endfor %}
-
-    {% for link in site.data.entrypoints['entrypoints'][adapter]['js'] %}
-        {% unless link contains '/dist/runtime.' %}
-            <script defer src="{{ link }}"></script>
-        {% endunless %}
-    {% endfor %}
-{% endif %}
-
-
 {% unless site.data.dev.dev_mode %}
+
+    {% if site.data.flasher contains page.url  %}
+        {% assign adapter = site.data.flasher[page.url] %}
+        {% for link in site.data.entrypoints['entrypoints'][adapter]['css'] %}
+            <link href="{{ link }}" rel="stylesheet"/>
+        {% endfor %}
+
+        {% for link in site.data.entrypoints['entrypoints'][adapter]['js'] %}
+            {% unless link contains '/dist/runtime.' %}
+                <script defer src="{{ link }}"></script>
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+
     <script src="https://cdn.counter.dev/script.js" data-id="3772fc72-0949-47c9-b4e3-6e1da76a2095" data-utcoffset="1"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4D78SM7TC"></script>
     <script defer>

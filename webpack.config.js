@@ -25,6 +25,11 @@ Encore
         to: 'images/[path][name].[ext]',
     })
 
+    .copyFiles({
+        from: './assets/sounds',
+        to: 'sounds/[path][name].[ext]',
+    })
+
     .addEntry('homepage', './assets/js/homepage.js')
     .addEntry('main', './assets/js/main.js')
 

@@ -8,6 +8,7 @@ title: Noty adapter for PHP flasher
 For more information about noty click <a href="https://ned.im/noty/">here</a>.
 
 **<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
+
 ```shell
 composer require php-flasher/flasher-noty-laravel
 ```
@@ -15,6 +16,7 @@ composer require php-flasher/flasher-noty-laravel
 <br />
 
 **<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
+
 ```shell
 composer require php-flasher/flasher-noty-symfony
 ```
@@ -74,7 +76,7 @@ noty()
 
 <p id="method-alert"><a href="#method-alert" class="anchor"><i class="fa-duotone fa-link"></i> alert</a></p>
 
-display alert type notification
+Display alert type notification
 
 ```php
 noty()->alert(string $message = null, array $options = array());
@@ -94,7 +96,8 @@ noty()
 
 <p id="method-layout"><a href="#method-layout" class="anchor"><i class="fa-duotone fa-link"></i> layout</a></p>
 
-top, topLeft, topCenter, topRight, center, centerLeft, centerRight, bottom, bottomLeft, bottomCenter, bottomRight <br />
+`top`, `topLeft`, `topCenter`, `topRight`, `center`, `centerLeft`, `centerRight`, `bottom`, `bottomLeft`, `bottomCenter`, `bottomRight` <br />
+
 > ClassName generator uses this value → noty_layout__${layout}
 
 ```php
@@ -238,45 +241,110 @@ noty()
 
 <p id="method-timeout"><a href="#method-timeout" class="anchor"><i class="fa-duotone fa-link"></i> timeout</a></p>
 
-false, 1000, 3000, 3500, etc. Delay for closing event in milliseconds (ms). Set 'false' for sticky notifications.
+`false`, `1000`, `3000`, `3500`, etc. Delay for closing event in milliseconds (ms). Set `false` for sticky
+notifications.
+
 ```php
 noty()->timeout(int|bool $timeout)
+```
+
+<br /> Example:
+
+```php
+# noty timeout
+
+noty()
+    ->timeout(2000) // 2 seconds
+    ->addSuccess('The action was completed successfully.');
 ```
 
 ---
 
 <p id="method-progressBar"><a href="#method-progressBar" class="anchor"><i class="fa-duotone fa-link"></i> progressBar</a></p>
 
-true, false - Displays a progress bar if timeout is not false.
+`true`, `false` - Displays a progress bar if timeout is not false.
+
 ```php
 noty()->progressBar(bool $progressBar = false)
+```
+
+<br /> Example:
+
+```php
+# noty progressBar
+
+noty()
+    ->progressBar(false)
+    ->addSuccess('The action was completed successfully.');
 ```
 
 ---
 
 <p id="method-closeWith"><a href="#method-closeWith" class="anchor"><i class="fa-duotone fa-link"></i> closeWith</a></p>
 
-click, button
+`click`, `button`
+
+> default `click`
+
 ```php
 noty()->closeWith(string|array $closeWith)
+```
+
+<br /> Example:
+
+```php
+# noty closeWith
+
+noty()
+    ->closeWith(['click', 'button'])
+    ->addError('The action was completed successfully.');
 ```
 
 ---
 
 <p id="method-animation"><a href="#method-animation" class="anchor"><i class="fa-duotone fa-link"></i> animation</a></p>
 
-If string, assumed to be CSS class name. If null, no animation at all. If function, runs the function. (v3.0.1+)
-You can use animate.css class names or your custom css animations as well.
+If `string`, assumed to be CSS class name. <br />
+If `null`, no animation at all. <br />
+If `function`, runs the function. (v3.0.1+) <br /><br />
+You can use `animate.css` class names or your custom css animations as well.
+
 ```php
 noty()->animation(string $animation, string $effect)
+```
+
+<br /> Example:
+
+```php
+# noty animation
+
+noty()
+    ->animation(null)
+    ->addInfo('This may take some time. Do not refresh the page.');
 ```
 
 ---
 
 <p id="method-sounds"><a href="#method-sounds" class="anchor"><i class="fa-duotone fa-link"></i> sounds</a></p>
 
+`sources` : Array of audio sources e.g 'some.wav' <br />
+`volume` : nteger value between 0-1 e.g 0.5 <br />
+`conditions` : There are two conditions for now: 'docVisible' & 'docHidden'. You can use one of them or both. <br />
+
 ```php
 noty()->sounds(string $option, mixed $value)
+```
+
+<br /> Example:
+
+```php
+# noty sounds
+
+noty()
+    ->sounds('sources', ['/dist/sounds/notification.wav'])
+    ->sounds('volume', 0.3)
+    ->sounds('conditions', ['docVisible', 'docHidden'])
+    ->addSuccess('The operation completed successfully.');
 ```
 
 ---
@@ -300,6 +368,7 @@ noty()->modal(bool $modal = true)
 <p id="method-id"><a href="#method-id" class="anchor"><i class="fa-duotone fa-link"></i> id</a></p>
 
 You can use this id with querySelectors. Generated automatically if false.
+
 ```php
 noty()->id(bool|string $id)
 ```
@@ -309,6 +378,7 @@ noty()->id(bool|string $id)
 <p id="method-force"><a href="#method-force" class="anchor"><i class="fa-duotone fa-link"></i> force</a></p>
 
 DOM insert method depends on this parameter. If false uses append, if true uses prepend.
+
 ```php
 noty()->force(bool $force = true)
 ```
@@ -327,6 +397,7 @@ noty()->queue(string $queue)
 
 If true closes all visible notifications and shows itself. If string(queueName) closes all visible notification
 on this queue and shows itself.
+
 ```php
 noty()->killer(bool|string $killer)
 ```
@@ -336,6 +407,7 @@ noty()->killer(bool|string $killer)
 <p id="method-container"><a href="#method-container" class="anchor"><i class="fa-duotone fa-link"></i> container</a></p>
 
 Custom container selector string. Like '.my-custom-container'. Layout parameter will be ignored.
+
 ```php
 noty()->container(bool|string $container)
 ```
@@ -345,6 +417,7 @@ noty()->container(bool|string $container)
 <p id="method-buttons"><a href="#method-buttons" class="anchor"><i class="fa-duotone fa-link"></i> buttons</a></p>
 
 An array of Noty.button, for creating confirmation dialogs.
+
 ```php
 noty()->buttons(array $buttons)
 ```
@@ -354,6 +427,7 @@ noty()->buttons(array $buttons)
 <p id="method-visibilityControl"><a href="#method-visibilityControl" class="anchor"><i class="fa-duotone fa-link"></i> visibilityControl</a></p>
 
 If true Noty uses PageVisibility API to handle timeout. To ensure that users do not miss their notifications.
+
 ```php
 noty()->visibilityControl(bool $visibilityControl)
 ```
