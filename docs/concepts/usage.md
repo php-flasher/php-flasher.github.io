@@ -15,7 +15,7 @@ flash()->addFlash(string $type, string $message, string $title = null, array $op
 
 ```php
 # success
-flash()->addFlash('success', 'Your request has been submitted successfully.');
+flash()->addFlash('success', '{{ site.data.messages["success"] | sample }}');
 ```
 
 | param      | description                                                                                                                                                                                                                                                                                                         |
@@ -32,22 +32,22 @@ So instead of manually supplying the notification type, you can simply call the 
 
 ```php
 # success
-flash()->addSuccess('Your request has been submitted successfully');
+flash()->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 ```php
 # error
-flash()->addError('Sorry, we encountered an error. Please try again');
+flash()->addError('{{ site.data.messages["error"] | sample }}');
 ```
 
 ```php
 # warning
-flash()->addWarning('Are you sure you want to delete this item? This action cannot be undone.');
+flash()->addWarning('{{ site.data.messages["warning"] | sample }}');
 ```
 
 ```php
 # info
-flash()->addInfo('Your account has been successfully created. Please check your email for a confirmation message.');
+flash()->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 --- 
@@ -80,7 +80,7 @@ $builder = flash()
     ->handler('toastr') // the handle() method here is optional
     ->type('success')
     ->title('Great!')
-    ->message('The action was completed successfully.')
+    ->message('{{ site.data.messages["success"] | sample }}')
     ->priority(2)
     ->option('timeOut', 10000); // 10 seconds
 
@@ -108,7 +108,7 @@ flash()->type(string $type, string $message = null, string $title = null, array 
 # example with type
 
 flash()
-    ->type('error', 'An error has occurred please try again later.')
+    ->type('error', '{{ site.data.messages["error"] | sample }}')
     ->flash();
 ```
 
@@ -136,7 +136,7 @@ flash()->info(string $message = null, string $title = null, array $options = [])
 # success type with title
 
 flash()
-    ->success('The action was completed successfully.', 'Congratulations!')
+    ->success('{{ site.data.messages["success"] | sample }}', 'Congratulations!')
     ->flash();
 ```
 
@@ -154,7 +154,7 @@ flash()->message(string $message);
 # error message
 
 flash()
-    ->message('This may take some time. Do not refresh the page.')
+    ->message('{{ site.data.messages["error"] | sample }}')
     ->error()
     ->flash();
 ```
@@ -174,7 +174,7 @@ flash()->title(string $title);
 
 flash()
     ->title('Oops!')
-    ->message('This may take some time. Do not refresh the page.')
+    ->message('{{ site.data.messages["error"] | sample }}')
     ->error()
     ->flash();
 ```
@@ -194,7 +194,7 @@ flash()->options(array $options, bool $merge = true);
 
 flash()
     ->title('Oops!')
-    ->message('This may take some time. Do not refresh the page.')
+    ->message('{{ site.data.messages["error"] | sample }}')
     ->error()
     ->options([
         'timeout' => 10000, // 10 seconds
@@ -224,7 +224,7 @@ flash()->option(string $option, mixed $value);
 flash()
     ->option('position', 'top-center')
     ->option('timeout', 10000)
-    ->addSuccess('Your request was processed successfully.', 'Congratulations!');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}', 'Congratulations!');
 ```
 
 | param     | description  |
@@ -281,7 +281,7 @@ flash()->hops(int $hops);
 ```php
 flash()
     ->hops(2)
-    ->addSuccess('This message will be displayed in the current and next page');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 | param   | description                                                   |
@@ -301,7 +301,7 @@ flash()->keep();
 ```php
 flash()
     ->keep()
-    ->addSuccess('This message will be displayed in the current and next page');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 
@@ -322,7 +322,7 @@ flash()->delay(int $delay);
 ```php
 flash()
     ->delay(2)
-    ->addSuccess('This message will not be displayed until the next request');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 
@@ -343,7 +343,7 @@ flash()->now();
 ```php
 flash()
     ->now()
-    ->addSuccess('This message will be displayed in the current page');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 | description                     |
@@ -365,7 +365,7 @@ flash()->translate(string $locale = null);
 
 flash()
     ->translate('ar')
-    ->addSuccess('The operation completed successfully.', 'Congratulations!');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}', 'Congratulations!');
 ```
 
 ```php
@@ -374,7 +374,7 @@ flash()
 flash()
     ->translate('ar')
     ->option('position', 'top-left')
-    ->addSuccess('The operation completed successfully.', 'Congratulations!');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}', 'Congratulations!');
 ```
 
 | param     | description                                                                 |

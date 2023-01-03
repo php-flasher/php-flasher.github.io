@@ -54,15 +54,15 @@ class BookController
     {
         // ...
 
-        flash('Book has been created successfully!');
+        flash('{{ site.data.messages["success"] | sample }}');
         
-        flash()->addSuccess('The book has been added to the library successfully!');
+        flash()->addSuccess('{{ site.data.messages["success"] | sample }}');
         
         flash()
-            ->success('Congratulations! Your book has been published.')
+            ->success('{{ site.data.messages["success"] | sample }}')
             ->flash();
             
-        app('flasher')->addSuccess('The book creation process has been completed successfully.');
+        app('flasher')->addSuccess('{{ site.data.messages["success"] | sample }}');
 
         // ... redirect or render the view
     }
@@ -74,7 +74,7 @@ class BookController
     {
         // ...
         
-        $flasher->addSuccess('Your account has been successfully created!');
+        $flasher->addSuccess('{{ site.data.messages["success"] | sample }}');
         
         // ... redirect or render the view
     }

@@ -40,7 +40,7 @@ class BookController
 {
     public function saveBook()
     {        
-        noty()->addSuccess('The book has been added to the library successfully!');
+        noty()->addSuccess('{{ site.data.messages["success"] | sample }}');
     }
 }
 ```
@@ -67,7 +67,7 @@ noty()->text(string $text);
 # noty text
 
 noty()
-    ->text('Oops, something went wrong.')
+    ->text('{{ site.data.messages["error"] | sample }}')
     ->error()
     ->flash();
 ```
@@ -88,7 +88,7 @@ noty()->alert(string $message = null, array $options = array());
 # noty alert
 
 noty()
-    ->alert('This may take a while. Do not refresh the page.')
+    ->alert('{{ site.data.messages["info"] | sample }}')
     ->flash();
 ```
 
@@ -111,7 +111,7 @@ noty()->layout(string $layout);
 
 noty()
     ->layout('topCenter')
-    ->addSuccess('The action was completed successfully.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 ---
@@ -135,19 +135,19 @@ noty()->theme(string $theme);
 
 noty()
     ->theme('mint')
-    ->addSuccess('Your request was successfully sent.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 
 noty()
     ->theme('mint')
-    ->addError('An error occurred while sending your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 
 noty()
     ->theme('mint')
-    ->addWarning('You must fill out all required fields before submitting the form.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 
 noty()
     ->theme('mint')
-    ->addInfo('This page will be updated in 10 minutes.');
+    ->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 ```php
@@ -157,19 +157,19 @@ noty()
 
 noty()
     ->theme('mint')
-    ->addSuccess('Your request was successfully sent.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 
 noty()
     ->theme('mint')
-    ->addError('An error occurred while sending your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 
 noty()
     ->theme('mint')
-    ->addWarning('You must fill out all required fields before submitting the form.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 
 noty()
     ->theme('mint')
-    ->addInfo('This page will be updated in 10 minutes.');
+    ->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 ```php
@@ -179,19 +179,19 @@ noty()
 
 noty()
     ->theme('metroui')
-    ->addSuccess('Your request was successfully sent.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 
 noty()
     ->theme('metroui')
-    ->addError('An error occurred while sending your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 
 noty()
     ->theme('metroui')
-    ->addWarning('You must fill out all required fields before submitting the form.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 
 noty()
     ->theme('metroui')
-    ->addInfo('This page will be updated in 10 minutes.');
+    ->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 ```php
@@ -201,19 +201,19 @@ noty()
 
 noty()
     ->theme('light')
-    ->addSuccess('Your request was successfully sent.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 
 noty()
     ->theme('light')
-    ->addError('An error occurred while sending your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 
 noty()
     ->theme('light')
-    ->addWarning('You must fill out all required fields before submitting the form.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 
 noty()
     ->theme('light')
-    ->addInfo('This page will be updated in 10 minutes.');
+    ->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 ```php
@@ -222,19 +222,19 @@ noty()
 
 noty()
     ->theme('sunset')
-    ->addSuccess('Your request was successfully sent.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 
 noty()
     ->theme('sunset')
-    ->addError('An error occurred while sending your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 
 noty()
     ->theme('sunset')
-    ->addWarning('You must fill out all required fields before submitting the form.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 
 noty()
     ->theme('sunset')
-    ->addInfo('This page will be updated in 10 minutes.');
+    ->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 ---
@@ -255,7 +255,7 @@ noty()->timeout(int|bool $timeout)
 
 noty()
     ->timeout(2000) // 2 seconds
-    ->addSuccess('The action was completed successfully.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 ---
@@ -275,7 +275,7 @@ noty()->progressBar(bool $progressBar = false)
 
 noty()
     ->progressBar(false)
-    ->addSuccess('The action was completed successfully.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 ---
@@ -297,7 +297,7 @@ noty()->closeWith(string|array $closeWith)
 
 noty()
     ->closeWith(['click', 'button'])
-    ->addError('The action was completed successfully.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 ```
 
 ---
@@ -320,7 +320,7 @@ noty()->animation(string $animation, string $effect)
 
 noty()
     ->animation(null)
-    ->addInfo('This may take some time. Do not refresh the page.');
+    ->addInfo('{{ site.data.messages["info"] | sample }}');
 ```
 
 ---
@@ -344,7 +344,7 @@ noty()
     ->sounds('sources', ['/dist/sounds/notification.wav'])
     ->sounds('volume', 0.3)
     ->sounds('conditions', ['docVisible', 'docHidden'])
-    ->addSuccess('The operation completed successfully.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 ---
@@ -364,7 +364,7 @@ noty()->docTitle(string $option, mixed $docTitle)
 
 noty()
     ->docTitle('conditions', ['docVisible', 'docHidden'])
-    ->addSuccess('The operation completed successfully.');
+    ->addSuccess('{{ site.data.messages["success"] | sample }}');
 ```
 
 ---
@@ -382,7 +382,7 @@ noty()->modal(bool $modal = true)
 
 noty()
     ->modal(true)
-    ->addError('There was a problem processing your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 ```
 
 ---
@@ -403,7 +403,7 @@ noty()->id(bool|string $id)
 
 noty()
     ->id(false)
-    ->addWarning('This may have unintended consequences. Proceed with caution.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 ```
 
 ---
@@ -424,7 +424,7 @@ noty()->force(bool $force = true)
 
 noty()
     ->force(false)
-    ->addWarning('This may have unintended consequences. Proceed with caution.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 ```
 
 ---
@@ -446,7 +446,7 @@ Default: `global`
 
 noty()
     ->queue('global')
-    ->addWarning('This may have unintended consequences. Proceed with caution.');
+    ->addWarning('{{ site.data.messages["warning"] | sample }}');
 ```
 
 ---
@@ -467,7 +467,7 @@ noty()->killer(bool|string $killer)
 
 noty()
     ->killer(true)
-    ->addError('There was a problem processing your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 ```
 
 ---
@@ -488,7 +488,7 @@ noty()->container(bool|string $container)
 
 noty()
     ->container(false)
-    ->addError('There was a problem processing your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 ```
 
 ---
@@ -519,5 +519,5 @@ noty()->visibilityControl(bool $visibilityControl)
 
 noty()
     ->visibilityControl(true)
-    ->addError('There was a problem processing your request.');
+    ->addError('{{ site.data.messages["error"] | sample }}');
 ```

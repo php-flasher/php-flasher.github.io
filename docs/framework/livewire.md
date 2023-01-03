@@ -31,8 +31,8 @@ class MyComponent extends Component
 {
     public function someAction()
     {
-        toastr()->addSuccess('notification using toastr library'); // composer require php-flasher/flasher-toastr-laravel
-        sweetalert()->addInfo('notification using sweetalert library'); // composer require php-flasher/flasher-sweetalert-laravel
+        toastr()->addSuccess('{{ site.data.messages["success"] | sample }}'); // composer require php-flasher/flasher-toastr-laravel
+        sweetalert()->addInfo('{{ site.data.messages["info"] | sample }}'); // composer require php-flasher/flasher-sweetalert-laravel
     }
 
     public function render()
