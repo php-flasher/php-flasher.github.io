@@ -116,7 +116,7 @@ class MyComponent extends Component
 Every listener method accept an **array $data** parameter which contain the following data :
 
 ```php
-public function sweetAlertConfirmed(array $payload)
+public function sweetalertConfirmed(array $payload)
 {
     $promise = $payload['promise'];
     $envelope = $payload['envelope'];
