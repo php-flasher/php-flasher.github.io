@@ -11,11 +11,16 @@ Using this package is actually pretty easy. Adding notifications to your applica
 flash()->addFlash(string $type, string $message, string $title = null, array $options = [])
 ```
 
-<br /> Example:
+{% assign id = '# usage addFlash' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# success
-flash()->addFlash('success', '{{ site.data.messages["success"] | sample }}');
+{{ id }}
+
+flash()->addFlash('{{ type }}', '{{ message }}');
 ```
 
 | param      | description                                                                                                                                                                                                                                                                                                         |
@@ -28,31 +33,57 @@ flash()->addFlash('success', '{{ site.data.messages["success"] | sample }}');
 To make life even easier, there are four helper methods for different notification types of notification. 
 So instead of manually supplying the notification type, you can simply call the type as its method name. 
 
-<br /> Example:
+{% assign id = '# usage addSuccess' %}
+{% assign type = 'success' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# success
-flash()->addSuccess('{{ site.data.messages["success"] | sample }}');
+{{ id }}
+
+flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
-```php
-# error
-flash()->addError('{{ site.data.messages["error"] | sample }}');
-```
+{% assign id = '# usage addError' %}
+{% assign type = 'error' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# warning
-flash()->addWarning('{{ site.data.messages["warning"] | sample }}');
+{{ id }}
+
+flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
+{% assign id = '# usage addWarning' %}
+{% assign type = 'warning' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
-# info
-flash()->addInfo('{{ site.data.messages["info"] | sample }}');
+{{ id }}
+
+flash()->add{{ type | capitalize }}('{{ message }}');
+```
+
+{% assign id = '# usage addInfo' %}
+{% assign type = 'info' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
 --- 
 
-## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
+## <i class="fa-duotone fa-list-radio"></i> Fluent methods
 
 There are only __two__ main steps to display a notification using **a fluent chainable way** : __build__ and __flash__.
 
@@ -70,19 +101,23 @@ $builder = flash()
 $builder->flash();
 ```
 
-<br /> Example:
+{% assign id = '# usage fluent methods' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 
 ```php
-# notification builder with toastr
+{{ id }}
 
 // Step 1: create your notification and add options
 $builder = flash()
     ->handler('toastr') // the handle() method here is optional
-    ->type('success')
-    ->title('Great!')
-    ->message('{{ site.data.messages["success"] | sample }}')
+    ->type('{{ type }}')
+    ->message('{{ message }}')
     ->priority(2)
-    ->option('timeOut', 10000); // 10 seconds
+    ->option('timeOut', 50000); // 5 seconds
 
 // Step2 : Store the notification in the session
 $builder->flash();
@@ -102,13 +137,17 @@ Its getting even better right ? it's so easy to read and still very powerful. Yo
 flash()->type(string $type, string $message = null, string $title = null, array $options = []);
 ```
 
-<br /> Example:
+{% assign id = '# usage type' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# example with type
+{{ id }}
 
 flash()
-    ->type('error', '{{ site.data.messages["error"] | sample }}')
+    ->type('{{ type }}', '{{ message }}')
     ->flash();
 ```
 
@@ -130,13 +169,17 @@ flash()->warning(string $message = null, string $title = null, array $options = 
 flash()->info(string $message = null, string $title = null, array $options = []);
 ```
 
-<br /> Example:
+{% assign id = '# usage type shortcut' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# success type with title
+{{ id }}
 
 flash()
-    ->success('{{ site.data.messages["success"] | sample }}', 'Congratulations!')
+    ->{{ type }}('{{ message }}')
     ->flash();
 ```
 
@@ -148,14 +191,18 @@ flash()
 flash()->message(string $message);
 ```
 
-<br /> Example:
+{% assign id = '# usage message' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# error message
+{{ id }}
 
 flash()
-    ->message('{{ site.data.messages["error"] | sample }}')
-    ->error()
+    ->message('{{ message }}')
+    ->{{ type }}()
     ->flash();
 ```
 
@@ -167,14 +214,18 @@ flash()
 flash()->title(string $title);
 ```
 
-<br /> Example:
+{% assign id = '# usage title' %}
+{% assign type = 'error' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# error message with title
+{{ id }}
 
 flash()
     ->title('Oops!')
-    ->message('{{ site.data.messages["error"] | sample }}')
+    ->message('{{ message }}')
     ->error()
     ->flash();
 ```
@@ -187,17 +238,20 @@ flash()
 flash()->options(array $options, bool $merge = true);
 ```
 
-<br /> Example:
+{% assign id = '# usage options' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"timeout": 3000, "position": "top-center"}' %}
+{% include example.html %}
 
 ```php
-# error message with options
+{{ id }}
 
 flash()
-    ->title('Oops!')
-    ->message('{{ site.data.messages["error"] | sample }}')
-    ->error()
+    ->message('{{ message }}')
+    ->{{ type }}()
     ->options([
-        'timeout' => 10000, // 10 seconds
+        'timeout' => 3000, // 3 seconds
         'position' => 'top-center',
     ])
     ->flash();
@@ -216,15 +270,19 @@ flash()
 flash()->option(string $option, mixed $value);
 ```
 
-<br /> Example:
+{% assign id = '# usage option' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"timeout": 3000, "position": "top-center"}' %}
+{% include example.html %}
 
 ```php
-# success message with options
+{{ id }}
 
 flash()
     ->option('position', 'top-center')
-    ->option('timeout', 10000)
-    ->addSuccess('{{ site.data.messages["success"] | sample }}', 'Congratulations!');
+    ->option('timeout', 3000)
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 | param     | description  |
@@ -240,26 +298,59 @@ flash()
 flash()->priority(int $priority);
 ```
 
-<br /> Example:
+{% assign id = '# usage priority' %}
+{% assign successMessage = site.data.messages['success'] | sample | prepend: 'Priority 3 → ' %}
+{% assign errorMessage = site.data.messages['error'] | sample | prepend: 'Priority 1 → ' %}
+{% assign warningMessage = site.data.messages['warning'] | sample | prepend: 'Priority 4 → ' %}
+{% assign infoMessage = site.data.messages['info'] | sample | prepend: 'Priority 2 → ' %}
+
+<script type="text/javascript">
+    messages["{{ id }}"] = [
+        {
+            handler: "flasher",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "success",
+            message: "{{ successMessage }}",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "info",
+            message: "{{ infoMessage }}",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "error",
+            message: "{{ errorMessage }}",
+            options: {},
+        },
+    ];
+</script>
 
 ```php
-# Message with priority
+{{ id }}
 
 flash()
     ->priority(3)
-    ->addSuccess('Message with priority 3');
+    ->addSuccess('{{ successMessage }}');
 
 flash()
     ->priority(1)
-    ->addError('Message with priority 1');
+    ->addError('{{ errorMessage }}');
 
 flash()
     ->priority(4)
-    ->addWarning('Message with priority 4');
+    ->addWarning('{{ warningMessage }}');
 
 flash()
     ->priority(2)
-    ->addInfo('Message with priority 2');
+    ->addInfo('{{ infoMessage }}');
 ```
 
 | param       | description                                                                                |
@@ -272,16 +363,20 @@ flash()
 
 Sometimes you may want a flash message to persist for longer than a single request. As an example, with a multi-page form, you may want to store messages until all pages have been filled.
 
+{% assign id = '# usage hops' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
 flash()->hops(int $hops);
 ```
 
-<br /> Example:
-
 ```php
 flash()
     ->hops(2)
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 | param   | description                                                   |
@@ -296,14 +391,17 @@ flash()
 flash()->keep();
 ```
 
-<br /> Example:
+{% assign id = '# usage keep' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
 flash()
     ->keep()
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
-
 
 | description                                        |
 |----------------------------------------------------|
@@ -317,14 +415,17 @@ flash()
 flash()->delay(int $delay);
 ```
 
-<br /> Example:
+{% assign id = '# usage delay' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
 flash()
     ->delay(2)
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
-
 
 | param    | description                                                                        |
 |----------|------------------------------------------------------------------------------------|
@@ -338,12 +439,16 @@ flash()
 flash()->now();
 ```
 
-<br /> Example:
+{% assign id = '# usage now' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
 flash()
     ->now()
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 | description                     |
@@ -358,23 +463,35 @@ flash()
 flash()->translate(string $locale = null);
 ```
 
-<br /> Example:
+{% assign id = '# usage translate' %}
+{% assign type = 'success' %}
+{% assign message = 'تمت العملية بنجاح.' %}
+{% assign title = 'تهانينا' %}
+{% assign options = '{"rtl": true, "position": "top-right"}' %}
+{% include example.html %}
 
 ```php
-# Translated message
+{{ id }}
 
 flash()
     ->translate('ar')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}', 'Congratulations!');
+    ->add{{ type | capitalize }}('Your request was processed successfully.', 'Congratulations!');
 ```
 
+{% assign id = '# usage translate with position' %}
+{% assign type = 'success' %}
+{% assign message = 'تمت العملية بنجاح.' %}
+{% assign title = 'تهانينا' %}
+{% assign options = '{"rtl": true, "position": "top-left"}' %}
+{% include example.html %}
+
 ```php
-# Translated message top-left
+{{ id }}
 
 flash()
     ->translate('ar')
     ->option('position', 'top-left')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}', 'Congratulations!');
+    ->add{{ type | capitalize }}('Your request was processed successfully.', 'Congratulations!');
 ```
 
 | param     | description                                                                 |

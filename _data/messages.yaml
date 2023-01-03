@@ -1,3 +1,9 @@
+types:
+    - success
+    - error
+    - warning
+    - info
+
 success:
     - "Operation completed successfully."
     - "Task completed successfully."
@@ -93,7 +99,7 @@ error:
     - "Sorry, something went wrong."
     - "Oops, something went wrong."
     - "An error has occurred."
-    - "We're sorry, but an error occurred."
+    - "We’re sorry, but an error occurred."
     - "An unexpected error occurred."
     - "An error occurred while creating your account."
     - "There was a problem resetting your password."

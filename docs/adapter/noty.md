@@ -1,6 +1,7 @@
 ---
 permalink: /docs/adapter/noty/
 title: Noty adapter for PHP flasher
+handler: noty
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation
@@ -27,8 +28,14 @@ composer require php-flasher/flasher-noty-symfony
 
 Just instantiate the `NotyFactory` and start calling build methods
 
+{% assign id = '# noty' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
-# noty
+{{ id }}
 
 <?php
 
@@ -40,7 +47,7 @@ class BookController
 {
     public function saveBook()
     {        
-        noty()->addSuccess('{{ site.data.messages["success"] | sample }}');
+        noty()->add{{ type | capitalize }}('{{ message }}');
     }
 }
 ```
@@ -61,14 +68,18 @@ This string can contain HTML too. But be careful and don't pass user inputs to t
 noty()->text(string $text);
 ```
 
-<br /> `Example`:
+{% assign id = '# noty text' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
-# noty text
+{{ id }}
 
 noty()
-    ->text('{{ site.data.messages["error"] | sample }}')
-    ->error()
+    ->text('{{ message }}')
+    ->{{ type }}()
     ->flash();
 ```
 
@@ -82,13 +93,17 @@ Display alert type notification
 noty()->alert(string $message = null, array $options = array());
 ```
 
-<br /> `Example`:
+{% assign id = '# noty alert' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"type":"alert"}' %}
+{% include example.html %}
 
 ```php
-# noty alert
+{{ id }}
 
 noty()
-    ->alert('{{ site.data.messages["info"] | sample }}')
+    ->alert('{{ message }}')
     ->flash();
 ```
 
@@ -104,14 +119,18 @@ ClassName generator uses this value → <span class="text-orange-600">noty_layou
 noty()->layout(string $layout);
 ```
 
-<br /> `Example`:
+{% assign id = '# noty layout' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"layout":"topCenter"}' %}
+{% include example.html %}
 
 ```php
-# noty layout
+{{ id }}
 
 noty()
     ->layout('topCenter')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -130,25 +149,93 @@ noty()->theme(string $theme);
 
 <br /> Examples:
 
+{% assign successMessage = site.data.messages['success'] | sample %}
+{% assign errorMessage = site.data.messages['error'] | sample %}
+{% assign warningMessage = site.data.messages['warning'] | sample %}
+{% assign infoMessage = site.data.messages['info'] | sample %}
+
+<script type="text/javascript">
+    messages["# noty theme mint"] = [
+        {
+            handler: "{{ page.handler }}",
+            type: "success",
+            message: "{{ successMessage }}",
+            options: { theme: "mint"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "error",
+            message: "{{ errorMessage }}",
+            options: { theme: "mint"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            options: { theme: "mint"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "info",
+            message: "{{ infoMessage }}",
+            options: { theme: "mint"},
+        }
+    ];
+</script>
+
 ```php
 # noty theme mint
 
 noty()
     ->theme('mint')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->addSuccess('{{ successMessage }}');
 
 noty()
     ->theme('mint')
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->addError('{{ errorMessage }}');
 
 noty()
     ->theme('mint')
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->addWarning('{{ warningMessage }}');
 
 noty()
     ->theme('mint')
-    ->addInfo('{{ site.data.messages["info"] | sample }}');
+    ->addInfo('{{ infoMessage }}');
 ```
+
+{% assign successMessage = site.data.messages['success'] | sample %}
+{% assign errorMessage = site.data.messages['error'] | sample %}
+{% assign warningMessage = site.data.messages['warning'] | sample %}
+{% assign infoMessage = site.data.messages['info'] | sample %}
+
+<script type="text/javascript">
+    messages["# noty theme relax"] = [
+        {
+            handler: "{{ page.handler }}",
+            type: "success",
+            message: "{{ successMessage }}",
+            options: { theme: "relax"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "error",
+            message: "{{ errorMessage }}",
+            options: { theme: "relax"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            options: { theme: "relax"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "info",
+            message: "{{ infoMessage }}",
+            options: { theme: "relax"},
+        }
+    ];
+</script>
 
 ```php
 # noty theme relax
@@ -156,21 +243,55 @@ noty()
 // don't the load the theme css file: https://github.com/needim/noty/blob/master/lib/themes/relax.css
 
 noty()
-    ->theme('mint')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->theme('relax')
+    ->addSuccess('{{ successMessage }}');
 
 noty()
-    ->theme('mint')
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->theme('relax')
+    ->addError('{{ errorMessage }}');
 
 noty()
-    ->theme('mint')
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->theme('relax')
+    ->addWarning('{{ warningMessage }}');
 
 noty()
-    ->theme('mint')
-    ->addInfo('{{ site.data.messages["info"] | sample }}');
+    ->theme('relax')
+    ->addInfo('{{ infoMessage }}');
 ```
+
+{% assign successMessage = site.data.messages['success'] | sample %}
+{% assign errorMessage = site.data.messages['error'] | sample %}
+{% assign warningMessage = site.data.messages['warning'] | sample %}
+{% assign infoMessage = site.data.messages['info'] | sample %}
+
+<script type="text/javascript">
+    messages["# noty theme metroui"] = [
+        {
+            handler: "{{ page.handler }}",
+            type: "success",
+            message: "{{ successMessage }}",
+            options: { theme: "metroui"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "error",
+            message: "{{ errorMessage }}",
+            options: { theme: "metroui"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            options: { theme: "metroui"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "info",
+            message: "{{ infoMessage }}",
+            options: { theme: "metroui"},
+        }
+    ];
+</script>
 
 ```php
 # noty theme metroui
@@ -179,20 +300,54 @@ noty()
 
 noty()
     ->theme('metroui')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->addSuccess('{{ successMessage }}');
 
 noty()
     ->theme('metroui')
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->addError('{{ errorMessage }}');
 
 noty()
     ->theme('metroui')
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->addWarning('{{ warningMessage }}');
 
 noty()
     ->theme('metroui')
-    ->addInfo('{{ site.data.messages["info"] | sample }}');
+    ->addInfo('{{ infoMessage }}');
 ```
+
+{% assign successMessage = site.data.messages['success'] | sample %}
+{% assign errorMessage = site.data.messages['error'] | sample %}
+{% assign warningMessage = site.data.messages['warning'] | sample %}
+{% assign infoMessage = site.data.messages['info'] | sample %}
+
+<script type="text/javascript">
+    messages["# noty theme light"] = [
+        {
+            handler: "{{ page.handler }}",
+            type: "success",
+            message: "{{ successMessage }}",
+            options: { theme: "light"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "error",
+            message: "{{ errorMessage }}",
+            options: { theme: "light"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            options: { theme: "light"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "info",
+            message: "{{ infoMessage }}",
+            options: { theme: "light"},
+        }
+    ];
+</script>
 
 ```php
 # noty theme light
@@ -201,20 +356,54 @@ noty()
 
 noty()
     ->theme('light')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->addSuccess('{{ successMessage }}');
 
 noty()
     ->theme('light')
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->addError('{{ errorMessage }}');
 
 noty()
     ->theme('light')
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->addWarning('{{ warningMessage }}');
 
 noty()
     ->theme('light')
-    ->addInfo('{{ site.data.messages["info"] | sample }}');
+    ->addInfo('{{ infoMessage }}');
 ```
+
+{% assign successMessage = site.data.messages['success'] | sample %}
+{% assign errorMessage = site.data.messages['error'] | sample %}
+{% assign warningMessage = site.data.messages['warning'] | sample %}
+{% assign infoMessage = site.data.messages['info'] | sample %}
+
+<script type="text/javascript">
+    messages["# noty theme sunset"] = [
+        {
+            handler: "{{ page.handler }}",
+            type: "success",
+            message: "{{ successMessage }}",
+            options: { theme: "sunset"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "error",
+            message: "{{ errorMessage }}",
+            options: { theme: "sunset"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            options: { theme: "sunset"},
+        },
+        {
+            handler: "{{ page.handler }}",
+            type: "info",
+            message: "{{ infoMessage }}",
+            options: { theme: "sunset"},
+        }
+    ];
+</script>
 
 ```php
 # noty theme sunset
@@ -222,19 +411,19 @@ noty()
 
 noty()
     ->theme('sunset')
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->addSuccess('{{ successMessage }}');
 
 noty()
     ->theme('sunset')
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->addError('{{ errorMessage }}');
 
 noty()
     ->theme('sunset')
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->addWarning('{{ warningMessage }}');
 
 noty()
     ->theme('sunset')
-    ->addInfo('{{ site.data.messages["info"] | sample }}');
+    ->addInfo('{{ infoMessage }}');
 ```
 
 ---
@@ -248,14 +437,18 @@ notifications.
 noty()->timeout(int|bool $timeout)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty timeout' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"timeout": 2000}' %}
+{% include example.html %}
 
 ```php
-# noty timeout
+{{ id }}
 
 noty()
     ->timeout(2000) // 2 seconds
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -268,14 +461,18 @@ noty()
 noty()->progressBar(bool $progressBar = false)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty progressBar' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"progressBar": false}' %}
+{% include example.html %}
 
 ```php
-# noty progressBar
+{{ id }}
 
 noty()
     ->progressBar(false)
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -290,14 +487,18 @@ Default `click`
 noty()->closeWith(string|array $closeWith)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty closeWith' %}
+{% assign type = 'error' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeWith": ["click", "button"]}' %}
+{% include example.html %}
 
 ```php
-# noty closeWith
+{{ id }}
 
 noty()
     ->closeWith(['click', 'button'])
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -313,14 +514,18 @@ You can use `animate.css` class names or your custom css animations as well.
 noty()->animation(string $animation, string $effect)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty animation' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"animation": null}' %}
+{% include example.html %}
 
 ```php
-# noty animation
+{{ id }}
 
 noty()
     ->animation(null)
-    ->addInfo('{{ site.data.messages["info"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -335,16 +540,20 @@ noty()
 noty()->sounds(string $option, mixed $value)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty sounds' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"sounds": {"sources": ["/dist/sounds/notification.wav"], "volume": 0.3, "conditions": ["docVisible", "docHidden"]}}' %}
+{% include example.html %}
 
 ```php
-# noty sounds
+{{ id }}
 
 noty()
     ->sounds('sources', ['/dist/sounds/notification.wav'])
     ->sounds('volume', 0.3)
     ->sounds('conditions', ['docVisible', 'docHidden'])
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -357,14 +566,18 @@ There are two conditions for now: `docVisible` & `docHidden`. You can use one of
 noty()->docTitle(string $option, mixed $docTitle)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty docTitle' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"docTitle": {"conditions": ["docVisible", "docHidden"]}}' %}
+{% include example.html %}
 
 ```php
-# noty docTitle
+{{ id }}
 
 noty()
     ->docTitle('conditions', ['docVisible', 'docHidden'])
-    ->addSuccess('{{ site.data.messages["success"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -375,14 +588,18 @@ noty()
 noty()->modal(bool $modal = true)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty modal' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"modal": true}' %}
+{% include example.html %}
 
 ```php
-# noty modal
+{{ id }}
 
 noty()
     ->modal(true)
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -396,14 +613,18 @@ Generated automatically if false.
 noty()->id(bool|string $id)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty id' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"id": false}' %}
+{% include example.html %}
 
 ```php
-# noty id
+{{ id }}
 
 noty()
     ->id(false)
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -417,14 +638,18 @@ If `false` uses append, if `true` uses prepend.
 noty()->force(bool $force = true)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty force' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"force": false}' %}
+{% include example.html %}
 
 ```php
-# noty force
+{{ id }}
 
 noty()
     ->force(false)
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -439,14 +664,18 @@ noty()->queue(string $queue)
 
 Default: `global`
 
-<br /> `Example`:
+{% assign id = '# noty queue' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"queue":"global"}' %}
+{% include example.html %}
 
 ```php
-# noty force
+{{ id }}
 
 noty()
     ->queue('global')
-    ->addWarning('{{ site.data.messages["warning"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -460,14 +689,18 @@ If `string(queueName)` closes all `visible` notification on this queue and shows
 noty()->killer(bool|string $killer)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty killer' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"killer": true}' %}
+{% include example.html %}
 
 ```php
-# noty killer
+{{ id }}
 
 noty()
     ->killer(true)
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -481,14 +714,18 @@ Layout parameter will be ignored.
 noty()->container(bool|string $container)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty container' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"container": false}' %}
+{% include example.html %}
 
 ```php
-# noty container
+{{ id }}
 
 noty()
     ->container(false)
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -512,12 +749,16 @@ To ensure that users do not miss their notifications.
 noty()->visibilityControl(bool $visibilityControl)
 ```
 
-<br /> `Example`:
+{% assign id = '# noty visibilityControl' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"visibilityControl": true}' %}
+{% include example.html %}
 
 ```php
-# noty visibilityControl
+{{ id }}
 
 noty()
     ->visibilityControl(true)
-    ->addError('{{ site.data.messages["error"] | sample }}');
+    ->add{{ type | capitalize }}('{{ message }}');
 ```

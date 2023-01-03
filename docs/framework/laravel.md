@@ -32,15 +32,14 @@ composer require php-flasher/flasher-laravel
 
 Dispatch `notifications` anywhere from your application
 
+{% assign id = '# laravel' %}
+{% assign type = 'success' %}
+{% assign message = 'Book successfully created!' %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
-# General usage
-
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Post;
-use Illuminate\Http\Request;
+{{ id }}
 
 class BookController extends Controller
 {
@@ -58,7 +57,7 @@ class BookController extends Controller
             'price' => $request->price,
         ]);
     
-        flash()->addSuccess('Book successfully created!');
+        flash()->add{{ type | capitalize }}('{{ message }}');
     
         return redirect()->route('books.index');
     }
@@ -263,15 +262,22 @@ You can create a preset for a custom notification that you want to reuse in mult
 
 For example, you can create a preset named `entity_saved` in the configuration file and then use
 
+{% assign id = '# laravel addPreset' %}
+{% assign type = 'success' %}
+{% assign message = 'Entity saved successfully' %}
+{% assign title = 'Entity saved' %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
 <?php // config/flasher.php
 
 return [
     'presets' => [
         'entity_saved' => [
-            'type' => 'success',
-            'message' => 'Entity saved successfully',
-            'title' => 'Entity saved',
+            'type' => '{{ type }}',
+            'message' => '{{ message }}',
+            'title' => '{{ title }}',
         ],
     ],
 ];
@@ -280,9 +286,7 @@ return [
 To use the preset, you can call the `addPreset()` method and pass the name of the preset as the first argument:
 
 ```php
-# preset entity_saved
-
-<?php
+{{ id }}
 
 class BookController
 {
@@ -294,15 +298,11 @@ class BookController
 This is equivalent to:
 
 ```php
-# preset entity_saved
-
-<?php
-
 class BookController
 {
     public function save()
     {
-        flash()->addSuccess('Entity saved successfully', 'Entity saved');
+        flash()->add{{ type | capitalize }}('{{ message }}', '{{ title }}');
 ```
 
 ---
@@ -374,24 +374,102 @@ return [
 ];
 ```
 
-Examples:
+{% assign id = '# laravel arabic translations' %}
+{% assign successMessage = 'تم إرسال طلبك بنجاح.' %}
+{% assign errorMessage = 'حدث خطأ أثناء إرسال طلبك.' %}
+{% assign warningMessage = 'يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج' %}
+{% assign infoMessage = 'سيتم تحديث هذه الصفحة في غضون 10 دقائق.' %}
+
+<script type="text/javascript">
+    messages["{{ id }}"] = [
+        {
+            handler: "flasher",
+            type: "success",
+            message: "{{ successMessage }}",
+            title: "نجاح",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "error",
+            message: "{{ errorMessage }}",
+            title: "خطأ",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            title: "تحذير",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "info",
+            message: "{{ infoMessage }}",
+            title: "معلومة",
+            options: {},
+        },
+        
+    ];
+</script>
 
 ```php
-# arabic translation
+{{ id }}
 
-flash()->addSuccess('تم إرسال طلبك بنجاح.');
-flash()->addError('حدث خطأ أثناء إرسال طلبك.');
-flash()->addWarning('يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج');
-flash()->addInfo('سيتم تحديث هذه الصفحة في غضون 10 دقائق.');
+flash()->addSuccess('{{ successMessage }}');
+flash()->addError('{{ errorMessage }}');
+flash()->addWarning('{{ warningMessage }}');
+flash()->addInfo('{{ infoMessage }}');
 ```
 
-```php
-# french translation
+{% assign id = '# laravel french translations' %}
+{% assign successMessage = "Votre demande a été envoyée avec succès." %}
+{% assign errorMessage = "Une erreur s’est produite lors de l’envoi de votre demande." %}
+{% assign warningMessage = "Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire." %}
+{% assign infoMessage = "Cette page sera mise à jour dans 10 minutes."%}
 
-flash()->addSuccess('Votre demande a été envoyée avec succès.');
-flash()->addError('Une erreur s\'est produite lors de l\'envoi de votre demande.');
-flash()->addWarning('Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire.');
-flash()->addInfo('Cette page sera mise à jour dans 10 minutes.');
+<script type="text/javascript">
+    messages["{{ id }}"] = [
+        {
+            handler: "flasher",
+            type: "success",
+            message: "{{ successMessage }}",
+            title: "Succès",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "error",
+            message: "{{ errorMessage }}",
+            title: "Erreur",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "warning",
+            message: "{{ warningMessage }}",
+            title: "Avertissement",
+            options: {},
+        },
+        {
+            handler: "flasher",
+            type: "info",
+            message: "{{ infoMessage }}",
+            title: "Information",
+            options: {},
+        },
+        
+    ];
+</script>
+
+```php
+{{ id }}
+
+flash()->addSuccess('{{ successMessage }}');
+flash()->addError('{{ errorMessage }}');
+flash()->addWarning('{{ warningMessage }}');
+flash()->addInfo('{{ infoMessage }}');
 ```
 
 ---

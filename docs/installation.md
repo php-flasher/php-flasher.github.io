@@ -39,14 +39,14 @@ composer require php-flasher/flasher-symfony
 To display a notification message, you can either use the `flash()` helper method or obtain an instance of `flasher` from the service container. 
 Then, before returning a view or redirecting, call the `addSuccess()` method and pass in the desired message to be displayed.
 
+{% assign id = '# PHPFlasher' %}
+{% assign type = 'success' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
-# General usage
-
-<?php
-
-namespace App\Controller;
-
-use Flasher\Prime\FlasherInterface;
+{{ id }}
 
 class BookController
 {
@@ -54,7 +54,7 @@ class BookController
     {
         // ...
 
-        flash('{{ site.data.messages["success"] | sample }}');
+        flash('{{ message }}');
         
         flash()->addSuccess('{{ site.data.messages["success"] | sample }}');
         
