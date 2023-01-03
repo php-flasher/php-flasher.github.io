@@ -1,10 +1,16 @@
 import "../css/_tryit.pcss";
 
 import flasher from "@flasher/flasher";
-import "@flasher/flasher-toastr";
-import "@flasher/flasher-noty";
-import "@flasher/flasher-notyf";
-import "@flasher/flasher-sweetalert";
+import toastr from "@flasher/flasher-toastr";
+import noty from "@flasher/flasher-noty";
+import notyf from "@flasher/flasher-notyf";
+import sweetalert from "@flasher/flasher-sweetalert";
+
+window.flasher = flasher;
+window.toastr = toastr;
+window.noty = noty;
+window.notyf = notyf;
+window.sweetalert = sweetalert;
 
 const messages = window.messages;
 

@@ -22,17 +22,24 @@ Please follow the same installation steps as for the [Laravel Installation](/doc
 
 Dispatch `notifications` from your components
 
+{% assign id = '# livewire' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
+
 ```php
+{{ id }}
+
 namespace App\Http\Livewire;
 
 use Livewire\Component;
 
 class MyComponent extends Component
 {
-    public function someAction()
+    public function save()
     {
-        toastr()->addSuccess('{{ site.data.messages["success"] | sample }}'); // composer require php-flasher/flasher-toastr-laravel
-        sweetalert()->addInfo('{{ site.data.messages["info"] | sample }}'); // composer require php-flasher/flasher-sweetalert-laravel
+        flash()->add{{ type | capitalize }}('{{ message }}');
     }
 
     public function render()
@@ -47,7 +54,26 @@ class MyComponent extends Component
 
 For sweetalert you can listen to **Confirmed**, **Denied** and **Dismissed** from withing you component
 
+<script type="text/javascript">
+    messages["# livewire events"] = {
+        handler: "sweetalert",
+        type: "info",
+        message: "confirm or deny action",
+        options: { 
+            showDenyButton: true,
+            preConfirm: function() {
+                toastr.success('sweetalert was confirmed');
+            },
+            preDeny: function() {
+                toastr.error('sweetalert was denied');
+            },
+        },
+    };
+</script>
+
 ```php
+# livewire events
+
 namespace App\Http\Livewire;
 
 use Livewire\Component;
@@ -55,35 +81,25 @@ use Livewire\Component;
 class MyComponent extends Component
 {
     protected $listeners = [
-        'sweetalertEvent', // for all events from sweetalert
-        'sweetalertConfirmed', // only when confirm button is clicked
-        'sweetalertDenied' => 'onDeny', // if you want a custom method name
-        'sweetalertDismissed',
+        'sweetalertConfirmed',
+        'sweetalertDenied',
     ];
 
-    public function someAction()
+    public function delete()
     {
-        sweetalert()->showDenyButton()->addInfo('confirm or deny action');
-    }
-
-    public function sweetalertEvent(array $payload)
-    {
-        toastr()->closeButton()->addInfo('Event received from sweetalert');
+        sweetalert()
+            ->showDenyButton()
+            ->addInfo('confirm or deny action');
     }
 
     public function sweetalertConfirmed(array $payload)
     {
-        toastr()->addSuccess('The "Confirm" button was clicked');
+        toastr()->addSuccess('sweetalert was confirmed');
     }
 
-    public function onDeny(array $payload)
+    public function sweetalertDenied(array $payload)
     {
-        toastr()->addError('The "Deny" button was clicked');
-    }
-
-    public function sweetalertDismissed(array $payload)
-    {
-        toastr()->addWarning('The "Cancel" button was clicked');
+        toastr()->addError('sweetalert was denied');
     }
 
     public function render()
