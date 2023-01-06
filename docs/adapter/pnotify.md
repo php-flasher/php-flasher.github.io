@@ -26,7 +26,7 @@ composer require php-flasher/flasher-pnotify-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-{% assign id = '# toastr' %}
+{% assign id = '# pnotify' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
