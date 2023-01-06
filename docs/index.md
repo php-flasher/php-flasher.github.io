@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: Effortless Flash Notifications for PHP with PHPFlasher
+title: Home
 ---
 
 <div class="text-center mb-8">

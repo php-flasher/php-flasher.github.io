@@ -1,7 +1,7 @@
 ---
 permalink: /docs/adapter/notyf/
 title: Notyf adapter for PHP flasher
-handler: notyf
+handler: Notyf
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation

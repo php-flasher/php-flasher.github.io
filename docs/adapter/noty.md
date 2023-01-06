@@ -1,6 +1,6 @@
 ---
 permalink: /docs/adapter/noty/
-title: Noty adapter for PHP flasher
+title: Noty
 handler: noty
 ---
 

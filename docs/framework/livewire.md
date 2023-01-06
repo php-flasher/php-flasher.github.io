@@ -1,6 +1,6 @@
 ---
 permalink: /docs/framework/livewire/
-title: A solid integration with Laravel Livewire
+title: Livewire
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offers a solid integration with Livewire v2.

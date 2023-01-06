@@ -1,6 +1,6 @@
 ---
 permalink: /docs/framework/laravel/
-title: Effortless integration with Laravel
+title: Laravel
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> PHPFlasher Laravel

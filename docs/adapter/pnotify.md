@@ -1,6 +1,6 @@
 ---
 permalink: /docs/adapter/pnotify/
-title: Pnotify adapter for PHP flasher
+title: Pnotify
 handler: pnotify
 ---
 

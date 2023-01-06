@@ -1,6 +1,6 @@
 ---
 permalink: /docs/concepts/presets/
-title: Presets allow you to use predefined messages
+title: Presets
 ---
 
 Let's say you have a custom notification that you want to use in multiple places. 

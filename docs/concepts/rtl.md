@@ -1,6 +1,6 @@
 ---
 permalink: /docs/concepts/rtl/
-title: RTL Support
+title: Right to Left
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** 

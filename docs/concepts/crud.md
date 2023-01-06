@@ -1,6 +1,6 @@
 ---
 permalink: /docs/concepts/crud/
-title: CRUD flash messages made easy
+title: CRUD
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows to display flash messages for common CRUD operations with ease.

@@ -1,6 +1,6 @@
 ---
 permalink: /docs/framework/symfony/
-title: A solid integration with the <i class="fa-brands fa-symfony text-black"></i> Symfony framework
+title: Symfony
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offer a solid integration with <i class="fa-brands fa-symfony text-black fa-xl"></i> **Symfony**, with support from **Symfony** version **2.0** to **6**

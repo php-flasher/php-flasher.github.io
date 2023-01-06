@@ -1,6 +1,6 @@
 ---
 permalink: /docs/concepts/dark-mode/
-title: Dark Mode Support
+title: Dark Mode
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Dark Mode Support

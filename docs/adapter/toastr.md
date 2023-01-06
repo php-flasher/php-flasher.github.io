@@ -1,6 +1,6 @@
 ---
 permalink: /docs/adapter/toastr/
-title: Toastr.js adapter for PHP flasher
+title: Toastr
 handler: toastr
 ---
 

@@ -1,6 +1,6 @@
 ---
 permalink: /docs/framework/javascript/
-title: Install PHPFlasher assets with cdn or npm
+title: JavaScript
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** assets can be installed from a cdn or using npm

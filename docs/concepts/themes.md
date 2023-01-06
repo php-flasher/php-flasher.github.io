@@ -1,6 +1,6 @@
 ---
 permalink: /docs/concepts/themes/
-title: Adding a Custom Theme to <span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>
+title: Themes
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** 
