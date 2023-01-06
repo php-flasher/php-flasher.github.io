@@ -23,10 +23,10 @@
     Notyf: '/docs/adapter/notyf/'
     Pnotify: '/docs/adapter/pnotify/'
 
-<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
-    Configuration: '/docs/laravel/configuration/'
-    Translations: '/docs/laravel/translations/'
+#<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
+#    Configuration: '/docs/laravel/configuration/'
+#    Translations: '/docs/laravel/translations/'
 
-<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony:
-    Configuration: '/docs/symfony/configuration/'
-    Translations: '/docs/symfony/translations/'
+#<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony:
+#    Configuration: '/docs/symfony/configuration/'
+#    Translations: '/docs/symfony/translations/'
