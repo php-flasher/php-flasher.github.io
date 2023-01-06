@@ -161,6 +161,8 @@ toastr()
 
 The HTML content of the close button.
 
+Default: `<button type="button">&times;</button>`
+
 ```php
 toastr()->closeHtml(string $closeHtml);
 ```
@@ -241,6 +243,8 @@ toastr()
 
 The ID of the element that should contain the toast notifications.
 
+Default: `toast-container`
+
 ```php
 toastr()->containerId(string $containerId);
 ```
@@ -291,6 +295,8 @@ toastr()
 
 When set to `true`, HTML in the toast message will be escaped.
 
+Default: `false`
+
 ```php
 toastr()->escapeHtml(bool $escapeHtml = true)
 ```
@@ -300,6 +306,8 @@ toastr()->escapeHtml(bool $escapeHtml = true)
 <p id="method-extendedTimeOut"><a href="#method-extendedTimeOut" class="anchor"><i class="fa-duotone fa-link"></i> extendedTimeOut</a></p>
 
 The time in milliseconds to keep the toast visible after the user hovers over it.
+
+Default: `1000` milliseconds
 
 ```php
 toastr()->extendedTimeOut(int $extendedTimeOut)
@@ -311,6 +319,8 @@ toastr()->extendedTimeOut(int $extendedTimeOut)
 
 The duration of the hide animation in milliseconds.
 
+Default: `1000` milliseconds
+
 ```php
 toastr()->hideDuration(int $hideDuration)
 ```
@@ -320,6 +330,8 @@ toastr()->hideDuration(int $hideDuration)
 <p id="method-hideEasing"><a href="#method-hideEasing" class="anchor"><i class="fa-duotone fa-link"></i> hideEasing</a></p>
 
 The easing function used for the hide animation.
+
+Default: `swing`
 
 ```php
 toastr()->hideEasing(string $hideEasing)
@@ -331,6 +343,8 @@ toastr()->hideEasing(string $hideEasing)
 
 The method used to hide the toast, either `fadeOut` or `slideOut`.
 
+Default: `fadeOut`
+
 ```php
 toastr()->hideMethod(string $hideMethod)
 ```
@@ -340,6 +354,8 @@ toastr()->hideMethod(string $hideMethod)
 <p id="method-iconClass"><a href="#method-iconClass" class="anchor"><i class="fa-duotone fa-link"></i> iconClass</a></p>
 
 The default class applied to the toast icon.
+
+Default: `toast-info`
 
 ```php
 toastr()->iconClass(string $iconClass)
@@ -351,6 +367,8 @@ toastr()->iconClass(string $iconClass)
 
 The class applied to the toast message element.
 
+Default: `toast-message`
+
 ```php
 toastr()->messageClass(string $messageClass)
 ```
@@ -359,7 +377,9 @@ toastr()->messageClass(string $messageClass)
 
 <p id="method-newestOnTop"><a href="#method-newestOnTop" class="anchor"><i class="fa-duotone fa-link"></i> newestOnTop</a></p>
 
- When set to `true`, new toast notifications are displayed above older ones.
+When set to `true`, new toast notifications are displayed above older ones.
+
+Default: `true`
 
 ```php
 toastr()->newestOnTop(bool $newestOnTop = true)
@@ -391,6 +411,8 @@ toastr()->onShown(string $onShown)
 
 The class applied to the toast container that determines the position of the toast on the screen (e.g. `toast-top-right`, `toast-bottom-left`).
 
+Default: `toast-top-right`
+
 ```php
 toastr()->positionClass(string $positionClass)
 ```
@@ -401,6 +423,8 @@ toastr()->positionClass(string $positionClass)
 
 When set to `true`, prevents the display of multiple toast notifications with the same message.
 
+Default: `false`
+
 ```php
 toastr()->preventDuplicates(bool $preventDuplicates = true)
 ```
@@ -410,6 +434,8 @@ toastr()->preventDuplicates(bool $preventDuplicates = true)
 <p id="method-progressBar"><a href="#method-progressBar" class="anchor"><i class="fa-duotone fa-link"></i> progressBar</a></p>
 
 When set to `true`, displays a progress bar in the toast.
+
+Default: `true`
 
 ```php
 toastr()->progressBar(bool $progressBar = true)
@@ -425,11 +451,15 @@ The class applied to the progress bar.
 toastr()->progressClass(string $progressClass)
 ```
 
+Default: `toast-progress`
+
 ---
 
 <p id="method-rtl"><a href="#method-rtl" class="anchor"><i class="fa-duotone fa-link"></i> rtl</a></p>
 
 When set to `true`, displays the toast notifications in right-to-left mode.
+
+Default: `false`
 
 ```php
 toastr()->rtl(bool $rtl = true)
@@ -441,6 +471,8 @@ toastr()->rtl(bool $rtl = true)
 
 The duration of the show animation in milliseconds.
 
+Default: `300` milliseconds
+
 ```php
 toastr()->showDuration(int $showDuration)
 ```
@@ -449,7 +481,9 @@ toastr()->showDuration(int $showDuration)
 
 <p id="method-showEasing"><a href="#method-showEasing" class="anchor"><i class="fa-duotone fa-link"></i> showEasing</a></p>
 
-The easing function used for the show animation.
+The easing function used for the show animation, either `swing` or `linear` (built into jQuery).
+
+Default: `swing`
 
 ```php
 toastr()->showEasing(string $showEasing)
@@ -459,7 +493,9 @@ toastr()->showEasing(string $showEasing)
 
 <p id="method-showMethod"><a href="#method-showMethod" class="anchor"><i class="fa-duotone fa-link"></i> showMethod</a></p>
 
-The method used to show the toast, either `fadeIn` or `slideIn`.
+The method used to show the toast, either `fadeIn` or `slideIn` or `show` (built into jQuery).
+
+Default: `fadeIn`
 
 ```php
 toastr()->showMethod(string $showMethod)
@@ -481,6 +517,8 @@ toastr()->tapToDismiss(bool $tapToDismiss = true)
 
 The element that should contain the toast notifications.
 
+Default: `body`
+
 ```php
 toastr()->target(string $target)
 ```
@@ -489,7 +527,10 @@ toastr()->target(string $target)
 
 <p id="method-timeOut"><a href="#method-timeOut" class="anchor"><i class="fa-duotone fa-link"></i> timeOut</a></p>
 
-The time in milliseconds to keep the toast visible before it is automatically closed.
+The time in milliseconds to keep the toast visible before it is automatically closed. <br />
+Set `timeOut` and `extendedTimeOut` to `0` to make it sticky
+
+Default: `5000` milliseconds
 
 ```php
 toastr()->timeOut(int $timeOut, bool $extendedTimeOut = null)
@@ -510,6 +551,8 @@ toastr()->titleClass(string $titleClass)
 <p id="method-toastClass"><a href="#method-toastClass" class="anchor"><i class="fa-duotone fa-link"></i> toastClass</a></p>
 
 The class applied to the toast container.
+
+Default: `toast`
 
 ```php
 toastr()->toastClass(string $toastClass)
