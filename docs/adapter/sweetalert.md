@@ -1,6 +1,7 @@
 ---
 permalink: /docs/adapter/sweetalert/
 title: Sweet Alert 2 adapter for PHP flasher
+handler: sweetalert
 ---
 
 For more information about Sweet Alert 2 click <a href="https://sweetalert2.github.io/">here</a>.

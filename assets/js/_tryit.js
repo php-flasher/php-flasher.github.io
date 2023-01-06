@@ -13,6 +13,7 @@ window.notyf = notyf;
 window.sweetalert = sweetalert;
 
 const messages = window.messages;
+console.log(messages);
 
 const flashMessage = ({ handler, type, message, title, options }) => {
     const factory = flasher.create(handler);

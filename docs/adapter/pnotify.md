@@ -1,6 +1,7 @@
 ---
 permalink: /docs/adapter/pnotify/
 title: Pnotify adapter for PHP flasher
+handler: pnotify
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation

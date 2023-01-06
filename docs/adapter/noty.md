@@ -26,8 +26,6 @@ composer require php-flasher/flasher-noty-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Just instantiate the `NotyFactory` and start calling build methods
-
 {% assign id = '# noty' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
@@ -37,15 +35,11 @@ Just instantiate the `NotyFactory` and start calling build methods
 ```php
 {{ id }}
 
-<?php
-
 namespace App\Controller;
 
-use Flasher\Prime\FlasherInterface;
-
-class BookController
+class AppController
 {
-    public function saveBook()
+    public function save()
     {        
         noty()->add{{ type | capitalize }}('{{ message }}');
     }
@@ -54,9 +48,9 @@ class BookController
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
+## <i class="fa-duotone fa-list-radio"></i> Modifiers
 
-All methods in the **[Usage](/docs/usage/)** section are available also for `NotyFactory`
+> The methods described in the **[Usage](/docs/usage/)** section can also be used with the `noty` adapter.
 
 ---
 

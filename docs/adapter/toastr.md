@@ -1,25 +1,23 @@
 ---
 permalink: /docs/adapter/toastr/
 title: Toastr.js adapter for PHP flasher
+handler: toastr
 ---
-
-For more information about Toastr.js click <a href="https://github.com/CodeSeven/toastr">here</a>.
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
-This package can be installed through Composer.
+For more information about Toastr.js click <a href="https://github.com/CodeSeven/toastr">here</a>.
 
-**For Vanilla PHP:**
-```shell
-composer require php-flasher/flasher-toastr
-```
+**<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 
-**For Laravel:**
 ```shell
 composer require php-flasher/flasher-toastr-laravel
 ```
 
-**For Symfony:**
+<br />
+
+**<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
+
 ```shell
 composer require php-flasher/flasher-toastr-symfony
 ```
@@ -28,252 +26,501 @@ composer require php-flasher/flasher-toastr-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Just grave an instance of `ToastrFactory` and start calling build methods
+{% assign id = '# toastr' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
+{{ id }}
+
 namespace App\Controller;
 
-use Flasher\Toastr\Prime\ToastrFactory;
-
-class NotifyController
+class AppController
 {
-    public function flasher(ToastrFactory $flasher)
-    {
-        // ... 
-        $flasher->addSuccess('Data has been saved successfully!');
-        
-        // ... redirect or render a view here
+    public function save()
+    {        
+        toastr()->add{{ type | capitalize }}('{{ message }}');
     }
-}    
+} 
 ```
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
+## <i class="fa-duotone fa-list-radio"></i> Modifiers
 
-All methods in the **[Usage](/docs/usage/)** section are available also for `ToastrFactory`
+> The methods described in the **[Usage](/docs/usage/)** section can also be used with the `toastr` adapter.
 
-<p id="method-title"><a href="#method-title" class="anchor"><i class="fa-duotone fa-link"></i> title</a></p>
-
-The title of the notification
-```php
-$flasher->title(string $title)
-```
+---
 
 <p id="method-closeButton"><a href="#method-closeButton" class="anchor"><i class="fa-duotone fa-link"></i> closeButton</a></p>
 
-Enable a close button
+When set to `true`, a close button is displayed in the toast notification.
+
 ```php
-$flasher->closeButton(bool $closeButton = true)
+toastr()->closeButton(bool $closeButton = true);
 ```
+
+{% assign id = '# toastr closeButton' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeButton": true}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->closeButton(true)
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-closeClass"><a href="#method-closeClass" class="anchor"><i class="fa-duotone fa-link"></i> closeClass</a></p>
 
+The class applied to the close button.
+
+Default: `toast-close-button`
+
 ```php
-$flasher->closeClass(string $closeClass)
+toastr()->closeClass(string $closeClass);
 ```
+
+{% assign id = '# toastr closeClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeClass": "toast-close-button"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->closeClass('toastr')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-closeDuration"><a href="#method-closeDuration" class="anchor"><i class="fa-duotone fa-link"></i> closeDuration</a></p>
 
+The duration of the close animation in milliseconds. <br />
+
+Default: `300` milliseconds
+
 ```php
-$flasher->closeDuration(int $closeDuration)
+toastr()->closeDuration(int $closeDuration);
 ```
+
+{% assign id = '# toastr closeDuration' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeDuration": 3000}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->closeDuration(3000)
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-closeEasing"><a href="#method-closeEasing" class="anchor"><i class="fa-duotone fa-link"></i> closeEasing</a></p>
 
+The easing function used for the close animation. <br />
+
+Default: `swing`
+
 ```php
-$flasher->closeEasing(string $closeEasing)
+toastr()->closeEasing(string $closeEasing);
 ```
+
+{% assign id = '# toastr closeEasing' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeEasing": "swing"}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->closeEasing('swing')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-closeHtml"><a href="#method-closeHtml" class="anchor"><i class="fa-duotone fa-link"></i> closeHtml</a></p>
 
-Override the close button's HTML.
+The HTML content of the close button.
+
 ```php
-$flasher->closeHtml(string $closeHtml)
+toastr()->closeHtml(string $closeHtml);
 ```
+
+{% assign id = '# toastr closeHtml' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeButton": true, "closeHtml":"<button>⛑</button>"}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->closeButton(true)
+    ->closeHtml('⛑')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-closeMethod"><a href="#method-closeMethod" class="anchor"><i class="fa-duotone fa-link"></i> closeMethod</a></p>
 
+The method used to close the toast, either `fadeOut` or `slideOut`.
+
+Default: `fadeOut`
+
 ```php
-$flasher->closeMethod(string $closeMethod)
+toastr()->closeMethod(string $closeMethod);
 ```
+
+{% assign id = '# toastr closeMethod' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeMethod": "fadeOut"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->closeMethod('fadeOut')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-closeOnHover"><a href="#method-closeOnHover" class="anchor"><i class="fa-duotone fa-link"></i> closeOnHover</a></p>
 
+When set to `true`, the toast will close when the user hovers over it.
+
+Default: `false`
+
 ```php
-$flasher->closeOnHover(bool $closeOnHover = true)
+toastr()->closeOnHover(bool $closeOnHover = true);
 ```
+
+{% assign id = '# toastr closeOnHover' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"closeOnHover": true, "closeDuration": 10}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->closeOnHover(true)
+    ->closeDuration(10)
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-containerId"><a href="#method-containerId" class="anchor"><i class="fa-duotone fa-link"></i> containerId</a></p>
 
+The ID of the element that should contain the toast notifications.
+
 ```php
-$flasher->containerId(string $containerId)
+toastr()->containerId(string $containerId);
 ```
+
+{% assign id = '# toastr containerId' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"containerId": "toast-container"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->containerId('toast-container')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-debug"><a href="#method-debug" class="anchor"><i class="fa-duotone fa-link"></i> debug</a></p>
 
+When set to `true`, enables debug mode which logs messages to the console.
+
+Default: `false`
+
 ```php
-$flasher->debug(bool $debug = true)
+toastr()->debug(bool $debug = true);
 ```
+
+{% assign id = '# toastr debug' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"debug": true}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->debug(true)
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
 
 <p id="method-escapeHtml"><a href="#method-escapeHtml" class="anchor"><i class="fa-duotone fa-link"></i> escapeHtml</a></p>
 
-In case you want to escape HTML characters in title and message
+When set to `true`, HTML in the toast message will be escaped.
+
 ```php
-$flasher->escapeHtml(bool $escapeHtml = true)
+toastr()->escapeHtml(bool $escapeHtml = true)
 ```
+
+---
 
 <p id="method-extendedTimeOut"><a href="#method-extendedTimeOut" class="anchor"><i class="fa-duotone fa-link"></i> extendedTimeOut</a></p>
 
-How long the toast will display after a user hovers over it
+The time in milliseconds to keep the toast visible after the user hovers over it.
+
 ```php
-$flasher->extendedTimeOut(int $extendedTimeOut)
+toastr()->extendedTimeOut(int $extendedTimeOut)
 ```
+
+---
 
 <p id="method-hideDuration"><a href="#method-hideDuration" class="anchor"><i class="fa-duotone fa-link"></i> hideDuration</a></p>
 
-Specifies the time during which the pop-up closes in ms
+The duration of the hide animation in milliseconds.
+
 ```php
-$flasher->hideDuration(int $hideDuration)
+toastr()->hideDuration(int $hideDuration)
 ```
+
+---
 
 <p id="method-hideEasing"><a href="#method-hideEasing" class="anchor"><i class="fa-duotone fa-link"></i> hideEasing</a></p>
 
-Indicates the entry transition of the pop-up
+The easing function used for the hide animation.
+
 ```php
-$flasher->hideEasing(string $hideEasing)
+toastr()->hideEasing(string $hideEasing)
 ```
+
+---
 
 <p id="method-hideMethod"><a href="#method-hideMethod" class="anchor"><i class="fa-duotone fa-link"></i> hideMethod</a></p>
 
-Indicates the opening animation of the pop-up
+The method used to hide the toast, either `fadeOut` or `slideOut`.
+
 ```php
-$flasher->hideMethod(string $hideMethod)
+toastr()->hideMethod(string $hideMethod)
 ```
+
+---
 
 <p id="method-iconClass"><a href="#method-iconClass" class="anchor"><i class="fa-duotone fa-link"></i> iconClass</a></p>
 
+The default class applied to the toast icon.
+
 ```php
-$flasher->iconClass(string $iconClass)
+toastr()->iconClass(string $iconClass)
 ```
+
+---
 
 <p id="method-messageClass"><a href="#method-messageClass" class="anchor"><i class="fa-duotone fa-link"></i> messageClass</a></p>
 
+The class applied to the toast message element.
+
 ```php
-$flasher->messageClass(string $messageClass)
+toastr()->messageClass(string $messageClass)
 ```
+
+---
 
 <p id="method-newestOnTop"><a href="#method-newestOnTop" class="anchor"><i class="fa-duotone fa-link"></i> newestOnTop</a></p>
 
-Show newest toast at bottom (top is default)
+ When set to `true`, new toast notifications are displayed above older ones.
+
 ```php
-$flasher->newestOnTop(bool $newestOnTop = true)
+toastr()->newestOnTop(bool $newestOnTop = true)
 ```
+
+---
 
 <p id="method-onHidden"><a href="#method-onHidden" class="anchor"><i class="fa-duotone fa-link"></i> onHidden</a></p>
 
-Define a callback for when the toast is hidden
+A callback function that is called when the toast is fully hidden.
+
 ```php
-$flasher->onHidden(string $onHidden)
+toastr()->onHidden(string $onHidden)
 ```
+
+---
 
 <p id="method-onShown"><a href="#method-onShown" class="anchor"><i class="fa-duotone fa-link"></i> onShown</a></p>
 
-Define a callback for when the toast is shown
+A callback function that is called when the toast is fully shown.
+
 ```php
-$flasher->onShown(string $onShown)
+toastr()->onShown(string $onShown)
 ```
+
+---
 
 <p id="method-positionClass"><a href="#method-positionClass" class="anchor"><i class="fa-duotone fa-link"></i> positionClass</a></p>
 
+The class applied to the toast container that determines the position of the toast on the screen (e.g. `toast-top-right`, `toast-bottom-left`).
+
 ```php
-$flasher->positionClass(string $positionClass)
+toastr()->positionClass(string $positionClass)
 ```
+
+---
 
 <p id="method-preventDuplicates"><a href="#method-preventDuplicates" class="anchor"><i class="fa-duotone fa-link"></i> preventDuplicates</a></p>
 
-Rather than having identical toasts stack, set the preventDuplicates property to true.
-Duplicates are matched to the previous toast based on their message content.
+When set to `true`, prevents the display of multiple toast notifications with the same message.
+
 ```php
-$flasher->preventDuplicates(bool $preventDuplicates = true)
+toastr()->preventDuplicates(bool $preventDuplicates = true)
 ```
+
+---
 
 <p id="method-progressBar"><a href="#method-progressBar" class="anchor"><i class="fa-duotone fa-link"></i> progressBar</a></p>
 
-Visually indicate how long before a toast expires.
+When set to `true`, displays a progress bar in the toast.
+
 ```php
-$flasher->progressBar(bool $progressBar = true)
+toastr()->progressBar(bool $progressBar = true)
 ```
+
+---
 
 <p id="method-progressClass"><a href="#method-progressClass" class="anchor"><i class="fa-duotone fa-link"></i> progressClass</a></p>
 
+The class applied to the progress bar.
+
 ```php
-$flasher->progressClass(string $progressClass)
+toastr()->progressClass(string $progressClass)
 ```
+
+---
 
 <p id="method-rtl"><a href="#method-rtl" class="anchor"><i class="fa-duotone fa-link"></i> rtl</a></p>
 
-Flip the toastr to be displayed properly for right-to-left languages.
+When set to `true`, displays the toast notifications in right-to-left mode.
+
 ```php
-$flasher->rtl(bool $rtl = true)
+toastr()->rtl(bool $rtl = true)
 ```
+
+---
 
 <p id="method-showDuration"><a href="#method-showDuration" class="anchor"><i class="fa-duotone fa-link"></i> showDuration</a></p>
 
-Specifies the time during which the pop-up opens in ms
+The duration of the show animation in milliseconds.
+
 ```php
-$flasher->showDuration(int $showDuration)
+toastr()->showDuration(int $showDuration)
 ```
+
+---
 
 <p id="method-showEasing"><a href="#method-showEasing" class="anchor"><i class="fa-duotone fa-link"></i> showEasing</a></p>
 
-Indicates the entry transition of the pop-up
+The easing function used for the show animation.
+
 ```php
-$flasher->showEasing(string $showEasing)
+toastr()->showEasing(string $showEasing)
 ```
+
+---
 
 <p id="method-showMethod"><a href="#method-showMethod" class="anchor"><i class="fa-duotone fa-link"></i> showMethod</a></p>
 
-Indicates the opening animation of the pop-up
+The method used to show the toast, either `fadeIn` or `slideIn`.
+
 ```php
-$flasher->showMethod(string $showMethod)
+toastr()->showMethod(string $showMethod)
 ```
+
+---
 
 <p id="method-tapToDismiss"><a href="#method-tapToDismiss" class="anchor"><i class="fa-duotone fa-link"></i> tapToDismiss</a></p>
 
-Forces the user to validate the pop-up before closing
+When set to `true`, the toast can be dismissed by tapping on it.
+
 ```php
-$flasher->tapToDismiss(bool $tapToDismiss = true)
+toastr()->tapToDismiss(bool $tapToDismiss = true)
 ```
+
+---
 
 <p id="method-target"><a href="#method-target" class="anchor"><i class="fa-duotone fa-link"></i> target</a></p>
 
+The element that should contain the toast notifications.
+
 ```php
-$flasher->target(string $target)
+toastr()->target(string $target)
 ```
+
+---
 
 <p id="method-timeOut"><a href="#method-timeOut" class="anchor"><i class="fa-duotone fa-link"></i> timeOut</a></p>
 
-How long the toast will display without user interaction
+The time in milliseconds to keep the toast visible before it is automatically closed.
+
 ```php
-$flasher->timeOut(int $timeOut, bool $extendedTimeOut = null)
+toastr()->timeOut(int $timeOut, bool $extendedTimeOut = null)
 ```
+
+---
 
 <p id="method-titleClass"><a href="#method-titleClass" class="anchor"><i class="fa-duotone fa-link"></i> titleClass</a></p>
 
+The class applied to the toast title element.
+
 ```php
-$flasher->titleClass(string $titleClass)
+toastr()->titleClass(string $titleClass)
 ```
+
+---
 
 <p id="method-toastClass"><a href="#method-toastClass" class="anchor"><i class="fa-duotone fa-link"></i> toastClass</a></p>
 
+The class applied to the toast container.
+
 ```php
-$flasher->toastClass(string $toastClass)
+toastr()->toastClass(string $toastClass)
 ```
+
+---
 
 <p id="method-persistent"><a href="#method-persistent" class="anchor"><i class="fa-duotone fa-link"></i> persistent</a></p>
 
-Prevent from Auto Hiding
+Prevent from Auto Hiding.
+
 ```php
-$flasher->persistent()
+toastr()->persistent()
 ```
