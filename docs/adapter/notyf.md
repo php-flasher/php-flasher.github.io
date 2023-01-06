@@ -8,17 +8,16 @@ handler: notyf
 
 For more information about notyf click <a href="https://carlosroso.com/notyf/">here</a>.
 
-**For Vanilla PHP:**
-```shell
-composer require php-flasher/flasher-notyf
-```
+**<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 
-**For Laravel:**
 ```shell
 composer require php-flasher/flasher-notyf-laravel
 ```
 
-**For Symfony:**
+<br />
+
+**<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
+
 ```shell
 composer require php-flasher/flasher-notyf-symfony
 ```
@@ -27,38 +26,40 @@ composer require php-flasher/flasher-notyf-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Just instantiate the `NotyfFactory` and start calling build methods
+{% assign id = '# toastr' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
+{{ id }}
+
 namespace App\Controller;
 
-use Flasher\Notyf\Prime\NotyfFactory;
-
-class NotifyController
+class AppController
 {
-    public function flasher(NotyfFactory $flasher)
-    {
-        // ... 
-        $flasher->addSuccess('Data has been saved successfully!');
-        
-        // ... redirect or render a view here
+    public function save()
+    {        
+        notyf()->add{{ type | capitalize }}('{{ message }}');
     }
-}    
+} 
 ```
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
+## <i class="fa-duotone fa-list-radio"></i> Modifiers
 
-All methods in the **[Usage](/docs/usage/)** section are available also for `NotyfFactory`
+> The methods described in the **[Usage](/docs/usage/)** section can also be used with the `notyf` adapter.
 
 ---
 
 <p id="method-duration"><a href="#method-duration" class="anchor"><i class="fa-duotone fa-link"></i> duration</a></p>
 
-Number of miliseconds before hiding the notification. Use 0 for infinite duration.
+Number of milliseconds before hiding the notification. Use 0 for infinite duration.
+
 ```php
-$flasher->duration(int $duration)
+notyf()->duration(int $duration);
 ```
 
 ---
@@ -66,8 +67,9 @@ $flasher->duration(int $duration)
 <p id="method-ripple"><a href="#method-ripple" class="anchor"><i class="fa-duotone fa-link"></i> ripple</a></p>
 
 Whether to show the notification with a ripple effect
+
 ```php
-$flasher->ripple(bool $ripple)
+notyf()->ripple(bool $ripple);
 ```
 
 ---
@@ -75,8 +77,9 @@ $flasher->ripple(bool $ripple)
 <p id="method-position"><a href="#method-position" class="anchor"><i class="fa-duotone fa-link"></i> position</a></p>
 
 Viewport location where notifications are rendered
+
 ```php
-$flasher->position(string $position, string $value)
+notyf()->position(string $position, string $value);
 ```
 
 ---
@@ -84,6 +87,7 @@ $flasher->position(string $position, string $value)
 <p id="method-dismissible"><a href="#method-dismissible" class="anchor"><i class="fa-duotone fa-link"></i> dismissible</a></p>
 
 Whether to allow users to dismiss the notification with a button
+
 ```php
-$flasher->dismissible(bool $dismissible)
+notyf()->dismissible(bool $dismissible);
 ```
