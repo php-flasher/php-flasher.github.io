@@ -8,17 +8,16 @@ handler: pnotify
 
 For more information about Pnotify click <a href="https://sciactive.com/pnotify/">here</a>.
 
-**For Vanilla PHP:**
-```shell
-composer require php-flasher/flasher-pnotify
-```
+**<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 
-**For Laravel:**
 ```shell
 composer require php-flasher/flasher-pnotify-laravel
 ```
 
-**For Symfony:**
+<br />
+
+**<i class="fa-brands fa-symfony text-black fa-xl"></i> Symfony**:
+
 ```shell
 composer require php-flasher/flasher-pnotify-symfony
 ```
@@ -27,38 +26,40 @@ composer require php-flasher/flasher-pnotify-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-Just instantiate the `PnotifyFactory` and start calling build methods
+{% assign id = '# toastr' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{}' %}
+{% include example.html %}
 
 ```php
+{{ id }}
+
 namespace App\Controller;
 
-use Flasher\Pnotify\Prime\PnotifyFactory;
-
-class NotifyController
+class AppController
 {
-    public function flasher(PnotifyFactory $flasher)
-    {
-        // ... 
-        $flasher->addSuccess('Data has been saved successfully!');
-        
-        // ... redirect or render a view here
+    public function save()
+    {        
+        pnotify()->add{{ type | capitalize }}('{{ message }}');
     }
-}    
+} 
 ```
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Fluent Builder methods
+## <i class="fa-duotone fa-list-radio"></i> Modifiers
 
-All methods in the **[Usage](/docs/usage/)** section are available also for `PnotifyFactory`
+> The methods described in the **[Usage](/docs/usage/)** section can also be used with the `pnotify` adapter.
 
 ---
 
 <p id="method-title"><a href="#method-title" class="anchor"><i class="fa-duotone fa-link"></i> title</a></p>
 
 The notice's title.
-```php 
-$flasher->title(bool|string $title)
+
+```php
+pnotify()->title(bool|string $title);
 ```
 
 ---
@@ -66,8 +67,9 @@ $flasher->title(bool|string $title)
 <p id="method-titleEscape"><a href="#method-titleEscape" class="anchor"><i class="fa-duotone fa-link"></i> titleEscape</a></p>
 
 Whether to escape the content of the title. (Not allow HTML.)
+
 ```php
-$flasher->titleEscape(bool $titleEscape = true)
+pnotify()->titleEscape(bool $titleEscape = true);
 ```
 
 ---
@@ -75,8 +77,9 @@ $flasher->titleEscape(bool $titleEscape = true)
 <p id="method-text"><a href="#method-text" class="anchor"><i class="fa-duotone fa-link"></i> text</a></p>
 
 The notice's text.
-```php 
-$flasher->text(string $text)
+
+```php
+pnotify()->text(string $text);
 ```
 
 ---
@@ -84,8 +87,9 @@ $flasher->text(string $text)
 <p id="method-textEscape"><a href="#method-textEscape" class="anchor"><i class="fa-duotone fa-link"></i> textEscape</a></p>
  
 Whether to escape the content of the text. (Not allow HTML.)
-```php 
-$flasher->textEscape(bool $textEscape = true)
+
+```php
+pnotify()->textEscape(bool $textEscape = true);
 ```
 
 ---
@@ -94,8 +98,9 @@ $flasher->textEscape(bool $textEscape = true)
 
 What styling classes to use. (Can be either "brighttheme", "bootstrap3", "fontawesome", or a custom style object.
 See the source in the end of pnotify.js for the properties in a style object.)
-```php 
-$flasher->styling(string $styling)
+
+```php
+pnotify()->styling(string $styling);
 ```
 
 ---
@@ -103,8 +108,9 @@ $flasher->styling(string $styling)
 <p id="method-addClass"><a href="#method-addClass" class="anchor"><i class="fa-duotone fa-link"></i> addClass</a></p>
 
 Additional classes to be added to the notice. (For custom styling.)
-```php 
-$flasher->addClass(string $addClass)
+
+```php
+pnotify()->addClass(string $addClass);
 ```
 
 ---
@@ -112,8 +118,9 @@ $flasher->addClass(string $addClass)
 <p id="method-cornerClass"><a href="#method-cornerClass" class="anchor"><i class="fa-duotone fa-link"></i> cornerClass</a></p>
 
 Class to be added to the notice for corner styling.
-```php 
-$flasher->cornerClass(string $cornerClass)
+
+```php
+pnotify()->cornerClass(string $cornerClass);
 ```
 
 ---
@@ -121,8 +128,9 @@ $flasher->cornerClass(string $cornerClass)
 <p id="method-autoDisplay"><a href="#method-autoDisplay" class="anchor"><i class="fa-duotone fa-link"></i> autoDisplay</a></p>
 
 Display the notice when it is created. Turn this off to add notifications to the history without displaying them.
-```php 
-$flasher->autoDisplay(bool $autoDisplay = true)
+
+```php
+pnotify()->autoDisplay(bool $autoDisplay = true);
 ```
 
 ---
@@ -130,8 +138,9 @@ $flasher->autoDisplay(bool $autoDisplay = true)
 <p id="method-width"><a href="#method-width" class="anchor"><i class="fa-duotone fa-link"></i> width</a></p>
 
 Width of the notice.
-```php 
-$flasher->width(int $width)
+
+```php
+pnotify()->width(int $width);
 ```
 
 ---
@@ -139,8 +148,9 @@ $flasher->width(int $width)
 <p id="method-minHeight"><a href="#method-minHeight" class="anchor"><i class="fa-duotone fa-link"></i> minHeight</a></p>
 
 Minimum height of the notice. It will expand to fit content.
-```php 
-$flasher->minHeight(int $minHeight)
+
+```php
+pnotify()->minHeight(int $minHeight);
 ```
 
 ---
@@ -149,8 +159,9 @@ $flasher->minHeight(int $minHeight)
 
 Set icon to true to use the default icon for the selected style/type, false for no icon, or a string for your own
 icon class.
-```php 
-$flasher->icon(bool $icon = true)
+
+```php
+pnotify()->icon(bool $icon = true);
 ```
 
 ---
@@ -159,8 +170,9 @@ $flasher->icon(bool $icon = true)
 
 The animation to use when displaying and hiding the notice. "none" and "fade" are supported through CSS. Others
 are supported through the Animate module and Animate.css.
-```php 
-$flasher->animation(string $animation)
+
+```php
+pnotify()->animation(string $animation);
 ```
 
 ---
@@ -168,8 +180,9 @@ $flasher->animation(string $animation)
 <p id="method-animateSpeed"><a href="#method-animateSpeed" class="anchor"><i class="fa-duotone fa-link"></i> animateSpeed</a></p>
 
 Speed at which the notice animates in and out. "slow", "normal", or "fast". Respectively, 400ms, 250ms, 100ms.
-```php 
-$flasher->animateSpeed(string $animateSpeed)
+
+```php
+pnotify()->animateSpeed(string $animateSpeed);
 ```
 
 ---
@@ -177,8 +190,9 @@ $flasher->animateSpeed(string $animateSpeed)
 <p id="method-shadow"><a href="#method-shadow" class="anchor"><i class="fa-duotone fa-link"></i> shadow</a></p>
 
 Display a drop shadow.
-```php 
-$flasher->shadow(bool $shadow = true)
+
+```php
+pnotify()->shadow(bool $shadow = true);
 ```
 
 ---
@@ -186,8 +200,9 @@ $flasher->shadow(bool $shadow = true)
 <p id="method-hide"><a href="#method-hide" class="anchor"><i class="fa-duotone fa-link"></i> hide</a></p>
 
 After a delay, remove the notice.
-```php 
-$flasher->hide(bool $hide = true)
+
+```php
+pnotify()->hide(bool $hide = true);
 ```
 
 ---
@@ -195,8 +210,9 @@ $flasher->hide(bool $hide = true)
 <p id="method-timer"><a href="#method-timer" class="anchor"><i class="fa-duotone fa-link"></i> timer</a></p>
 
 Delay in milliseconds before the notice is removed.
-```php 
-$flasher->timer(int $timer)
+
+```php
+pnotify()->timer(int $timer);
 ```
 
 ---
@@ -204,8 +220,9 @@ $flasher->timer(int $timer)
 <p id="method-mouseReset"><a href="#method-mouseReset" class="anchor"><i class="fa-duotone fa-link"></i> mouseReset</a></p>
 
 Reset the hide timer if the mouse moves over the notice.
-```php 
-$flasher->mouseReset(bool $mouseReset = true)
+
+```php
+pnotify()->mouseReset(bool $mouseReset = true);
 ```
 
 ---
@@ -213,8 +230,9 @@ $flasher->mouseReset(bool $mouseReset = true)
 <p id="method-remove"><a href="#method-remove" class="anchor"><i class="fa-duotone fa-link"></i> remove</a></p>
 
 Remove the notice's elements from the DOM after it is removed.
-```php 
-$flasher->remove(bool $remove = true)
+
+```php
+pnotify()->remove(bool $remove = true);
 ```
 
 ---
@@ -222,8 +240,9 @@ $flasher->remove(bool $remove = true)
 <p id="method-insertBrs"><a href="#method-insertBrs" class="anchor"><i class="fa-duotone fa-link"></i> insertBrs</a></p>
 
 Change new lines to br tags.
-```php 
-$flasher->insertBrs(bool $insertBrs = true)
+
+```php
+pnotify()->insertBrs(bool $insertBrs = true);
 ```
 
 ---
@@ -231,8 +250,9 @@ $flasher->insertBrs(bool $insertBrs = true)
 <p id="method-destroy"><a href="#method-destroy" class="anchor"><i class="fa-duotone fa-link"></i> destroy</a></p>
 
 Whether to remove the notice from the global array when it is closed.
-```php 
-$flasher->destroy(bool $destroy = true)
+
+```php
+pnotify()->destroy(bool $destroy = true);
 ```
 
 ---
@@ -240,8 +260,9 @@ $flasher->destroy(bool $destroy = true)
 <p id="method-desktop"><a href="#method-desktop" class="anchor"><i class="fa-duotone fa-link"></i> desktop</a></p>
 
 Desktop Module
-```php 
-$flasher->desktop(string $desktop, mixed $value)
+
+```php
+pnotify()->desktop(string $desktop, mixed $value);
 ```
 
 ---
@@ -249,8 +270,9 @@ $flasher->desktop(string $desktop, mixed $value)
 <p id="method-buttons"><a href="#method-buttons" class="anchor"><i class="fa-duotone fa-link"></i> buttons</a></p>
 
 Buttons Module
-```php 
-$flasher->buttons(string $buttons, mixed $value)
+
+```php
+pnotify()->buttons(string $buttons, mixed $value);
 ```
 
 ---
@@ -258,8 +280,9 @@ $flasher->buttons(string $buttons, mixed $value)
 <p id="method-nonblock"><a href="#method-nonblock" class="anchor"><i class="fa-duotone fa-link"></i> nonblock</a></p>
 
 NonBlock Module
-```php 
-$flasher->nonblock(string $nonblock, mixed $value)
+
+```php
+pnotify()->nonblock(string $nonblock, mixed $value);
 ```
 
 ---
@@ -267,8 +290,9 @@ $flasher->nonblock(string $nonblock, mixed $value)
 <p id="method-mobile"><a href="#method-mobile" class="anchor"><i class="fa-duotone fa-link"></i> mobile</a></p>
 
 Mobile Module
-```php 
-$flasher->mobile(string $mobile, mixed $value)
+
+```php
+pnotify()->mobile(string $mobile, mixed $value);
 ```
 
 ---
@@ -276,8 +300,9 @@ $flasher->mobile(string $mobile, mixed $value)
 <p id="method-animate"><a href="#method-animate" class="anchor"><i class="fa-duotone fa-link"></i> animate</a></p>
 
 Animate Module
-```php 
-$flasher->animate(string $animate, mixed $value)
+
+```php
+pnotify()->animate(string $animate, mixed $value);
 ```
 
 ---
@@ -285,8 +310,9 @@ $flasher->animate(string $animate, mixed $value)
 <p id="method-confirm"><a href="#method-confirm" class="anchor"><i class="fa-duotone fa-link"></i> confirm</a></p>
 
 Confirm Module
-```php 
-$flasher->confirm(string $confirm, mixed $value)
+
+```php
+pnotify()->confirm(string $confirm, mixed $value);
 ```
 
 ---
@@ -294,6 +320,7 @@ $flasher->confirm(string $confirm, mixed $value)
 <p id="method-history"><a href="#method-history" class="anchor"><i class="fa-duotone fa-link"></i> history</a></p>
 
 History Module
+
 ```php
-$flasher->history(string $history, mixed $value) 
+pnotify()->history(string $history, mixed $value);
 ```
