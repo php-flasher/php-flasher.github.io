@@ -30,7 +30,7 @@ title: Home
     </p>
 </div>
 
-## <i class="fa-duotone fa-list-radio"></i> What is **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
+## <i class="fa-duotone fa-list-radio"></i> Introduction
 
 Flash messages are are a great way to quickly and easily notify users of important events or updates on your website or application. <br />
 These messages can be easily implemented using the Laravel and Symfony frameworks and provide a great way to communicate with users in a clear and concise manner. 
@@ -43,7 +43,7 @@ The flashing system allows you to record and store messages within the session, 
 
 ---
 
-### <i class="fa-duotone fa-list-radio"></i> Types of Messages
+### <i class="fa-duotone fa-list-radio"></i> Flash notification types
 
 Flash notifications serves as a feedback & confirmation mechanism after the user takes an action.
 

@@ -1,16 +1,17 @@
 ---
 permalink: /docs/framework/laravel/
 title: Laravel
+handler: flasher
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> PHPFlasher Laravel
+## <i class="fa-duotone fa-list-radio"></i> **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** Laravel
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is a trusted and well-supported package 
 that allows you to easily integrate flash notification messages into your <i class="fa-brands fa-laravel text-red-900 fa-xl"></i> **Laravel** projects.
 
-Its compatibility with Laravel versions **4.0** to **9** makes it a reliable choice for use in a wide range of Laravel projects, ensuring seamless integration and hassle-free functionality.
+Its compatibility with **Laravel** versions **4.0** to **9** makes it a reliable choice for use in a wide range of Laravel projects, ensuring seamless integration and hassle-free functionality.
 
-To use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** in a Laravel application, you need :
+To use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** in a **Laravel** application, you need :
 
 > <i class="fa-brands fa-php fa-2xl text-blue-900 mr-1 mb-1"></i> **PHP** >= 5.3
 > <i class="fa-brands fa-laravel fa-2xl text-red-900 mr-1 ml-4"></i> **Laravel** >= 4.0
@@ -303,6 +304,30 @@ class BookController
     public function save()
     {
         flash()->add{{ type | capitalize }}('{{ message }}', '{{ title }}');
+```
+
+---
+
+## <i class="fa-duotone fa-list-radio"></i> RTL support
+
+Are you working on a website or application that supports right-to-left languages like `Arabic` or `Hebrew` ?
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** makes it easy to incorporate right-to-left language support. 
+it automatically detects the text direction and handles the necessary adjustments for you. 
+
+Simply make sure the translation service is enabled and let **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** handle the rest.
+
+{% assign id = '# phpflasher rtl' %}
+{% assign type = 'success' %}
+{% assign message = 'تم إرسال طلبك بنجاح.' %}
+{% assign title = 'نجاح' %}
+{% assign options = '{"rtl": true}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
