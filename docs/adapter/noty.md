@@ -6,8 +6,6 @@ handler: noty
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
-For more information about noty click <a href="https://ned.im/noty/">here</a>.
-
 **<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 
 ```shell
@@ -49,6 +47,10 @@ class AppController
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Modifiers
+
+For more information on Noty options and usage, please refer to the original documentation at [https://ned.im/noty/](https://ned.im/noty/)
+
+---
 
 > The methods described in the **[Usage](/docs/usage/)** section can also be used with the `noty` adapter.
 

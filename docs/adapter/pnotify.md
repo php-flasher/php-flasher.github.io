@@ -6,8 +6,6 @@ handler: pnotify
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
-For more information about Pnotify click <a href="https://sciactive.com/pnotify/">here</a>.
-
 **<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel**:
 
 ```shell
@@ -49,6 +47,10 @@ class AppController
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Modifiers
+
+For more information on Pnotify options and usage, please refer to the original documentation at [https://sciactive.com/pnotify/](https://sciactive.com/pnotify/)
+
+---
 
 > The methods described in the **[Usage](/docs/usage/)** section can also be used with the `pnotify` adapter.
 
