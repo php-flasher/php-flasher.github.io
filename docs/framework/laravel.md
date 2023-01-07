@@ -308,9 +308,75 @@ class BookController
 
 ---
 
+## <i class="fa-duotone fa-list-radio"></i> Dark Mode 
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports &nbsp; <i class="fa-duotone fa-circle-half-stroke text-indigo-900 mr-1 fa-lg"></i> **dark mode**, 
+allowing you to seamlessly integrate it with the dark mode of your design.
+By default, **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** uses the `prefers-color-scheme` CSS media query to automatically detect the user's dark mode preference. 
+However, you can also choose to manually toggle dark mode using the `class strategy`.
+
+```php
+// config/flasher.php
+
+return [
+    'themes' => [
+        'flasher' => [
+            'options' => [
+                'darkMode' => 'class',
+            ],
+        ],
+    ],
+];
+```
+
+Now instead of relying on the `prefers-color-scheme` CSS media query, dark mode will be applied whenever **.dark** class is present earlier in the HTML tree.
+
+To enable dark mode, add dark class to the `<html>` or `<body>` tag, as follows:
+
+```html
+<!-- Dark mode enabled -->
+<html class="dark">
+```
+
+or
+
+```html
+<!-- Dark mode enabled -->
+<body class="dark">
+```
+
+You can even customize the dark mode **selector** by setting `darkMode` to an array with your desired class name as the second item.
+
+```php
+return [
+    'themes' => [
+        'flasher' => [
+            'options' => [
+                'darkMode' => ['class', '[data-mode="dark"]'],
+            ],
+        ],
+    ],
+];
+```
+
+And now you can add the [data-mode="dark"] selector to the <html> or <body> tag, as follows:
+
+```html
+<!-- Dark mode enabled -->
+<html data-mode="dark">
+```
+
+or 
+
+```html
+<!-- Dark mode enabled -->
+<body data-mode="dark">
+```
+---
+
 ## <i class="fa-duotone fa-list-radio"></i> RTL support
 
-Are you working on a website or application that supports right-to-left languages like `Arabic` or `Hebrew` ?
+Are you working on a website or application that supports <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> **right-to-left** languages like `Arabic` or `Hebrew` ?
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** makes it easy to incorporate right-to-left language support. 
 it automatically detects the text direction and handles the necessary adjustments for you. 
