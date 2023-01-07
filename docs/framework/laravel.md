@@ -315,7 +315,15 @@ allowing you to seamlessly integrate it with the dark mode of your design.
 By default, **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** uses the `prefers-color-scheme` CSS media query to automatically detect the user's dark mode preference. 
 However, you can also choose to manually toggle dark mode using the `class strategy`.
 
+{% assign id = '# flasher darkMode' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"darkMode": "class"}' %}
+{% include example.html %}
+
 ```php
+{{ id }}
+
 // config/flasher.php
 
 return [

@@ -61,7 +61,15 @@ codeBlocks.forEach(function (codeBlock) {
         };
 
         try {
-            if (example in themes) {
+            if ('# flasher darkMode' === example) {
+                document.documentElement.classList.add('dark');
+                const factory = flasher.create('flasher');
+                factory.renderOptions(messages[example].options);
+                factory.flash(messages[example].type, messages[example].message, messages[example].options);
+                setTimeout(function () {
+                    document.documentElement.classList.remove('dark');
+                }, 5000);
+            } else if (example in themes) {
                 import(`noty/lib/themes/${themes[example]}`).then(() => {
                     messages[example].forEach(flashMessage);
                 });
