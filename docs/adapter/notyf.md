@@ -82,6 +82,8 @@ notyf()
 
 Whether to show the notification with a ripple effect
 
+Default ⇒ `true`
+
 ```php
 notyf()->ripple(bool $ripple);
 ```
@@ -118,6 +120,11 @@ notyf()
 
 Viewport location where notifications are rendered
 
+position x ⇒ `left`, `center`, `right` <br />
+position y ⇒ `top`, `center`, `bottom`
+
+Default ⇒ x: `right`, y: `bottom`
+
 ```php
 notyf()->position(string $position, string $value);
 ```
@@ -142,6 +149,8 @@ notyf()
 <p id="method-dismissible"><a href="#method-dismissible" class="anchor"><i class="fa-duotone fa-link"></i> dismissible</a></p>
 
 Whether to allow users to dismiss the notification with a button
+
+Default ⇒ `false`
 
 ```php
 notyf()->dismissible(bool $dismissible);

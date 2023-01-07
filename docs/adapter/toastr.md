@@ -54,6 +54,32 @@ class AppController
 
 ---
 
+<p id="method-persistent"><a href="#method-persistent" class="anchor"><i class="fa-duotone fa-link"></i> persistent</a></p>
+
+Prevent from Auto Hiding.
+
+```php
+toastr()->persistent();
+```
+
+{% assign id = '# toastr persistent' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"timeOut": 0, "extendedTimeOut": 0, "closeButton": true}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->persistent()
+    ->closeButton()
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
+
 <p id="method-closeButton"><a href="#method-closeButton" class="anchor"><i class="fa-duotone fa-link"></i> closeButton</a></p>
 
 When set to `true`, a close button is displayed in the toast notification.
@@ -82,7 +108,7 @@ toastr()
 
 The class applied to the close button.
 
-Default: `toast-close-button`
+Default ⇒ `toast-close-button`
 
 ```php
 toastr()->closeClass(string $closeClass);
@@ -108,7 +134,7 @@ toastr()
 
 The duration of the close animation in milliseconds. <br />
 
-Default: `300` milliseconds
+Default ⇒ `300` milliseconds
 
 ```php
 toastr()->closeDuration(int $closeDuration);
@@ -134,7 +160,7 @@ toastr()
 
 The easing function used for the close animation. <br />
 
-Default: `swing`
+Default ⇒ `swing`
 
 ```php
 toastr()->closeEasing(string $closeEasing);
@@ -161,7 +187,7 @@ toastr()
 
 The HTML content of the close button.
 
-Default: `<button type="button">&times;</button>`
+Default ⇒ `<button type="button">&times;</button>`
 
 ```php
 toastr()->closeHtml(string $closeHtml);
@@ -189,7 +215,7 @@ toastr()
 
 The method used to close the toast, either `fadeOut` or `slideOut`.
 
-Default: `fadeOut`
+Default ⇒ `fadeOut`
 
 ```php
 toastr()->closeMethod(string $closeMethod);
@@ -215,7 +241,7 @@ toastr()
 
 When set to `true`, the toast will close when the user hovers over it.
 
-Default: `false`
+Default ⇒ `false`
 
 ```php
 toastr()->closeOnHover(bool $closeOnHover = true);
@@ -243,7 +269,7 @@ toastr()
 
 The ID of the element that should contain the toast notifications.
 
-Default: `toast-container`
+Default ⇒ `toast-container`
 
 ```php
 toastr()->containerId(string $containerId);
@@ -269,7 +295,7 @@ toastr()
 
 When set to `true`, enables debug mode which logs messages to the console.
 
-Default: `false`
+Default ⇒ `false`
 
 ```php
 toastr()->debug(bool $debug = true);
@@ -295,11 +321,39 @@ toastr()
 
 When set to `true`, HTML in the toast message will be escaped.
 
-Default: `false`
+Default ⇒ `false`
 
 ```php
-toastr()->escapeHtml(bool $escapeHtml = true)
+toastr()->escapeHtml(bool $escapeHtml = true);
 ```
+
+{% assign id = '# toastr escapeHtml false' %}
+{% assign type = 'error' %}
+{% assign message = '<strong>We’re sorry</strong>, but an error occurred.' %}
+{% assign options = '{"escapeHtml": false}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->escapeHtml(false)
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+{% assign id = '# toastr escapeHtml true' %}
+{% assign options = '{"escapeHtml": true}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->escapeHtml(true)
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+
 
 ---
 
@@ -307,10 +361,24 @@ toastr()->escapeHtml(bool $escapeHtml = true)
 
 The time in milliseconds to keep the toast visible after the user hovers over it.
 
-Default: `1000` milliseconds
+Default ⇒ `1000` milliseconds
 
 ```php
-toastr()->extendedTimeOut(int $extendedTimeOut)
+toastr()->extendedTimeOut(int $extendedTimeOut);
+```
+
+{% assign id = '# toastr extendedTimeOut' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"extendedTimeOut": 200}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->extendedTimeOut(200) // 200 milliseconds
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -319,10 +387,24 @@ toastr()->extendedTimeOut(int $extendedTimeOut)
 
 The duration of the hide animation in milliseconds.
 
-Default: `1000` milliseconds
+Default ⇒ `1000` milliseconds
 
 ```php
-toastr()->hideDuration(int $hideDuration)
+toastr()->hideDuration(int $hideDuration);
+```
+
+{% assign id = '# toastr hideDuration' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"hideDuration": 200}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->hideDuration(200) // 200 milliseconds
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -331,10 +413,36 @@ toastr()->hideDuration(int $hideDuration)
 
 The easing function used for the hide animation.
 
-Default: `swing`
+Default ⇒ `swing`
 
 ```php
-toastr()->hideEasing(string $hideEasing)
+toastr()->hideEasing(string $hideEasing);
+```
+
+{% assign id = '# toastr hideEasing swing' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"hideEasing": "swing"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->hideEasing('swing')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+{% assign id = '# toastr hideEasing linear' %}
+{% assign options = '{"hideEasing": "linear"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->hideEasing('linear')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -343,10 +451,24 @@ toastr()->hideEasing(string $hideEasing)
 
 The method used to hide the toast, either `fadeOut` or `slideOut`.
 
-Default: `fadeOut`
+Default ⇒ `fadeOut`
 
 ```php
-toastr()->hideMethod(string $hideMethod)
+toastr()->hideMethod(string $hideMethod);
+```
+
+{% assign id = '# toastr hideMethod' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"hideMethod": "fadeOut"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->hideMethod('fadeOut')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -355,10 +477,24 @@ toastr()->hideMethod(string $hideMethod)
 
 The default class applied to the toast icon.
 
-Default: `toast-info`
+Default ⇒ `toast-info`
 
 ```php
-toastr()->iconClass(string $iconClass)
+toastr()->iconClass(string $iconClass);
+```
+
+{% assign id = '# toastr iconClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"iconClass": "toast-info"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->iconClass('toast-info')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -367,10 +503,24 @@ toastr()->iconClass(string $iconClass)
 
 The class applied to the toast message element.
 
-Default: `toast-message`
+Default ⇒ `toast-message`
 
 ```php
-toastr()->messageClass(string $messageClass)
+toastr()->messageClass(string $messageClass);
+```
+
+{% assign id = '# toastr messageClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"messageClass": "toast-message"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->messageClass('toast-message')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -379,30 +529,24 @@ toastr()->messageClass(string $messageClass)
 
 When set to `true`, new toast notifications are displayed above older ones.
 
-Default: `true`
+Default ⇒ `true`
 
 ```php
-toastr()->newestOnTop(bool $newestOnTop = true)
+toastr()->newestOnTop(bool $newestOnTop = true);
 ```
 
----
-
-<p id="method-onHidden"><a href="#method-onHidden" class="anchor"><i class="fa-duotone fa-link"></i> onHidden</a></p>
-
-A callback function that is called when the toast is fully hidden.
-
-```php
-toastr()->onHidden(string $onHidden)
-```
-
----
-
-<p id="method-onShown"><a href="#method-onShown" class="anchor"><i class="fa-duotone fa-link"></i> onShown</a></p>
-
-A callback function that is called when the toast is fully shown.
+{% assign id = '# toastr newestOnTop' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"newestOnTop": true}' %}
+{% include example.html %}
 
 ```php
-toastr()->onShown(string $onShown)
+{{ id }}
+
+toastr()
+    ->newestOnTop(true)
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -411,10 +555,24 @@ toastr()->onShown(string $onShown)
 
 The class applied to the toast container that determines the position of the toast on the screen (e.g. `toast-top-right`, `toast-bottom-left`).
 
-Default: `toast-top-right`
+Default ⇒ `toast-top-right`
 
 ```php
-toastr()->positionClass(string $positionClass)
+toastr()->positionClass(string $positionClass);
+```
+
+{% assign id = '# toastr positionClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"positionClass": "toast-top-center"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->positionClass('toast-top-center')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -423,10 +581,24 @@ toastr()->positionClass(string $positionClass)
 
 When set to `true`, prevents the display of multiple toast notifications with the same message.
 
-Default: `false`
+Default ⇒ `false`
 
 ```php
-toastr()->preventDuplicates(bool $preventDuplicates = true)
+toastr()->preventDuplicates(bool $preventDuplicates = true);
+```
+
+{% assign id = '# toastr preventDuplicates' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"preventDuplicates": true}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->preventDuplicates(true)
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -435,10 +607,24 @@ toastr()->preventDuplicates(bool $preventDuplicates = true)
 
 When set to `true`, displays a progress bar in the toast.
 
-Default: `true`
+Default ⇒ `true`
 
 ```php
-toastr()->progressBar(bool $progressBar = true)
+toastr()->progressBar(bool $progressBar = true);
+```
+
+{% assign id = '# toastr progressBar' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"progressBar": false}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->progressBar(false)
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -448,10 +634,24 @@ toastr()->progressBar(bool $progressBar = true)
 The class applied to the progress bar.
 
 ```php
-toastr()->progressClass(string $progressClass)
+toastr()->progressClass(string $progressClass);
 ```
 
-Default: `toast-progress`
+Default ⇒ `toast-progress`
+
+{% assign id = '# toastr progressClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"progressClass": "toast-progress"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->progressClass('toast-progress')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
 
 ---
 
@@ -459,10 +659,24 @@ Default: `toast-progress`
 
 When set to `true`, displays the toast notifications in right-to-left mode.
 
-Default: `false`
+Default ⇒ `false`
 
 ```php
-toastr()->rtl(bool $rtl = true)
+toastr()->rtl(bool $rtl = true);
+```
+
+{% assign id = '# toastr rtl' %}
+{% assign type = 'info' %}
+{% assign message = 'تم قفل حسابك وتم إرسال رسالة تأكيد إلكترونية.' %}
+{% assign options = '{"rtl": true}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->rtl(true)
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -471,10 +685,24 @@ toastr()->rtl(bool $rtl = true)
 
 The duration of the show animation in milliseconds.
 
-Default: `300` milliseconds
+Default ⇒ `300` milliseconds
 
 ```php
-toastr()->showDuration(int $showDuration)
+toastr()->showDuration(int $showDuration);
+```
+
+{% assign id = '# toastr showDuration' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"showDuration": 100 }' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->showDuration(100) // 100 milliseconds
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -483,10 +711,36 @@ toastr()->showDuration(int $showDuration)
 
 The easing function used for the show animation, either `swing` or `linear` (built into jQuery).
 
-Default: `swing`
+Default ⇒ `swing`
 
 ```php
-toastr()->showEasing(string $showEasing)
+toastr()->showEasing(string $showEasing);
+```
+
+{% assign id = '# toastr showEasing swing' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"showEasing": "swing"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->showEasing('swing')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+{% assign id = '# toastr showEasing linear' %}
+{% assign options = '{"showEasing": "linear"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->showEasing('linear')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -495,10 +749,24 @@ toastr()->showEasing(string $showEasing)
 
 The method used to show the toast, either `fadeIn` or `slideIn` or `show` (built into jQuery).
 
-Default: `fadeIn`
+Default ⇒ `fadeIn`
 
 ```php
-toastr()->showMethod(string $showMethod)
+toastr()->showMethod(string $showMethod);
+```
+
+{% assign id = '# toastr showMethod' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"showMethod": "fadeIn"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->showMethod('fadeIn')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -508,7 +776,22 @@ toastr()->showMethod(string $showMethod)
 When set to `true`, the toast can be dismissed by tapping on it.
 
 ```php
-toastr()->tapToDismiss(bool $tapToDismiss = true)
+toastr()->tapToDismiss(bool $tapToDismiss = true);
+```
+
+{% assign id = '# toastr tapToDismiss' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"tapToDismiss": true}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->tapToDismiss(true)
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -517,10 +800,25 @@ toastr()->tapToDismiss(bool $tapToDismiss = true)
 
 The element that should contain the toast notifications.
 
-Default: `body`
+Default ⇒ `body`
 
 ```php
-toastr()->target(string $target)
+toastr()->target(string $target);
+```
+
+{% assign id = '# toastr target' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"target": "body"}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->target('body')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -530,10 +828,25 @@ toastr()->target(string $target)
 The time in milliseconds to keep the toast visible before it is automatically closed. <br />
 Set `timeOut` and `extendedTimeOut` to `0` to make it sticky
 
-Default: `5000` milliseconds
+Default ⇒ `5000` milliseconds
 
 ```php
-toastr()->timeOut(int $timeOut, bool $extendedTimeOut = null)
+toastr()->timeOut(int $timeOut, bool $extendedTimeOut = null);
+```
+
+{% assign id = '# toastr timeOut' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"timeOut": 1000}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+toastr()
+    ->timeOut(1000) // 1 second
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -543,8 +856,23 @@ toastr()->timeOut(int $timeOut, bool $extendedTimeOut = null)
 The class applied to the toast title element.
 
 ```php
-toastr()->titleClass(string $titleClass)
+toastr()->titleClass(string $titleClass);
 ```
+
+{% assign id = '# toastr titleClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"titleClass": "toastr-title"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+toastr()
+    ->titleClass('toastr-title')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
 
 ---
 
@@ -552,18 +880,23 @@ toastr()->titleClass(string $titleClass)
 
 The class applied to the toast container.
 
-Default: `toast`
+Default ⇒ `toast`
 
 ```php
-toastr()->toastClass(string $toastClass)
+toastr()->toastClass(string $toastClass);
 ```
 
----
+{% assign id = '# toastr toastClass' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"toastClass": "toast"}' %}
+{% include example.html %}
 
-<p id="method-persistent"><a href="#method-persistent" class="anchor"><i class="fa-duotone fa-link"></i> persistent</a></p>
-
-Prevent from Auto Hiding.
 
 ```php
-toastr()->persistent()
+{{ id }}
+
+toastr()
+    ->toastClass('toast')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
