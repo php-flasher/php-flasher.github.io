@@ -2,6 +2,8 @@ url: https://php-flasher.io
 
 title: PHPFlasher
 
+logo: https://php-flasher.io/dist/images/php-flasher-logo.png
+
 author:
   name: Younes KHOUBZA
   twitter: yoeunes
@@ -9,8 +11,22 @@ author:
   picture: https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
 
 image:
-  path: /dist/images/php-flasher-logo.svg
+  path: https://php-flasher.io/dist/images/php-flasher-logo.png
   alt: PHPFlasher Logo
+
+twitter:
+  username: phpflasher
+  image: https://php-flasher.io/dist/images/php-flasher-logo.png
+  card: https://php-flasher.io/dist/images/php-flasher-logo.png
+
+social:
+    name: phpflasher
+    links:
+        - https://twitter.com/phpflasher
+        - https://github.com/php-flasher
+        - https://twitter.com/yoeunes
+        - https://github.com/yoeunes
+        - https://www.linkedin.com/in/younes-khoubza/
 
 highlighter: none
 
