@@ -17,11 +17,11 @@
 
 
 <i class="fa-duotone fa-bars-sort"></i> Adapters:
-    Noty: '/docs/adapter/noty/'
-    Toastr: '/docs/adapter/toastr/'
-    Sweetalert: '/docs/adapter/sweetalert/'
-    Notyf: '/docs/adapter/notyf/'
-    Pnotify: '/docs/adapter/pnotify/'
+    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Noty: '/docs/adapter/noty/'
+    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Toastr: '/docs/adapter/toastr/'
+    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Sweetalert: '/docs/adapter/sweetalert/'
+    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Notyf: '/docs/adapter/notyf/'
+    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Pnotify: '/docs/adapter/pnotify/'
 
 #<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
 #    Configuration: '/docs/laravel/configuration/'
