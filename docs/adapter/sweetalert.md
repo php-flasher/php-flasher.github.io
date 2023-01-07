@@ -62,6 +62,20 @@ Display a question typed alert message
 sweetalert()->question(string $message = null, array $options = array());
 ```
 
+{% assign id = '# sweetalert question' %}
+{% assign type = 'question' %}
+{% assign message = 'Are you sure you want to proceed ?' %}
+{% assign options = '{"icon": "question"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+sweetalert()
+    ->question('{{ message }}');
+    ->flash();
+```
+
 ---
 
 <p id="method-title"><a href="#method-title" class="anchor"><i class="fa-duotone fa-link"></i> title</a></p>
@@ -70,6 +84,20 @@ The title of the popup, as HTML.
 
 ```php
 sweetalert()->title(string $title);
+```
+
+{% assign id = '# sweetalert title' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"title": "PHPFlasher" }' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+sweetalert()
+    ->title('PHPFlasher')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -82,6 +110,18 @@ The title of the popup, as text. Useful to avoid HTML injection.
 sweetalert()->titleText(string $titleText);
 ```
 
+{% assign id = '# sweetalert titleText' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"titleText": "PHPFlasher"}' %}
+{% include example.html %}
+
+```php
+sweetalert()
+    ->titleText('PHPFlasher')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
 ---
 
 <p id="method-html"><a href="#method-html" class="anchor"><i class="fa-duotone fa-link"></i> html</a></p>
@@ -92,26 +132,69 @@ A HTML description for the popup.
 sweetalert()->html(string $html);
 ```
 
+{% assign id = '# sweetalert html' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"html": "<span class=\\"text-indigo-900\\">PHP<span class=\\"text-indigo-500\\">Flasher</span></span>"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+sweetalert()
+    ->html('<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
 ---
 
 <p id="method-text"><a href="#method-text" class="anchor"><i class="fa-duotone fa-link"></i> text</a></p>
 
-A description for the popup. If "text" and "html" parameters are provided in the same time, "text" will be used.
+A description for the popup. If `text` and `html` parameters are provided in the same time, `text` will be used.
 
 ```php
 sweetalert()->text(string $text);
+```
+
+{% assign id = '# sweetalert text' %}
+{% assign type = 'error' %}
+{% assign message = 'There was an issue re-verifying your account.' %}
+{% assign options = '{"text": "There was an issue re-verifying your account."}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+sweetalert()
+    ->text('{{ message }}')
+    ->flash();
 ```
 
 ---
 
 <p id="method-icon"><a href="#method-icon" class="anchor"><i class="fa-duotone fa-link"></i> icon</a></p>
 
-The icon of the popup. SweetAlert2 comes with 5 built-in icon which will show a corresponding icon animation:
-warning, error, success, info, and question. It can either be put in the array under the key "icon" or passed as
-the third parameter of the function.
+The icon of the popup. SweetAlert2 comes with 5 built-in icon which will show a corresponding icon animation: <br />
+`warning`, `error`, `success`, `info`, and `question`. <br />
+It can either be put in the array under the key `icon` or passed as the third parameter of the function.
 
 ```php
 sweetalert()->icon(string $icon);
+```
+
+{% assign id = '# sweetalert icon' %}
+{% assign type = 'success' %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"icon": "success"}' %}
+{% include example.html %}
+
+
+```php
+{{ id }}
+
+sweetalert()
+    ->icon('{{ type }}')
+    ->add{{ type | capitalize }}('{{ message }}');
 ```
 
 ---
@@ -124,6 +207,20 @@ Use this to change the color of the icon.
 sweetalert()->iconColor(string $iconColor);
 ```
 
+{% assign id = '# sweetalert iconColor' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"iconColor": "#6b21a8"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+sweetalert()
+    ->iconColor('#6b21a8')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
 ---
 
 <p id="method-iconHtml"><a href="#method-iconHtml" class="anchor"><i class="fa-duotone fa-link"></i> iconHtml</a></p>
@@ -133,6 +230,22 @@ The custom HTML content for an icon.
 ```php
 sweetalert()->iconHtml(string $iconHtml);
 ```
+
+{% assign id = '# sweetalert iconHtml' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = 'هل تريد الاستمرار؟' %}
+{% assign options = '{"iconHtml": "؟", "type": "question"}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+sweetalert()
+    ->iconHtml('؟')
+    ->question('{{ message }}')
+    ->flash();
+```
+
 
 ---
 
