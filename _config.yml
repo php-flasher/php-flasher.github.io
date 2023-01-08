@@ -2,7 +2,7 @@ url: https://php-flasher.io
 
 title: PHPFlasher
 
-logo: /dist/images/php-flasher-logo.png
+logo: https://php-flasher.io/dist/images/php-flasher-logo.png
 
 author:
   name: Younes KHOUBZA
@@ -11,13 +11,13 @@ author:
   picture: https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png
 
 image:
-  path: /dist/images/php-flasher-logo.png
+  path: https://php-flasher.io/dist/images/php-flasher-logo.png
   alt: PHPFlasher Logo
 
 twitter:
   username: phpflasher
-  image: /dist/images/php-flasher-logo.png
-  card: /dist/images/php-flasher-logo.png
+  image: https://php-flasher.io/dist/images/php-flasher-logo.png
+  card: https://php-flasher.io/dist/images/php-flasher-logo.png
 
 social:
     name: phpflasher
@@ -39,7 +39,7 @@ defaults:
       path: ""
     values:
       layout: "main"
-      image: /dist/images/php-flasher-logo.png
+      image: https://php-flasher.io/dist/images/php-flasher-logo.png
 
 exclude:
   - "*.config.js"

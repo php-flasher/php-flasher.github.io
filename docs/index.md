@@ -4,9 +4,9 @@ title: Home
 description: Easily add flash notification messages to your website with PHPFlasher. Supports popular notification libraries and desktop notifications. Enhance user experience on your website or application.
 ---
 
-<div class="text-center mb-8">
+<div class="text-center mb-24">
     <img id="logo" src="/dist/images/php-flasher-logo.svg" class="h-20 my-8" alt="PHPFlasher">
-    <p class="pt-4 text-center">
+    <p class="pt-4 mt-4 text-center">
         <a href="https://www.linkedin.com/in/younes-khoubza/">
             <img src="https://img.shields.io/badge/author-@yoeunes-blue.svg" alt="Author" />
         </a>
@@ -20,7 +20,10 @@ description: Easily add flash notification messages to your website with PHPFlas
             <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="License" />
         </a>
         <a href="https://packagist.org/packages/php-flasher/flasher">
-            <img src="https://img.shields.io/packagist/dt/php-flasher/flasher.svg" alt="Packagist" />
+            <img src="https://img.shields.io/packagist/dt/php-flasher/flasher.svg" alt="Packagist Downloads" />
+        </a>
+        <a href="https://github.com/php-flasher/php-flasher">
+            <img src="https://img.shields.io/github/stars/php-flasher/php-flasher.svg" alt="GitHub stars" />
         </a>
         <a href="https://packagist.org/packages/php-flasher/flasher">
             <img src="https://img.shields.io/packagist/php-v/php-flasher/flasher.svg" alt="PHP Version" />
