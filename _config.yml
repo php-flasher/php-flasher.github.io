@@ -17,7 +17,7 @@ image:
 twitter:
   username: phpflasher
   image: https://php-flasher.io/dist/images/php-flasher-logo.png
-  card: https://php-flasher.io/dist/images/php-flasher-logo.png
+  card: summary_large_image
 
 social:
     name: phpflasher
