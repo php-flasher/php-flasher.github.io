@@ -5,7 +5,7 @@
     <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony: '/docs/framework/symfony/'
     <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Livewire: '/docs/framework/livewire/'
     <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Inertia: '/docs/framework/inertia/'
-    <i class="fa-brands fa-js-square fa-lg text-yellow-600 mr-1"></i> Javascript: '/docs/framework/javascript/'
+    # <i class="fa-brands fa-js-square fa-lg text-yellow-600 mr-1"></i> Javascript: '/docs/framework/javascript/'
 
 # <i class="fa-duotone fa-bars-sort"></i> Core Concepts:
     # <i class="fa-duotone fa-message-code text-indigo-900 mr-1 fa-lg"></i> Usage: '/docs/concepts/usage/'
