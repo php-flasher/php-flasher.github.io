@@ -2,12 +2,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-{% if site.data.project.description %}
-    <meta name="description" content="{{ site.data.project.description }}"/>
-{% endif %}
-
-{% seo %}
-
 <meta name="twitter:image:src" content="https://php-flasher.io/dist/images/php-flasher-social-card.png" />
 <meta name="twitter:site" content="@phpflasher" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -19,6 +13,8 @@
 <meta property="og:type" content="object" />
 <meta property="og:title" content="https://php-flasher.io" />
 <meta property="og:url" content="https://php-flasher.io" />
+
+{% seo %}
 
 <link rel="icon" type="image/png" href="/dist/images/favicon.ico"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-touch-icon.png">
