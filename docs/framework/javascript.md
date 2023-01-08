@@ -1,6 +1,7 @@
 ---
 permalink: /docs/framework/javascript/
 title: JavaScript
+description: Easily add flash notification messages to your JavaScript application with PHPFlasher. Follow our step-by-step guide to install the library using npm or include it in your project using CDN links, and start engaging and informing your users with powerful flash messages.
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** assets can be installed from a cdn or using npm

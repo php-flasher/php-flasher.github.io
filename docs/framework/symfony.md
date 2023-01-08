@@ -1,6 +1,7 @@
 ---
 permalink: /docs/framework/symfony/
 title: Symfony
+description: Easily add flash notification messages to your Symfony application with PHPFlasher. Follow our step-by-step guide to install and use the library in your project, and start engaging and informing your users with powerful flash messages.
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** offer a solid integration with <i class="fa-brands fa-symfony text-black fa-xl"></i> **Symfony**, with support from **Symfony** version **2.0** to **6**

@@ -2,6 +2,7 @@
 permalink: /docs/adapter/sweetalert/
 title: Sweetalert
 handler: sweetalert
+description: Add beautiful, customizable alert messages to your web projects with SweetAlert2, a popular JavaScript library. Easy to install and use, SweetAlert2 is perfect for any project that wants to engage and inform users in a visually appealing way.
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation

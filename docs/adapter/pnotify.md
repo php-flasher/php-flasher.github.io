@@ -2,6 +2,7 @@
 permalink: /docs/adapter/pnotify/
 title: Pnotify
 handler: pnotify
+description: Enhance your web projects with stylish and customizable notification messages using Pnotify, a popular JavaScript library. With a wide range of features and options, Pnotify is easy to install and use, making it a great choice for any project that wants to engage and inform users.
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation

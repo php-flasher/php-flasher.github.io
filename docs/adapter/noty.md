@@ -2,6 +2,7 @@
 permalink: /docs/adapter/noty/
 title: Noty
 handler: noty
+description: Elevate your user experience with Noty, a popular JavaScript library for creating customizable, stylish notification messages. Easy to install and use, Noty is perfect for any project that wants to engage and inform users in a dynamic way.
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation

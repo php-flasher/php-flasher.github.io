@@ -1,6 +1,7 @@
 ---
 permalink: /docs/installation/
 title: Installation
+description: Install only the specific components you need for your project with PHPFlasher, a modular PHP library for displaying flash notification messages. Simply include the library in your composer.json file and run the composer install command to get started.
 ---
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is modular and consists of multiple libraries, 
