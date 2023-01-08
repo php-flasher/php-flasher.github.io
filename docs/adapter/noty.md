@@ -53,7 +53,7 @@ For more information on Noty options and usage, please refer to the original doc
 
 ---
 
-> The methods described in the **[Usage](/docs/usage/)** section can also be used with the `noty` adapter.
+> The methods described in the **[Usage](/docs/installation/#-modifiers)** section can also be used with the `noty` adapter.
 
 ---
 

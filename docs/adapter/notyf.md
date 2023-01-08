@@ -53,7 +53,7 @@ For more information on Notyf options and usage, please refer to the original do
 
 ---
 
-> The methods described in the **[Usage](/docs/usage/)** section can also be used with the `notyf` adapter.
+> The methods described in the **[Usage](/docs/installation/#-modifiers)** section can also be used with the `notyf` adapter.
 
 ---
 

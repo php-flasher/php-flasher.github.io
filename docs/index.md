@@ -88,7 +88,6 @@ Give it a try and see the difference it can make for yourself!
 ## <i class="fa-duotone fa-list-radio"></i> Getting Started
 
 * **[Installation](/docs/installation/)**
-* **[Usage](/docs/usage/)**
 * **[Toastr](/docs/adapter/toastr/)**
 * **[Noty](/docs/adapter/noty/)**
 * **[Notyf](/docs/adapter/notyf/)**
