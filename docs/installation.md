@@ -241,6 +241,8 @@ flash()
 
 <p id="method-priority"><a href="#method-priority" class="anchor"><i class="fa-duotone fa-link"></i> priority</a></p>
 
+Sets the priority of a flash message, the highest priority will be displayed first.
+
 ```php
 flash()->priority(int $priority);
 ```
@@ -308,7 +310,9 @@ flash()
 
 <p id="method-hops"><a href="#method-hops" class="anchor"><i class="fa-duotone fa-link"></i> hops</a></p>
 
-Sometimes you may want a flash message to persist for longer than a single request. As an example, with a multi-page form, you may want to store messages until all pages have been filled.
+This method sets the number of requests that the flash message should persist for. By default, flash messages are only displayed for a single request and are then discarded. By setting the number of hops, the flash message will be persisted for multiple requests.
+
+As an example, with a multi-page form, you may want to store messages until all pages have been filled.
 
 {% assign id = '# usage hops' %}
 {% assign type = site.data.messages.types | sample %}
@@ -332,79 +336,10 @@ flash()
 
 ---
 
-<p id="method-keep"><a href="#method-keep" class="anchor"><i class="fa-duotone fa-link"></i> keep</a></p>
-
-```php
-flash()->keep();
-```
-
-{% assign id = '# usage keep' %}
-{% assign type = site.data.messages.types | sample %}
-{% assign message = site.data.messages[type] | sample %}
-{% assign options = '{}' %}
-{% include example.html %}
-
-```php
-flash()
-    ->keep()
-    ->add{{ type | capitalize }}('{{ message }}');
-```
-
-| description                                        |
-|----------------------------------------------------|
-| Keep the notification in the next session requests |
-
----
-
-<p id="method-delay"><a href="#method-delay" class="anchor"><i class="fa-duotone fa-link"></i> delay</a></p>
-
-```php
-flash()->delay(int $delay);
-```
-
-{% assign id = '# usage delay' %}
-{% assign type = site.data.messages.types | sample %}
-{% assign message = site.data.messages[type] | sample %}
-{% assign options = '{}' %}
-{% include example.html %}
-
-```php
-flash()
-    ->delay(2)
-    ->add{{ type | capitalize }}('{{ message }}');
-```
-
-| param    | description                                                                        |
-|----------|------------------------------------------------------------------------------------|
-| `$delay` | The number of requests in which the message will be waiting before being displayed |
-
----
-
-<p id="method-now"><a href="#method-now" class="anchor"><i class="fa-duotone fa-link"></i> now</a></p>
-
-```php
-flash()->now();
-```
-
-{% assign id = '# usage now' %}
-{% assign type = site.data.messages.types | sample %}
-{% assign message = site.data.messages[type] | sample %}
-{% assign options = '{}' %}
-{% include example.html %}
-
-```php
-flash()
-    ->now()
-    ->add{{ type | capitalize }}('{{ message }}');
-```
-
-| description                     |
-|---------------------------------|
-| Shortcut for flash()->delay(0) |
-
----
-
 <p id="method-translate"><a href="#method-translate" class="anchor"><i class="fa-duotone fa-link"></i> translate</a></p>
+
+This method sets the `locale` to be used for the translation of the flash message. If a non-null value is provided, 
+the flash message will be translated into the specified language. If null is provided, the **default** `locale` will be used.
 
 ```php
 flash()->translate(string $locale = null);
@@ -441,95 +376,20 @@ flash()
     ->add{{ type | capitalize }}('Your request was processed successfully.', 'Congratulations!');
 ```
 
-| param     | description                                                                 |
-|-----------|-----------------------------------------------------------------------------|
-| `$locale` | The locale to be used for the translation or null to use the default locale |
+| param     | description                                                                  |
+|-----------|------------------------------------------------------------------------------|
+| `$locale` | The locale to be used for the translation, or null to use the default locale |
 
----
+It is **important** to note that the `translate()` method only sets the locale to be used for the translation of the flash message. 
+It does not actually perform the translation itself.
 
-<p id="method-preset"><a href="#method-preset" class="anchor"><i class="fa-duotone fa-link"></i> preset</a></p>
+In order to translate the flash message, you will need to provide the appropriate translation keys in your translation files.
 
-```php
-$builder = flash()->preset(string $preset, bool $flash = true);
-```
-
-| param     | description                                                           |
-|-----------|-----------------------------------------------------------------------|
-| `$preset` | The preset to be used for the notification                            |
-| `$flash`  | If true, the notification will be flashed after the preset is applied |
-
----
-
-<p id="method-context"><a href="#method-context" class="anchor"><i class="fa-duotone fa-link"></i> context</a></p>
+In the above example, to translate the flash message into `Arabic`, If you are using **<i class="fa-brands fa-laravel text-red-900 fa-xl"></i> Laravel** you will need to add the following keys to the `resources/lang/ar/messages.php` file:
 
 ```php
-$builder = flash()->context(array $context = []);
+return [
+    'Your request was processed successfully.' => 'تمت العملية بنجاح.',
+    'Congratulations!' => 'تهانينا',
+];
 ```
-
-| param      | description                                    |
-|------------|------------------------------------------------|
-| `$context` | Custom data to be available in javascript side |
-
----
-
-<p id="method-withStamp"><a href="#method-withStamp" class="anchor"><i class="fa-duotone fa-link"></i> withStamp</a></p>
-
-```php
-$builder = flash()->withStamp(StampInterface $stamp);
-```
-
-| param    | description                                |
-|----------|--------------------------------------------|
-| `$stamp` | Attach a stamp to the current notification |
-
----
-
-<p id="method-with"><a href="#method-with" class="anchor"><i class="fa-duotone fa-link"></i> with</a></p>
-
-```php
-$builder = flash()->with(array $stamps);
-```
-
-| param     | description                                                         |
-|-----------|---------------------------------------------------------------------|
-| `$stamps` | Attach multiple stamps at the same time to the current notification |
-
----
-
-<p id="method-handler"><a href="#method-handler" class="anchor"><i class="fa-duotone fa-link"></i> handler</a></p>
-
-```php
-$builder = flash()->handler(string $handler);
-```
-
-| param      | description                                                                                             |
-|------------|---------------------------------------------------------------------------------------------------------|
-| `$handler` | The handler name it will be used to choose to correct js adapter to be used to display the notification |
-
----
-
-<p id="method-getEnvelope"><a href="#method-getEnvelope" class="anchor"><i class="fa-duotone fa-link"></i> getEnvelope</a></p>
-
-```php
-$envelope = flash()->getEnvelope();
-```
-
-| param       | description                                                             |
-|-------------|-------------------------------------------------------------------------|
-| `$envelope` | Get the current notification with all stamps and options attached to it |
-
----
-
-<p id="method-flash"><a href="#method-flash" class="anchor"><i class="fa-duotone fa-link"></i> flash</a></p>
-
-> <span class="text-orange-900">Call the **flash** method at the end when your notification is ready to be displayed</span>
-
-
-```php
-$envelope = flash()->flash(array $stamps = []);
-```
-
-| param       | description                                                         |
-|-------------|---------------------------------------------------------------------|
-| `$stamps`   | Attach multiple stamps at the same time to the current notification |
-| `$envelope` | The current notification with all stamps and options attached to it |
