@@ -1,13 +1,13 @@
-<i class="fa-duotone fa-bars-sort"></i> Getting Started:
-    <i class="fa-duotone fa-message-check text-indigo-900 mr-1 fa-lg"></i> Introduction: '/'
-    <i class="fa-duotone fa-cloud-arrow-down text-indigo-900 mr-1 fa-lg"></i> Installation: '/docs/installation/'
-    <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel: '/docs/framework/laravel/'
+<i class="fa-duotone fa-bars"></i> Getting Started:
+    <i class="fa-duotone fa-book text-indigo-900 mr-1 fa-lg"></i> Introduction: '/'
+    <i class="fa-duotone fa-download text-indigo-900 mr-1 fa-lg"></i> Installation: '/docs/installation/'
     <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony: '/docs/framework/symfony/'
-    <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Livewire: '/docs/framework/livewire/'
-    <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Inertia: '/docs/framework/inertia/'
+    <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel: '/docs/framework/laravel/'
+    <i class="fa-duotone fa-ghost fa-lg text-pink-800 mr-1"></i> Livewire: '/docs/framework/livewire/'
+    <i class="fa-duotone fa-angles-right fa-lg text-indigo-900 mr-1"></i> Inertia: '/docs/framework/inertia/'
     # <i class="fa-brands fa-js-square fa-lg text-yellow-600 mr-1"></i> Javascript: '/docs/framework/javascript/'
 
-# <i class="fa-duotone fa-bars-sort"></i> Core Concepts:
+# <i class="fa-duotone fa-bars"></i> Core Concepts:
     # <i class="fa-duotone fa-message-code text-indigo-900 mr-1 fa-lg"></i> Usage: '/docs/concepts/usage/'
     # <i class="fa-duotone fa-palette text-indigo-900 mr-1 fa-lg"></i> Themes: '/docs/concepts/themes/'
     # <i class="fa-duotone fa-cubes text-indigo-900 mr-1 fa-lg"></i> Presets: '/docs/concepts/presets/'
@@ -16,17 +16,17 @@
     # <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> RTL support: '/docs/concepts/rtl/'
 
 
-<i class="fa-duotone fa-bars-sort"></i> Adapters:
+<i class="fa-duotone fa-bars"></i> libraries:
     <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Noty: '/docs/adapter/noty/'
-    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Toastr: '/docs/adapter/toastr/'
-    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Sweetalert: '/docs/adapter/sweetalert/'
-    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Notyf: '/docs/adapter/notyf/'
-    <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Pnotify: '/docs/adapter/pnotify/'
+    <i class="fa-duotone fa-bread-loaf text-indigo-900 mr-1 fa-lg"></i> Toastr: '/docs/adapter/toastr/'
+    <i class="fa-duotone fa-exclamation-circle text-indigo-900 mr-1 fa-lg"></i> Sweetalert: '/docs/adapter/sweetalert/'
+    <i class="fa-duotone fa-info-circle text-indigo-900 mr-1 fa-lg"></i> Notyf: '/docs/adapter/notyf/'
+    <i class="fa-duotone fa-exclamation-triangle text-indigo-900 mr-1 fa-lg"></i> Pnotify: '/docs/adapter/pnotify/'
 
-#<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
+#<i class="fa-duotone fa-bars mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
 #    Configuration: '/docs/laravel/configuration/'
 #    Translations: '/docs/laravel/translations/'
 
-#<i class="fa-duotone fa-bars-sort mr-2"></i> <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony:
+#<i class="fa-duotone fa-bars mr-2"></i> <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony:
 #    Configuration: '/docs/symfony/configuration/'
 #    Translations: '/docs/symfony/translations/'
