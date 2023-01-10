@@ -1,4 +1,4 @@
-<i class="fa-duotone fa-bars"></i> Getting Started:
+<i class="fa-duotone fa-rocket"></i> Getting Started:
     <i class="fa-duotone fa-book text-indigo-900 mr-1 fa-lg"></i> Introduction: '/'
     <i class="fa-duotone fa-download text-indigo-900 mr-1 fa-lg"></i> Installation: '/docs/installation/'
     <i class="fa-brands fa-symfony fa-lg text-black mr-1"></i> Symfony: '/docs/framework/symfony/'
@@ -16,7 +16,7 @@
     # <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> RTL support: '/docs/concepts/rtl/'
 
 
-<i class="fa-duotone fa-bars"></i> libraries:
+<i class="fa-duotone fa-plug"></i> libraries:
     <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Noty: '/docs/adapter/noty/'
     <i class="fa-duotone fa-info-circle text-indigo-900 mr-1 fa-lg"></i> Notyf: '/docs/adapter/notyf/'
     <i class="fa-duotone fa-bread-loaf text-indigo-900 mr-1 fa-lg"></i> Toastr: '/docs/adapter/toastr/'
