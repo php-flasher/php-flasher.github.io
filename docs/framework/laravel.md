@@ -385,38 +385,36 @@ or
 
 ## <i class="fa-duotone fa-list-radio"></i> RTL support
 
-Are you working on a website or application that supports <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> **right-to-left** languages like `Arabic` or `Hebrew` ?
-
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** makes it easy to incorporate right-to-left language support. 
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** makes it easy to incorporate <i class="fa-duotone fa-signs-post text-indigo-900 mr-1 fa-lg"></i> **right-to-left** languages like `Arabic` or `Hebrew`. 
 it automatically detects the text direction and handles the necessary adjustments for you. 
 
 Simply make sure the translation service is enabled and let **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** handle the rest.
 
 {% assign id = '# phpflasher rtl' %}
 {% assign type = 'success' %}
-{% assign message = 'تم إرسال طلبك بنجاح.' %}
-{% assign title = 'نجاح' %}
+{% assign message = 'تمت العملية بنجاح.' %}
+{% assign title = 'تهانينا' %}
 {% assign options = '{"rtl": true}' %}
 {% include example.html %}
 
 ```php
 {{ id }}
 
-flash()->add{{ type | capitalize }}('{{ message }}');
+flash()
+    ->translate('ar')
+    ->add{{ type | capitalize }}('Your request was processed successfully.', 'Congratulations!');
 ```
 
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Translation
 
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to translate your notification messages, presets and automatically detect right-to-left (RTL) support.
-
-**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** comes with Arabic, English and French translations out of the box, but you can easily add your own translations.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to translate your notification `messages`, `presets`, it comes with `Arabic`, `English` and `French` translations out of the box, but you can easily add your own translations.
 
 For example, if you need to override the English translation strings for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**,  you can create a language file at the following location:
 **`/resources/lang/vendor/flasher/en/messages.php`**. 
 
-In this file, you should only define the translation strings you want to override. Any translation strings that you don't override will still be loaded from **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**'s original language files.
+In this file, you should **only** define the translation strings you want to override. Any translation strings that you don't override will still be loaded from **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**'s original language files.
 
 Here is a list of the default translation keys for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**:
 
@@ -475,7 +473,7 @@ return [
 ```
 
 {% assign id = '# laravel arabic translations' %}
-{% assign successMessage = 'تم إرسال طلبك بنجاح.' %}
+{% assign successMessage = 'تم إنشاء الملف' %}
 {% assign errorMessage = 'حدث خطأ أثناء إرسال طلبك.' %}
 {% assign warningMessage = 'يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج' %}
 {% assign infoMessage = 'سيتم تحديث هذه الصفحة في غضون 10 دقائق.' %}
@@ -517,14 +515,21 @@ return [
 ```php
 {{ id }}
 
-flash()->addSuccess('{{ successMessage }}');
+use Illuminate\Support\Facades\App;
+
+// Set the locale to be used for the translation
+App::setLocale('ar');
+
+// Translate the flash message using the PHPFlasher translation files
+flash()->addSuccess('The resource was created');
+
 flash()->addError('{{ errorMessage }}');
 flash()->addWarning('{{ warningMessage }}');
 flash()->addInfo('{{ infoMessage }}');
 ```
 
 {% assign id = '# laravel french translations' %}
-{% assign successMessage = "Votre demande a été envoyée avec succès." %}
+{% assign successMessage = "La ressource a été ajoutée" %}
 {% assign errorMessage = "Une erreur s’est produite lors de l’envoi de votre demande." %}
 {% assign warningMessage = "Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire." %}
 {% assign infoMessage = "Cette page sera mise à jour dans 10 minutes."%}
@@ -566,116 +571,19 @@ flash()->addInfo('{{ infoMessage }}');
 ```php
 {{ id }}
 
-flash()->addSuccess('{{ successMessage }}');
+use Illuminate\Support\Facades\App;
+
+// Set the locale to be used for the translation
+App::setLocale('fr');
+
+// Translate the flash message using the PHPFlasher translation files
+flash()->addSuccess('The resource was created');
+
 flash()->addError('{{ errorMessage }}');
 flash()->addWarning('{{ warningMessage }}');
 flash()->addInfo('{{ infoMessage }}');
 ```
 
----
-
-## <i class="fa-duotone fa-list-radio"></i> cdn - local - npm
-
-By default **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** use **cdn** link to include all of its assets.
-
-To pull in the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** via CDN, grab the latest version from [jsdelivr](https://www.jsdelivr.com/package/npm/@flasher/flasher)
-
-<span>
-    <a href="https://cdn.jsdelivr.net/npm/@flasher/flasher/dist/flasher.min.js" target="_blank">
-        <img src="https://img.shields.io/badge/cdn-jsdelivr-blue.svg?style=flat-square" alt="cdn-jsdelivr" />
-    </a>
-    <a href="https://cdn.jsdelivr.net/npm/@flasher/flasher/dist/flasher.min.js">
-        <img src="https://img.badgesize.io/php-flasher/flasher-js/main/packages/flasher/dist/flasher.min.js.svg?compression=brotli&label=flasher.min.js"/>
-    </a>
-</span>
-
-```html
-<script defer src="https://cdn.jsdelivr.net/npm/@flasher/flasher@1.2.4/dist/flasher.min.js"></script>
-```
-
-<br/>
-
-But you can use **local** version of the assets or install them using **npm**.
-
----
-
-To use the **local** version of the assets, first publish the assets to the public folder by running:
-
-```shell
-php artisan vendor:publish --force --tag=flasher-assets
-```
-
-The published assets will be copied to the `/public/vendor/flasher` folder.
-
-Then update the configuration file at `config/flasher.php`, set **`use_cdn`** to false
-
-```php
-<?php // config/flasher.php
-
-return [
-    /*
-    |--------------------------------------------------------------------------
-    | Whether to use CDN for PHPFlasher assets or not
-    |--------------------------------------------------------------------------
-    | This option controls whether PHPFlasher should use CDN links or local assets
-    | for its javascript and CSS files. By default, PHPFlasher uses CDN links
-    | to serve the latest version of the library. However, you can also choose
-    | to use local assets by setting this option to 'false'.
-    |
-    | If you decide to use local assets, don't forget to publish the necessary
-    | files to your application's public folder by running the following command:
-    |     php artisan vendor:publish --force --tag=flasher-assets
-    |
-    | This will copy the necessary assets to your application's public folder. 
-    */
-    'use_cdn' => true,
-];
-```
-
----
-
-To install **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** using npm, run the following command:
-
-```shell
-npm i @flasher/flasher
-```
-
-<br/>
-
-Then attach `flasher` to the `window` object. Add the following lines at the end of your application's `/resources/js/bootstrap.js` file:
-
-```javascript
-import flasher from "@flasher/flasher";
-window.flasher = flasher;
-```
-
-Then update the configuration file:
-
-```php
-<?php // /config/flasher.php
-
-return [
-    /*
-    |--------------------------------------------------------------------------
-    | Main PHPFlasher javascript file 
-    |--------------------------------------------------------------------------
-    | This option specifies the location of the main javascript file that is
-    | required by PHPFlasher to display notifications in your Laravel application.
-    |
-    | By default, PHPFlasher uses a CDN to serve the latest version of the library.
-    | However, you can also choose to download the library locally or install it
-    | using npm. 
-    |
-    | To use the local version of the library, run the following command:
-    |     php artisan vendor:publish --force --tag=flasher-assets
-    |
-    | This will copy the necessary assets to your application's public folder. 
-    | You can then specify the local path to the javascript file in the 'local'
-    | field of this option.
-    */
-    'root_script' => [], // set this to empty array
-];
-```
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Laravel version < 5.5
