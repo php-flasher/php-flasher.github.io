@@ -2,21 +2,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<meta name="twitter:image:src" content="https://php-flasher.io/dist/images/php-flasher-social-card.png" />
-<meta name="twitter:image:alt" content="Easily add flash notification messages to your website with PHPFlasher." />
-<meta name="twitter:site" content="@phpflasher" />
+<title>{% if page.title %}{{ page.title }} | {% endif %}PHPFlasher</title>
+
+<meta property="og:title" content="{{ site.data.project.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://php-flasher.io">
+<meta property="og:image" content="https://php-flasher.io/dist/images/php-flasher-social-card.png">
+<meta property="og:image:alt" content="{{ site.data.project.description }}" />
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="512">
+<meta property="og:description" content="{{ site.data.project.description }}">
+<meta property="og:site_name" content="PHPFlasher">
+
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="PHPFlasher" />
+<meta name="twitter:creator" content="@yoeunes">
+<meta name="twitter:site" content="@phpflasher" />
+<meta name="twitter:image:src" content="https://php-flasher.io/dist/images/php-flasher-social-card.png" />
+<meta name="twitter:image:alt" content="{{ site.data.project.description }}" />
+<meta name="twitter:title" content="{{ site.data.project.description }}">
 
-<meta property="og:image" content="https://php-flasher.io/dist/images/php-flasher-social-card.png" />
-<meta property="og:image:alt" content="Easily add flash notification messages to your website with PHPFlasher." />
-<meta property="og:site_name" content="PHPFlasher" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="PHPFlasher" />
-
-<meta property="og:url" content="https://php-flasher.io" />
-
-{% seo %}
+<meta name="description" content="{{ page.description }}" />
 
 <link rel="icon" type="image/png" href="/dist/images/favicon.ico"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/dist/images/apple-touch-icon.png">

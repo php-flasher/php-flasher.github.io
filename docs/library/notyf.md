@@ -1,5 +1,6 @@
 ---
-permalink: /docs/adapter/notyf/
+permalink: /library/notyf/
+redirect_from: /docs/adapter/notyf/
 title: Notyf
 handler: notyf
 description: Add lightweight, customizable notification messages to your web projects with Notyf, a popular JavaScript library. With a focus on simplicity and accessibility, Notyf is easy to install and use, making it a great choice for any project that wants to engage and inform users.

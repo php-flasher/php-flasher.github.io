@@ -1,5 +1,6 @@
 ---
-permalink: /docs/adapter/toastr/
+permalink: /library/toastr/
+redirect_from: /docs/adapter/toastr/
 title: Toastr
 handler: toastr
 description: Easily add customizable, stylish notification messages to your web projects with Toastr, a popular JavaScript library. With a focus on simplicity and flexibility, Toastr is easy to install and use, making it a great choice for any project that wants to engage and inform users.

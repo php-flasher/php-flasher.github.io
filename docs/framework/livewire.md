@@ -1,5 +1,6 @@
 ---
-permalink: /docs/framework/livewire/
+permalink: /livewire/
+redirect_from: /docs/framework/livewire/
 title: Livewire
 description: Easily add flash notification messages to your Livewire application with PHPFlasher. Follow our step-by-step guide to install and use the library in your project, and start engaging and informing your users with powerful flash messages.
 ---

@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: Home
+title:
 description: Easily add flash notification messages to your website with PHPFlasher. Supports popular notification libraries and desktop notifications. Enhance user experience on your website or application.
 ---
 

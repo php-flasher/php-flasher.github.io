@@ -1,5 +1,6 @@
 ---
-permalink: /docs/framework/laravel/
+permalink: /laravel/
+redirect_from: /docs/framework/laravel/
 title: Laravel
 handler: flasher
 description: Easily add flash notification messages to your Laravel application with PHPFlasher. Follow our step-by-step guide to install and use the library in your project, and start engaging and informing your users with powerful flash messages.
