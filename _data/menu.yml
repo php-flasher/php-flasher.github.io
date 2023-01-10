@@ -18,9 +18,9 @@
 
 <i class="fa-duotone fa-bars"></i> libraries:
     <i class="fa-duotone fa-bell text-indigo-900 mr-1 fa-lg"></i> Noty: '/docs/adapter/noty/'
+    <i class="fa-duotone fa-info-circle text-indigo-900 mr-1 fa-lg"></i> Notyf: '/docs/adapter/notyf/'
     <i class="fa-duotone fa-bread-loaf text-indigo-900 mr-1 fa-lg"></i> Toastr: '/docs/adapter/toastr/'
     <i class="fa-duotone fa-exclamation-circle text-indigo-900 mr-1 fa-lg"></i> Sweetalert: '/docs/adapter/sweetalert/'
-    <i class="fa-duotone fa-info-circle text-indigo-900 mr-1 fa-lg"></i> Notyf: '/docs/adapter/notyf/'
     <i class="fa-duotone fa-exclamation-triangle text-indigo-900 mr-1 fa-lg"></i> Pnotify: '/docs/adapter/pnotify/'
 
 #<i class="fa-duotone fa-bars mr-2"></i> <i class="fa-brands fa-laravel fa-lg text-red-900 mr-1"></i> Laravel:
