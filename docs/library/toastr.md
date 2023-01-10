@@ -55,7 +55,7 @@ For more information on Toastr options and usage, please refer to the original d
 
 ---
 
-> The methods described in the **[Usage](/docs/installation/#-modifiers)** section can also be used with the `toastr` adapter.
+> The methods described in the **[Usage](/installation/#-modifiers)** section can also be used with the `toastr` adapter.
 
 ---
 

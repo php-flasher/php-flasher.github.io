@@ -54,7 +54,7 @@ For more information on Sweetalert2 alert  options and usage, please refer to th
 
 ---
 
-> The methods described in the **[Usage](/docs/installation/#-modifiers)** section can also be used with the `sweetalert` adapter.
+> The methods described in the **[Usage](/installation/#-modifiers)** section can also be used with the `sweetalert` adapter.
 
 ---
 

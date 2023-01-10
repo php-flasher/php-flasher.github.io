@@ -22,8 +22,10 @@ To use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher<
 
 ## <i class="fa-duotone fa-list-radio"></i> Installation
 
-You can install the **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** Laravel package using composer.<br />
-This is the base package for all Laravel adapters.
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is modular and consists of multiple libraries, 
+allowing users to install and use only the specific components they need for their project.
+
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** can be installed using composer :
 
 ```shell
 composer require php-flasher/flasher-laravel
@@ -31,41 +33,17 @@ composer require php-flasher/flasher-laravel
 
 ---
 
-## <i class="fa-duotone fa-list-radio"></i> Usage
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** includes a default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but users can also install additional adapters to customize the appearance of notifications within their projects such as :
 
-Dispatch `notifications` anywhere from your application
+* **[Toastr](/docs/adapter/toastr/)**
+* **[Noty](/docs/adapter/noty/)**
+* **[Notyf](/docs/adapter/notyf/)**
+* **[Sweet Alert](/docs/adapter/sweetalert/)**
+* **[Pnotify](/docs/adapter/pnotify/)**
 
-{% assign id = '# laravel' %}
-{% assign type = 'success' %}
-{% assign message = 'Book successfully created!' %}
-{% assign options = '{}' %}
-{% include example.html %}
+---
 
-```php
-{{ id }}
-
-class BookController extends Controller
-{
-    public function saveBook(Request $request)
-    {
-        $request->validate([
-            'title' => 'required|max:255',
-            'author' => 'required|max:255',
-            'price' => 'required|numeric',
-        ]);
-    
-        $book = Book::create([
-            'title' => $request->title,
-            'author' => $request->author,
-            'price' => $request->price,
-        ]);
-    
-        flash()->add{{ type | capitalize }}('{{ message }}');
-    
-        return redirect()->route('books.index');
-    }
-}
-```
+{% include _usage.md %}
 
 ---
 

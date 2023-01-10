@@ -54,7 +54,7 @@ For more information on Pnotify options and usage, please refer to the original 
 
 ---
 
-> The methods described in the **[Usage](/docs/installation/#-modifiers)** section can also be used with the `pnotify` adapter.
+> The methods described in the **[Usage](/installation/#-modifiers)** section can also be used with the `pnotify` adapter.
 
 ---
 
