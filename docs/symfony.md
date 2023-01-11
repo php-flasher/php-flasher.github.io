@@ -277,7 +277,6 @@ However, you can also choose to manually toggle dark mode using the `class strat
 
 ```yaml
 {{ id }}
-
 # config/packages/flasher.yaml
 
 flasher:

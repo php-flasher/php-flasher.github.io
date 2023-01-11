@@ -58,55 +58,6 @@ For more information on Noty options and usage, please refer to the original doc
 
 ---
 
-<p id="method-text"><a href="#method-text" class="anchor"><i class="fa-duotone fa-link"></i> text</a></p>
-
-This string can contain HTML too. But be careful and don't pass user inputs to this parameter.
-
-```php
-noty()->text(string $text);
-```
-
-{% assign id = '#/ noty text' %}
-{% assign type = site.data.messages.types | sample %}
-{% assign message = site.data.messages[type] | sample %}
-{% assign options = '{}' %}
-{% include example.html %}
-
-```php
-{{ id }}
-
-noty()
-    ->text('{{ message }}')
-    ->{{ type }}()
-    ->flash();
-```
-
----
-
-<p id="method-alert"><a href="#method-alert" class="anchor"><i class="fa-duotone fa-link"></i> alert</a></p>
-
-Display alert type notification
-
-```php
-noty()->alert(string $message = null, array $options = array());
-```
-
-{% assign id = '#/ noty alert' %}
-{% assign type = site.data.messages.types | sample %}
-{% assign message = site.data.messages[type] | sample %}
-{% assign options = '{"type":"alert"}' %}
-{% include example.html %}
-
-```php
-{{ id }}
-
-noty()
-    ->alert('{{ message }}')
-    ->flash();
-```
-
----
-
 <p id="method-layout"><a href="#method-layout" class="anchor"><i class="fa-duotone fa-link"></i> layout</a></p>
 
 `top`, `topLeft`, `topCenter`, `topRight`, `center`, `centerLeft`, `centerRight`, `bottom`, `bottomLeft`, `bottomCenter`, `bottomRight` <br />
@@ -724,16 +675,6 @@ noty()->container(bool|string $container)
 noty()
     ->container(false)
     ->add{{ type | capitalize }}('{{ message }}');
-```
-
----
-
-<p id="method-buttons"><a href="#method-buttons" class="anchor"><i class="fa-duotone fa-link"></i> buttons</a></p>
-
-An `array` of <span class="text-orange-600">Noty.button</span>, for creating confirmation dialogs. Details are [here](https://ned.im/noty/#/confirm).
-
-```php
-noty()->buttons(array $buttons)
 ```
 
 ---
