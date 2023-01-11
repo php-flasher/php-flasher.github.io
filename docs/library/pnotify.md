@@ -58,50 +58,10 @@ For more information on Pnotify options and usage, please refer to the original 
 
 ---
 
-<p id="method-title"><a href="#method-title" class="anchor"><i class="fa-duotone fa-link"></i> title</a></p>
-
-The notice's title.
-
-```php
-pnotify()->title(bool|string $title);
-```
-
----
-
-<p id="method-titleEscape"><a href="#method-titleEscape" class="anchor"><i class="fa-duotone fa-link"></i> titleEscape</a></p>
-
-Whether to escape the content of the title. (Not allow HTML.)
-
-```php
-pnotify()->titleEscape(bool $titleEscape = true);
-```
-
----
-
-<p id="method-text"><a href="#method-text" class="anchor"><i class="fa-duotone fa-link"></i> text</a></p>
-
-The notice's text.
-
-```php
-pnotify()->text(string $text);
-```
-
----
-
-<p id="method-textEscape"><a href="#method-textEscape" class="anchor"><i class="fa-duotone fa-link"></i> textEscape</a></p>
- 
-Whether to escape the content of the text. (Not allow HTML.)
-
-```php
-pnotify()->textEscape(bool $textEscape = true);
-```
-
----
-
 <p id="method-styling"><a href="#method-styling" class="anchor"><i class="fa-duotone fa-link"></i> styling</a></p>
 
-What styling classes to use. (Can be either "brighttheme", "bootstrap3", "fontawesome", or a custom style object.
-See the source in the end of pnotify.js for the properties in a style object.)
+What styling classes to use. (Can be either `brighttheme`, `bootstrap3`, `fontawesome` or a custom style object.
+See the source in the end of `pnotify.js` for the properties in a style object.)
 
 ```php
 pnotify()->styling(string $styling);
@@ -135,78 +95,6 @@ Display the notice when it is created. Turn this off to add notifications to the
 
 ```php
 pnotify()->autoDisplay(bool $autoDisplay = true);
-```
-
----
-
-<p id="method-width"><a href="#method-width" class="anchor"><i class="fa-duotone fa-link"></i> width</a></p>
-
-Width of the notice.
-
-```php
-pnotify()->width(int $width);
-```
-
----
-
-<p id="method-minHeight"><a href="#method-minHeight" class="anchor"><i class="fa-duotone fa-link"></i> minHeight</a></p>
-
-Minimum height of the notice. It will expand to fit content.
-
-```php
-pnotify()->minHeight(int $minHeight);
-```
-
----
-
-<p id="method-icon"><a href="#method-icon" class="anchor"><i class="fa-duotone fa-link"></i> icon</a></p>
-
-Set icon to true to use the default icon for the selected style/type, false for no icon, or a string for your own
-icon class.
-
-```php
-pnotify()->icon(bool $icon = true);
-```
-
----
-
-<p id="method-animation"><a href="#method-animation" class="anchor"><i class="fa-duotone fa-link"></i> animation</a></p>
-
-The animation to use when displaying and hiding the notice. "none" and "fade" are supported through CSS. Others
-are supported through the Animate module and Animate.css.
-
-```php
-pnotify()->animation(string $animation);
-```
-
----
-
-<p id="method-animateSpeed"><a href="#method-animateSpeed" class="anchor"><i class="fa-duotone fa-link"></i> animateSpeed</a></p>
-
-Speed at which the notice animates in and out. "slow", "normal", or "fast". Respectively, 400ms, 250ms, 100ms.
-
-```php
-pnotify()->animateSpeed(string $animateSpeed);
-```
-
----
-
-<p id="method-shadow"><a href="#method-shadow" class="anchor"><i class="fa-duotone fa-link"></i> shadow</a></p>
-
-Display a drop shadow.
-
-```php
-pnotify()->shadow(bool $shadow = true);
-```
-
----
-
-<p id="method-hide"><a href="#method-hide" class="anchor"><i class="fa-duotone fa-link"></i> hide</a></p>
-
-After a delay, remove the notice.
-
-```php
-pnotify()->hide(bool $hide = true);
 ```
 
 ---
@@ -257,74 +145,4 @@ Whether to remove the notice from the global array when it is closed.
 
 ```php
 pnotify()->destroy(bool $destroy = true);
-```
-
----
-
-<p id="method-desktop"><a href="#method-desktop" class="anchor"><i class="fa-duotone fa-link"></i> desktop</a></p>
-
-Desktop Module
-
-```php
-pnotify()->desktop(string $desktop, mixed $value);
-```
-
----
-
-<p id="method-buttons"><a href="#method-buttons" class="anchor"><i class="fa-duotone fa-link"></i> buttons</a></p>
-
-Buttons Module
-
-```php
-pnotify()->buttons(string $buttons, mixed $value);
-```
-
----
-
-<p id="method-nonblock"><a href="#method-nonblock" class="anchor"><i class="fa-duotone fa-link"></i> nonblock</a></p>
-
-NonBlock Module
-
-```php
-pnotify()->nonblock(string $nonblock, mixed $value);
-```
-
----
-
-<p id="method-mobile"><a href="#method-mobile" class="anchor"><i class="fa-duotone fa-link"></i> mobile</a></p>
-
-Mobile Module
-
-```php
-pnotify()->mobile(string $mobile, mixed $value);
-```
-
----
-
-<p id="method-animate"><a href="#method-animate" class="anchor"><i class="fa-duotone fa-link"></i> animate</a></p>
-
-Animate Module
-
-```php
-pnotify()->animate(string $animate, mixed $value);
-```
-
----
-
-<p id="method-confirm"><a href="#method-confirm" class="anchor"><i class="fa-duotone fa-link"></i> confirm</a></p>
-
-Confirm Module
-
-```php
-pnotify()->confirm(string $confirm, mixed $value);
-```
-
----
-
-<p id="method-history"><a href="#method-history" class="anchor"><i class="fa-duotone fa-link"></i> history</a></p>
-
-History Module
-
-```php
-pnotify()->history(string $history, mixed $value);
 ```

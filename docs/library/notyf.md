@@ -58,6 +58,36 @@ For more information on Notyf options and usage, please refer to the original do
 
 ---
 
+<p id="method-position"><a href="#method-position" class="anchor"><i class="fa-duotone fa-link"></i> position</a></p>
+
+Viewport location where notifications are rendered
+
+position x ⇒ `left`, `center`, `right` <br />
+position y ⇒ `top`, `center`, `bottom`
+
+Default ⇒ x: `right`, y: `bottom`
+
+```php
+notyf()->position(string $position, string $value);
+```
+
+{% assign id = '#/ notyf position' %}
+{% assign type = site.data.messages.types | sample %}
+{% assign message = site.data.messages[type] | sample %}
+{% assign options = '{"position": {"x": "center", "y":"top"}}' %}
+{% include example.html %}
+
+```php
+{{ id }}
+
+notyf()
+    ->position('x', 'center')
+    ->position('y', 'top')
+    ->add{{ type | capitalize }}('{{ message }}');
+```
+
+---
+
 <p id="method-duration"><a href="#method-duration" class="anchor"><i class="fa-duotone fa-link"></i> duration</a></p>
 
 Number of milliseconds before hiding the notification. Use 0 for infinite duration.
@@ -115,36 +145,6 @@ notyf()
 
 notyf()
     ->ripple(false)
-    ->add{{ type | capitalize }}('{{ message }}');
-```
-
----
-
-<p id="method-position"><a href="#method-position" class="anchor"><i class="fa-duotone fa-link"></i> position</a></p>
-
-Viewport location where notifications are rendered
-
-position x ⇒ `left`, `center`, `right` <br />
-position y ⇒ `top`, `center`, `bottom`
-
-Default ⇒ x: `right`, y: `bottom`
-
-```php
-notyf()->position(string $position, string $value);
-```
-
-{% assign id = '#/ notyf position' %}
-{% assign type = site.data.messages.types | sample %}
-{% assign message = site.data.messages[type] | sample %}
-{% assign options = '{"position": {"x": "center", "y":"top"}}' %}
-{% include example.html %}
-
-```php
-{{ id }}
-
-notyf()
-    ->position('x', 'center')
-    ->position('y', 'top')
     ->add{{ type | capitalize }}('{{ message }}');
 ```
 

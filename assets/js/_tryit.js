@@ -54,14 +54,14 @@ codeBlocks.forEach(function (codeBlock) {
 
         const example = code.split("\n")[0].trim();
         const themes = {
-            "# noty theme sunset": "sunset.css",
-            "# noty theme relax": "relax.css",
-            "# noty theme light": "light.css",
-            "# noty theme metroui": "metroui.css",
+            "#/ noty theme sunset": "sunset.css",
+            "#/ noty theme relax": "relax.css",
+            "#/ noty theme light": "light.css",
+            "#/ noty theme metroui": "metroui.css",
         };
 
         try {
-            if ('# flasher darkMode' === example) {
+            if ('#/ flasher darkMode' === example) {
                 document.documentElement.classList.add('dark');
                 const factory = flasher.create('flasher');
                 factory.renderOptions(messages[example].options);
