@@ -28,11 +28,11 @@ composer require php-flasher/flasher-symfony
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** includes a default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but users can also install additional adapters to customize the appearance of notifications within their projects such as :
 
-* **[Toastr](/docs/adapter/toastr/)**
-* **[Noty](/docs/adapter/noty/)**
-* **[Notyf](/docs/adapter/notyf/)**
-* **[Sweet Alert](/docs/adapter/sweetalert/)**
-* **[Pnotify](/docs/adapter/pnotify/)**
+* **[Toastr](/library/toastr/)**
+* **[Noty](/library/noty/)**
+* **[Notyf](/library/notyf/)**
+* **[Sweet Alert](/library/sweetalert/)**
+* **[Pnotify](/library/pnotify/)**
 
 ---
 
@@ -41,7 +41,7 @@ composer require php-flasher/flasher-symfony
 To display a notification message, you can either use the `flash()` helper method or obtain an instance of `flasher` from the service container. 
 Then, before returning a view or redirecting, call the `addSuccess()` method and pass in the desired message to be displayed.
 
-{% assign id = '# PHPFlasher' %}
+{% assign id = '#/ PHPFlasher' %}
 {% assign type = 'success' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -91,7 +91,7 @@ but you may want to tailor it to fit the specific context and language of your a
 
 > Using this package is actually pretty easy. Adding notifications to your application actually require only one line of code.
 
-{% assign id = '# usage addSuccess' %}
+{% assign id = '#/ usage addSuccess' %}
 {% assign type = 'success' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -103,7 +103,7 @@ but you may want to tailor it to fit the specific context and language of your a
 flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# usage addError' %}
+{% assign id = '#/ usage addError' %}
 {% assign type = 'error' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -115,7 +115,7 @@ flash()->add{{ type | capitalize }}('{{ message }}');
 flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# usage addWarning' %}
+{% assign id = '#/ usage addWarning' %}
 {% assign type = 'warning' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -127,7 +127,7 @@ flash()->add{{ type | capitalize }}('{{ message }}');
 flash()->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# usage addInfo' %}
+{% assign id = '#/ usage addInfo' %}
 {% assign type = 'info' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -148,7 +148,7 @@ allowing you to specify the `type` and `message` in a single method call rather 
 flash()->addFlash(string $type, string $message, string $title = null, array $options = [])
 ```
 
-{% assign id = '# usage addFlash' %}
+{% assign id = '#/ usage addFlash' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -186,7 +186,7 @@ flash()->options(array $options, bool $merge = true);
 
 > Refer to the documentation for your chosen JavaScript library to see which options are available and how they should be formatted.
 
-{% assign id = '# usage options' %}
+{% assign id = '#/ usage options' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"timeout": 3000, "position": "top-center"}' %}
@@ -218,7 +218,7 @@ Set a single option by specifying its name and value as separate arguments.
 flash()->option(string $option, mixed $value);
 ```
 
-{% assign id = '# usage option' %}
+{% assign id = '#/ usage option' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"timeout": 3000, "position": "top-center"}' %}
@@ -248,7 +248,7 @@ Sets the priority of a flash message, the highest priority will be displayed fir
 flash()->priority(int $priority);
 ```
 
-{% assign id = '# usage priority' %}
+{% assign id = '#/ usage priority' %}
 {% assign successMessage = site.data.messages['success'] | sample | prepend: 'Priority 3 → ' %}
 {% assign errorMessage = site.data.messages['error'] | sample | prepend: 'Priority 1 → ' %}
 {% assign warningMessage = site.data.messages['warning'] | sample | prepend: 'Priority 4 → ' %}
@@ -315,7 +315,7 @@ This method sets the number of requests that the flash message should persist fo
 
 As an example, with a multi-page form, you may want to store messages until all pages have been filled.
 
-{% assign id = '# usage hops' %}
+{% assign id = '#/ usage hops' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -346,7 +346,7 @@ the flash message will be translated into the specified language. If null is pro
 flash()->translate(string $locale = null);
 ```
 
-{% assign id = '# usage translate' %}
+{% assign id = '#/ usage translate' %}
 {% assign type = 'success' %}
 {% assign message = 'تمت العملية بنجاح.' %}
 {% assign title = 'تهانينا' %}
@@ -361,7 +361,7 @@ flash()
     ->add{{ type | capitalize }}('Your request was processed successfully.', 'Congratulations!');
 ```
 
-{% assign id = '# usage translate with position' %}
+{% assign id = '#/ usage translate with position' %}
 {% assign type = 'success' %}
 {% assign message = 'تمت العملية بنجاح.' %}
 {% assign title = 'تهانينا' %}

@@ -26,7 +26,7 @@ composer require php-flasher/flasher-toastr-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-{% assign id = '# toastr' %}
+{% assign id = '#/ toastr' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -67,7 +67,7 @@ Prevent from Auto Hiding.
 toastr()->persistent();
 ```
 
-{% assign id = '# toastr persistent' %}
+{% assign id = '#/ toastr persistent' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"timeOut": 0, "extendedTimeOut": 0, "closeButton": true}' %}
@@ -93,7 +93,7 @@ When set to `true`, a close button is displayed in the toast notification.
 toastr()->closeButton(bool $closeButton = true);
 ```
 
-{% assign id = '# toastr closeButton' %}
+{% assign id = '#/ toastr closeButton' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeButton": true}' %}
@@ -119,7 +119,7 @@ Default ⇒ `toast-close-button`
 toastr()->closeClass(string $closeClass);
 ```
 
-{% assign id = '# toastr closeClass' %}
+{% assign id = '#/ toastr closeClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeClass": "toast-close-button"}' %}
@@ -145,7 +145,7 @@ Default ⇒ `300` milliseconds
 toastr()->closeDuration(int $closeDuration);
 ```
 
-{% assign id = '# toastr closeDuration' %}
+{% assign id = '#/ toastr closeDuration' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeDuration": 3000}' %}
@@ -171,7 +171,7 @@ Default ⇒ `swing`
 toastr()->closeEasing(string $closeEasing);
 ```
 
-{% assign id = '# toastr closeEasing' %}
+{% assign id = '#/ toastr closeEasing' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeEasing": "swing"}' %}
@@ -198,7 +198,7 @@ Default ⇒ `<button type="button">&times;</button>`
 toastr()->closeHtml(string $closeHtml);
 ```
 
-{% assign id = '# toastr closeHtml' %}
+{% assign id = '#/ toastr closeHtml' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeButton": true, "closeHtml":"<button>⛑</button>"}' %}
@@ -226,7 +226,7 @@ Default ⇒ `fadeOut`
 toastr()->closeMethod(string $closeMethod);
 ```
 
-{% assign id = '# toastr closeMethod' %}
+{% assign id = '#/ toastr closeMethod' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeMethod": "fadeOut"}' %}
@@ -252,7 +252,7 @@ Default ⇒ `false`
 toastr()->closeOnHover(bool $closeOnHover = true);
 ```
 
-{% assign id = '# toastr closeOnHover' %}
+{% assign id = '#/ toastr closeOnHover' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeOnHover": true, "closeDuration": 10}' %}
@@ -280,7 +280,7 @@ Default ⇒ `toast-container`
 toastr()->containerId(string $containerId);
 ```
 
-{% assign id = '# toastr containerId' %}
+{% assign id = '#/ toastr containerId' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"containerId": "toast-container"}' %}
@@ -306,7 +306,7 @@ Default ⇒ `false`
 toastr()->debug(bool $debug = true);
 ```
 
-{% assign id = '# toastr debug' %}
+{% assign id = '#/ toastr debug' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"debug": true}' %}
@@ -332,7 +332,7 @@ Default ⇒ `false`
 toastr()->escapeHtml(bool $escapeHtml = true);
 ```
 
-{% assign id = '# toastr escapeHtml false' %}
+{% assign id = '#/ toastr escapeHtml false' %}
 {% assign type = 'error' %}
 {% assign message = '<strong>We’re sorry</strong>, but an error occurred.' %}
 {% assign options = '{"escapeHtml": false}' %}
@@ -346,7 +346,7 @@ toastr()
     ->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# toastr escapeHtml true' %}
+{% assign id = '#/ toastr escapeHtml true' %}
 {% assign options = '{"escapeHtml": true}' %}
 {% include example.html %}
 
@@ -372,7 +372,7 @@ Default ⇒ `1000` milliseconds
 toastr()->extendedTimeOut(int $extendedTimeOut);
 ```
 
-{% assign id = '# toastr extendedTimeOut' %}
+{% assign id = '#/ toastr extendedTimeOut' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"extendedTimeOut": 200}' %}
@@ -398,7 +398,7 @@ Default ⇒ `1000` milliseconds
 toastr()->hideDuration(int $hideDuration);
 ```
 
-{% assign id = '# toastr hideDuration' %}
+{% assign id = '#/ toastr hideDuration' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"hideDuration": 200}' %}
@@ -424,7 +424,7 @@ Default ⇒ `swing`
 toastr()->hideEasing(string $hideEasing);
 ```
 
-{% assign id = '# toastr hideEasing swing' %}
+{% assign id = '#/ toastr hideEasing swing' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"hideEasing": "swing"}' %}
@@ -438,7 +438,7 @@ toastr()
     ->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# toastr hideEasing linear' %}
+{% assign id = '#/ toastr hideEasing linear' %}
 {% assign options = '{"hideEasing": "linear"}' %}
 {% include example.html %}
 
@@ -462,7 +462,7 @@ Default ⇒ `fadeOut`
 toastr()->hideMethod(string $hideMethod);
 ```
 
-{% assign id = '# toastr hideMethod' %}
+{% assign id = '#/ toastr hideMethod' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"hideMethod": "fadeOut"}' %}
@@ -488,7 +488,7 @@ Default ⇒ `toast-info`
 toastr()->iconClass(string $iconClass);
 ```
 
-{% assign id = '# toastr iconClass' %}
+{% assign id = '#/ toastr iconClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"iconClass": "toast-info"}' %}
@@ -514,7 +514,7 @@ Default ⇒ `toast-message`
 toastr()->messageClass(string $messageClass);
 ```
 
-{% assign id = '# toastr messageClass' %}
+{% assign id = '#/ toastr messageClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"messageClass": "toast-message"}' %}
@@ -540,7 +540,7 @@ Default ⇒ `true`
 toastr()->newestOnTop(bool $newestOnTop = true);
 ```
 
-{% assign id = '# toastr newestOnTop' %}
+{% assign id = '#/ toastr newestOnTop' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"newestOnTop": true}' %}
@@ -566,7 +566,7 @@ Default ⇒ `toast-top-right`
 toastr()->positionClass(string $positionClass);
 ```
 
-{% assign id = '# toastr positionClass' %}
+{% assign id = '#/ toastr positionClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"positionClass": "toast-top-center"}' %}
@@ -592,7 +592,7 @@ Default ⇒ `false`
 toastr()->preventDuplicates(bool $preventDuplicates = true);
 ```
 
-{% assign id = '# toastr preventDuplicates' %}
+{% assign id = '#/ toastr preventDuplicates' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"preventDuplicates": true}' %}
@@ -618,7 +618,7 @@ Default ⇒ `true`
 toastr()->progressBar(bool $progressBar = true);
 ```
 
-{% assign id = '# toastr progressBar' %}
+{% assign id = '#/ toastr progressBar' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"progressBar": false}' %}
@@ -644,7 +644,7 @@ toastr()->progressClass(string $progressClass);
 
 Default ⇒ `toast-progress`
 
-{% assign id = '# toastr progressClass' %}
+{% assign id = '#/ toastr progressClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"progressClass": "toast-progress"}' %}
@@ -670,7 +670,7 @@ Default ⇒ `false`
 toastr()->rtl(bool $rtl = true);
 ```
 
-{% assign id = '# toastr rtl' %}
+{% assign id = '#/ toastr rtl' %}
 {% assign type = 'info' %}
 {% assign message = 'تم قفل حسابك وتم إرسال رسالة تأكيد إلكترونية.' %}
 {% assign options = '{"rtl": true}' %}
@@ -696,7 +696,7 @@ Default ⇒ `300` milliseconds
 toastr()->showDuration(int $showDuration);
 ```
 
-{% assign id = '# toastr showDuration' %}
+{% assign id = '#/ toastr showDuration' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"showDuration": 100 }' %}
@@ -722,7 +722,7 @@ Default ⇒ `swing`
 toastr()->showEasing(string $showEasing);
 ```
 
-{% assign id = '# toastr showEasing swing' %}
+{% assign id = '#/ toastr showEasing swing' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"showEasing": "swing"}' %}
@@ -736,7 +736,7 @@ toastr()
     ->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# toastr showEasing linear' %}
+{% assign id = '#/ toastr showEasing linear' %}
 {% assign options = '{"showEasing": "linear"}' %}
 {% include example.html %}
 
@@ -760,7 +760,7 @@ Default ⇒ `fadeIn`
 toastr()->showMethod(string $showMethod);
 ```
 
-{% assign id = '# toastr showMethod' %}
+{% assign id = '#/ toastr showMethod' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"showMethod": "fadeIn"}' %}
@@ -784,7 +784,7 @@ When set to `true`, the toast can be dismissed by tapping on it.
 toastr()->tapToDismiss(bool $tapToDismiss = true);
 ```
 
-{% assign id = '# toastr tapToDismiss' %}
+{% assign id = '#/ toastr tapToDismiss' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"tapToDismiss": true}' %}
@@ -811,7 +811,7 @@ Default ⇒ `body`
 toastr()->target(string $target);
 ```
 
-{% assign id = '# toastr target' %}
+{% assign id = '#/ toastr target' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"target": "body"}' %}
@@ -839,7 +839,7 @@ Default ⇒ `5000` milliseconds
 toastr()->timeOut(int $timeOut, bool $extendedTimeOut = null);
 ```
 
-{% assign id = '# toastr timeOut' %}
+{% assign id = '#/ toastr timeOut' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"timeOut": 1000}' %}
@@ -864,7 +864,7 @@ The class applied to the toast title element.
 toastr()->titleClass(string $titleClass);
 ```
 
-{% assign id = '# toastr titleClass' %}
+{% assign id = '#/ toastr titleClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"titleClass": "toastr-title"}' %}
@@ -891,7 +891,7 @@ Default ⇒ `toast`
 toastr()->toastClass(string $toastClass);
 ```
 
-{% assign id = '# toastr toastClass' %}
+{% assign id = '#/ toastr toastClass' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"toastClass": "toast"}' %}

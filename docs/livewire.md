@@ -24,7 +24,7 @@ Please follow the same installation steps as for the [Laravel Installation](/doc
 
 Dispatch `notifications` from your components
 
-{% assign id = '# livewire' %}
+{% assign id = '#/ livewire' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -57,7 +57,7 @@ class MyComponent extends Component
 For sweetalert you can listen to **Confirmed**, **Denied** and **Dismissed** from withing you component
 
 <script type="text/javascript">
-    messages["# livewire events"] = {
+    messages["#/ livewire events"] = {
         handler: "sweetalert",
         type: "info",
         message: "confirm or deny action",
@@ -74,7 +74,7 @@ For sweetalert you can listen to **Confirmed**, **Denied** and **Dismissed** fro
 </script>
 
 ```php
-# livewire events
+#/ livewire events
 
 namespace App\Http\Livewire;
 

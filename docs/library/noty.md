@@ -26,7 +26,7 @@ composer require php-flasher/flasher-noty-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-{% assign id = '# noty' %}
+{% assign id = '#/ noty' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -66,7 +66,7 @@ This string can contain HTML too. But be careful and don't pass user inputs to t
 noty()->text(string $text);
 ```
 
-{% assign id = '# noty text' %}
+{% assign id = '#/ noty text' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -91,7 +91,7 @@ Display alert type notification
 noty()->alert(string $message = null, array $options = array());
 ```
 
-{% assign id = '# noty alert' %}
+{% assign id = '#/ noty alert' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"type":"alert"}' %}
@@ -117,7 +117,7 @@ ClassName generator uses this value → <span class="text-orange-600">noty_layou
 noty()->layout(string $layout);
 ```
 
-{% assign id = '# noty layout' %}
+{% assign id = '#/ noty layout' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"layout":"topCenter"}' %}
@@ -153,7 +153,7 @@ noty()->theme(string $theme);
 {% assign infoMessage = site.data.messages['info'] | sample %}
 
 <script type="text/javascript">
-    messages["# noty theme mint"] = [
+    messages["#/ noty theme mint"] = [
         {
             handler: "{{ page.handler }}",
             type: "success",
@@ -182,7 +182,7 @@ noty()->theme(string $theme);
 </script>
 
 ```php
-# noty theme mint
+#/ noty theme mint
 
 noty()
     ->theme('mint')
@@ -207,7 +207,7 @@ noty()
 {% assign infoMessage = site.data.messages['info'] | sample %}
 
 <script type="text/javascript">
-    messages["# noty theme relax"] = [
+    messages["#/ noty theme relax"] = [
         {
             handler: "{{ page.handler }}",
             type: "success",
@@ -236,7 +236,7 @@ noty()
 </script>
 
 ```php
-# noty theme relax
+#/ noty theme relax
 
 // don't the load the theme css file: https://github.com/needim/noty/blob/master/lib/themes/relax.css
 
@@ -263,7 +263,7 @@ noty()
 {% assign infoMessage = site.data.messages['info'] | sample %}
 
 <script type="text/javascript">
-    messages["# noty theme metroui"] = [
+    messages["#/ noty theme metroui"] = [
         {
             handler: "{{ page.handler }}",
             type: "success",
@@ -292,7 +292,7 @@ noty()
 </script>
 
 ```php
-# noty theme metroui
+#/ noty theme metroui
 
 // Theme: https://github.com/needim/noty/blob/master/lib/themes/metroui.css
 
@@ -319,7 +319,7 @@ noty()
 {% assign infoMessage = site.data.messages['info'] | sample %}
 
 <script type="text/javascript">
-    messages["# noty theme light"] = [
+    messages["#/ noty theme light"] = [
         {
             handler: "{{ page.handler }}",
             type: "success",
@@ -348,7 +348,7 @@ noty()
 </script>
 
 ```php
-# noty theme light
+#/ noty theme light
 
 // Theme: https://github.com/needim/noty/blob/master/lib/themes/light.css
 
@@ -375,7 +375,7 @@ noty()
 {% assign infoMessage = site.data.messages['info'] | sample %}
 
 <script type="text/javascript">
-    messages["# noty theme sunset"] = [
+    messages["#/ noty theme sunset"] = [
         {
             handler: "{{ page.handler }}",
             type: "success",
@@ -404,7 +404,7 @@ noty()
 </script>
 
 ```php
-# noty theme sunset
+#/ noty theme sunset
 // Theme: https://github.com/needim/noty/blob/master/lib/themes/sunset.css
 
 noty()
@@ -435,7 +435,7 @@ notifications.
 noty()->timeout(int|bool $timeout)
 ```
 
-{% assign id = '# noty timeout' %}
+{% assign id = '#/ noty timeout' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"timeout": 2000}' %}
@@ -459,7 +459,7 @@ noty()
 noty()->progressBar(bool $progressBar = false)
 ```
 
-{% assign id = '# noty progressBar' %}
+{% assign id = '#/ noty progressBar' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"progressBar": false}' %}
@@ -485,7 +485,7 @@ Default `click`
 noty()->closeWith(string|array $closeWith)
 ```
 
-{% assign id = '# noty closeWith' %}
+{% assign id = '#/ noty closeWith' %}
 {% assign type = 'error' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"closeWith": ["click", "button"]}' %}
@@ -512,7 +512,7 @@ You can use `animate.css` class names or your custom css animations as well.
 noty()->animation(string $animation, string $effect)
 ```
 
-{% assign id = '# noty animation' %}
+{% assign id = '#/ noty animation' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"animation": null}' %}
@@ -538,7 +538,7 @@ noty()
 noty()->sounds(string $option, mixed $value)
 ```
 
-{% assign id = '# noty sounds' %}
+{% assign id = '#/ noty sounds' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"sounds": {"sources": ["/dist/sounds/notification.wav"], "volume": 0.3, "conditions": ["docVisible", "docHidden"]}}' %}
@@ -564,7 +564,7 @@ There are two conditions for now: `docVisible` & `docHidden`. You can use one of
 noty()->docTitle(string $option, mixed $docTitle)
 ```
 
-{% assign id = '# noty docTitle' %}
+{% assign id = '#/ noty docTitle' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"docTitle": {"conditions": ["docVisible", "docHidden"]}}' %}
@@ -586,7 +586,7 @@ noty()
 noty()->modal(bool $modal = true)
 ```
 
-{% assign id = '# noty modal' %}
+{% assign id = '#/ noty modal' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"modal": true}' %}
@@ -611,7 +611,7 @@ Generated automatically if false.
 noty()->id(bool|string $id)
 ```
 
-{% assign id = '# noty id' %}
+{% assign id = '#/ noty id' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"id": false}' %}
@@ -636,7 +636,7 @@ If `false` uses append, if `true` uses prepend.
 noty()->force(bool $force = true)
 ```
 
-{% assign id = '# noty force' %}
+{% assign id = '#/ noty force' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"force": false}' %}
@@ -662,7 +662,7 @@ noty()->queue(string $queue)
 
 Default: `global`
 
-{% assign id = '# noty queue' %}
+{% assign id = '#/ noty queue' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"queue":"global"}' %}
@@ -687,7 +687,7 @@ If `string(queueName)` closes all `visible` notification on this queue and shows
 noty()->killer(bool|string $killer)
 ```
 
-{% assign id = '# noty killer' %}
+{% assign id = '#/ noty killer' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"killer": true}' %}
@@ -712,7 +712,7 @@ Layout parameter will be ignored.
 noty()->container(bool|string $container)
 ```
 
-{% assign id = '# noty container' %}
+{% assign id = '#/ noty container' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"container": false}' %}
@@ -747,7 +747,7 @@ To ensure that users do not miss their notifications.
 noty()->visibilityControl(bool $visibilityControl)
 ```
 
-{% assign id = '# noty visibilityControl' %}
+{% assign id = '#/ noty visibilityControl' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"visibilityControl": true}' %}

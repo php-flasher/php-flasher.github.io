@@ -26,11 +26,11 @@ composer require php-flasher/flasher-symfony
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** includes a default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but users can also install additional adapters to customize the appearance of notifications within their projects such as :
 
-* **[Toastr](/docs/adapter/toastr/)**
-* **[Noty](/docs/adapter/noty/)**
-* **[Notyf](/docs/adapter/notyf/)**
-* **[Sweet Alert](/docs/adapter/sweetalert/)**
-* **[Pnotify](/docs/adapter/pnotify/)**
+* **[Toastr](/library/toastr/)**
+* **[Noty](/library/noty/)**
+* **[Notyf](/library/notyf/)**
+* **[Sweet Alert](/library/sweetalert/)**
+* **[Pnotify](/library/pnotify/)**
 
 ---
 

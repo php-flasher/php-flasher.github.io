@@ -35,11 +35,11 @@ composer require php-flasher/flasher-laravel
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** includes a default notification style <i class="fa-duotone fa-comment-captions text-yellow-600"></i>, but users can also install additional adapters to customize the appearance of notifications within their projects such as :
 
-* **[Toastr](/docs/adapter/toastr/)**
-* **[Noty](/docs/adapter/noty/)**
-* **[Notyf](/docs/adapter/notyf/)**
-* **[Sweet Alert](/docs/adapter/sweetalert/)**
-* **[Pnotify](/docs/adapter/pnotify/)**
+* **[Toastr](/library/toastr/)**
+* **[Noty](/library/noty/)**
+* **[Notyf](/library/notyf/)**
+* **[Sweet Alert](/library/sweetalert/)**
+* **[Pnotify](/library/pnotify/)**
 
 ---
 
@@ -243,7 +243,7 @@ You can create a preset for a custom notification that you want to reuse in mult
 
 For example, you can create a preset named `entity_saved` in the configuration file and then use
 
-{% assign id = '# laravel addPreset' %}
+{% assign id = '#/ laravel addPreset' %}
 {% assign type = 'success' %}
 {% assign message = 'Entity saved successfully' %}
 {% assign title = 'Entity saved' %}
@@ -295,7 +295,7 @@ allowing you to seamlessly integrate it with the dark mode of your design.
 By default, **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** uses the `prefers-color-scheme` CSS media query to automatically detect the user's dark mode preference. 
 However, you can also choose to manually toggle dark mode using the `class strategy`.
 
-{% assign id = '# flasher darkMode' %}
+{% assign id = '#/ flasher darkMode' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"darkMode": "class"}' %}
@@ -360,6 +360,7 @@ or
 <!-- Dark mode enabled -->
 <body data-mode="dark">
 ```
+
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> RTL support
@@ -369,7 +370,7 @@ it automatically detects the text direction and handles the necessary adjustment
 
 Simply make sure the translation service is enabled and let **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** handle the rest.
 
-{% assign id = '# phpflasher rtl' %}
+{% assign id = '#/ phpflasher rtl' %}
 {% assign type = 'success' %}
 {% assign message = 'تمت العملية بنجاح.' %}
 {% assign title = 'تهانينا' %}
@@ -390,7 +391,7 @@ flash()
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** allows you to translate your notification `messages`, `presets`, it comes with `Arabic`, `English` and `French` translations out of the box, but you can easily add your own translations.
 
-For example, if you need to override the English translation strings for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**,  you can create a language file at the following location:
+For example, if you need to override the `English` translation strings for **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**,  you can create a language file at the following location:
 **`/resources/lang/vendor/flasher/en/messages.php`**. 
 
 In this file, you should **only** define the translation strings you want to override. Any translation strings that you don't override will still be loaded from **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**'s original language files.
@@ -451,7 +452,7 @@ return [
 ];
 ```
 
-{% assign id = '# laravel arabic translations' %}
+{% assign id = '#/ laravel arabic translations' %}
 {% assign successMessage = 'تم إنشاء الملف' %}
 {% assign errorMessage = 'حدث خطأ أثناء إرسال طلبك.' %}
 {% assign warningMessage = 'يجب إكمال جميع الحقول الإلزامية قبل إرسال النموذج' %}
@@ -507,7 +508,7 @@ flash()->addWarning('{{ warningMessage }}');
 flash()->addInfo('{{ infoMessage }}');
 ```
 
-{% assign id = '# laravel french translations' %}
+{% assign id = '#/ laravel french translations' %}
 {% assign successMessage = "La ressource a été ajoutée" %}
 {% assign errorMessage = "Une erreur s’est produite lors de l’envoi de votre demande." %}
 {% assign warningMessage = "Vous devez remplir tous les champs obligatoires avant de soumettre le formulaire." %}

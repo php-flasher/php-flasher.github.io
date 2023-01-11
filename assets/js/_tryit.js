@@ -32,7 +32,7 @@ const codeBlocks = document.querySelectorAll("pre > code");
 
 codeBlocks.forEach(function (codeBlock) {
     const code = codeBlock.innerText.trim();
-    if (!code.startsWith("#")) {
+    if (!code.startsWith("#/")) {
         return;
     }
 

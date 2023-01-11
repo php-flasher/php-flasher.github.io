@@ -26,7 +26,7 @@ composer require php-flasher/flasher-sweetalert-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-{% assign id = '# sweetalert' %}
+{% assign id = '#/ sweetalert' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -66,7 +66,7 @@ Display a question typed alert message
 sweetalert()->question(string $message = null, array $options = array());
 ```
 
-{% assign id = '# sweetalert question' %}
+{% assign id = '#/ sweetalert question' %}
 {% assign type = 'question' %}
 {% assign message = 'Are you sure you want to proceed ?' %}
 {% assign options = '{"icon": "question"}' %}
@@ -90,7 +90,7 @@ The title of the popup, as HTML.
 sweetalert()->title(string $title);
 ```
 
-{% assign id = '# sweetalert title' %}
+{% assign id = '#/ sweetalert title' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"title": "PHPFlasher" }' %}
@@ -114,7 +114,7 @@ The title of the popup, as text. Useful to avoid HTML injection.
 sweetalert()->titleText(string $titleText);
 ```
 
-{% assign id = '# sweetalert titleText' %}
+{% assign id = '#/ sweetalert titleText' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"titleText": "PHPFlasher"}' %}
@@ -136,7 +136,7 @@ A HTML description for the popup.
 sweetalert()->html(string $html);
 ```
 
-{% assign id = '# sweetalert html' %}
+{% assign id = '#/ sweetalert html' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"html": "<span class=\\"text-indigo-900\\">PHP<span class=\\"text-indigo-500\\">Flasher</span></span>"}' %}
@@ -160,7 +160,7 @@ A description for the popup. If `text` and `html` parameters are provided in the
 sweetalert()->text(string $text);
 ```
 
-{% assign id = '# sweetalert text' %}
+{% assign id = '#/ sweetalert text' %}
 {% assign type = 'error' %}
 {% assign message = 'There was an issue re-verifying your account.' %}
 {% assign options = '{"text": "There was an issue re-verifying your account."}' %}
@@ -186,7 +186,7 @@ It can either be put in the array under the key `icon` or passed as the third pa
 sweetalert()->icon(string $icon);
 ```
 
-{% assign id = '# sweetalert icon' %}
+{% assign id = '#/ sweetalert icon' %}
 {% assign type = 'success' %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"icon": "success"}' %}
@@ -211,7 +211,7 @@ Use this to change the color of the icon.
 sweetalert()->iconColor(string $iconColor);
 ```
 
-{% assign id = '# sweetalert iconColor' %}
+{% assign id = '#/ sweetalert iconColor' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"iconColor": "#6b21a8"}' %}
@@ -235,7 +235,7 @@ The custom HTML content for an icon.
 sweetalert()->iconHtml(string $iconHtml);
 ```
 
-{% assign id = '# sweetalert iconHtml' %}
+{% assign id = '#/ sweetalert iconHtml' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = 'هل تريد الاستمرار؟' %}
 {% assign options = '{"iconHtml": "؟", "type": "question"}' %}

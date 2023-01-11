@@ -26,7 +26,7 @@ composer require php-flasher/flasher-notyf-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Usage
 
-{% assign id = '# notyf' %}
+{% assign id = '#/ notyf' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{}' %}
@@ -66,7 +66,7 @@ Number of milliseconds before hiding the notification. Use 0 for infinite durati
 notyf()->duration(int $duration);
 ```
 
-{% assign id = '# notyf duration' %}
+{% assign id = '#/ notyf duration' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"duration": 2000}' %}
@@ -92,7 +92,7 @@ Default ⇒ `true`
 notyf()->ripple(bool $ripple);
 ```
 
-{% assign id = '# notyf ripple true' %}
+{% assign id = '#/ notyf ripple true' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"ripple": true}' %}
@@ -106,7 +106,7 @@ notyf()
     ->add{{ type | capitalize }}('{{ message }}');
 ```
 
-{% assign id = '# notyf ripple false' %}
+{% assign id = '#/ notyf ripple false' %}
 {% assign options = '{"ripple": false}' %}
 {% include example.html %}
 
@@ -133,7 +133,7 @@ Default ⇒ x: `right`, y: `bottom`
 notyf()->position(string $position, string $value);
 ```
 
-{% assign id = '# notyf position' %}
+{% assign id = '#/ notyf position' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"position": {"x": "center", "y":"top"}}' %}
@@ -160,7 +160,7 @@ Default ⇒ `false`
 notyf()->dismissible(bool $dismissible);
 ```
 
-{% assign id = '# notyf dismissible' %}
+{% assign id = '#/ notyf dismissible' %}
 {% assign type = site.data.messages.types | sample %}
 {% assign message = site.data.messages[type] | sample %}
 {% assign options = '{"dismissible": true}' %}

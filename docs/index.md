@@ -61,11 +61,11 @@ Flash notifications serves as a feedback & confirmation mechanism after the user
 ## <i class="fa-duotone fa-list-radio"></i> Why use **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** ?
 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** supports popular notification libraries : 
-<span class="text-indigo-900">[__toastr.js__](/docs/adapter/toastr/)</span>, 
-<span class="text-indigo-900">[__sweetalert 2__](/docs/adapter/sweetalert/)</span>, 
-<span class="text-indigo-900">[__pnotify__](/docs/adapter/pnotify/)</span>, 
-<span class="text-indigo-900">[__noty__](/docs/adapter/noty/)</span>, 
-<span class="text-indigo-900">[__notyf__](/docs/adapter/notyf/)</span> and even show <span class="text-indigo-900">__desktop__</span> notifications.
+<span class="text-indigo-900">[__toastr.js__](/library/toastr/)</span>, 
+<span class="text-indigo-900">[__sweetalert 2__](/library/sweetalert/)</span>, 
+<span class="text-indigo-900">[__pnotify__](/library/pnotify/)</span>, 
+<span class="text-indigo-900">[__noty__](/library/noty/)</span>, 
+<span class="text-indigo-900">[__notyf__](/library/notyf/)</span> and even show <span class="text-indigo-900">__desktop__</span> notifications.
 
 You have a wide range of options to choose from to suit your specific needs. Whether you want to display simple toast messages or more sophisticated alerts, 
 **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** has you covered.
@@ -87,9 +87,9 @@ Give it a try and see the difference it can make for yourself!
 
 ## <i class="fa-duotone fa-list-radio"></i> Getting Started
 
-* **[Installation](/docs/installation/)**
-* **[Toastr](/docs/adapter/toastr/)**
-* **[Noty](/docs/adapter/noty/)**
-* **[Notyf](/docs/adapter/notyf/)**
-* **[Sweet Alert](/docs/adapter/sweetalert/)**
-* **[Pnotify](/docs/adapter/pnotify/)**
+* **[Installation](/installation/)**
+* **[Toastr](/library/toastr/)**
+* **[Noty](/library/noty/)**
+* **[Notyf](/library/notyf/)**
+* **[Sweet Alert](/library/sweetalert/)**
+* **[Pnotify](/library/pnotify/)**
