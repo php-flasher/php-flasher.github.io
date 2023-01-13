@@ -1,7 +1,7 @@
 ---
 permalink: /
 title:
-description: Easily add flash notification messages to your website with PHPFlasher. Supports popular notification libraries and desktop notifications. Enhance user experience on your website or application.
+description: PHPFlasher - A powerful & easy-to-use package for adding flash messages to Laravel or Symfony projects. Provides feedback to users, improves engagement & enhances user experience. Intuitive design for beginners & experienced developers. A reliable, flexible solution.
 ---
 
 <div class="text-center mb-24">
@@ -36,14 +36,14 @@ description: Easily add flash notification messages to your website with PHPFlas
 
 ## <i class="fa-duotone fa-list-radio"></i> Introduction
 
-Flash messages are are a great way to quickly and easily notify users of important events or updates on your website or application. <br />
-These messages can be easily implemented using the Laravel and Symfony frameworks and provide a great way to communicate with users in a clear and concise manner. 
+**<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is a powerful and easy-to-use package that allows you to quickly and easily add flash messages to your Laravel or Symfony projects. 
+Whether you need to alert users of a successful form submission, an error, or any other important information, flash messages are a simple and effective solution for providing feedback to your users. 
 
-Whether you need to alert users of a successful form submission, an error, or any other important information, flash messages are a simple and effective solution.
+With **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**, you can easily record and store messages within the session, making it simple to retrieve and display them on the current or next page. 
+This improves user engagement and enhances the overall user experience on your website or application. 
 
-By using **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** in your Laravel or Symfony project, 
-you can improve the user experience and engagement on your website or application. **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is simple and effective for providing feedback messages to users on your website or application. <br />
-The flashing system allows you to record and store messages within the session, making it easy to retrieve and display them on the current or next page. 
+Whether you're a beginner or an experienced developer, **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>**'s intuitive and straightforward design makes it easy to integrate into your projects. 
+So, if you're looking for a reliable, flexible and easy to use flash messages solution, **<span class="text-indigo-900">PHP<span class="text-indigo-500">Flasher</span></span>** is the perfect choice.
 
 ---
 
@@ -93,3 +93,19 @@ Give it a try and see the difference it can make for yourself!
 * **[Notyf](/library/notyf/)**
 * **[Sweet Alert](/library/sweetalert/)**
 * **[Pnotify](/library/pnotify/)**
+
+## <i class="fa-duotone fa-list-radio"></i> Sponsors
+
+We are grateful for the support provided by our sponsors, who have made it possible for us to develop and improve the package. Special thanks to:
+
+* [Nashwan Abdullah](https://github.com/codenashwan) via PayPal, check out his youtube channel [Rstacode](https://www.youtube.com/rstacode)
+* [Salma Mourad](https://github.com/salmayno)
+* [Arvid de Jong](https://github.com/darviscommerce)
+
+## <i class="fa-duotone fa-list-radio"></i> Contributors
+
+We are grateful for the contributions of our contributors, who have been instrumental in helping us to develop and improve the package. Thank you to:
+
+* [Ash Allen](https://github.com/ash-jc-allen) for creating our logo, check out his **Battle Ready Laravel** book : [https://battle-ready-laravel.com](https://battle-ready-laravel.com)
+* [Tony Murray](https://github.com/murrant)
+* [Stéphane P](https://github.com/n3wborn)
