@@ -48,7 +48,13 @@ composer require php-flasher/flasher-symfony
 
 ## <i class="fa-duotone fa-list-radio"></i> Configuration
 
-As optional, if you want to modify the default configuration, you can copy and past the following the configuration file at `config/packages/flasher.yaml`
+As optional, if you want to modify the default configuration, you can publish the configuration file:
+
+```bash
+php bin/console flasher:install
+```
+
+The configuration file will be located at `config/packages/flasher.yaml` and will have the following content:
 
 ```yaml
 # config/packages/flasher.yaml
@@ -89,7 +95,7 @@ flasher:
     # using npm. 
     #
     # To use the local version of the library, run the following command:
-    #     php artisan vendor:publish --force --tag=flasher-assets
+    #     php bin/console flasher:install
     #
     # This will copy the necessary assets to your application's public folder. 
     # You can then specify the local path to the javascript file in the 'local'
@@ -109,7 +115,7 @@ flasher:
     #
     # If you decide to use local assets, don't forget to publish the necessary
     # files to your application's public folder by running the following command:
-    #     php artisan vendor:publish --force --tag=flasher-assets
+    #     php bin/console flasher:install
     #
     # This will copy the necessary assets to your application's public folder. 
     #

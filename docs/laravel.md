@@ -51,8 +51,8 @@ composer require php-flasher/flasher-laravel
 
 As optional, if you want to modify the default configuration, you can publish the configuration file:
 
-```shell
-php artisan vendor:publish --tag=flasher-config
+```bash
+php artisan flasher:install
 ```
 
 The configuration file will be located at `config/flasher.php` and will have the following content:
@@ -99,7 +99,7 @@ return [
     | using npm. 
     |
     | To use the local version of the library, run the following command:
-    |     php artisan vendor:publish --force --tag=flasher-assets
+    |     php artisan flasher:install
     |
     | This will copy the necessary assets to your application's public folder. 
     | You can then specify the local path to the javascript file in the 'local'
@@ -121,7 +121,7 @@ return [
     |
     | If you decide to use local assets, don't forget to publish the necessary
     | files to your application's public folder by running the following command:
-    |     php artisan vendor:publish --force --tag=flasher-assets
+    |     php artisan flasher:install
     |
     | This will copy the necessary assets to your application's public folder. 
     */
