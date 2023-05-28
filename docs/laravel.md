@@ -286,6 +286,45 @@ class BookController
         flash()->add{{ type | capitalize }}('{{ message }}', '{{ title }}');
 ```
 
+<p id="preset-variables"><a href="#preset-variables" class="anchor"><i class="fa-duotone fa-link"></i> Variables</a></p>
+
+Presets can also contain variables that can be substituted by using the translation system. Take the following example where you have a preset showing a personalised welcome message to the user.
+
+```php
+<?php // config/flasher.php
+
+return [
+    'presets' => [
+        'hello_user' => [
+            'type' => '{{ type }}',
+            'message' => 'welcome_back_user',
+        ],
+    ],
+];
+```
+
+In the translations file you can define `welcome_back_user` with the message containing the variable `:username`.
+
+```php
+<?php // /resources/lang/vendor/flasher/en/messages.php
+
+return [
+    'welcome_back_user' => 'Welcome back :username',
+];
+```
+
+If you want to substitute the `:username` in the above translation with a username in the controller, you can achieve this by passing an array of values to be substituted as the second argument.
+
+```php
+class BookController
+{
+    public function save()
+    {
+        $username = 'John Doe';
+
+        flash()->addPreset('hello_user', ['username' => $username]);
+```
+
 ---
 
 ## <i class="fa-duotone fa-list-radio"></i> Dark Mode 
