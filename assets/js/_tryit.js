@@ -13,7 +13,6 @@ window.notyf = notyf;
 window.sweetalert = sweetalert;
 
 const messages = window.messages;
-console.log(messages);
 
 const flashMessage = ({ handler, type, message, title, options }) => {
     const factory = flasher.create(handler);
@@ -69,7 +68,7 @@ codeBlocks.forEach(function (codeBlock) {
                 setTimeout(function () {
                     document.documentElement.classList.remove('dark');
                 }, 5000);
-            } else if (example in themes) {
+            } else if (false && example in themes) {
                 import(`noty/lib/themes/${themes[example]}`).then(() => {
                     messages[example].forEach(flashMessage);
                 });
