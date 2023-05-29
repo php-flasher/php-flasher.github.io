@@ -1,0 +1,46 @@
+version: '3'
+
+tasks:
+    build:
+        label: docker:build
+        desc: Build Docker images and cache dependencies
+        cmds:
+            - docker-compose build {{ .CLI_ARGS }}
+
+    up:
+        label: docker:up
+        desc: Start Docker containers in the background
+        cmds:
+            - docker-compose up --no-build --remove-orphans --detach {{ .CLI_ARGS }}
+
+    restart:
+        label: docker:restart
+        desc: Restart Docker containers
+        cmds:
+            - docker-compose restart {{ .CLI_ARGS }}
+
+    stop:
+        label: docker:stop
+        desc: Stop Docker containers
+        cmds:
+            - docker-compose stop {{ .CLI_ARGS }}
+
+    down:
+        label: docker:down
+        desc: Stop and remove Docker containers, networks
+        cmds:
+            - docker-compose down {{ .CLI_ARGS }}
+
+    exec:
+        label: docker:exec
+        desc: Run a command inside a running container
+        cmds:
+            - docker-compose exec {{ .CLI_ARGS }}
+        interactive: true
+
+    logs:
+        label: docker:logs
+        desc: Stream the logs of all Docker containers
+        cmds:
+            - docker-compose logs -f {{ .CLI_ARGS }}
+        interactive: true
