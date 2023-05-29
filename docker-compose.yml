@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        volumes:
+            - .:/app
+        ports:
+            - "4000:4000"
+            - "35729:35729"
+
+    watch:
+        build: .
+        command: [ "pnpm", "run", "watch" ]
+        volumes:
+            - .:/app
+        ports:
+            - "35729:35729"
